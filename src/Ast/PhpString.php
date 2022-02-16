@@ -38,14 +38,17 @@
 		public static function parse(Lexer\Stream $stream)
 		{
 			$children = [];
-			$unknowTokens = [];
 
 			while ($stream->hasToken()) {
-				$unknowTokens[] = $stream->consumeAnything();
-			}
+				if ($stream->isCurrent(T_INLINE_HTML)) {
+					$children[] = new HtmlNode($stream->consumeAllTokensAsText(T_INLINE_HTML));
 
-			if (count($unknowTokens) > 0) {
-				$children[] = new UnknowNode($unknowTokens);
+				} elseif ($stream->isCurrent([T_OPEN_TAG, T_OPEN_TAG_WITH_ECHO])) {
+					$children[] = PhpNode::parse($stream);
+
+				} else {
+					$stream->unknowToken();
+				}
 			}
 
 			return new self($children);

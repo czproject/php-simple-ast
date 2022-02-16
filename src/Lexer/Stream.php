@@ -125,6 +125,22 @@
 
 		/**
 		 * @param  int|string $type
+		 * @return string
+		 */
+		public function consumeAllTokensAsText($type)
+		{
+			$s = '';
+
+			foreach ($this->consumeAllTokens($type) as $token) {
+				$s .= $token->toString();
+			}
+
+			return $s;
+		}
+
+
+		/**
+		 * @param  int|string $type
 		 * @return IToken[]|NULL
 		 */
 		public function tryConsumeAllTokens($type)
@@ -134,6 +150,16 @@
 			}
 
 			return NULL;
+		}
+
+
+		/**
+		 * @return never
+		 * @throws \CzProject\PhpSimpleAst\InvalidStateException
+		 */
+		public function unknowToken()
+		{
+			throw new \CzProject\PhpSimpleAst\InvalidStateException('Unknow token ' . $this->formatTokenType($this->getCurrent()->getType()));
 		}
 
 
