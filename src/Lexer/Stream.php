@@ -34,24 +34,20 @@
 
 
 		/**
-		 * @param  int|string|array<int|string> $type
+		 * @param  int|string ...$types
 		 * @return bool
 		 */
-		public function isCurrent($type)
+		public function isCurrent(...$types)
 		{
 			$token = $this->tokens->getCurrent();
 
-			if (is_array($type)) {
-				foreach ($type as $t) {
-					if ($token->isOfType($t)) {
-						return TRUE;
-					}
+			foreach ($types as $type) {
+				if ($token->isOfType($type)) {
+					return TRUE;
 				}
-
-				return FALSE;
 			}
 
-			return $token->isOfType($type);
+			return FALSE;
 		}
 
 
@@ -71,18 +67,18 @@
 
 
 		/**
-		 * @param  int|string|array<int|string> $type
+		 * @param  int|string ...$type
 		 * @return IToken
 		 */
-		public function consumeToken($type)
+		public function consumeToken(...$types)
 		{
-			if (!$this->isCurrent($type)) {
+			if (!$this->isCurrent(...$types)) {
 				$token = $this->tokens->getCurrent();
 				$currentTokenType = $token->getType();
 				$currentTokenText = is_int($currentTokenType) ? (' (text: ' . $token->toString() . ')') : '';
 				$currentTokenLine = ' on line' . $token->getLine();
 				$currentToken = $this->formatTokenType($currentTokenType);
-				$expectedToken = $this->formatTokenType($type);
+				$expectedToken = $this->formatTokenType(...$types);
 				throw new \CzProject\PhpSimpleAst\InvalidStateException("Invalid token '{$currentToken}'{$currentTokenText}{$currentTokenLine}, expected '{$expectedToken}'.");
 			}
 
@@ -93,13 +89,13 @@
 
 
 		/**
-		 * @param  int|string $type
+		 * @param  int|string ...$types
 		 * @return IToken|NULL
 		 */
-		public function tryConsumeToken($type)
+		public function tryConsumeToken(...$types)
 		{
-			if ($this->isCurrent($type)) {
-				return $this->consumeToken($type);
+			if ($this->isCurrent($types)) {
+				return $this->consumeToken($types);
 			}
 
 			return NULL;
@@ -107,16 +103,16 @@
 
 
 		/**
-		 * @param  int|string $type
+		 * @param  int|string ...$types
 		 * @return IToken[]
 		 */
-		public function consumeAllTokens($type)
+		public function consumeAllTokens(...$types)
 		{
 			$res = [];
-			$res[] = $this->consumeToken($type);
+			$res[] = $this->consumeToken(...$types);
 
-			while ($this->hasToken() && $this->isCurrent($type)) {
-				$res[] = $this->consumeToken($type);
+			while ($this->hasToken() && $this->isCurrent(...$types)) {
+				$res[] = $this->consumeToken(...$types);
 			}
 
 			return $res;
@@ -124,14 +120,14 @@
 
 
 		/**
-		 * @param  int|string $type
+		 * @param  int|string ...$types
 		 * @return string
 		 */
-		public function consumeAllTokensAsText($type)
+		public function consumeAllTokensAsText(...$types)
 		{
 			$s = '';
 
-			foreach ($this->consumeAllTokens($type) as $token) {
+			foreach ($this->consumeAllTokens(...$types) as $token) {
 				$s .= $token->toString();
 			}
 
@@ -140,13 +136,13 @@
 
 
 		/**
-		 * @param  int|string $type
+		 * @param  int|string ...$types
 		 * @return IToken[]|NULL
 		 */
-		public function tryConsumeAllTokens($type)
+		public function tryConsumeAllTokens(...$types)
 		{
-			if ($this->isCurrent($type)) {
-				return $this->consumeAllTokens($type);
+			if ($this->isCurrent(...$types)) {
+				return $this->consumeAllTokens(...$types);
 			}
 
 			return NULL;
@@ -164,21 +160,17 @@
 
 
 		/**
-		 * @param  int|string|array<int|string> $type
+		 * @param  int|string ...$types
 		 * @return string
 		 */
-		private function formatTokenType($type)
+		private function formatTokenType(...$types)
 		{
-			if (is_array($type)) {
-				$tmp = [];
+			$tmp = [];
 
-				foreach ($type as $t) {
-					$tmp[] = $this->tokens->getTypeName($t);
-				}
-
-				return implode('|', $tmp);
+			foreach ($types as $type) {
+				$tmp[] = $this->tokens->getTypeName($type);
 			}
 
-			return $this->tokens->getTypeName($type);
+			return implode('|', $tmp);
 		}
 	}

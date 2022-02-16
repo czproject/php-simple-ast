@@ -43,7 +43,7 @@
 				if ($stream->isCurrent(T_INLINE_HTML)) {
 					$children[] = new HtmlNode($stream->consumeAllTokensAsText(T_INLINE_HTML));
 
-				} elseif ($stream->isCurrent([T_OPEN_TAG, T_OPEN_TAG_WITH_ECHO])) {
+				} elseif ($stream->isCurrent(T_OPEN_TAG, T_OPEN_TAG_WITH_ECHO)) {
 					$children[] = PhpNode::parse($stream);
 
 				} else {

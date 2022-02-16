@@ -49,7 +49,7 @@
 		 */
 		public static function parse(Lexer\Stream $stream)
 		{
-			$openToken = $stream->consumeToken([T_OPEN_TAG, T_OPEN_TAG_WITH_ECHO]);
+			$openToken = $stream->consumeToken(T_OPEN_TAG, T_OPEN_TAG_WITH_ECHO);
 			$children = [];
 			$closeToken = NULL;
 			$unknowTokens = [];
