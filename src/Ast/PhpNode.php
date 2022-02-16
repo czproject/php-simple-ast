@@ -64,7 +64,10 @@
 				}
 			}
 
-			$children[] = new UnknowNode($unknowTokens);
+			if (count($unknowTokens) > 0) {
+				$children[] = new UnknowNode($unknowTokens);
+			}
+
 			return new self($openToken, $children, $closeToken);
 		}
 	}

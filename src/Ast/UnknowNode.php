@@ -2,6 +2,7 @@
 
 	namespace CzProject\PhpSimpleAst\Ast;
 
+	use CzProject\Assert\Assert;
 	use CzProject\PhpSimpleAst\Lexer;
 
 
@@ -16,6 +17,7 @@
 		 */
 		public function __construct(array $tokens)
 		{
+			Assert::true(count($tokens) > 0, 'Missing tokens.');
 			$this->tokens = $tokens;
 		}
 
