@@ -89,6 +89,16 @@
 
 
 		/**
+		 * @param  int|string ...$type
+		 * @return string
+		 */
+		public function consumeTokenAsText(...$types)
+		{
+			return $this->consumeToken(...$types)->toString();
+		}
+
+
+		/**
 		 * @param  int|string ...$types
 		 * @return IToken|NULL
 		 */

@@ -2,45 +2,51 @@
 
 	namespace CzProject\PhpSimpleAst\Ast;
 
+	use CzProject\Assert\Assert;
 	use CzProject\PhpSimpleAst\Lexer;
 
 
 	class PhpNode implements INode
 	{
-		/** @var Lexer\PhpToken */
-		private $openToken;
+		/** @var string */
+		private $openTag;
 
 		/** @var INode[] */
 		private $children;
 
-		/** @var Lexer\PhpToken|NULL */
-		private $closeToken;
+		/** @var string|NULL */
+		private $closeTag;
 
 
 		/**
+		 * @param string $openTag
 		 * @param INode[] $children
+		 * @param string $closeTag
 		 */
 		public function __construct(
-			Lexer\PhpToken $openToken,
+			$openTag,
 			array $children,
-			Lexer\PhpToken $closeToken = NULL
+			$closeTag
 		)
 		{
-			$this->openToken = $openToken;
+			Assert::string($openTag);
+			Assert::stringOrNull($closeTag);
+
+			$this->openTag = $openTag;
 			$this->children = $children;
-			$this->closeToken = $closeToken;
+			$this->closeTag = $closeTag;
 		}
 
 
 		public function toString()
 		{
-			$s = $this->openToken->toString();
+			$s = $this->openTag;
 
 			foreach ($this->children as $child) {
 				$s .= $child->toString();
 			}
 
-			return $s . ($this->closeToken !== NULL ? $this->closeToken->toString() : '');
+			return $s . $this->closeTag;
 		}
 
 
@@ -49,16 +55,16 @@
 		 */
 		public static function parse(Lexer\Stream $stream)
 		{
-			$openToken = $stream->consumeToken(T_OPEN_TAG, T_OPEN_TAG_WITH_ECHO);
+			$openTag = $stream->consumeTokenAsText(T_OPEN_TAG, T_OPEN_TAG_WITH_ECHO);
 			$children = [];
-			$closeToken = NULL;
+			$closeTag = NULL;
 			$unknowTokens = [];
 
 			while ($stream->hasToken()) {
 				$flushUnknowTokens = TRUE;
 
 				if ($stream->isCurrent(T_CLOSE_TAG)) {
-					$closeToken = $stream->consumeToken(T_CLOSE_TAG);
+					$closeTag = $stream->consumeTokenAsText(T_CLOSE_TAG);
 					break;
 
 				} else {
@@ -76,6 +82,6 @@
 				$children[] = new UnknowNode($unknowTokens);
 			}
 
-			return new self($openToken, $children, $closeToken);
+			return new self($openTag, $children, $closeTag);
 		}
 	}
