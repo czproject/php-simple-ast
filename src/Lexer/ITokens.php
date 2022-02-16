@@ -1,0 +1,32 @@
+<?php
+
+	namespace CzProject\PhpSimpleAst\Lexer;
+
+
+	interface ITokens
+	{
+		/**
+		 * @return bool
+		 */
+		function hasToken();
+
+
+		/**
+		 * @return IToken
+		 * @throws \CzProject\PhpSimpleAst\OutOfRangeException
+		 */
+		function getCurrent();
+
+
+		/**
+		 * @return IToken|NULL
+		 */
+		function next();
+
+
+		/**
+		 * @param  int|string $type
+		 * @return string
+		 */
+		function getTypeName($type);
+	}
