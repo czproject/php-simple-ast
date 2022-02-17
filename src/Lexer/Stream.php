@@ -67,6 +67,15 @@
 
 
 		/**
+		 * @return string
+		 */
+		public function consumeAnythingAsText()
+		{
+			return $this->consumeAnything()->toString();
+		}
+
+
+		/**
 		 * @param  int|string ...$type
 		 * @return IToken
 		 */

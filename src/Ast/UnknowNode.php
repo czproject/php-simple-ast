@@ -3,7 +3,6 @@
 	namespace CzProject\PhpSimpleAst\Ast;
 
 	use CzProject\Assert\Assert;
-	use CzProject\PhpSimpleAst\Lexer;
 
 
 	class UnknowNode implements INode
@@ -26,22 +25,5 @@
 		public function toString()
 		{
 			return $this->content;
-		}
-
-
-		/**
-		 * @param  Lexer\PhpToken[] $tokens
-		 * @return self
-		 */
-		public static function fromTokens(array $tokens)
-		{
-			Assert::true(count($tokens) > 0, 'Missing tokens.');
-			$s = '';
-
-			foreach ($tokens as $token) {
-				$s .= $token->toString();
-			}
-
-			return new self($s);
 		}
 	}

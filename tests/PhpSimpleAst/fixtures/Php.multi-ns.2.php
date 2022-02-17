@@ -16,8 +16,3 @@ namespace NThird;
 	class MyClass3 extends NS9\ParentClass implements NS6\FooInterface
 	{
 	}
-
-// namespace; # global namespace
-// 	class MyGlobalClass extends NS1\NS3\ParentClass2
-// 	{
-// 	}

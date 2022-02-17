@@ -95,20 +95,20 @@
 		 */
 		public static function parse($indentation, Lexer\Stream $stream)
 		{
+			$buffer = new NodeBuffer($stream);
+
 			$keyword = $stream->consumeTokenAsText(T_NAMESPACE);
-			$prefixOfName = $stream->consumeAllTokensAsText(T_WHITESPACE);
+			$buffer->consumeWhitespace();
 			$name = NULL;
 			$blockOpener = '';
 			$inBrackets = FALSE;
 
 			if ($stream->isCurrent('{')) { // global namespace
-				$blockOpener = $prefixOfName;
-				$blockOpener .= $stream->consumeTokenAsText('{');
-				$prefixOfName = '';
+				$blockOpener = $buffer->flushIndentation() . $stream->consumeTokenAsText('{');
 				$inBrackets = TRUE;
 
 			} else { // named namespace
-				$name = Name::parse($prefixOfName, $stream);
+				$name = Name::parse($buffer->flushIndentation(), $stream);
 				$blockOpener = $stream->tryConsumeAllTokensAsText(T_WHITESPACE);
 
 				if ($stream->isCurrent(';')) {
@@ -124,40 +124,43 @@
 			}
 
 			// namespace body
-			$children = [];
 			$blockCloser = '';
-			$unknowTokens = [];
 
 			while ($stream->hasToken()) {
 				$child = NULL;
 
 				if ($stream->isCurrent(T_CLOSE_TAG)) {
 					break;
-				}
 
-				if ($child !== NULL) {
-					if (count($unknowTokens) > 0) {
-						$children[] = UnknowNode::fromTokens($unknowTokens);
-						$unknowTokens = [];
+				} elseif (!$inBrackets && $stream->isCurrent(T_NAMESPACE)) {
+					break;
+
+				} elseif ($stream->isCurrent(T_CLASS, T_TRAIT, T_INTERFACE)) {
+					$buffer->consumeUnknow();
+
+					while ($stream->hasToken() && !$stream->isCurrent('{', ';')) {
+						$buffer->consumeUnknow();
 					}
 
-					$children[] = $child;
+				} elseif ($stream->isCurrent(T_NEW)) {
+					$buffer->consumeUnknow();
 
-				} else {
-					$unknowTokens[] = $stream->consumeAnything();
+					while ($stream->hasToken() && !$stream->isCurrent('(', ';')) {
+						$buffer->consumeUnknow();
+					}
 				}
+
+				$buffer->onChild($child);
 			}
 
-			if (count($unknowTokens) > 0) {
-				$children[] = UnknowNode::fromTokens($unknowTokens);
-			}
+			$buffer->close();
 
 			return new self(
 				$indentation,
 				$keyword,
 				$name,
 				$blockOpener,
-				$children,
+				$buffer->getChildren(),
 				$blockCloser
 			);
 		}
