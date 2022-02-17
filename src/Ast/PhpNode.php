@@ -61,20 +61,23 @@
 			$unknowTokens = [];
 
 			while ($stream->hasToken()) {
-				$flushUnknowTokens = TRUE;
+				$child = NULL;
 
 				if ($stream->isCurrent(T_CLOSE_TAG)) {
 					$closeTag = $stream->consumeTokenAsText(T_CLOSE_TAG);
 					break;
+				}
+
+				if ($child !== NULL) {
+					if (count($unknowTokens) > 0) {
+						$children[] = UnknowNode::fromTokens($unknowTokens);
+						$unknowTokens = [];
+					}
+
+					$children[] = $child;
 
 				} else {
 					$unknowTokens[] = $stream->consumeAnything();
-					$flushUnknowTokens = FALSE;
-				}
-
-				if ($flushUnknowTokens && count($unknowTokens) > 0) {
-					$children[] = UnknowNode::fromTokens($unknowTokens);
-					$unknowTokens = [];
 				}
 			}
 
