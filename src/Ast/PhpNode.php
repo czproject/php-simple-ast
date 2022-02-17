@@ -73,13 +73,13 @@
 				}
 
 				if ($flushUnknowTokens && count($unknowTokens) > 0) {
-					$children[] = new UnknowNode($unknowTokens);
+					$children[] = UnknowNode::fromTokens($unknowTokens);
 					$unknowTokens = [];
 				}
 			}
 
 			if (count($unknowTokens) > 0) {
-				$children[] = new UnknowNode($unknowTokens);
+				$children[] = UnknowNode::fromTokens($unknowTokens);
 			}
 
 			return new self($openTag, $children, $closeTag);

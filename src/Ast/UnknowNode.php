@@ -8,28 +8,40 @@
 
 	class UnknowNode implements INode
 	{
-		/** @var Lexer\PhpToken[] */
-		private $tokens;
+		/** @var string */
+		private $content;
 
 
 		/**
-		 * @param Lexer\PhpToken[] $tokens
+		 * @param string $content
 		 */
-		public function __construct(array $tokens)
+		public function __construct($content)
 		{
-			Assert::true(count($tokens) > 0, 'Missing tokens.');
-			$this->tokens = $tokens;
+			Assert::string($content);
+			Assert::true($content !== '', 'Missing content.');
+			$this->content = $content;
 		}
 
 
 		public function toString()
 		{
+			return $this->content;
+		}
+
+
+		/**
+		 * @param  Lexer\PhpToken[] $tokens
+		 * @return self
+		 */
+		public static function fromTokens(array $tokens)
+		{
+			Assert::true(count($tokens) > 0, 'Missing tokens.');
 			$s = '';
 
-			foreach ($this->tokens as $token) {
+			foreach ($tokens as $token) {
 				$s .= $token->toString();
 			}
 
-			return $s;
+			return new self($s);
 		}
 	}
