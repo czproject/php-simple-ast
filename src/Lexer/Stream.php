@@ -160,12 +160,35 @@
 
 
 		/**
+		 * @param  int|string ...$types
+		 * @return string
+		 */
+		public function tryConsumeAllTokensAsText(...$types)
+		{
+			$tokens = $this->tryConsumeAllTokens(...$types);
+
+			if ($tokens === NULL) {
+				return '';
+			}
+
+			$s = '';
+
+			foreach ($tokens as $token) {
+				$s .= $token->toString();
+			}
+
+			return $s;
+		}
+
+
+		/**
+		 * @param  string|NULL $msg
 		 * @return never
 		 * @throws \CzProject\PhpSimpleAst\InvalidStateException
 		 */
-		public function unknowToken()
+		public function unknowToken($msg = NULL)
 		{
-			throw new \CzProject\PhpSimpleAst\InvalidStateException('Unknow token ' . $this->formatTokenType($this->getCurrent()->getType()));
+			throw new \CzProject\PhpSimpleAst\InvalidStateException(($msg !== NULL ? ($msg . ' | ') : '') . 'Unknow token ' . $this->formatTokenType($this->getCurrent()->getType()));
 		}
 
 

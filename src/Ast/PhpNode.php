@@ -66,6 +66,9 @@
 				if ($stream->isCurrent(T_CLOSE_TAG)) {
 					$closeTag = $stream->consumeTokenAsText(T_CLOSE_TAG);
 					break;
+
+				} elseif ($stream->isCurrent(T_NAMESPACE)) {
+					$child = NamespaceNode::parse(self::extractIndentation($unknowTokens), $stream);
 				}
 
 				if ($child !== NULL) {
@@ -86,5 +89,33 @@
 			}
 
 			return new self($openTag, $children, $closeTag);
+		}
+
+
+		/**
+		 * @param  Lexer\PhpToken[] $tokens
+		 * @return string
+		 */
+		private static function extractIndentation(array &$tokens)
+		{
+			if (count($tokens) === 0) {
+				return '';
+			}
+
+			$indentation = '';
+
+			while (count($tokens) > 0) {
+				$token = end($tokens);
+
+				if ($token->isOfType(T_WHITESPACE)) {
+					$indentation = $token->toString() . $indentation;
+					array_pop($tokens);
+
+				} else {
+					break;
+				}
+			}
+
+			return $indentation;
 		}
 	}
