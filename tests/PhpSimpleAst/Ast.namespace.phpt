@@ -74,7 +74,7 @@ test('Php.multi-ns.2', function () use ($astParser) {
 					new Ast\UnknowNode(
 						"\n\tuse NS4\NS5\NS6;"
 						. "\n\tuse NS4\NS5\NS7 as NS9;"
-						. "\n\tclass MyClass3 extends NS9\ParentClass implements NS6\FooInterface"
+						. "\n\n\tclass MyClass3 extends NS9\ParentClass implements NS6\FooInterface"
 						. "\n\t{"
 						. "\n\t}"
 						. "\n"

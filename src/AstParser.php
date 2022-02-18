@@ -11,7 +11,7 @@
 		 */
 		public function parseString($s)
 		{
-			return Ast\PhpString::parse($this->createStream($s));
+			return Ast\PhpString::parse($this->createParser($s));
 		}
 
 
@@ -21,17 +21,17 @@
 		 */
 		public function parseFile($path)
 		{
-			return Ast\PhpFile::parse($path, $this->createStream(file_get_contents($path)));
+			return Ast\PhpFile::parse($path, $this->createParser(file_get_contents($path)));
 		}
 
 
 		/**
 		 * @param  string $s
-		 * @return Lexer\Stream
+		 * @return Ast\NodeParser
 		 */
-		private function createStream($s)
+		private function createParser($s)
 		{
 			$tokens = Lexer\PhpTokens::fromSource($s);
-			return new Lexer\Stream($tokens);
+			return new Ast\NodeParser('', new Lexer\Stream($tokens));
 		}
 	}

@@ -2,8 +2,6 @@
 
 	namespace CzProject\PhpSimpleAst\Ast;
 
-	use CzProject\PhpSimpleAst\Lexer;
-
 
 	class PhpFile implements INode
 	{
@@ -48,8 +46,8 @@
 		/**
 		 * @return self
 		 */
-		public static function parse($path, Lexer\Stream $stream)
+		public static function parse($path, NodeParser $parser)
 		{
-			return new self($path, PhpString::parse($stream));
+			return new self($path, PhpString::parse($parser));
 		}
 	}

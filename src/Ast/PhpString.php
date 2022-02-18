@@ -2,8 +2,6 @@
 
 	namespace CzProject\PhpSimpleAst\Ast;
 
-	use CzProject\PhpSimpleAst\Lexer;
-
 
 	class PhpString implements INode
 	{
@@ -35,22 +33,23 @@
 		/**
 		 * @return self
 		 */
-		public static function parse(Lexer\Stream $stream)
+		public static function parse(NodeParser $parser)
 		{
 			$children = [];
 
-			while ($stream->hasToken()) {
-				if ($stream->isCurrent(T_INLINE_HTML)) {
-					$children[] = new HtmlNode($stream->consumeAllTokensAsText(T_INLINE_HTML));
+			while ($parser->hasToken()) {
+				if ($parser->isCurrent(T_INLINE_HTML)) {
+					$children[] = new HtmlNode($parser->consumeAllTokensAsText(T_INLINE_HTML));
 
-				} elseif ($stream->isCurrent(T_OPEN_TAG, T_OPEN_TAG_WITH_ECHO)) {
-					$children[] = PhpNode::parse($stream);
+				} elseif ($parser->isCurrent(T_OPEN_TAG, T_OPEN_TAG_WITH_ECHO)) {
+					$children[] = PhpNode::parse($parser->createSubParser());
 
 				} else {
-					$stream->unknowToken();
+					$parser->unknowToken();
 				}
 			}
 
+			$parser->closeAll();
 			return new self($children);
 		}
 	}

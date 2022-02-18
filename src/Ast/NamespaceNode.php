@@ -2,9 +2,6 @@
 
 	namespace CzProject\PhpSimpleAst\Ast;
 
-	use CzProject\Assert\Assert;
-	use CzProject\PhpSimpleAst\Lexer;
-
 
 	class NamespaceNode implements INode
 	{
@@ -90,77 +87,74 @@
 
 
 		/**
-		 * @param  string $indentation
 		 * @return self
 		 */
-		public static function parse($indentation, Lexer\Stream $stream)
+		public static function parse(NodeParser $parser)
 		{
-			$buffer = new NodeBuffer($stream);
-
-			$keyword = $stream->consumeTokenAsText(T_NAMESPACE);
-			$buffer->consumeWhitespace();
+			$keyword = $parser->consumeTokenAsText(T_NAMESPACE);
+			$parser->consumeWhitespace();
 			$name = NULL;
 			$blockOpener = '';
 			$inBrackets = FALSE;
 
-			if ($stream->isCurrent('{')) { // global namespace
-				$blockOpener = $buffer->flushIndentation() . $stream->consumeTokenAsText('{');
+			if ($parser->isCurrent('{')) { // global namespace
+				$blockOpener = $parser->flushIndentation() . $parser->consumeTokenAsText('{');
 				$inBrackets = TRUE;
 
 			} else { // named namespace
-				$name = Name::parse($buffer->flushIndentation(), $stream);
-				$blockOpener = $stream->tryConsumeAllTokensAsText(T_WHITESPACE);
+				$name = Name::parse($parser->createSubParser());
+				$blockOpener = $parser->tryConsumeAllTokensAsText(T_WHITESPACE);
 
-				if ($stream->isCurrent(';')) {
-					$blockOpener .= $stream->consumeTokenAsText(';');
+				if ($parser->isCurrent(';')) {
+					$blockOpener .= $parser->consumeTokenAsText(';');
 
-				} elseif ($stream->isCurrent('{')) {
-					$blockOpener .= $stream->consumeTokenAsText('{');
+				} elseif ($parser->isCurrent('{')) {
+					$blockOpener .= $parser->consumeTokenAsText('{');
 					$inBrackets = TRUE;
 
 				} else {
-					$stream->unknowToken('Broken namespace definition');
+					$parser->unknowToken('Broken namespace definition');
 				}
 			}
 
 			// namespace body
 			$blockCloser = '';
 
-			while ($stream->hasToken()) {
+			while ($parser->hasToken()) {
 				$child = NULL;
 
-				if ($stream->isCurrent(T_CLOSE_TAG)) {
+				if ($parser->isCurrent(T_CLOSE_TAG)) {
 					break;
 
-				} elseif (!$inBrackets && $stream->isCurrent(T_NAMESPACE)) {
+				} elseif (!$inBrackets && $parser->isCurrent(T_NAMESPACE)) {
 					break;
 
-				} elseif ($stream->isCurrent(T_CLASS, T_TRAIT, T_INTERFACE)) {
-					$buffer->consumeUnknow();
+				} elseif ($parser->isCurrent(T_CLASS, T_TRAIT, T_INTERFACE)) {
+					$parser->consumeUnknow();
 
-					while ($stream->hasToken() && !$stream->isCurrent('{', ';')) {
-						$buffer->consumeUnknow();
+					while ($parser->hasToken() && !$parser->isCurrent('{', ';')) {
+						$parser->consumeUnknow();
 					}
 
-				} elseif ($stream->isCurrent(T_NEW)) {
-					$buffer->consumeUnknow();
+				} elseif ($parser->isCurrent(T_NEW)) {
+					$parser->consumeUnknow();
 
-					while ($stream->hasToken() && !$stream->isCurrent('(', ';')) {
-						$buffer->consumeUnknow();
+					while ($parser->hasToken() && !$parser->isCurrent('(', ';')) {
+						$parser->consumeUnknow();
 					}
 				}
 
-				$buffer->onChild($child);
+				$parser->onChild($child);
 			}
 
-			$buffer->close();
+			$parser->close();
 
 			return new self(
-				$indentation,
+				$parser->getNodeIndentation(),
 				$keyword,
 				$name,
 				$blockOpener,
-				$buffer->getChildren(),
+				$parser->getChildren(),
 				$blockCloser
 			);
 		}
