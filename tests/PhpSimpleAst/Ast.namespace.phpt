@@ -19,11 +19,29 @@ test('Php.class-namespace', function () use ($astParser) {
 				new Ast\Name(' ', 'Foo\\Bar'),
 				';',
 				[
-					new Ast\UnknowNode(
-						"\n\nclass MyClass {}"
-						. "\n\nclass MyClass2 extends namespace\MyParent implements namespace\MyInterface {"
-						. "\n\n}\n"
-					)
+					new Ast\ClassNode(
+						"\n\n",
+						'class',
+						new Ast\Name(' ', 'MyClass'),
+						NULL,
+						NULL,
+						' {',
+						[],
+						'}'
+					),
+					new Ast\ClassNode(
+						"\n\n",
+						'class',
+						new Ast\Name(' ', 'MyClass2'),
+						new Ast\ObjectExtends(' ', 'extends', new Ast\Name(' ', 'namespace\\MyParent')),
+						new Ast\ObjectImplements(' ', 'implements', [
+							new Ast\Name(' ', 'namespace\\MyInterface'),
+						]),
+						' {',
+						[],
+						"\n\n}"
+					),
+					new Ast\UnknowNode("\n"),
 				],
 				''
 			),
@@ -43,11 +61,18 @@ test('Php.multi-ns.2', function () use ($astParser) {
 				new Ast\Name(' ', 'NFirst'),
 				';',
 				[
-					new Ast\UnknowNode(
-						"\n\tclass MyClass implements MyInterface"
-						. "\n\t{"
-						. "\n\t}"
-					)
+					new Ast\ClassNode(
+						"\n\t",
+						'class',
+						new Ast\Name(' ', 'MyClass'),
+						NULL,
+						new Ast\ObjectImplements(' ', 'implements', [
+							new Ast\Name(' ', 'MyInterface'),
+						]),
+						"\n\t{",
+						[],
+						"\n\t}"
+					),
 				],
 				''
 			),
@@ -57,11 +82,16 @@ test('Php.multi-ns.2', function () use ($astParser) {
 				new Ast\Name(' ', 'NSecond'),
 				';',
 				[
-					new Ast\UnknowNode(
-						"\n\tclass MyClass2 extends NThird\ParentClass"
-						. "\n\t{"
-						. "\n\t}"
-					)
+					new Ast\ClassNode(
+						"\n\t",
+						'class',
+						new Ast\Name(' ', 'MyClass2'),
+						new Ast\ObjectExtends(' ', 'extends', new Ast\Name(' ', 'NThird\\ParentClass')),
+						NULL,
+						"\n\t{",
+						[],
+						"\n\t}"
+					),
 				],
 				''
 			),
@@ -74,11 +104,20 @@ test('Php.multi-ns.2', function () use ($astParser) {
 					new Ast\UnknowNode(
 						"\n\tuse NS4\NS5\NS6;"
 						. "\n\tuse NS4\NS5\NS7 as NS9;"
-						. "\n\n\tclass MyClass3 extends NS9\ParentClass implements NS6\FooInterface"
-						. "\n\t{"
-						. "\n\t}"
-						. "\n"
-					)
+					),
+					new Ast\ClassNode(
+						"\n\n\t",
+						'class',
+						new Ast\Name(' ', 'MyClass3'),
+						new Ast\ObjectExtends(' ', 'extends', new Ast\Name(' ', 'NS9\\ParentClass')),
+						new Ast\ObjectImplements(' ', 'implements', [
+							new Ast\Name(' ', 'NS6\\FooInterface'),
+						]),
+						"\n\t{",
+						[],
+						"\n\t}"
+					),
+					new Ast\UnknowNode("\n"),
 				],
 				''
 			),

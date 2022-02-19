@@ -135,6 +135,16 @@
 
 
 		/**
+		 * @param  int|string ...$types
+		 * @return void
+		 */
+		public function consumeAsIndentation(...$types)
+		{
+			$this->addIndentation($this->stream->consumeTokenAsText(...$types));
+		}
+
+
+		/**
 		 * @return void
 		 */
 		public function consumeWhitespace()
@@ -158,6 +168,24 @@
 		public function consumeUnknow()
 		{
 			$this->addUnknowContent($this->stream->consumeAnythingAsText());
+		}
+
+
+		/**
+		 * @return void
+		 */
+		public function consumeAsUnknowContent(...$types)
+		{
+			$this->addUnknowContent($this->stream->consumeTokenAsText(...$types));
+		}
+
+
+		/**
+		 * @return void
+		 */
+		public function tryConsumeAsUnknowContent(...$types)
+		{
+			$this->addUnknowContent($this->stream->tryConsumeTokenAsText(...$types));
 		}
 
 

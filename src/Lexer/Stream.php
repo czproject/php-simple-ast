@@ -122,6 +122,17 @@
 
 
 		/**
+		 * @param  int|string ...$type
+		 * @return string
+		 */
+		public function tryConsumeTokenAsText(...$types)
+		{
+			$token = $this->tryConsumeToken(...$types);
+			return $token !== NULL ? $token->toString() : '';
+		}
+
+
+		/**
 		 * @param  int|string ...$types
 		 * @return IToken[]
 		 */

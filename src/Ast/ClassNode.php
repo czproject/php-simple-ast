@@ -3,7 +3,7 @@
 	namespace CzProject\PhpSimpleAst\Ast;
 
 
-	class NamespaceNode implements INode
+	class ClassNode implements INode
 	{
 		/** @var string */
 		private $indentation;
@@ -13,6 +13,12 @@
 
 		/** @var Name|NULL */
 		private $name;
+
+		/** @var ObjectExtends|NULL */
+		private $extends;
+
+		/** @var ObjectImplements|NULL */
+		private $implements;
 
 		/** @var string */
 		private $blockOpener;
@@ -35,6 +41,8 @@
 			$indentation,
 			$keyword,
 			Name $name = NULL,
+			ObjectExtends $extends = NULL,
+			ObjectImplements $implements = NULL,
 			$blockOpener,
 			array $children,
 			$blockCloser
@@ -43,6 +51,8 @@
 			$this->indentation = $indentation;
 			$this->keyword = $keyword;
 			$this->name = $name;
+			$this->extends = $extends;
+			$this->implements = $implements;
 			$this->blockOpener = $blockOpener;
 			$this->children = $children;
 			$this->blockCloser = $blockCloser;
@@ -76,6 +86,14 @@
 				$s .= $this->name->toString();
 			}
 
+			if ($this->extends !== NULL) {
+				$s .= $this->extends->toString();
+			}
+
+			if ($this->implements !== NULL) {
+				$s .= $this->implements->toString();
+			}
+
 			$s .= $this->blockOpener;
 
 			foreach ($this->children as $child) {
@@ -91,31 +109,30 @@
 		 */
 		public static function parse(NodeParser $parser)
 		{
-			$keyword = $parser->consumeTokenAsText(T_NAMESPACE);
+			$keyword = $parser->consumeTokenAsText(T_CLASS);
 			$parser->consumeWhitespace();
 			$name = NULL;
+			$extends = NULL;
+			$implements = NULL;
 			$blockOpener = '';
-			$inBrackets = FALSE;
 
-			if ($parser->isCurrent('{')) { // global namespace
-				$blockOpener = $parser->flushIndentation() . $parser->consumeTokenAsText('{');
-				$inBrackets = TRUE;
-
-			} else { // named namespace
+			if ($parser->isCurrent(T_STRING)) { // class name
 				$name = Name::parse($parser->createSubParser());
-				$blockOpener = $parser->tryConsumeAllTokensAsText(T_WHITESPACE);
-
-				if ($parser->isCurrent(';')) {
-					$blockOpener .= $parser->consumeTokenAsText(';');
-
-				} elseif ($parser->isCurrent('{')) {
-					$blockOpener .= $parser->consumeTokenAsText('{');
-					$inBrackets = TRUE;
-
-				} else {
-					$parser->unknowToken('Broken namespace definition');
-				}
+				$parser->tryConsumeWhitespace();
 			}
+
+			if ($parser->isCurrent(T_EXTENDS)) {
+				$extends = ObjectExtends::parse($parser->createSubParser());
+				$parser->tryConsumeWhitespace();
+			}
+
+			if ($parser->isCurrent(T_IMPLEMENTS)) {
+				$implements = ObjectImplements::parse($parser->createSubParser());
+			}
+
+			$parser->tryConsumeWhitespace();
+			$blockOpener = $parser->flushIndentation() . $parser->consumeTokenAsText('{');
+			$parser->tryConsumeWhitespace();
 
 			// namespace body
 			$blockCloser = '';
@@ -123,32 +140,9 @@
 			while ($parser->hasToken()) {
 				$child = NULL;
 
-				if ($parser->isCurrent(T_CLOSE_TAG)) {
+				if ($parser->isCurrent('}')) {
+					$blockCloser = $parser->flushIndentation() . $parser->consumeTokenAsText('}');
 					break;
-
-				} elseif (!$inBrackets && $parser->isCurrent(T_NAMESPACE)) {
-					break;
-
-				} elseif ($parser->isCurrent(T_DOUBLE_COLON)) { // static call or property/constant
-					$parser->consumeAsUnknowContent(T_DOUBLE_COLON);
-					$parser->tryConsumeAsUnknowContent(T_CLASS);
-
-				} elseif ($parser->isCurrent(T_CLASS)) {
-					$child = ClassNode::parse($parser->createSubParser());
-
-				} elseif ($parser->isCurrent(T_TRAIT, T_INTERFACE)) {
-					$parser->consumeUnknow();
-
-					while ($parser->hasToken() && !$parser->isCurrent('{', ';')) {
-						$parser->consumeUnknow();
-					}
-
-				} elseif ($parser->isCurrent(T_NEW)) {
-					$parser->consumeUnknow();
-
-					while ($parser->hasToken() && !$parser->isCurrent('(', ';')) {
-						$parser->consumeUnknow();
-					}
 				}
 
 				$parser->onChild($child);
@@ -160,6 +154,8 @@
 				$parser->getNodeIndentation(),
 				$keyword,
 				$name,
+				$extends,
+				$implements,
 				$blockOpener,
 				$parser->getChildren(),
 				$blockCloser
