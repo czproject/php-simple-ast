@@ -194,9 +194,9 @@
 		 * @return never
 		 * @throws \CzProject\PhpSimpleAst\InvalidStateException
 		 */
-		public function unknowToken($msg = NULL)
+		public function errorUnknowToken($msg = NULL)
 		{
-			$this->stream->unknowToken($msg);
+			$this->stream->errorUnknowToken($msg);
 		}
 
 

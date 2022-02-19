@@ -113,7 +113,7 @@
 					$inBrackets = TRUE;
 
 				} else {
-					$parser->unknowToken('Broken namespace definition');
+					$parser->errorUnknowToken('Broken namespace definition');
 				}
 			}
 

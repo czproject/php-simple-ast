@@ -45,7 +45,7 @@
 					$children[] = PhpNode::parse($parser->createSubParser());
 
 				} else {
-					$parser->unknowToken();
+					$parser->errorUnknowToken();
 				}
 			}
 
