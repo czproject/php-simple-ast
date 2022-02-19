@@ -76,11 +76,17 @@
 			$name = '';
 
 			if (PHP_VERSION_ID >= 80000) {
-				if ($parser->isCurrent(T_STRING, T_NAME_QUALIFIED, T_NAME_FULLY_QUALIFIED)) {
-					$name = $parser->consumeTokenAsText(T_STRING, T_NAME_QUALIFIED, T_NAME_FULLY_QUALIFIED);
+				if ($parser->isCurrent(T_STRING, T_NAME_QUALIFIED, T_NAME_FULLY_QUALIFIED, T_NAME_RELATIVE)) {
+					$name = $parser->consumeTokenAsText(T_STRING, T_NAME_QUALIFIED, T_NAME_FULLY_QUALIFIED, T_NAME_RELATIVE);
 				}
 
 			} else {
+				if ($parser->isCurrent(T_NAMESPACE)) { // old T_NAME_RELATIVE
+					$name .= $parser->consumeTokenAsText(T_NAMESPACE);
+					$parser->tryConsumeWhitespace();
+					$name .= $parser->consumeAllTokensAsText(T_NS_SEPARATOR);
+				}
+
 				if ($parser->isCurrent(T_STRING)) {
 					$name .= $parser->consumeTokenAsText(T_STRING);
 				}
