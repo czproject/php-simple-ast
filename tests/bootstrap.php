@@ -1,5 +1,7 @@
 <?php
 
+use CzProject\PhpSimpleAst\Ast;
+
 require __DIR__ . '/../vendor/autoload.php';
 
 Tester\Environment::setup();
@@ -8,6 +10,25 @@ Tester\Environment::setup();
 function test($caption, $cb)
 {
 	$cb();
+}
+
+
+class Tests
+{
+	/**
+	 * @return void
+	 */
+	public static function equalAst(Ast\INode $expected, Ast\INode $actual)
+	{
+		$options = [
+			\Tracy\Dumper::HASH => FALSE,
+		];
+
+		Tester\Assert::same(
+			\Tracy\Dumper::toText($expected, $options),
+			\Tracy\Dumper::toText($actual, $options)
+		);
+	}
 }
 
 

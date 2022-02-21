@@ -11,7 +11,7 @@ $astParser = new AstParser;
 test('Php.class-namespace', function () use ($astParser) {
 	$node = $astParser->parseString(Fixtures::load('Php.class-namespace.php'));
 
-	Assert::equal(new Ast\PhpString([
+	Tests::equalAst(new Ast\PhpString([
 		new Ast\PhpNode("<?php\n", [
 			new Ast\NamespaceNode(
 				"\n",
@@ -53,7 +53,7 @@ test('Php.class-namespace', function () use ($astParser) {
 test('Php.multi-ns.2', function () use ($astParser) {
 	$node = $astParser->parseString(Fixtures::load('Php.multi-ns.2.php'));
 
-	Assert::equal(new Ast\PhpString([
+	Tests::equalAst(new Ast\PhpString([
 		new Ast\PhpNode("<?php\n", [
 			new Ast\NamespaceNode(
 				'',
