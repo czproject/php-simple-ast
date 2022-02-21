@@ -13,21 +13,19 @@
 		/** @var string */
 		private $keyword;
 
-		/** @var Name[] */
+		/** @var Names */
 		private $implements;
 
 
 		/**
 		 * @param string $indentation
 		 * @param string $keyword
-		 * @param Name[] $implements
 		 */
-		public function __construct($indentation, $keyword, array $implements)
+		public function __construct($indentation, $keyword, Names $implements)
 		{
 			Assert::string($indentation);
 			Assert::string($keyword);
 			Assert::true($keyword !== '');
-			Assert::true(count($implements) > 0, 'Implements cannot be empty.');
 
 			$this->indentation = $indentation;
 			$this->keyword = $keyword;
@@ -46,13 +44,7 @@
 
 		public function toString()
 		{
-			$s = $this->indentation . $this->keyword;
-
-			foreach ($this->implements as $implement) {
-				$s .= $implement->toString();
-			}
-
-			return $s;
+			return $this->indentation . $this->keyword . $this->implements->toString();
 		}
 
 
@@ -63,16 +55,7 @@
 		{
 			$keyword = $parser->consumeTokenAsText(T_IMPLEMENTS);
 			$parser->consumeWhitespace();
-			$implements[] = Name::parse($parser->createSubParser());
-			$parser->tryConsumeWhitespace();
-
-			while ($parser->isCurrent(',')) {
-				$parser->consumeAsIndentation(',');
-				$parser->tryConsumeWhitespace();
-				$implements[] = Name::parse($parser->createSubParser());
-				$parser->tryConsumeWhitespace();
-			}
-
+			$implements = Names::parse($parser->createSubParser());
 			$parser->close();
 			return new self($parser->getNodeIndentation(), $keyword, $implements);
 		}

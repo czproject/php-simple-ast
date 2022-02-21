@@ -34,9 +34,9 @@ test('Php.class-namespace', function () use ($astParser) {
 						'class',
 						new Ast\Name(' ', 'MyClass2'),
 						new Ast\ObjectExtends(' ', 'extends', new Ast\Name(' ', 'namespace\\MyParent')),
-						new Ast\ObjectImplements(' ', 'implements', [
-							new Ast\Name(' ', 'namespace\\MyInterface'),
-						]),
+						new Ast\ObjectImplements(' ', 'implements', new Ast\Names(' ', [
+							new Ast\Name('', 'namespace\\MyInterface'),
+						])),
 						' {',
 						[],
 						"\n\n}"
@@ -66,9 +66,9 @@ test('Php.multi-ns.2', function () use ($astParser) {
 						'class',
 						new Ast\Name(' ', 'MyClass'),
 						NULL,
-						new Ast\ObjectImplements(' ', 'implements', [
-							new Ast\Name(' ', 'MyInterface'),
-						]),
+						new Ast\ObjectImplements(' ', 'implements', new Ast\Names(' ', [
+							new Ast\Name('', 'MyInterface'),
+						])),
 						"\n\t{",
 						[],
 						"\n\t}"
@@ -110,9 +110,9 @@ test('Php.multi-ns.2', function () use ($astParser) {
 						'class',
 						new Ast\Name(' ', 'MyClass3'),
 						new Ast\ObjectExtends(' ', 'extends', new Ast\Name(' ', 'NS9\\ParentClass')),
-						new Ast\ObjectImplements(' ', 'implements', [
-							new Ast\Name(' ', 'NS6\\FooInterface'),
-						]),
+						new Ast\ObjectImplements(' ', 'implements', new Ast\Names(' ', [
+							new Ast\Name('', 'NS6\\FooInterface'),
+						])),
 						"\n\t{",
 						[],
 						"\n\t}"
