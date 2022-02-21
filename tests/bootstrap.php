@@ -77,6 +77,12 @@ class Fixtures
 				continue;
 			}
 
+			$phpVersion = self::extractPhpVersion($entry);
+
+			if ($phpVersion !== NULL && PHP_VERSION_ID < $phpVersion) {
+				continue;
+			}
+
 			$entryPath = $basePath . ($basePath !== '' ? '/' : '') . $entry;
 			$realPath = self::path($entryPath);
 
@@ -91,5 +97,21 @@ class Fixtures
 		}
 
 		return $res;
+	}
+
+
+	/**
+	 * @param  string $entryName
+	 * @return int|NULL
+	 */
+	private static function extractPhpVersion($entryName)
+	{
+		$phpVersion = \Nette\Utils\Strings::before($entryName, '.');
+
+		if (is_string($phpVersion) && \Nette\Utils\Validators::isNumericInt($phpVersion)) {
+			return (int) $phpVersion;
+		}
+
+		return NULL;
 	}
 }
