@@ -39,19 +39,7 @@ class Fixtures
 	 */
 	public static function getAll()
 	{
-		$res = [];
-
-		foreach (scandir(__DIR__ . '/PhpSimpleAst/fixtures/') as $entry) {
-			if ($entry === '.' || $entry === '..') {
-				continue;
-			}
-
-			if (is_file(self::path($entry))) {
-				$res[] = $entry;
-			}
-		}
-
-		return $res;
+		return self::getAllFromDirectory('');
 	}
 
 
@@ -72,5 +60,36 @@ class Fixtures
 	public static function load($entry)
 	{
 		return file_get_contents(self::path($entry));
+	}
+
+
+	/**
+	 * @param  string $basePath
+	 * @return string[]
+	 */
+	private static function getAllFromDirectory($basePath = '')
+	{
+		$directory = self::path($basePath);
+		$res = [];
+
+		foreach (scandir($directory) as $entry) {
+			if ($entry === '.' || $entry === '..') {
+				continue;
+			}
+
+			$entryPath = $basePath . ($basePath !== '' ? '/' : '') . $entry;
+			$realPath = self::path($entryPath);
+
+			if (is_file($realPath)) {
+				$res[] = $entryPath;
+
+			} elseif (is_dir($realPath)) {
+				foreach (self::getAllFromDirectory($entryPath) as $subEntryPath) {
+					$res[] = $subEntryPath;
+				}
+			}
+		}
+
+		return $res;
 	}
 }
