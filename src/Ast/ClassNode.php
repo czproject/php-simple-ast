@@ -143,6 +143,25 @@
 				if ($parser->isCurrent('}')) {
 					$blockCloser = $parser->flushIndentation() . $parser->consumeTokenAsText('}');
 					break;
+
+				} elseif ($parser->isCurrent(T_PUBLIC, T_PROTECTED, T_PRIVATE, T_STATIC, T_ABSTRACT, T_FINAL)) {
+					$flags = Flags::parse($parser->createSubParser());
+
+					if ($parser->isCurrent(T_FUNCTION)) {
+						$child = MethodNode::parse($flags, $parser->createSubParser());
+
+					} else {
+						$parser->errorUnknowToken();
+					}
+
+				} elseif ($parser->isCurrent(T_FUNCTION)) {
+					$child = MethodNode::parse(Flags::empty($parser->flushIndentation()), $parser->createSubParser());
+
+				} elseif($parser->isCurrent(T_WHITESPACE)) {
+					// nothing
+
+				} else {
+					$parser->errorUnknowToken();
 				}
 
 				$parser->onChild($child);
