@@ -10,13 +10,13 @@
 		/** @var string */
 		private $indentation;
 
-		/** @var Name[] */
+		/** @var NullableName[] */
 		private $names;
 
 
 		/**
 		 * @param string $indentation
-		 * @param Name[] $names
+		 * @param NullableName[] $names
 		 */
 		public function __construct($indentation, array $names)
 		{
@@ -46,13 +46,13 @@
 		public static function parse(NodeParser $parser)
 		{
 			$names = [];
-			$names[] = Name::parse($parser->createSubParser());
+			$names[] = NullableName::parse($parser->createSubParser());
 			$parser->tryConsumeWhitespace();
 
 			while ($parser->isCurrent('&', '|')) {
 				$parser->consumeAsIndentation('&', '|');
 				$parser->tryConsumeWhitespace();
-				$names[] = Name::parse($parser->createSubParser());
+				$names[] = NullableName::parse($parser->createSubParser());
 				$parser->tryConsumeWhitespace();
 			}
 
