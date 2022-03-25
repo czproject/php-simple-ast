@@ -5,7 +5,7 @@
 	use CzProject\Assert\Assert;
 
 
-	class ObjectImplements
+	class ObjectParents
 	{
 		/** @var string */
 		private $indentation;

@@ -17,7 +17,7 @@
 		/** @var ObjectExtends|NULL */
 		private $extends;
 
-		/** @var ObjectImplements|NULL */
+		/** @var ObjectParents|NULL */
 		private $implements;
 
 		/** @var string */
@@ -42,7 +42,7 @@
 			$keyword,
 			Name $name = NULL,
 			ObjectExtends $extends = NULL,
-			ObjectImplements $implements = NULL,
+			ObjectParents $implements = NULL,
 			$blockOpener,
 			array $children,
 			$blockCloser
@@ -127,7 +127,7 @@
 			}
 
 			if ($parser->isCurrent(T_IMPLEMENTS)) {
-				$implements = ObjectImplements::parse($parser->createSubParser());
+				$implements = ObjectParents::parse($parser->createSubParser());
 			}
 
 			$parser->tryConsumeWhitespace();
