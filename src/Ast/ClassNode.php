@@ -14,7 +14,7 @@
 		/** @var Name|NULL */
 		private $name;
 
-		/** @var ObjectExtends|NULL */
+		/** @var ObjectParent|NULL */
 		private $extends;
 
 		/** @var ObjectParents|NULL */
@@ -41,7 +41,7 @@
 			$indentation,
 			$keyword,
 			Name $name = NULL,
-			ObjectExtends $extends = NULL,
+			ObjectParent $extends = NULL,
 			ObjectParents $implements = NULL,
 			$blockOpener,
 			array $children,
@@ -122,7 +122,7 @@
 			}
 
 			if ($parser->isCurrent(T_EXTENDS)) {
-				$extends = ObjectExtends::parse($parser->createSubParser());
+				$extends = ObjectParent::parse($parser->createSubParser());
 				$parser->tryConsumeWhitespace();
 			}
 
