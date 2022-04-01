@@ -12,6 +12,7 @@ test('AST structure', function () {
 	$astParser = new AstParser;
 
 	foreach (Fixtures::getAll() as $entry) {
+		echo $entry, "\n";
 		$content = Fixtures::load($entry);
 		$node = $astParser->parseString($content);
 
