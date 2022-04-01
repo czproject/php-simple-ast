@@ -136,7 +136,10 @@
 				} elseif ($parser->isCurrent(T_CLASS)) {
 					$child = ClassNode::parse($parser->createSubParser());
 
-				} elseif ($parser->isCurrent(T_TRAIT, T_INTERFACE)) {
+				} elseif ($parser->isCurrent(T_INTERFACE)) {
+					$child = InterfaceNode::parse($parser->createSubParser());
+
+				} elseif ($parser->isCurrent(T_TRAIT)) {
 					$parser->consumeUnknow();
 
 					while ($parser->hasToken() && !$parser->isCurrent('{', ';')) {
