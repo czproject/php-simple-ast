@@ -84,6 +84,9 @@
 				} elseif ($parser->isCurrent(T_COMMENT)) {
 					$child = CommentNode::parse($parser->createSubParser());
 
+				} elseif ($parser->isCurrent(T_DOC_COMMENT)) {
+					$child = PhpDocNode::parse($parser->createSubParser());
+
 				// } else {
 					// $parser->consumeUnknow();
 					// continue;
