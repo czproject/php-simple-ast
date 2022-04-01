@@ -16,23 +16,8 @@ Simple PHP-AST.
 composer require czproject/php-simple-ast
 ```
 
-CzProject\Php-simple-ast requires PHP 5.6.0 or later and ....
+CzProject\Php-simple-ast requires PHP 7.2.0 or later.
 
-
-## Usage # OR Tips, Writing tests, ...
-
-``` php
-<?php
-	$git = new Cz\Git\Git;
-	$filename = __DIR__ . '/my-file.txt';
-	file_put_contents($filename, "Lorem ipsum\ndolor\nsit amet");
-
-	if($git->isChanges())
-	{
-		$git->add($filename)
-			->commit('Added a file.');
-	}
-```
 
 ------------------------------
 
