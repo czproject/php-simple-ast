@@ -10,8 +10,8 @@ jobs:
             - uses: actions/checkout@v2
             - uses: shivammathur/setup-php@v2
               with:
-                  php-version: 7.2
+                  php-version: 7.4
                   coverage: none
 
-            - run: composer create-project nette/code-checker temp/code-checker ^3.2 --no-progress
-            - run: php temp/code-checker/src/code-checker.php
+            - run: composer create-project janpecha/code-checker temp/code-checker ^1.0 --no-progress
+            - run: temp/code-checker/code-checker --no-progress
