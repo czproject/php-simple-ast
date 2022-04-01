@@ -42,7 +42,7 @@
 		public function toMethodFlags()
 		{
 			foreach ($this->flags as $flag) {
-				Assert::type($flag, IMethodFlag::class, 'Flag is not IMethodFlag');
+				Assert::type($flag, IMethodFlag::class, 'Flag ' . get_class($flag) . ' is not IMethodFlag');
 			}
 
 			return $this->flags;
@@ -55,7 +55,7 @@
 		public function toPropertyFlags()
 		{
 			foreach ($this->flags as $flag) {
-				Assert::type($flag, IPropertyFlag::class, 'Flag is not IPropertyFlag');
+				Assert::type($flag, IPropertyFlag::class, 'Flag ' . get_class($flag) . ' is not IPropertyFlag');
 			}
 
 			return $this->flags;
