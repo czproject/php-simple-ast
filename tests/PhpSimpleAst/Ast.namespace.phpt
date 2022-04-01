@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use CzProject\PhpSimpleAst\Ast;
 use CzProject\PhpSimpleAst\AstParser;
 use Tester\Assert;

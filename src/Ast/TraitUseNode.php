@@ -1,5 +1,7 @@
 <?php
 
+	declare(strict_types=1);
+
 	namespace CzProject\PhpSimpleAst\Ast;
 
 	use CzProject\Assert\Assert;
