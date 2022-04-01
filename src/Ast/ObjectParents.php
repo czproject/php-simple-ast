@@ -49,11 +49,12 @@
 
 
 		/**
+		 * @param  int|string $keywordToken
 		 * @return self
 		 */
-		public static function parse(NodeParser $parser)
+		public static function parse(NodeParser $parser, $keywordToken)
 		{
-			$keyword = $parser->consumeTokenAsText(T_IMPLEMENTS);
+			$keyword = $parser->consumeTokenAsText($keywordToken);
 			$parser->consumeWhitespace();
 			$implements = Names::parse($parser->createSubParser());
 			$parser->close();

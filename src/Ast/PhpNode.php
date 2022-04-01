@@ -69,6 +69,9 @@
 
 				} elseif ($parser->isCurrent(T_CLASS)) {
 					$child = ClassNode::parse($parser->createSubParser());
+
+				} elseif ($parser->isCurrent(T_INTERFACE)) {
+					$child = InterfaceNode::parse($parser->createSubParser());
 				}
 
 				$parser->onChild($child);

@@ -2,10 +2,8 @@
 
 	namespace CzProject\PhpSimpleAst\Ast;
 
-	use CzProject\Assert\Assert;
 
-
-	class ClassNode implements INode
+	class InterfaceNode implements INode
 	{
 		/** @var string */
 		private $indentation;
@@ -13,17 +11,11 @@
 		/** @var string */
 		private $keyword;
 
-		/** @var Name|NULL */
+		/** @var Name */
 		private $name;
 
-		/** @var Literal|NULL */
-		private $constructorValues;
-
-		/** @var ObjectParent|NULL */
-		private $extends;
-
 		/** @var ObjectParents|NULL */
-		private $implements;
+		private $extends;
 
 		/** @var string */
 		private $blockOpener;
@@ -39,31 +31,23 @@
 		 * @param string $indentation
 		 * @param string $keyword
 		 * @param string $blockOpener
-		 * @param string $children
+		 * @param INode[] $children
 		 * @param string $blockCloser
 		 */
 		public function __construct(
 			$indentation,
 			$keyword,
-			Name $name = NULL,
-			Literal $constructorValues = NULL,
-			ObjectParent $extends = NULL,
-			ObjectParents $implements = NULL,
+			Name $name,
+			ObjectParents $extends = NULL,
 			$blockOpener,
 			array $children,
 			$blockCloser
 		)
 		{
-			if ($name !== NULL) {
-				Assert::null($constructorValues);
-			}
-
 			$this->indentation = $indentation;
 			$this->keyword = $keyword;
 			$this->name = $name;
-			$this->constructorValues = $constructorValues;
 			$this->extends = $extends;
-			$this->implements = $implements;
 			$this->blockOpener = $blockOpener;
 			$this->children = $children;
 			$this->blockCloser = $blockCloser;
@@ -71,21 +55,20 @@
 
 
 		/**
-		 * @return string|NULL
+		 * @return string
 		 */
 		public function getName()
 		{
-			return $this->name !== NULL ? $this->name->getName() : NULL;
+			return $this->name->getName();
 		}
 
 
 		/**
-		 * @param  string|NULL $name
+		 * @param  string $name
 		 * @return void
 		 */
 		public function setName($name)
 		{
-			Assert::true($this->name !== NULL, 'Anonymous class cannot be renamed.');
 			$this->name = Name::fromName($this->name, $name);
 		}
 
@@ -98,16 +81,8 @@
 				$s .= $this->name->toString();
 			}
 
-			if ($this->constructorValues !== NULL) {
-				$s .= $this->constructorValues->toString();
-			}
-
 			if ($this->extends !== NULL) {
 				$s .= $this->extends->toString();
-			}
-
-			if ($this->implements !== NULL) {
-				$s .= $this->implements->toString();
 			}
 
 			$s .= $this->blockOpener;
@@ -125,30 +100,16 @@
 		 */
 		public static function parse(NodeParser $parser)
 		{
-			$keyword = $parser->consumeTokenAsText(T_CLASS);
+			$keyword = $parser->consumeTokenAsText(T_INTERFACE);
 			$parser->tryConsumeWhitespace();
-			$name = NULL;
-			$constructorValues = NULL;
 			$extends = NULL;
-			$implements = NULL;
 			$blockOpener = '';
 
-			if ($parser->isCurrent(T_STRING)) { // class name
-				$name = Name::parse($parser->createSubParser());
-				$parser->tryConsumeWhitespace();
-
-			} elseif ($parser->isCurrent('(')) {
-				$constructorValues = Literal::parseParenthesisExpression($parser->createSubParser());
-				$parser->tryConsumeWhitespace();
-			}
+			$name = Name::parse($parser->createSubParser());
+			$parser->tryConsumeWhitespace();
 
 			if ($parser->isCurrent(T_EXTENDS)) {
-				$extends = ObjectParent::parse($parser->createSubParser());
-				$parser->tryConsumeWhitespace();
-			}
-
-			if ($parser->isCurrent(T_IMPLEMENTS)) {
-				$implements = ObjectParents::parse($parser->createSubParser(), T_IMPLEMENTS);
+				$extends = ObjectParents::parse($parser->createSubParser(), T_EXTENDS);
 			}
 
 			$parser->tryConsumeWhitespace();
@@ -165,14 +126,11 @@
 					$blockCloser = $parser->flushIndentation() . $parser->consumeTokenAsText('}');
 					break;
 
-				} elseif ($parser->isCurrent(T_PUBLIC, T_PROTECTED, T_PRIVATE, T_STATIC, T_ABSTRACT, T_FINAL)) {
+				} elseif ($parser->isCurrent(T_PUBLIC, T_STATIC)) {
 					$flags = Flags::parse($parser->createSubParser());
 
 					if ($parser->isCurrent(T_FUNCTION)) {
 						$child = MethodNode::parse($flags, $parser->createSubParser());
-
-					} elseif ($parser->isCurrent(T_VARIABLE)) {
-						$child = PropertyNode::parse($flags, $parser->createSubParser());
 
 					} else {
 						$parser->errorUnknowToken();
@@ -180,9 +138,6 @@
 
 				} elseif ($parser->isCurrent(T_FUNCTION)) {
 					$child = MethodNode::parse(Flags::empty($parser->flushIndentation()), $parser->createSubParser());
-
-				} elseif ($parser->isCurrent(T_USE)) { // trait
-					$child = TraitUseNode::parse($parser->createSubParser());
 
 				} elseif ($parser->isCurrent(T_COMMENT)) {
 					$child = CommentNode::parse($parser->createSubParser());
@@ -206,9 +161,7 @@
 				$parser->getNodeIndentation(),
 				$keyword,
 				$name,
-				$constructorValues,
 				$extends,
-				$implements,
 				$blockOpener,
 				$parser->getChildren(),
 				$blockCloser
