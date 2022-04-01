@@ -85,7 +85,7 @@
 				$token = $this->tokens->getCurrent();
 				$currentTokenType = $token->getType();
 				$currentTokenText = is_int($currentTokenType) ? (' (text: ' . $token->toString() . ')') : '';
-				$currentTokenLine = ' on line' . $token->getLine();
+				$currentTokenLine = ' on line ' . $token->getLine();
 				$currentToken = $this->formatTokenType($currentTokenType);
 				$expectedToken = $this->formatTokenType(...$types);
 				throw new \CzProject\PhpSimpleAst\InvalidStateException("Invalid token '{$currentToken}'{$currentTokenText}{$currentTokenLine}, expected '{$expectedToken}'.");
@@ -208,7 +208,9 @@
 		 */
 		public function errorUnknowToken($msg = NULL)
 		{
-			throw new \CzProject\PhpSimpleAst\InvalidStateException(($msg !== NULL ? ($msg . ' | ') : '') . 'Unknow token ' . $this->formatTokenType($this->getCurrent()->getType()));
+			$currentToken = $this->getCurrent();
+			$line = ' on line ' . $currentToken->getLine();
+			throw new \CzProject\PhpSimpleAst\InvalidStateException(($msg !== NULL ? ($msg . ' | ') : '') . 'Unknow token ' . $this->formatTokenType($currentToken->getType()) . $line);
 		}
 
 
