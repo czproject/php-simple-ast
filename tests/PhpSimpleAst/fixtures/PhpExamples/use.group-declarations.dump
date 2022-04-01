@@ -2,23 +2,66 @@ CzProject\PhpSimpleAst\Ast\PhpString
    children: array (1)
    |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
    |  |  openTag: '<?php\n'
-   |  |  children: array (1)
-   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  children: array (22)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: ''
+   |  |  |  |  content: '// Group `use` declarations\n'
+   |  |  |  1 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: ''
+   |  |  |  |  content: '// http://php.net/manual/en/language.namespaces.importing.php\n'
+   |  |  |  2 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: string
-   |  |  |  |  |  '// Group `use` declarations\n
-   |  |  |  |  |   // http://php.net/manual/en/language.namespaces.importing.php\n
-   |  |  |  |  |   use some\ns\{ClassA, ClassB, ClassC as C};\n
+   |  |  |  |  |  'use some\ns\{ClassA, ClassB, ClassC as C};\n
    |  |  |  |  |   use function some\ns\{fn_a, fn_b, fn_c};\n
    |  |  |  |  |   use const some\ns\{ConstA, ConstB, ConstC};\n
    |  |  |  |  |   \n
-   |  |  |  |  |   $a = new ClassA; // some\ns\ClassA\n
-   |  |  |  |  |   $a = new ClassB; // some\ns\ClassB\n
-   |  |  |  |  |   $a = new ClassC; // ClassC\n
-   |  |  |  |  |   $a = new C; // some\ns\ClassC\n
-   |  |  |  |  |   $a = new fn_a; // fn_a\n
-   |  |  |  |  |   $a = new fn_b; // fn_b\n
-   |  |  |  |  |   $a = new fn_c; // fn_c\n
-   |  |  |  |  |   $a = new ConstA; // ConstA\n
-   |  |  |  |  |   $a = new ConstB; // ConstB\n
-   |  |  |  |  |   $a = new ConstC; // ConstC\n'
+   |  |  |  |  |   $a = new ClassA;'
+   |  |  |  3 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: ' '
+   |  |  |  |  content: '// some\ns\ClassA\n'
+   |  |  |  4 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: '$a = new ClassB;'
+   |  |  |  5 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: ' '
+   |  |  |  |  content: '// some\ns\ClassB\n'
+   |  |  |  6 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: '$a = new ClassC;'
+   |  |  |  7 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: ' '
+   |  |  |  |  content: '// ClassC\n'
+   |  |  |  8 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: '$a = new C;'
+   |  |  |  9 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: ' '
+   |  |  |  |  content: '// some\ns\ClassC\n'
+   |  |  |  10 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: '$a = new fn_a;'
+   |  |  |  11 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: ' '
+   |  |  |  |  content: '// fn_a\n'
+   |  |  |  12 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: '$a = new fn_b;'
+   |  |  |  13 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: ' '
+   |  |  |  |  content: '// fn_b\n'
+   |  |  |  14 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: '$a = new fn_c;'
+   |  |  |  15 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: ' '
+   |  |  |  |  content: '// fn_c\n'
+   |  |  |  16 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: '$a = new ConstA;'
+   |  |  |  17 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: ' '
+   |  |  |  |  content: '// ConstA\n'
+   |  |  |  18 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: '$a = new ConstB;'
+   |  |  |  19 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: ' '
+   |  |  |  |  content: '// ConstB\n'
+   |  |  |  20 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: '$a = new ConstC;'
+   |  |  |  21 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: ' '
+   |  |  |  |  content: '// ConstC\n'
    |  |  closeTag: null

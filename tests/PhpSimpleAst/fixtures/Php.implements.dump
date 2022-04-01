@@ -3,10 +3,9 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
    |  |  openTag: '<?php\n'
    |  |  children: array (7)
-   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  content: string
-   |  |  |  |  |  '\n
-   |  |  |  |  |   // Basic class & interface definition\n'
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: '\n'
+   |  |  |  |  content: '// Basic class & interface definition\n'
    |  |  |  1 => CzProject\PhpSimpleAst\Ast\InterfaceNode
    |  |  |  |  indentation: ''
    |  |  |  |  keyword: 'interface'

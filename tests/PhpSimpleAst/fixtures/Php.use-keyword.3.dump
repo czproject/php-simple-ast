@@ -3,7 +3,8 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
    |  |  openTag: '<?php\n'
    |  |  children: array (3)
-   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: ''
    |  |  |  |  content: '// conflicts\n'
    |  |  |  1 => CzProject\PhpSimpleAst\Ast\NamespaceNode
    |  |  |  |  indentation: ''

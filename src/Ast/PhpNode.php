@@ -75,6 +75,9 @@
 
 				} elseif ($parser->isCurrent(T_TRAIT)) {
 					$child = TraitNode::parse($parser->createSubParser());
+
+				} elseif ($parser->isCurrent(T_COMMENT)) {
+					$child = CommentNode::parse($parser->createSubParser());
 				}
 
 				$parser->onChild($child);

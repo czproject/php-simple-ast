@@ -2,12 +2,14 @@ CzProject\PhpSimpleAst\Ast\PhpString
    children: array (1)
    |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
    |  |  openTag: '<?php\n'
-   |  |  children: array (6)
-   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  content: string
-   |  |  |  |  |  '// Example #5 Conflict Resolution\n
-   |  |  |  |  |   // http://www.php.net/manual/en/language.oop5.traits.php\n'
-   |  |  |  1 => CzProject\PhpSimpleAst\Ast\TraitNode
+   |  |  children: array (7)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: ''
+   |  |  |  |  content: '// Example #5 Conflict Resolution\n'
+   |  |  |  1 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: ''
+   |  |  |  |  content: '// http://www.php.net/manual/en/language.oop5.traits.php\n'
+   |  |  |  2 => CzProject\PhpSimpleAst\Ast\TraitNode
    |  |  |  |  indentation: ''
    |  |  |  |  keyword: 'trait'
    |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
@@ -78,7 +80,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  blockCloser: string
    |  |  |  |  |  '\n
    |  |  |  |  |   }'
-   |  |  |  2 => CzProject\PhpSimpleAst\Ast\TraitNode
+   |  |  |  3 => CzProject\PhpSimpleAst\Ast\TraitNode
    |  |  |  |  indentation: string
    |  |  |  |  |  '\n
    |  |  |  |  |   \n'
@@ -151,7 +153,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  blockCloser: string
    |  |  |  |  |  '\n
    |  |  |  |  |   }'
-   |  |  |  3 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  4 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  indentation: string
    |  |  |  |  |  '\n
    |  |  |  |  |   \n'
@@ -192,7 +194,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  blockCloser: string
    |  |  |  |  |  '\n
    |  |  |  |  |   }'
-   |  |  |  4 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  5 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  indentation: string
    |  |  |  |  |  '\n
    |  |  |  |  |   \n'
@@ -234,6 +236,6 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  blockCloser: string
    |  |  |  |  |  '\n
    |  |  |  |  |   }'
-   |  |  |  5 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  6 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: '\n'
    |  |  closeTag: null

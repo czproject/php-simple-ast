@@ -2,13 +2,19 @@ CzProject\PhpSimpleAst\Ast\PhpString
    children: array (1)
    |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
    |  |  openTag: '<?php\n'
-   |  |  children: array (1)
-   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  children: array (4)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: ''
+   |  |  |  |  content: '// Group `use` declarations\n'
+   |  |  |  1 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: ''
+   |  |  |  |  content: '// http://php.net/manual/en/language.namespaces.importing.php\n'
+   |  |  |  2 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: ''
+   |  |  |  |  content: '// subpath\n'
+   |  |  |  3 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: string
-   |  |  |  |  |  '// Group `use` declarations\n
-   |  |  |  |  |   // http://php.net/manual/en/language.namespaces.importing.php\n
-   |  |  |  |  |   // subpath\n
-   |  |  |  |  |   use A\B\{A, B\C, C as D};\n
+   |  |  |  |  |  'use A\B\{A, B\C, C as D};\n
    |  |  |  |  |   \n
    |  |  |  |  |   $a = new A;\n
    |  |  |  |  |   $a = new C;\n

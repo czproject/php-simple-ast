@@ -2,16 +2,37 @@ CzProject\PhpSimpleAst\Ast\PhpString
    children: array (1)
    |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
    |  |  openTag: '<?php\n'
-   |  |  children: array (1)
-   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  children: array (11)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: ''
+   |  |  |  |  content: '// Group `use` declarations\n'
+   |  |  |  1 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: ''
+   |  |  |  |  content: '// http://php.net/manual/en/language.namespaces.importing.php\n'
+   |  |  |  2 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: ''
+   |  |  |  |  content: '// spaces\n'
+   |  |  |  3 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: string
-   |  |  |  |  |  '// Group `use` declarations\n
-   |  |  |  |  |   // http://php.net/manual/en/language.namespaces.importing.php\n
-   |  |  |  |  |   // spaces\n
-   |  |  |  |  |   use some\ns\{ ClassA, ClassB, ClassC as C };\n
+   |  |  |  |  |  'use some\ns\{ ClassA, ClassB, ClassC as C };\n
    |  |  |  |  |   \n
-   |  |  |  |  |   $a = new ClassA; // some\ns\ClassA\n
-   |  |  |  |  |   $a = new ClassB; // some\ns\ClassB\n
-   |  |  |  |  |   $a = new ClassC; // ClassC\n
-   |  |  |  |  |   $a = new C; // some\ns\ClassC\n'
+   |  |  |  |  |   $a = new ClassA;'
+   |  |  |  4 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: ' '
+   |  |  |  |  content: '// some\ns\ClassA\n'
+   |  |  |  5 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: '$a = new ClassB;'
+   |  |  |  6 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: ' '
+   |  |  |  |  content: '// some\ns\ClassB\n'
+   |  |  |  7 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: '$a = new ClassC;'
+   |  |  |  8 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: ' '
+   |  |  |  |  content: '// ClassC\n'
+   |  |  |  9 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: '$a = new C;'
+   |  |  |  10 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: ' '
+   |  |  |  |  content: '// some\ns\ClassC\n'
    |  |  closeTag: null

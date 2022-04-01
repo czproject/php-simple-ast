@@ -2,12 +2,14 @@ CzProject\PhpSimpleAst\Ast\PhpString
    children: array (1)
    |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
    |  |  openTag: '<?php\n'
-   |  |  children: array (2)
-   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  content: string
-   |  |  |  |  |  '// Example #1\n
-   |  |  |  |  |   // http://php.net/manual/en/language.namespaces.importing.php\n'
-   |  |  |  1 => CzProject\PhpSimpleAst\Ast\NamespaceNode
+   |  |  children: array (3)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: ''
+   |  |  |  |  content: '// Example #1\n'
+   |  |  |  1 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: ''
+   |  |  |  |  content: '// http://php.net/manual/en/language.namespaces.importing.php\n'
+   |  |  |  2 => CzProject\PhpSimpleAst\Ast\NamespaceNode
    |  |  |  |  indentation: ''
    |  |  |  |  keyword: 'namespace'
    |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name

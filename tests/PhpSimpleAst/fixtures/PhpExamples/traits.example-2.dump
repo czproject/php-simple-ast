@@ -2,12 +2,14 @@ CzProject\PhpSimpleAst\Ast\PhpString
    children: array (1)
    |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
    |  |  openTag: '<?php\n'
-   |  |  children: array (5)
-   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  content: string
-   |  |  |  |  |  '// Example #2 Precedence Order Example\n
-   |  |  |  |  |   // http://www.php.net/manual/en/language.oop5.traits.php\n'
-   |  |  |  1 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  children: array (6)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: ''
+   |  |  |  |  content: '// Example #2 Precedence Order Example\n'
+   |  |  |  1 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: ''
+   |  |  |  |  content: '// http://www.php.net/manual/en/language.oop5.traits.php\n'
+   |  |  |  2 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  indentation: ''
    |  |  |  |  keyword: 'class'
    |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
@@ -51,7 +53,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  blockCloser: string
    |  |  |  |  |  '\n
    |  |  |  |  |   }'
-   |  |  |  2 => CzProject\PhpSimpleAst\Ast\TraitNode
+   |  |  |  3 => CzProject\PhpSimpleAst\Ast\TraitNode
    |  |  |  |  indentation: string
    |  |  |  |  |  '\n
    |  |  |  |  |   \n'
@@ -95,7 +97,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  blockCloser: string
    |  |  |  |  |  '\n
    |  |  |  |  |   }'
-   |  |  |  3 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  4 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  indentation: string
    |  |  |  |  |  '\n
    |  |  |  |  |   \n'
@@ -129,7 +131,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  blockCloser: string
    |  |  |  |  |  '\n
    |  |  |  |  |   }'
-   |  |  |  4 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  5 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: string
    |  |  |  |  |  '\n
    |  |  |  |  |   \n

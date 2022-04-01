@@ -2,12 +2,14 @@ CzProject\PhpSimpleAst\Ast\PhpString
    children: array (1)
    |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
    |  |  openTag: '<?php\n'
-   |  |  children: array (7)
-   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  content: string
-   |  |  |  |  |  '// Example #6 Changing Method Visibility\n
-   |  |  |  |  |   // http://www.php.net/manual/en/language.oop5.traits.php\n'
-   |  |  |  1 => CzProject\PhpSimpleAst\Ast\TraitNode
+   |  |  children: array (9)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: ''
+   |  |  |  |  content: '// Example #6 Changing Method Visibility\n'
+   |  |  |  1 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: ''
+   |  |  |  |  content: '// http://www.php.net/manual/en/language.oop5.traits.php\n'
+   |  |  |  2 => CzProject\PhpSimpleAst\Ast\TraitNode
    |  |  |  |  indentation: ''
    |  |  |  |  keyword: 'trait'
    |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
@@ -48,12 +50,12 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  blockCloser: string
    |  |  |  |  |  '\n
    |  |  |  |  |   }'
-   |  |  |  2 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  content: string
+   |  |  |  3 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: string
    |  |  |  |  |  '\n
-   |  |  |  |  |   \n
-   |  |  |  |  |   // Change visibility of sayHello\n'
-   |  |  |  3 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  |   \n'
+   |  |  |  |  content: '// Change visibility of sayHello\n'
+   |  |  |  4 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  indentation: ''
    |  |  |  |  keyword: 'class'
    |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
@@ -82,13 +84,15 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  blockCloser: string
    |  |  |  |  |  '\n
    |  |  |  |  |   }'
-   |  |  |  4 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  content: string
+   |  |  |  5 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: string
    |  |  |  |  |  '\n
-   |  |  |  |  |   \n
-   |  |  |  |  |   // Alias method with changed visibility\n
-   |  |  |  |  |   // sayHello visibility not changed\n'
-   |  |  |  5 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  |   \n'
+   |  |  |  |  content: '// Alias method with changed visibility\n'
+   |  |  |  6 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: ''
+   |  |  |  |  content: '// sayHello visibility not changed\n'
+   |  |  |  7 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  indentation: ''
    |  |  |  |  keyword: 'class'
    |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
@@ -117,6 +121,6 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  blockCloser: string
    |  |  |  |  |  '\n
    |  |  |  |  |   }'
-   |  |  |  6 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  8 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: '\n'
    |  |  closeTag: null

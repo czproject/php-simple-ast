@@ -94,12 +94,13 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  blockCloser: string
    |  |  |  |  |  '\n
    |  |  |  |  |   \t    }'
-   |  |  |  3 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  content: string
+   |  |  |  3 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: string
    |  |  |  |  |  '\n
    |  |  |  |  |   \n
    |  |  |  |  |   \n
-   |  |  |  |  |   \t    // Multiple\n'
+   |  |  |  |  |   \t    '
+   |  |  |  |  content: '// Multiple\n'
    |  |  |  4 => CzProject\PhpSimpleAst\Ast\TraitNode
    |  |  |  |  indentation: '\t    '
    |  |  |  |  keyword: 'trait'
@@ -161,12 +162,13 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  blockCloser: string
    |  |  |  |  |  '\n
    |  |  |  |  |   \t    }'
-   |  |  |  7 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  content: string
+   |  |  |  7 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  indentation: string
    |  |  |  |  |  '\n
    |  |  |  |  |   \n
    |  |  |  |  |   \n
-   |  |  |  |  |   \t    // Block { }\n'
+   |  |  |  |  |   \t    '
+   |  |  |  |  content: '// Block { }\n'
    |  |  |  8 => CzProject\PhpSimpleAst\Ast\TraitNode
    |  |  |  |  indentation: '\t    '
    |  |  |  |  keyword: 'trait'
