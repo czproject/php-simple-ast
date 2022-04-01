@@ -5,16 +5,16 @@
 	use CzProject\Assert\Assert;
 
 
-	class FunctionArguments implements IFunctionBody
+	class TraitUseNode implements INode
 	{
 		/** @var string */
 		private $indentation;
 
 		/** @var string */
-		private $opener;
+		private $keyword;
 
-		/** @var FunctionArgument[] */
-		private $arguments;
+		/** @var TraitImport[] */
+		private $imports;
 
 		/** @var string */
 		private $closer;
@@ -22,37 +22,39 @@
 
 		/**
 		 * @param string $indentation
-		 * @param string $opener
-		 * @param string $arguments
+		 * @param string $keyword
+		 * @param TraitImport[] $imports
 		 * @param string $closer
 		 */
 		public function __construct(
 			$indentation,
-			$opener,
-			array $arguments,
+			$keyword,
+			array $imports,
 			$closer
 		)
 		{
 			Assert::string($indentation);
-			Assert::string($opener);
+			Assert::string($keyword);
 			Assert::string($closer);
+			Assert::true($closer === '' || $closer === ';', 'Invalid closer.');
 
 			$this->indentation = $indentation;
-			$this->opener = $opener;
-			$this->arguments = $arguments;
+			$this->keyword = $keyword;
+			$this->imports = $imports;
 			$this->closer = $closer;
 		}
 
 
 		public function toString()
 		{
-			$s = $this->indentation . $this->opener;
+			$s = $this->indentation . $this->keyword;
 
-			foreach ($this->arguments as $argument) {
-				$s .= $argument->toString();
+			foreach ($this->imports as $import) {
+				$s .= $import->toString();
 			}
 
-			return $s . $this->closer;
+			$s .= $this->closer;
+			return $s;
 		}
 
 
@@ -61,27 +63,36 @@
 		 */
 		public static function parse(NodeParser $parser)
 		{
-			$opener = $parser->consumeTokenAsText('(');
+			$keyword = $parser->consumeTokenAsText(T_USE);
+			$parser->consumeWhitespace();
+			$imports = [];
+			$closer = '';
 			$parser->tryConsumeWhitespace();
-			$arguments = [];
 
-			while (!$parser->isCurrent(')')) {
-				$arguments[] = FunctionArgument::parse($parser->createSubParser());
+			do {
+				$imports[] = TraitImport::parse($parser->createSubParser());
 				$parser->tryConsumeWhitespace();
 
 				if ($parser->isCurrent(',')) {
 					$parser->consumeAsIndentation(',');
 					$parser->tryConsumeWhitespace();
+
+				} else {
+					break;
 				}
+
+			} while (TRUE);
+
+			if ($parser->isCurrent(';')) {
+				$closer = $parser->consumeTokenAsText(';');
 			}
 
-			$closer = $parser->flushIndentation() . $parser->consumeTokenAsText(')');
 			$parser->close();
 
 			return new self(
 				$parser->getNodeIndentation(),
-				$opener,
-				$arguments,
+				$keyword,
+				$imports,
 				$closer
 			);
 		}

@@ -1,0 +1,49 @@
+CzProject\PhpSimpleAst\Ast\PhpString
+   children: array (1)
+   |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
+   |  |  openTag: '<?php\n'
+   |  |  children: array (3)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: string
+   |  |  |  |  |  '// Example #10 Static Methods\n
+   |  |  |  |  |   // http://www.php.net/manual/en/language.oop5.traits.php\n
+   |  |  |  |  |   trait StaticExample {\n
+   |  |  |  |  |       public static function doSomething() {\n
+   |  |  |  |  |           return 'Doing something';\n
+   |  |  |  |  |       }\n
+   |  |  |  |  |   }'
+   |  |  |  1 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n'
+   |  |  |  |  keyword: 'class'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'Example'
+   |  |  |  |  constructorValues: null
+   |  |  |  |  extends: null
+   |  |  |  |  implements: null
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (1)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\TraitUseNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |       '
+   |  |  |  |  |  |  keyword: 'use'
+   |  |  |  |  |  |  imports: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\TraitImport
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  name: 'StaticExample'
+   |  |  |  |  |  |  |  |  aliases: null
+   |  |  |  |  |  |  closer: ';'
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   }'
+   |  |  |  2 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   Example::doSomething();\n'
+   |  |  closeTag: null

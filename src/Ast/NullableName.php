@@ -37,7 +37,7 @@
 		public function toString()
 		{
 			if ($this->nullableSign !== '') {
-				return $this->indentation . $this->nullableSign . $this->name;
+				return $this->indentation . $this->nullableSign . $this->name->toString();
 			}
 
 			return $this->indentation . $this->name->getName();

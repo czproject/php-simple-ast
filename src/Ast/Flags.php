@@ -50,6 +50,19 @@
 
 
 		/**
+		 * @return IPropertyFlag[]
+		 */
+		public function toPropertyFlags()
+		{
+			foreach ($this->flags as $flag) {
+				Assert::type($flag, IPropertyFlag::class, 'Flag is not IPropertyFlag');
+			}
+
+			return $this->flags;
+		}
+
+
+		/**
 		 * @param  string $indentation
 		 * @return self
 		 */

@@ -1,0 +1,21 @@
+CzProject\PhpSimpleAst\Ast\PhpString
+   children: array (1)
+   |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
+   |  |  openTag: '<?php\n'
+   |  |  children: array (1)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\NamespaceNode
+   |  |  |  |  indentation: '\n'
+   |  |  |  |  keyword: 'namespace'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'Foo\Bar'
+   |  |  |  |  blockOpener: ';'
+   |  |  |  |  children: array (1)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  |  |  content: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   $foo = new Foo;\n
+   |  |  |  |  |  |  |   $bar = new Bar;\n
+   |  |  |  |  |  |  |   $barfoo = new namespace\BarFoo;\n'
+   |  |  |  |  blockCloser: ''
+   |  |  closeTag: null

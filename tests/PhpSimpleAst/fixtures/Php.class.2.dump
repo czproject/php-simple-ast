@@ -1,0 +1,80 @@
+CzProject\PhpSimpleAst\Ast\PhpString
+   children: array (1)
+   |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
+   |  |  openTag: '<?php\n'
+   |  |  children: array (2)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  indentation: '\t    '
+   |  |  |  |  keyword: 'class'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'Greeting'
+   |  |  |  |  constructorValues: null
+   |  |  |  |  extends: null
+   |  |  |  |  implements: CzProject\PhpSimpleAst\Ast\ObjectParents
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  keyword: 'implements'
+   |  |  |  |  |  implements: CzProject\PhpSimpleAst\Ast\Names
+   |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  names: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  name: 'IGreeting'
+   |  |  |  |  blockOpener: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \t    {'
+   |  |  |  |  children: array (1)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\MethodNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    \t    '
+   |  |  |  |  |  |  flags: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  visibility: 'public'
+   |  |  |  |  |  |  keywordPrefix: ' '
+   |  |  |  |  |  |  keyword: 'function'
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  name: 'say'
+   |  |  |  |  |  |  arguments: CzProject\PhpSimpleAst\Ast\FunctionArguments
+   |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  opener: '('
+   |  |  |  |  |  |  |  arguments: array (1)
+   |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\FunctionArgument
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  type: null
+   |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
+   |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  referenceSign: ''
+   |  |  |  |  |  |  |  |  |  |  referenceSuffix: ''
+   |  |  |  |  |  |  |  |  |  |  name: '$name'
+   |  |  |  |  |  |  |  |  |  defaultValue: null
+   |  |  |  |  |  |  |  closer: ')'
+   |  |  |  |  |  |  returnType: null
+   |  |  |  |  |  |  body: CzProject\PhpSimpleAst\Ast\FunctionBody
+   |  |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |   \t    \t    '
+   |  |  |  |  |  |  |  blockOpener: '{'
+   |  |  |  |  |  |  |  children: array (1)
+   |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  |  |  |  |  |  content: string
+   |  |  |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t    \t    if (!$name) {\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t    \t    \t    throw new InvalidArgumentException('Invalid name');\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t    \t    }\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t    \t    return "Hello $name";'
+   |  |  |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |   \t    \t    }'
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \t    }'
+   |  |  |  1 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   \t    $greeting = new Greeting;\n
+   |  |  |  |  |   \t    $greeting->say('John');\n'
+   |  |  closeTag: null

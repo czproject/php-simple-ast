@@ -1,0 +1,129 @@
+CzProject\PhpSimpleAst\Ast\PhpString
+   children: array (1)
+   |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
+   |  |  openTag: '<?php\n'
+   |  |  children: array (3)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: string
+   |  |  |  |  |  '// Example #8 Express Requirements by Abstract Methods\n
+   |  |  |  |  |   // http://www.php.net/manual/en/language.oop5.traits.php\n
+   |  |  |  |  |   trait Hello {\n
+   |  |  |  |  |       public function sayHelloWorld() {\n
+   |  |  |  |  |           echo 'Hello'.$this->getWorld();\n
+   |  |  |  |  |       }\n
+   |  |  |  |  |       abstract public function getWorld();\n
+   |  |  |  |  |   }'
+   |  |  |  1 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n'
+   |  |  |  |  keyword: 'class'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'MyHelloWorld'
+   |  |  |  |  constructorValues: null
+   |  |  |  |  extends: null
+   |  |  |  |  implements: null
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (4)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\PropertyNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |       '
+   |  |  |  |  |  |  flags: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  visibility: 'private'
+   |  |  |  |  |  |  type: null
+   |  |  |  |  |  |  namePrefix: ' '
+   |  |  |  |  |  |  name: '$world'
+   |  |  |  |  |  |  defaultValue: null
+   |  |  |  |  |  |  closer: ';'
+   |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\TraitUseNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |       '
+   |  |  |  |  |  |  keyword: 'use'
+   |  |  |  |  |  |  imports: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\TraitImport
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  name: 'Hello'
+   |  |  |  |  |  |  |  |  aliases: null
+   |  |  |  |  |  |  closer: ';'
+   |  |  |  |  |  2 => CzProject\PhpSimpleAst\Ast\MethodNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |       '
+   |  |  |  |  |  |  flags: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  visibility: 'public'
+   |  |  |  |  |  |  keywordPrefix: ' '
+   |  |  |  |  |  |  keyword: 'function'
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  name: 'getWorld'
+   |  |  |  |  |  |  arguments: CzProject\PhpSimpleAst\Ast\FunctionArguments
+   |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  opener: '('
+   |  |  |  |  |  |  |  arguments: array (0)
+   |  |  |  |  |  |  |  closer: ')'
+   |  |  |  |  |  |  returnType: null
+   |  |  |  |  |  |  body: CzProject\PhpSimpleAst\Ast\FunctionBody
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  blockOpener: '{'
+   |  |  |  |  |  |  |  children: array (1)
+   |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  |  |  |  |  |  content: string
+   |  |  |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |  |  |           return $this->world;'
+   |  |  |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |       }'
+   |  |  |  |  |  3 => CzProject\PhpSimpleAst\Ast\MethodNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |       '
+   |  |  |  |  |  |  flags: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  visibility: 'public'
+   |  |  |  |  |  |  keywordPrefix: ' '
+   |  |  |  |  |  |  keyword: 'function'
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  name: 'setWorld'
+   |  |  |  |  |  |  arguments: CzProject\PhpSimpleAst\Ast\FunctionArguments
+   |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  opener: '('
+   |  |  |  |  |  |  |  arguments: array (1)
+   |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\FunctionArgument
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  type: null
+   |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
+   |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  referenceSign: ''
+   |  |  |  |  |  |  |  |  |  |  referenceSuffix: ''
+   |  |  |  |  |  |  |  |  |  |  name: '$val'
+   |  |  |  |  |  |  |  |  |  defaultValue: null
+   |  |  |  |  |  |  |  closer: ')'
+   |  |  |  |  |  |  returnType: null
+   |  |  |  |  |  |  body: CzProject\PhpSimpleAst\Ast\FunctionBody
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  blockOpener: '{'
+   |  |  |  |  |  |  |  children: array (1)
+   |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  |  |  |  |  |  content: string
+   |  |  |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |  |  |           $this->world = $val;'
+   |  |  |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |       }'
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   }'
+   |  |  |  2 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: '\n'
+   |  |  closeTag: null

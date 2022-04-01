@@ -1,0 +1,12 @@
+CzProject\PhpSimpleAst\Ast\PhpString
+   children: array (1)
+   |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
+   |  |  openTag: '<?php\n'
+   |  |  children: array (1)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: string
+   |  |  |  |  |  'use function NS\{funcA, funcB};\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   $a = new funcA;\n
+   |  |  |  |  |   $a = new funcB;\n'
+   |  |  closeTag: null

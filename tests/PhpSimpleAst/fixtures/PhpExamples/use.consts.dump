@@ -1,0 +1,12 @@
+CzProject\PhpSimpleAst\Ast\PhpString
+   children: array (1)
+   |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
+   |  |  openTag: '<?php\n'
+   |  |  children: array (1)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: string
+   |  |  |  |  |  '// http://php.net/manual/en/language.namespaces.importing.php\n
+   |  |  |  |  |   use const My\Full\CONSTANT;\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   $a = new CONSTANT;\n'
+   |  |  closeTag: null

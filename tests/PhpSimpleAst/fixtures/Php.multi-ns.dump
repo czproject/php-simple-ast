@@ -1,0 +1,148 @@
+CzProject\PhpSimpleAst\Ast\PhpString
+   children: array (1)
+   |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
+   |  |  openTag: '<?php\n'
+   |  |  children: array (1)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\NamespaceNode
+   |  |  |  |  indentation: ''
+   |  |  |  |  keyword: 'namespace'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'NS1'
+   |  |  |  |  blockOpener: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   {'
+   |  |  |  |  children: array (8)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    '
+   |  |  |  |  |  |  keyword: 'class'
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  name: 'MyClass'
+   |  |  |  |  |  |  constructorValues: null
+   |  |  |  |  |  |  extends: null
+   |  |  |  |  |  |  implements: CzProject\PhpSimpleAst\Ast\ObjectParents
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  keyword: 'implements'
+   |  |  |  |  |  |  |  implements: CzProject\PhpSimpleAst\Ast\Names
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  names: array (1)
+   |  |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  name: 'MyInterface'
+   |  |  |  |  |  |  blockOpener: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    {'
+   |  |  |  |  |  |  children: array (0)
+   |  |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    }'
+   |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  |  |  content: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   }\n
+   |  |  |  |  |  |  |   \n
+   |  |  |  |  |  |  |   namespace NS2\n
+   |  |  |  |  |  |  |   {'
+   |  |  |  |  |  2 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    '
+   |  |  |  |  |  |  keyword: 'class'
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  name: 'MyClass2'
+   |  |  |  |  |  |  constructorValues: null
+   |  |  |  |  |  |  extends: CzProject\PhpSimpleAst\Ast\ObjectParent
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  keyword: 'extends'
+   |  |  |  |  |  |  |  extends: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  name: 'NS3\ParentClass'
+   |  |  |  |  |  |  implements: null
+   |  |  |  |  |  |  blockOpener: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    {'
+   |  |  |  |  |  |  children: array (0)
+   |  |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    }'
+   |  |  |  |  |  3 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  |  |  content: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   }\n
+   |  |  |  |  |  |  |   \n
+   |  |  |  |  |  |  |   namespace NS3\n
+   |  |  |  |  |  |  |   {\n
+   |  |  |  |  |  |  |   \t    use NS4\NS5\NS6;\n
+   |  |  |  |  |  |  |   \t    use NS4\NS5\NS7 as NS9;'
+   |  |  |  |  |  4 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \n
+   |  |  |  |  |  |  |   \t    '
+   |  |  |  |  |  |  keyword: 'class'
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  name: 'MyClass3'
+   |  |  |  |  |  |  constructorValues: null
+   |  |  |  |  |  |  extends: CzProject\PhpSimpleAst\Ast\ObjectParent
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  keyword: 'extends'
+   |  |  |  |  |  |  |  extends: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  name: 'NS9\ParentClass'
+   |  |  |  |  |  |  implements: CzProject\PhpSimpleAst\Ast\ObjectParents
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  keyword: 'implements'
+   |  |  |  |  |  |  |  implements: CzProject\PhpSimpleAst\Ast\Names
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  names: array (1)
+   |  |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  name: 'NS6\FooInterface'
+   |  |  |  |  |  |  blockOpener: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    {'
+   |  |  |  |  |  |  children: array (0)
+   |  |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    }'
+   |  |  |  |  |  5 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  |  |  content: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   }\n
+   |  |  |  |  |  |  |   \n
+   |  |  |  |  |  |  |   namespace # global namespace\n
+   |  |  |  |  |  |  |   {'
+   |  |  |  |  |  6 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    '
+   |  |  |  |  |  |  keyword: 'class'
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  name: 'MyGlobalClass'
+   |  |  |  |  |  |  constructorValues: null
+   |  |  |  |  |  |  extends: CzProject\PhpSimpleAst\Ast\ObjectParent
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  keyword: 'extends'
+   |  |  |  |  |  |  |  extends: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  name: 'NS1\NS3\ParentClass2'
+   |  |  |  |  |  |  implements: null
+   |  |  |  |  |  |  blockOpener: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    {'
+   |  |  |  |  |  |  children: array (0)
+   |  |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    }'
+   |  |  |  |  |  7 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  |  |  content: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   }\n'
+   |  |  |  |  blockCloser: ''
+   |  |  closeTag: null

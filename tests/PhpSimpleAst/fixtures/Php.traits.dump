@@ -1,0 +1,211 @@
+CzProject\PhpSimpleAst\Ast\PhpString
+   children: array (1)
+   |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
+   |  |  openTag: '<?php\n'
+   |  |  children: array (9)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: string
+   |  |  |  |  |  '\t    trait ezcReflectionReturnInfo {\n
+   |  |  |  |  |   \t    }'
+   |  |  |  1 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   \t    '
+   |  |  |  |  keyword: 'class'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'ezcReflectionMethod'
+   |  |  |  |  constructorValues: null
+   |  |  |  |  extends: CzProject\PhpSimpleAst\Ast\ObjectParent
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  keyword: 'extends'
+   |  |  |  |  |  extends: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  name: 'ReflectionMethod'
+   |  |  |  |  implements: null
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (2)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\TraitUseNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    \t    '
+   |  |  |  |  |  |  keyword: 'use'
+   |  |  |  |  |  |  imports: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\TraitImport
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  name: 'ezcReflectionReturnInfo'
+   |  |  |  |  |  |  |  |  aliases: null
+   |  |  |  |  |  |  closer: ';'
+   |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    \t    '
+   |  |  |  |  |  |  content: '/* ... */'
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \t    }'
+   |  |  |  2 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   \t    '
+   |  |  |  |  keyword: 'class'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'ezcReflectionFunction'
+   |  |  |  |  constructorValues: null
+   |  |  |  |  extends: CzProject\PhpSimpleAst\Ast\ObjectParent
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  keyword: 'extends'
+   |  |  |  |  |  extends: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  name: 'ReflectionFunction'
+   |  |  |  |  implements: null
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (2)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\TraitUseNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    \t    '
+   |  |  |  |  |  |  keyword: 'use'
+   |  |  |  |  |  |  imports: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\TraitImport
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  name: 'ezcReflectionReturnInfo'
+   |  |  |  |  |  |  |  |  aliases: null
+   |  |  |  |  |  |  closer: ';'
+   |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    \t    '
+   |  |  |  |  |  |  content: '/* ... */'
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \t    }'
+   |  |  |  3 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   \n
+   |  |  |  |  |   \t    // Multiple\n
+   |  |  |  |  |   \t    trait Hello {\n
+   |  |  |  |  |   \t    }\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   \t    trait World {\n
+   |  |  |  |  |   \t    }'
+   |  |  |  4 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   \t    '
+   |  |  |  |  keyword: 'class'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'MyHelloWorld'
+   |  |  |  |  constructorValues: null
+   |  |  |  |  extends: null
+   |  |  |  |  implements: null
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (1)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\TraitUseNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    \t    '
+   |  |  |  |  |  |  keyword: 'use'
+   |  |  |  |  |  |  imports: array (2)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\TraitImport
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  name: 'Hello'
+   |  |  |  |  |  |  |  |  aliases: null
+   |  |  |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\TraitImport
+   |  |  |  |  |  |  |  |  indentation: ', '
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  name: 'World'
+   |  |  |  |  |  |  |  |  aliases: null
+   |  |  |  |  |  |  closer: ';'
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \t    }'
+   |  |  |  5 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   \n
+   |  |  |  |  |   \t    // Block { }\n
+   |  |  |  |  |   \t    trait HelloWorld {\n
+   |  |  |  |  |   \t    }'
+   |  |  |  6 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   \t    '
+   |  |  |  |  keyword: 'class'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'MyClass1'
+   |  |  |  |  constructorValues: null
+   |  |  |  |  extends: null
+   |  |  |  |  implements: null
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (1)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\TraitUseNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    \t    '
+   |  |  |  |  |  |  keyword: 'use'
+   |  |  |  |  |  |  imports: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\TraitImport
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  name: 'HelloWorld'
+   |  |  |  |  |  |  |  |  aliases: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  |  literal: '{ sayHello as protected; }'
+   |  |  |  |  |  |  closer: ''
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \t    }'
+   |  |  |  7 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   \t    '
+   |  |  |  |  keyword: 'class'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'MyClass2'
+   |  |  |  |  constructorValues: null
+   |  |  |  |  extends: null
+   |  |  |  |  implements: null
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (1)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\TraitUseNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    \t    '
+   |  |  |  |  |  |  keyword: 'use'
+   |  |  |  |  |  |  imports: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\TraitImport
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  name: 'HelloWorld'
+   |  |  |  |  |  |  |  |  aliases: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  |  literal: '{ sayHello as private myPrivateHello; }'
+   |  |  |  |  |  |  closer: ''
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \t    }'
+   |  |  |  8 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: '\n'
+   |  |  closeTag: null

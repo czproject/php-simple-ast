@@ -1,0 +1,81 @@
+CzProject\PhpSimpleAst\Ast\PhpString
+   children: array (1)
+   |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
+   |  |  openTag: '<?php\n'
+   |  |  children: array (4)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: string
+   |  |  |  |  |  '// Example #9 Static Variables\n
+   |  |  |  |  |   // http://www.php.net/manual/en/language.oop5.traits.php\n
+   |  |  |  |  |   trait Counter {\n
+   |  |  |  |  |       public function inc() {\n
+   |  |  |  |  |           static $c = 0;\n
+   |  |  |  |  |           $c = $c + 1;\n
+   |  |  |  |  |           echo "$c\n";\n
+   |  |  |  |  |       }\n
+   |  |  |  |  |   }'
+   |  |  |  1 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n'
+   |  |  |  |  keyword: 'class'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'C1'
+   |  |  |  |  constructorValues: null
+   |  |  |  |  extends: null
+   |  |  |  |  implements: null
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (1)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\TraitUseNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |       '
+   |  |  |  |  |  |  keyword: 'use'
+   |  |  |  |  |  |  imports: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\TraitImport
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  name: 'Counter'
+   |  |  |  |  |  |  |  |  aliases: null
+   |  |  |  |  |  |  closer: ';'
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   }'
+   |  |  |  2 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n'
+   |  |  |  |  keyword: 'class'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'C2'
+   |  |  |  |  constructorValues: null
+   |  |  |  |  extends: null
+   |  |  |  |  implements: null
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (1)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\TraitUseNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |       '
+   |  |  |  |  |  |  keyword: 'use'
+   |  |  |  |  |  |  imports: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\TraitImport
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  name: 'Counter'
+   |  |  |  |  |  |  |  |  aliases: null
+   |  |  |  |  |  |  closer: ';'
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   }'
+   |  |  |  3 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   $o = new C1(); $o->inc(); // echo 1\n
+   |  |  |  |  |   $p = new C2(); $p->inc(); // echo 1\n'
+   |  |  closeTag: null

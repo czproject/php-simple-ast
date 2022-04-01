@@ -1,0 +1,14 @@
+CzProject\PhpSimpleAst\Ast\PhpString
+   children: array (1)
+   |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
+   |  |  openTag: '<?php\n'
+   |  |  children: array (1)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: string
+   |  |  |  |  |  '// Example #2\n
+   |  |  |  |  |   // http://php.net/manual/en/language.namespaces.importing.php\n
+   |  |  |  |  |   use My\Full\Classname as Another, My\Full\NSname;\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   $obj = new Another; // instantiates object of class My\Full\Classname\n
+   |  |  |  |  |   NSname\subns\func(); // calls function My\Full\NSname\subns\func\n'
+   |  |  closeTag: null

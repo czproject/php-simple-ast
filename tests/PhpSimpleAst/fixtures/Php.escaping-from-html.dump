@@ -1,0 +1,52 @@
+CzProject\PhpSimpleAst\Ast\PhpString
+   children: array (12)
+   |  0 => CzProject\PhpSimpleAst\Ast\HtmlNode
+   |  |  text: '<p>This is going to be ignored by PHP and displayed by the browser.</p>\n'
+   |  1 => CzProject\PhpSimpleAst\Ast\PhpNode
+   |  |  openTag: '<?php '
+   |  |  children: array (1)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: 'echo 'While this is going to be parsed.'; '
+   |  |  closeTag: '?>\n'
+   |  2 => CzProject\PhpSimpleAst\Ast\HtmlNode
+   |  |  text: string
+   |  |  |  '<p>This will also be ignored by PHP and displayed by the browser.</p>\n
+   |  |  |   \n'
+   |  3 => CzProject\PhpSimpleAst\Ast\PhpNode
+   |  |  openTag: '<?php '
+   |  |  children: array (1)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: 'if ($expression == true): '
+   |  |  closeTag: '?>\n'
+   |  4 => CzProject\PhpSimpleAst\Ast\HtmlNode
+   |  |  text: '  This will show if the expression is true.\n'
+   |  5 => CzProject\PhpSimpleAst\Ast\PhpNode
+   |  |  openTag: '<?php '
+   |  |  children: array (1)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: 'else: '
+   |  |  closeTag: '?>\n'
+   |  6 => CzProject\PhpSimpleAst\Ast\HtmlNode
+   |  |  text: '  Otherwise this will show.\n'
+   |  7 => CzProject\PhpSimpleAst\Ast\PhpNode
+   |  |  openTag: '<?php '
+   |  |  children: array (1)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: 'endif; '
+   |  |  closeTag: '?>\n'
+   |  8 => CzProject\PhpSimpleAst\Ast\HtmlNode
+   |  |  text: string
+   |  |  |  '\n
+   |  |  |   I have '
+   |  9 => CzProject\PhpSimpleAst\Ast\PhpNode
+   |  |  openTag: '<?='
+   |  |  children: array (1)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: '$foo'
+   |  |  closeTag: '?>'
+   |  10 => CzProject\PhpSimpleAst\Ast\HtmlNode
+   |  |  text: ' foo.\n'
+   |  11 => CzProject\PhpSimpleAst\Ast\PhpNode
+   |  |  openTag: '<?php\n'
+   |  |  children: array (0)
+   |  |  closeTag: null

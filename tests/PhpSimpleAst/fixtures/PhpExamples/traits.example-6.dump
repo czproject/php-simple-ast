@@ -1,0 +1,83 @@
+CzProject\PhpSimpleAst\Ast\PhpString
+   children: array (1)
+   |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
+   |  |  openTag: '<?php\n'
+   |  |  children: array (5)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: string
+   |  |  |  |  |  '// Example #6 Changing Method Visibility\n
+   |  |  |  |  |   // http://www.php.net/manual/en/language.oop5.traits.php\n
+   |  |  |  |  |   trait HelloWorld {\n
+   |  |  |  |  |       public function sayHello() {\n
+   |  |  |  |  |           echo 'Hello World!';\n
+   |  |  |  |  |       }\n
+   |  |  |  |  |   }\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   // Change visibility of sayHello\n'
+   |  |  |  1 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  indentation: ''
+   |  |  |  |  keyword: 'class'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'MyClass1'
+   |  |  |  |  constructorValues: null
+   |  |  |  |  extends: null
+   |  |  |  |  implements: null
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (1)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\TraitUseNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |       '
+   |  |  |  |  |  |  keyword: 'use'
+   |  |  |  |  |  |  imports: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\TraitImport
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  name: 'HelloWorld'
+   |  |  |  |  |  |  |  |  aliases: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  |  literal: '{ sayHello as protected; }'
+   |  |  |  |  |  |  closer: ''
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   }'
+   |  |  |  2 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   // Alias method with changed visibility\n
+   |  |  |  |  |   // sayHello visibility not changed\n'
+   |  |  |  3 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  indentation: ''
+   |  |  |  |  keyword: 'class'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'MyClass2'
+   |  |  |  |  constructorValues: null
+   |  |  |  |  extends: null
+   |  |  |  |  implements: null
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (1)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\TraitUseNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |       '
+   |  |  |  |  |  |  keyword: 'use'
+   |  |  |  |  |  |  imports: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\TraitImport
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  name: 'HelloWorld'
+   |  |  |  |  |  |  |  |  aliases: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  |  literal: '{ sayHello as private myPrivateHello; }'
+   |  |  |  |  |  |  closer: ''
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   }'
+   |  |  |  4 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: '\n'
+   |  |  closeTag: null

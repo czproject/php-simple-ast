@@ -1,0 +1,81 @@
+CzProject\PhpSimpleAst\Ast\PhpString
+   children: array (1)
+   |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
+   |  |  openTag: '<?php\n'
+   |  |  children: array (5)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   // Basic class & interface definition\n
+   |  |  |  |  |   interface IMyInterface\n
+   |  |  |  |  |   {\n
+   |  |  |  |  |   }'
+   |  |  |  1 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n'
+   |  |  |  |  keyword: 'class'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'MyClass'
+   |  |  |  |  constructorValues: null
+   |  |  |  |  extends: null
+   |  |  |  |  implements: CzProject\PhpSimpleAst\Ast\ObjectParents
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  keyword: 'implements'
+   |  |  |  |  |  implements: CzProject\PhpSimpleAst\Ast\Names
+   |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  names: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  name: 'IMyInterface'
+   |  |  |  |  blockOpener: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   {'
+   |  |  |  |  children: array (0)
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   }'
+   |  |  |  2 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   use Foo\Bar;\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   interface IMyInterface extends Bar\FooBar\n
+   |  |  |  |  |   {\n
+   |  |  |  |  |   }'
+   |  |  |  3 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n'
+   |  |  |  |  keyword: 'class'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'MyClass'
+   |  |  |  |  constructorValues: null
+   |  |  |  |  extends: CzProject\PhpSimpleAst\Ast\ObjectParent
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  keyword: 'extends'
+   |  |  |  |  |  extends: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  name: 'Foo\Bar\Object'
+   |  |  |  |  implements: CzProject\PhpSimpleAst\Ast\ObjectParents
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  keyword: 'implements'
+   |  |  |  |  |  implements: CzProject\PhpSimpleAst\Ast\Names
+   |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  names: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  name: 'IMyInterface'
+   |  |  |  |  blockOpener: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   {'
+   |  |  |  |  children: array (0)
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   }'
+   |  |  |  4 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: '\n'
+   |  |  closeTag: null

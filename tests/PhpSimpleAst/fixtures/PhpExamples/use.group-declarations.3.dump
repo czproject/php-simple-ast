@@ -1,0 +1,16 @@
+CzProject\PhpSimpleAst\Ast\PhpString
+   children: array (1)
+   |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
+   |  |  openTag: '<?php\n'
+   |  |  children: array (1)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: string
+   |  |  |  |  |  '// Group `use` declarations\n
+   |  |  |  |  |   // http://php.net/manual/en/language.namespaces.importing.php\n
+   |  |  |  |  |   // subpath\n
+   |  |  |  |  |   use A\B\{A, B\C, C as D};\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   $a = new A;\n
+   |  |  |  |  |   $a = new C;\n
+   |  |  |  |  |   $a = new D;\n'
+   |  |  closeTag: null

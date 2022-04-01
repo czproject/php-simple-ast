@@ -190,6 +190,15 @@
 
 
 		/**
+		 * @return string
+		 */
+		public function consumeAnythingAsText()
+		{
+			return $this->stream->consumeAnythingAsText();
+		}
+
+
+		/**
 		 * @param  string|NULL $msg
 		 * @return never
 		 * @throws \CzProject\PhpSimpleAst\InvalidStateException

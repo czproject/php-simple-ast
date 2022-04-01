@@ -1,0 +1,11 @@
+CzProject\PhpSimpleAst\Ast\PhpString
+   children: array (1)
+   |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
+   |  |  openTag: '<?php\n'
+   |  |  children: array (1)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: string
+   |  |  |  |  |  'use function some\ns\fn_a;\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   $a = new fn_a;\n'
+   |  |  closeTag: null

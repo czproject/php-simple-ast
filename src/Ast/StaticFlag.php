@@ -5,7 +5,7 @@
 	use CzProject\Assert\Assert;
 
 
-	class StaticFlag implements IMethodFlag
+	class StaticFlag implements IMethodFlag, IPropertyFlag
 	{
 		/** @var string */
 		private $indentation;

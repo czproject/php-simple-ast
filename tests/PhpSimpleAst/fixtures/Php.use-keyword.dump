@@ -1,0 +1,36 @@
+CzProject\PhpSimpleAst\Ast\PhpString
+   children: array (1)
+   |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
+   |  |  openTag: '<?php\n'
+   |  |  children: array (3)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: 'use MyNamespace\Sub\SubClass;'
+   |  |  |  1 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n'
+   |  |  |  |  keyword: 'class'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'MyClass'
+   |  |  |  |  constructorValues: null
+   |  |  |  |  extends: null
+   |  |  |  |  implements: CzProject\PhpSimpleAst\Ast\ObjectParents
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  keyword: 'implements'
+   |  |  |  |  |  implements: CzProject\PhpSimpleAst\Ast\Names
+   |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  names: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  name: 'SubClass'
+   |  |  |  |  blockOpener: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   {'
+   |  |  |  |  children: array (0)
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   }'
+   |  |  |  2 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: '\n'
+   |  |  closeTag: null

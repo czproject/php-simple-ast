@@ -1,0 +1,24 @@
+CzProject\PhpSimpleAst\Ast\PhpString
+   children: array (1)
+   |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
+   |  |  openTag: '<?php\n'
+   |  |  children: array (1)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: string
+   |  |  |  |  |  '// Group `use` declarations\n
+   |  |  |  |  |   // http://php.net/manual/en/language.namespaces.importing.php\n
+   |  |  |  |  |   use some\ns\{ClassA, ClassB, ClassC as C};\n
+   |  |  |  |  |   use function some\ns\{fn_a, fn_b, fn_c};\n
+   |  |  |  |  |   use const some\ns\{ConstA, ConstB, ConstC};\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   $a = new ClassA; // some\ns\ClassA\n
+   |  |  |  |  |   $a = new ClassB; // some\ns\ClassB\n
+   |  |  |  |  |   $a = new ClassC; // ClassC\n
+   |  |  |  |  |   $a = new C; // some\ns\ClassC\n
+   |  |  |  |  |   $a = new fn_a; // fn_a\n
+   |  |  |  |  |   $a = new fn_b; // fn_b\n
+   |  |  |  |  |   $a = new fn_c; // fn_c\n
+   |  |  |  |  |   $a = new ConstA; // ConstA\n
+   |  |  |  |  |   $a = new ConstB; // ConstB\n
+   |  |  |  |  |   $a = new ConstC; // ConstC\n'
+   |  |  closeTag: null

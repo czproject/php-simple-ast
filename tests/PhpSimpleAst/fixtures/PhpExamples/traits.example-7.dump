@@ -1,0 +1,61 @@
+CzProject\PhpSimpleAst\Ast\PhpString
+   children: array (1)
+   |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
+   |  |  openTag: '<?php\n'
+   |  |  children: array (3)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: string
+   |  |  |  |  |  '// Example #7 Traits Composed from Traits\n
+   |  |  |  |  |   // http://www.php.net/manual/en/language.oop5.traits.php\n
+   |  |  |  |  |   trait Hello {\n
+   |  |  |  |  |       public function sayHello() {\n
+   |  |  |  |  |           echo 'Hello ';\n
+   |  |  |  |  |       }\n
+   |  |  |  |  |   }\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   trait World {\n
+   |  |  |  |  |       public function sayWorld() {\n
+   |  |  |  |  |           echo 'World!';\n
+   |  |  |  |  |       }\n
+   |  |  |  |  |   }\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   trait HelloWorld {\n
+   |  |  |  |  |       use Hello, World;\n
+   |  |  |  |  |   }'
+   |  |  |  1 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n'
+   |  |  |  |  keyword: 'class'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'MyHelloWorld'
+   |  |  |  |  constructorValues: null
+   |  |  |  |  extends: null
+   |  |  |  |  implements: null
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (1)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\TraitUseNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |       '
+   |  |  |  |  |  |  keyword: 'use'
+   |  |  |  |  |  |  imports: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\TraitImport
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  name: 'HelloWorld'
+   |  |  |  |  |  |  |  |  aliases: null
+   |  |  |  |  |  |  closer: ';'
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   }'
+   |  |  |  2 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   $o = new MyHelloWorld();\n
+   |  |  |  |  |   $o->sayHello();\n
+   |  |  |  |  |   $o->sayWorld();\n'
+   |  |  closeTag: null

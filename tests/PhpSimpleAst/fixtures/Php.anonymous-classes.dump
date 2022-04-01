@@ -1,0 +1,432 @@
+CzProject\PhpSimpleAst\Ast\PhpString
+   children: array (1)
+   |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
+   |  |  openTag: '<?php\n'
+   |  |  children: array (15)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   // http://php.net/manual/en/language.oop5.anonymous.php\n
+   |  |  |  |  |   // Pre PHP 7 code\n'
+   |  |  |  1 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  indentation: ''
+   |  |  |  |  keyword: 'class'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'Logger'
+   |  |  |  |  constructorValues: null
+   |  |  |  |  extends: null
+   |  |  |  |  implements: null
+   |  |  |  |  blockOpener: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   {'
+   |  |  |  |  children: array (1)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\MethodNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    '
+   |  |  |  |  |  |  flags: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  visibility: 'public'
+   |  |  |  |  |  |  keywordPrefix: ' '
+   |  |  |  |  |  |  keyword: 'function'
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  name: 'log'
+   |  |  |  |  |  |  arguments: CzProject\PhpSimpleAst\Ast\FunctionArguments
+   |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  opener: '('
+   |  |  |  |  |  |  |  arguments: array (1)
+   |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\FunctionArgument
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  type: null
+   |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
+   |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  referenceSign: ''
+   |  |  |  |  |  |  |  |  |  |  referenceSuffix: ''
+   |  |  |  |  |  |  |  |  |  |  name: '$msg'
+   |  |  |  |  |  |  |  |  |  defaultValue: null
+   |  |  |  |  |  |  |  closer: ')'
+   |  |  |  |  |  |  returnType: null
+   |  |  |  |  |  |  body: CzProject\PhpSimpleAst\Ast\FunctionBody
+   |  |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |   \t    '
+   |  |  |  |  |  |  |  blockOpener: '{'
+   |  |  |  |  |  |  |  children: array (1)
+   |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  |  |  |  |  |  content: string
+   |  |  |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t    echo $msg;'
+   |  |  |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |   \t    }'
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   }'
+   |  |  |  2 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   $util->setLogger(new Logger());\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   // PHP 7+ code\n
+   |  |  |  |  |   $util->setLogger(new'
+   |  |  |  3 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  indentation: ' '
+   |  |  |  |  keyword: 'class'
+   |  |  |  |  name: null
+   |  |  |  |  constructorValues: null
+   |  |  |  |  extends: null
+   |  |  |  |  implements: null
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (1)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\MethodNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    '
+   |  |  |  |  |  |  flags: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  visibility: 'public'
+   |  |  |  |  |  |  keywordPrefix: ' '
+   |  |  |  |  |  |  keyword: 'function'
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  name: 'log'
+   |  |  |  |  |  |  arguments: CzProject\PhpSimpleAst\Ast\FunctionArguments
+   |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  opener: '('
+   |  |  |  |  |  |  |  arguments: array (1)
+   |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\FunctionArgument
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  type: null
+   |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
+   |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  referenceSign: ''
+   |  |  |  |  |  |  |  |  |  |  referenceSuffix: ''
+   |  |  |  |  |  |  |  |  |  |  name: '$msg'
+   |  |  |  |  |  |  |  |  |  defaultValue: null
+   |  |  |  |  |  |  |  closer: ')'
+   |  |  |  |  |  |  returnType: null
+   |  |  |  |  |  |  body: CzProject\PhpSimpleAst\Ast\FunctionBody
+   |  |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |   \t    '
+   |  |  |  |  |  |  |  blockOpener: '{'
+   |  |  |  |  |  |  |  children: array (1)
+   |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  |  |  |  |  |  content: string
+   |  |  |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t    echo $msg;'
+   |  |  |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |   \t    }'
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   }'
+   |  |  |  4 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: string
+   |  |  |  |  |  ');\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   \n
+   |  |  |  |  |   // example 2\n'
+   |  |  |  5 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  indentation: ''
+   |  |  |  |  keyword: 'class'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'SomeClass'
+   |  |  |  |  constructorValues: null
+   |  |  |  |  extends: null
+   |  |  |  |  implements: null
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (0)
+   |  |  |  |  blockCloser: '}'
+   |  |  |  6 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   interface SomeInterface {}\n
+   |  |  |  |  |   trait SomeTrait {}\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   var_dump(new'
+   |  |  |  7 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  indentation: ' '
+   |  |  |  |  keyword: 'class'
+   |  |  |  |  name: null
+   |  |  |  |  constructorValues: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  indentation: ''
+   |  |  |  |  |  literal: '(10)'
+   |  |  |  |  extends: CzProject\PhpSimpleAst\Ast\ObjectParent
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  keyword: 'extends'
+   |  |  |  |  |  extends: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  name: 'SomeClass'
+   |  |  |  |  implements: CzProject\PhpSimpleAst\Ast\ObjectParents
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  keyword: 'implements'
+   |  |  |  |  |  implements: CzProject\PhpSimpleAst\Ast\Names
+   |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  names: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  name: 'SomeInterface'
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (3)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\PropertyNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    '
+   |  |  |  |  |  |  flags: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  visibility: 'private'
+   |  |  |  |  |  |  type: null
+   |  |  |  |  |  |  namePrefix: ' '
+   |  |  |  |  |  |  name: '$num'
+   |  |  |  |  |  |  defaultValue: null
+   |  |  |  |  |  |  closer: ';'
+   |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\MethodNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \n
+   |  |  |  |  |  |  |   \t    '
+   |  |  |  |  |  |  flags: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  visibility: 'public'
+   |  |  |  |  |  |  keywordPrefix: ' '
+   |  |  |  |  |  |  keyword: 'function'
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  name: '__construct'
+   |  |  |  |  |  |  arguments: CzProject\PhpSimpleAst\Ast\FunctionArguments
+   |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  opener: '('
+   |  |  |  |  |  |  |  arguments: array (1)
+   |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\FunctionArgument
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  type: null
+   |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
+   |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  referenceSign: ''
+   |  |  |  |  |  |  |  |  |  |  referenceSuffix: ''
+   |  |  |  |  |  |  |  |  |  |  name: '$num'
+   |  |  |  |  |  |  |  |  |  defaultValue: null
+   |  |  |  |  |  |  |  closer: ')'
+   |  |  |  |  |  |  returnType: null
+   |  |  |  |  |  |  body: CzProject\PhpSimpleAst\Ast\FunctionBody
+   |  |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |   \t    '
+   |  |  |  |  |  |  |  blockOpener: '{'
+   |  |  |  |  |  |  |  children: array (1)
+   |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  |  |  |  |  |  content: string
+   |  |  |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t    $this->num = $num;'
+   |  |  |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |   \t    }'
+   |  |  |  |  |  2 => CzProject\PhpSimpleAst\Ast\TraitUseNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \n
+   |  |  |  |  |  |  |   \t    '
+   |  |  |  |  |  |  keyword: 'use'
+   |  |  |  |  |  |  imports: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\TraitImport
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  name: 'SomeTrait'
+   |  |  |  |  |  |  |  |  aliases: null
+   |  |  |  |  |  |  closer: ';'
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   }'
+   |  |  |  8 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: string
+   |  |  |  |  |  ');\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   \n
+   |  |  |  |  |   // example 3\n'
+   |  |  |  9 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  indentation: ''
+   |  |  |  |  keyword: 'class'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'Outer'
+   |  |  |  |  constructorValues: null
+   |  |  |  |  extends: null
+   |  |  |  |  implements: null
+   |  |  |  |  blockOpener: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   {'
+   |  |  |  |  children: array (4)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\PropertyNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    '
+   |  |  |  |  |  |  flags: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  visibility: 'private'
+   |  |  |  |  |  |  type: null
+   |  |  |  |  |  |  namePrefix: ' '
+   |  |  |  |  |  |  name: '$prop'
+   |  |  |  |  |  |  defaultValue: CzProject\PhpSimpleAst\Ast\DefaultValue
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  operator: '='
+   |  |  |  |  |  |  |  literal: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  literal: '1'
+   |  |  |  |  |  |  closer: ';'
+   |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\PropertyNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    '
+   |  |  |  |  |  |  flags: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  visibility: 'protected'
+   |  |  |  |  |  |  type: null
+   |  |  |  |  |  |  namePrefix: ' '
+   |  |  |  |  |  |  name: '$prop2'
+   |  |  |  |  |  |  defaultValue: CzProject\PhpSimpleAst\Ast\DefaultValue
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  operator: '='
+   |  |  |  |  |  |  |  literal: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  literal: '2'
+   |  |  |  |  |  |  closer: ';'
+   |  |  |  |  |  2 => CzProject\PhpSimpleAst\Ast\MethodNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \n
+   |  |  |  |  |  |  |   \t    '
+   |  |  |  |  |  |  flags: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  visibility: 'protected'
+   |  |  |  |  |  |  keywordPrefix: ' '
+   |  |  |  |  |  |  keyword: 'function'
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  name: 'func1'
+   |  |  |  |  |  |  arguments: CzProject\PhpSimpleAst\Ast\FunctionArguments
+   |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  opener: '('
+   |  |  |  |  |  |  |  arguments: array (0)
+   |  |  |  |  |  |  |  closer: ')'
+   |  |  |  |  |  |  returnType: null
+   |  |  |  |  |  |  body: CzProject\PhpSimpleAst\Ast\FunctionBody
+   |  |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |   \t    '
+   |  |  |  |  |  |  |  blockOpener: '{'
+   |  |  |  |  |  |  |  children: array (1)
+   |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  |  |  |  |  |  content: string
+   |  |  |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t    return 3;'
+   |  |  |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |   \t    }'
+   |  |  |  |  |  3 => CzProject\PhpSimpleAst\Ast\MethodNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \n
+   |  |  |  |  |  |  |   \t    '
+   |  |  |  |  |  |  flags: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  visibility: 'public'
+   |  |  |  |  |  |  keywordPrefix: ' '
+   |  |  |  |  |  |  keyword: 'function'
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  name: 'func2'
+   |  |  |  |  |  |  arguments: CzProject\PhpSimpleAst\Ast\FunctionArguments
+   |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  opener: '('
+   |  |  |  |  |  |  |  arguments: array (0)
+   |  |  |  |  |  |  |  closer: ')'
+   |  |  |  |  |  |  returnType: null
+   |  |  |  |  |  |  body: CzProject\PhpSimpleAst\Ast\FunctionBody
+   |  |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |   \t    '
+   |  |  |  |  |  |  |  blockOpener: '{'
+   |  |  |  |  |  |  |  children: array (1)
+   |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  |  |  |  |  |  content: string
+   |  |  |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t    return new class($this->prop) extends Outer {\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t    \t    private $prop3;\n
+   |  |  |  |  |  |  |  |  |  |   \n
+   |  |  |  |  |  |  |  |  |  |   \t    \t    \t    public function __construct($prop)\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t    \t    {\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t    \t    \t    $this->prop3 = $prop;\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t    \t    }\n
+   |  |  |  |  |  |  |  |  |  |   \n
+   |  |  |  |  |  |  |  |  |  |   \t    \t    \t    public function func3()\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t    \t    {\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t    \t    \t    return $this->prop2 + $this->prop3 + $this->func1();\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t    \t    }\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t    };'
+   |  |  |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |   \t    }'
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   }'
+   |  |  |  10 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   echo (new Outer)->func2()->func3();\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   \n
+   |  |  |  |  |   // example 4\n
+   |  |  |  |  |   function anonymous_class()\n
+   |  |  |  |  |   {\n
+   |  |  |  |  |   \t    return new'
+   |  |  |  11 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  indentation: ' '
+   |  |  |  |  keyword: 'class'
+   |  |  |  |  name: null
+   |  |  |  |  constructorValues: null
+   |  |  |  |  extends: null
+   |  |  |  |  implements: null
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (0)
+   |  |  |  |  blockCloser: '}'
+   |  |  |  12 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: string
+   |  |  |  |  |  ';\n
+   |  |  |  |  |   }\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   if (get_class(anonymous_class()) === get_class(anonymous_class())) {\n
+   |  |  |  |  |   \t    echo 'same class';\n
+   |  |  |  |  |   } else {\n
+   |  |  |  |  |   \t    echo 'different class';\n
+   |  |  |  |  |   }\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   // example 5\n
+   |  |  |  |  |   echo get_class(new'
+   |  |  |  13 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  indentation: ' '
+   |  |  |  |  keyword: 'class'
+   |  |  |  |  name: null
+   |  |  |  |  constructorValues: null
+   |  |  |  |  extends: null
+   |  |  |  |  implements: null
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (0)
+   |  |  |  |  blockCloser: '}'
+   |  |  |  14 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: ');\n'
+   |  |  closeTag: null

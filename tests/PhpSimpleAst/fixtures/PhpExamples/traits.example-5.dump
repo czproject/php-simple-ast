@@ -1,0 +1,112 @@
+CzProject\PhpSimpleAst\Ast\PhpString
+   children: array (1)
+   |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
+   |  |  openTag: '<?php\n'
+   |  |  children: array (4)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: string
+   |  |  |  |  |  '// Example #5 Conflict Resolution\n
+   |  |  |  |  |   // http://www.php.net/manual/en/language.oop5.traits.php\n
+   |  |  |  |  |   trait A {\n
+   |  |  |  |  |       public function smallTalk() {\n
+   |  |  |  |  |           echo 'a';\n
+   |  |  |  |  |       }\n
+   |  |  |  |  |       public function bigTalk() {\n
+   |  |  |  |  |           echo 'A';\n
+   |  |  |  |  |       }\n
+   |  |  |  |  |   }\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   trait B {\n
+   |  |  |  |  |       public function smallTalk() {\n
+   |  |  |  |  |           echo 'b';\n
+   |  |  |  |  |       }\n
+   |  |  |  |  |       public function bigTalk() {\n
+   |  |  |  |  |           echo 'B';\n
+   |  |  |  |  |       }\n
+   |  |  |  |  |   }'
+   |  |  |  1 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n'
+   |  |  |  |  keyword: 'class'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'Talker'
+   |  |  |  |  constructorValues: null
+   |  |  |  |  extends: null
+   |  |  |  |  implements: null
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (1)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\TraitUseNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |       '
+   |  |  |  |  |  |  keyword: 'use'
+   |  |  |  |  |  |  imports: array (2)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\TraitImport
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  name: 'A'
+   |  |  |  |  |  |  |  |  aliases: null
+   |  |  |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\TraitImport
+   |  |  |  |  |  |  |  |  indentation: ', '
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  name: 'B'
+   |  |  |  |  |  |  |  |  aliases: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  |  literal: string
+   |  |  |  |  |  |  |  |  |  |  '{\n
+   |  |  |  |  |  |  |  |  |  |           B::smallTalk insteadof A;\n
+   |  |  |  |  |  |  |  |  |  |           A::bigTalk insteadof B;\n
+   |  |  |  |  |  |  |  |  |  |       }'
+   |  |  |  |  |  |  closer: ''
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   }'
+   |  |  |  2 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n'
+   |  |  |  |  keyword: 'class'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'Aliased_Talker'
+   |  |  |  |  constructorValues: null
+   |  |  |  |  extends: null
+   |  |  |  |  implements: null
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (1)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\TraitUseNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |       '
+   |  |  |  |  |  |  keyword: 'use'
+   |  |  |  |  |  |  imports: array (2)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\TraitImport
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  name: 'A'
+   |  |  |  |  |  |  |  |  aliases: null
+   |  |  |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\TraitImport
+   |  |  |  |  |  |  |  |  indentation: ', '
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  name: 'B'
+   |  |  |  |  |  |  |  |  aliases: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  |  literal: string
+   |  |  |  |  |  |  |  |  |  |  '{\n
+   |  |  |  |  |  |  |  |  |  |           B::smallTalk insteadof A;\n
+   |  |  |  |  |  |  |  |  |  |           A::bigTalk insteadof B;\n
+   |  |  |  |  |  |  |  |  |  |           B::bigTalk as talk;\n
+   |  |  |  |  |  |  |  |  |  |       }'
+   |  |  |  |  |  |  closer: ''
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   }'
+   |  |  |  3 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: '\n'
+   |  |  closeTag: null

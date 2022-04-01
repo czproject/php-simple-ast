@@ -55,10 +55,32 @@ class Fixtures
 
 	/**
 	 * @param  string $entry
+	 * @param  string $extension
 	 * @return string
 	 */
-	public static function load($entry)
+	public static function pathWithExtension($entry, $extension)
 	{
+		$path = self::path($entry);
+
+		if (\Nette\Utils\Strings::endsWith($path, '.php')) {
+			$path = \Nette\Utils\Strings::substring($path, 0, -4);
+		}
+
+		return $path . '.' . $extension;
+	}
+
+
+	/**
+	 * @param  string $entry
+	 * @param  string|NULL $extension
+	 * @return string
+	 */
+	public static function load($entry, $extension = NULL)
+	{
+		if ($extension !== NULL) {
+			return file_get_contents(self::pathWithExtension($entry, $extension));
+		}
+
 		return file_get_contents(self::path($entry));
 	}
 
@@ -74,6 +96,10 @@ class Fixtures
 
 		foreach (scandir($directory) as $entry) {
 			if ($entry === '.' || $entry === '..') {
+				continue;
+			}
+
+			if (!\Nette\Utils\Strings::endsWith($entry, '.php')) {
 				continue;
 			}
 

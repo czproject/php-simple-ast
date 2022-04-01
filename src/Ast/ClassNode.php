@@ -2,6 +2,8 @@
 
 	namespace CzProject\PhpSimpleAst\Ast;
 
+	use CzProject\Assert\Assert;
+
 
 	class ClassNode implements INode
 	{
@@ -13,6 +15,9 @@
 
 		/** @var Name|NULL */
 		private $name;
+
+		/** @var Literal|NULL */
+		private $constructorValues;
 
 		/** @var ObjectParent|NULL */
 		private $extends;
@@ -41,6 +46,7 @@
 			$indentation,
 			$keyword,
 			Name $name = NULL,
+			Literal $constructorValues = NULL,
 			ObjectParent $extends = NULL,
 			ObjectParents $implements = NULL,
 			$blockOpener,
@@ -48,9 +54,14 @@
 			$blockCloser
 		)
 		{
+			if ($name !== NULL) {
+				Assert::null($constructorValues);
+			}
+
 			$this->indentation = $indentation;
 			$this->keyword = $keyword;
 			$this->name = $name;
+			$this->constructorValues = $constructorValues;
 			$this->extends = $extends;
 			$this->implements = $implements;
 			$this->blockOpener = $blockOpener;
@@ -74,6 +85,7 @@
 		 */
 		public function setName($name)
 		{
+			Assert::true($this->name !== NULL, 'Anonymous class cannot be renamed.');
 			$this->name = Name::fromName($this->name, $name);
 		}
 
@@ -84,6 +96,10 @@
 
 			if ($this->name !== NULL) {
 				$s .= $this->name->toString();
+			}
+
+			if ($this->constructorValues !== NULL) {
+				$s .= $this->constructorValues->toString();
 			}
 
 			if ($this->extends !== NULL) {
@@ -110,14 +126,19 @@
 		public static function parse(NodeParser $parser)
 		{
 			$keyword = $parser->consumeTokenAsText(T_CLASS);
-			$parser->consumeWhitespace();
+			$parser->tryConsumeWhitespace();
 			$name = NULL;
+			$constructorValues = NULL;
 			$extends = NULL;
 			$implements = NULL;
 			$blockOpener = '';
 
 			if ($parser->isCurrent(T_STRING)) { // class name
 				$name = Name::parse($parser->createSubParser());
+				$parser->tryConsumeWhitespace();
+
+			} elseif ($parser->isCurrent('(')) {
+				$constructorValues = Literal::parseParenthesisExpression($parser->createSubParser());
 				$parser->tryConsumeWhitespace();
 			}
 
@@ -150,12 +171,24 @@
 					if ($parser->isCurrent(T_FUNCTION)) {
 						$child = MethodNode::parse($flags, $parser->createSubParser());
 
+					} elseif ($parser->isCurrent(T_VARIABLE)) {
+						$child = PropertyNode::parse($flags, $parser->createSubParser());
+
 					} else {
 						$parser->errorUnknowToken();
 					}
 
 				} elseif ($parser->isCurrent(T_FUNCTION)) {
 					$child = MethodNode::parse(Flags::empty($parser->flushIndentation()), $parser->createSubParser());
+
+				} elseif ($parser->isCurrent(T_USE)) { // trait
+					$child = TraitUseNode::parse($parser->createSubParser());
+
+				} elseif ($parser->isCurrent(T_COMMENT)) {
+					$child = CommentNode::parse($parser->createSubParser());
+
+				} elseif ($parser->isCurrent(T_DOC_COMMENT)) {
+					$child = PhpDocNode::parse($parser->createSubParser());
 
 				} elseif($parser->isCurrent(T_WHITESPACE)) {
 					// nothing
@@ -173,6 +206,7 @@
 				$parser->getNodeIndentation(),
 				$keyword,
 				$name,
+				$constructorValues,
 				$extends,
 				$implements,
 				$blockOpener,

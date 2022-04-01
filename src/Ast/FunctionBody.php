@@ -60,7 +60,7 @@
 		public static function parse(NodeParser $parser)
 		{
 			$blockOpener = $parser->consumeTokenAsText('{');
-			$level = 0;
+			$level = 1;
 
 			while ($parser->hasToken()) {
 				$child = NULL;
