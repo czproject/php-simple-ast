@@ -22,14 +22,24 @@ class Tests
 	 */
 	public static function equalAst(Ast\INode $expected, Ast\INode $actual)
 	{
-		$options = [
-			\Tracy\Dumper::HASH => FALSE,
-		];
-
 		Tester\Assert::same(
-			\Tracy\Dumper::toText($expected, $options),
-			\Tracy\Dumper::toText($actual, $options)
+			self::dumpToText($expected),
+			self::dumpToText($actual)
 		);
+	}
+
+
+	/**
+	 * @param  mixed $value
+	 * @return string
+	 */
+	public static function dumpToText($value)
+	{
+		return \Tracy\Dumper::toText($value, [
+			\Tracy\Dumper::DEPTH => 20,
+			\Tracy\Dumper::TRUNCATE => 1000,
+			\Tracy\Dumper::HASH => FALSE,
+		]);
 	}
 }
 

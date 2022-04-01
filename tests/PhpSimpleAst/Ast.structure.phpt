@@ -18,10 +18,7 @@ test('AST structure', function () {
 
 		Assert::same(
 			Fixtures::load($entry, 'dump'),
-			\Tracy\Dumper::toText($node, [
-				\Tracy\Dumper::HASH => FALSE,
-				\Tracy\Dumper::TRUNCATE => 1000,
-			])
+			Tests::dumpToText($node)
 		);
 	}
 });
