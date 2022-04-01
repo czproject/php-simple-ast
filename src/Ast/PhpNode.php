@@ -72,6 +72,9 @@
 
 				} elseif ($parser->isCurrent(T_INTERFACE)) {
 					$child = InterfaceNode::parse($parser->createSubParser());
+
+				} elseif ($parser->isCurrent(T_TRAIT)) {
+					$child = TraitNode::parse($parser->createSubParser());
 				}
 
 				$parser->onChild($child);

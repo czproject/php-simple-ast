@@ -2,7 +2,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    children: array (1)
    |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
    |  |  openTag: '<?php\n'
-   |  |  children: array (16)
+   |  |  children: array (17)
    |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: string
    |  |  |  |  |  '\n
@@ -154,13 +154,21 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  blockOpener: ' {'
    |  |  |  |  children: array (0)
    |  |  |  |  blockCloser: '}'
-   |  |  |  7 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  7 => CzProject\PhpSimpleAst\Ast\TraitNode
+   |  |  |  |  indentation: '\n'
+   |  |  |  |  keyword: 'trait'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'SomeTrait'
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (0)
+   |  |  |  |  blockCloser: '}'
+   |  |  |  8 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: string
    |  |  |  |  |  '\n
-   |  |  |  |  |   trait SomeTrait {}\n
    |  |  |  |  |   \n
    |  |  |  |  |   var_dump(new'
-   |  |  |  8 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  9 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  indentation: ' '
    |  |  |  |  keyword: 'class'
    |  |  |  |  name: null
@@ -256,13 +264,13 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  blockCloser: string
    |  |  |  |  |  '\n
    |  |  |  |  |   }'
-   |  |  |  9 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  10 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: string
    |  |  |  |  |  ');\n
    |  |  |  |  |   \n
    |  |  |  |  |   \n
    |  |  |  |  |   // example 3\n'
-   |  |  |  10 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  11 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  indentation: ''
    |  |  |  |  keyword: 'class'
    |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
@@ -392,7 +400,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  blockCloser: string
    |  |  |  |  |  '\n
    |  |  |  |  |   }'
-   |  |  |  11 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  12 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: string
    |  |  |  |  |  '\n
    |  |  |  |  |   \n
@@ -403,7 +411,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |   function anonymous_class()\n
    |  |  |  |  |   {\n
    |  |  |  |  |   \t    return new'
-   |  |  |  12 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  13 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  indentation: ' '
    |  |  |  |  keyword: 'class'
    |  |  |  |  name: null
@@ -413,7 +421,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  blockOpener: ' {'
    |  |  |  |  children: array (0)
    |  |  |  |  blockCloser: '}'
-   |  |  |  13 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  14 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: string
    |  |  |  |  |  ';\n
    |  |  |  |  |   }\n
@@ -426,7 +434,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |   \n
    |  |  |  |  |   // example 5\n
    |  |  |  |  |   echo get_class(new'
-   |  |  |  14 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  15 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  indentation: ' '
    |  |  |  |  keyword: 'class'
    |  |  |  |  name: null
@@ -436,6 +444,6 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  blockOpener: ' {'
    |  |  |  |  children: array (0)
    |  |  |  |  blockCloser: '}'
-   |  |  |  15 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  16 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: ');\n'
    |  |  closeTag: null

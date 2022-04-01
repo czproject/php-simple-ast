@@ -2,15 +2,41 @@ CzProject\PhpSimpleAst\Ast\PhpString
    children: array (1)
    |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
    |  |  openTag: '<?php\n'
-   |  |  children: array (3)
+   |  |  children: array (4)
    |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: string
    |  |  |  |  |  '// Example #11 Defining Properties\n
-   |  |  |  |  |   // http://www.php.net/manual/en/language.oop5.traits.php\n
-   |  |  |  |  |   trait PropertiesTrait {\n
-   |  |  |  |  |       public $x = 1;\n
+   |  |  |  |  |   // http://www.php.net/manual/en/language.oop5.traits.php\n'
+   |  |  |  1 => CzProject\PhpSimpleAst\Ast\TraitNode
+   |  |  |  |  indentation: ''
+   |  |  |  |  keyword: 'trait'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'PropertiesTrait'
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (1)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\PropertyNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |       '
+   |  |  |  |  |  |  flags: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  visibility: 'public'
+   |  |  |  |  |  |  type: null
+   |  |  |  |  |  |  namePrefix: ' '
+   |  |  |  |  |  |  name: '$x'
+   |  |  |  |  |  |  defaultValue: CzProject\PhpSimpleAst\Ast\DefaultValue
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  operator: '='
+   |  |  |  |  |  |  |  literal: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  literal: '1'
+   |  |  |  |  |  |  closer: ';'
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
    |  |  |  |  |   }'
-   |  |  |  1 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  2 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  indentation: string
    |  |  |  |  |  '\n
    |  |  |  |  |   \n'
@@ -39,7 +65,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  blockCloser: string
    |  |  |  |  |  '\n
    |  |  |  |  |   }'
-   |  |  |  2 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  3 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: string
    |  |  |  |  |  '\n
    |  |  |  |  |   \n

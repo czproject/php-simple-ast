@@ -2,10 +2,17 @@ CzProject\PhpSimpleAst\Ast\PhpString
    children: array (1)
    |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
    |  |  openTag: '<?php\n'
-   |  |  children: array (9)
-   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  content: string
-   |  |  |  |  |  '\t    trait ezcReflectionReturnInfo {\n
+   |  |  children: array (12)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\TraitNode
+   |  |  |  |  indentation: '\t    '
+   |  |  |  |  keyword: 'trait'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'ezcReflectionReturnInfo'
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (0)
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
    |  |  |  |  |   \t    }'
    |  |  |  1 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  indentation: string
@@ -92,13 +99,33 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  '\n
    |  |  |  |  |   \n
    |  |  |  |  |   \n
-   |  |  |  |  |   \t    // Multiple\n
-   |  |  |  |  |   \t    trait Hello {\n
-   |  |  |  |  |   \t    }\n
-   |  |  |  |  |   \n
-   |  |  |  |  |   \t    trait World {\n
+   |  |  |  |  |   \t    // Multiple\n'
+   |  |  |  4 => CzProject\PhpSimpleAst\Ast\TraitNode
+   |  |  |  |  indentation: '\t    '
+   |  |  |  |  keyword: 'trait'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'Hello'
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (0)
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
    |  |  |  |  |   \t    }'
-   |  |  |  4 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  5 => CzProject\PhpSimpleAst\Ast\TraitNode
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   \t    '
+   |  |  |  |  keyword: 'trait'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'World'
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (0)
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \t    }'
+   |  |  |  6 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  indentation: string
    |  |  |  |  |  '\n
    |  |  |  |  |   \n
@@ -134,15 +161,24 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  blockCloser: string
    |  |  |  |  |  '\n
    |  |  |  |  |   \t    }'
-   |  |  |  5 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  7 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: string
    |  |  |  |  |  '\n
    |  |  |  |  |   \n
    |  |  |  |  |   \n
-   |  |  |  |  |   \t    // Block { }\n
-   |  |  |  |  |   \t    trait HelloWorld {\n
+   |  |  |  |  |   \t    // Block { }\n'
+   |  |  |  8 => CzProject\PhpSimpleAst\Ast\TraitNode
+   |  |  |  |  indentation: '\t    '
+   |  |  |  |  keyword: 'trait'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'HelloWorld'
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (0)
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
    |  |  |  |  |   \t    }'
-   |  |  |  6 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  9 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  indentation: string
    |  |  |  |  |  '\n
    |  |  |  |  |   \n
@@ -174,7 +210,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  blockCloser: string
    |  |  |  |  |  '\n
    |  |  |  |  |   \t    }'
-   |  |  |  7 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  10 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  indentation: string
    |  |  |  |  |  '\n
    |  |  |  |  |   \n
@@ -206,6 +242,6 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  blockCloser: string
    |  |  |  |  |  '\n
    |  |  |  |  |   \t    }'
-   |  |  |  8 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  11 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: '\n'
    |  |  closeTag: null

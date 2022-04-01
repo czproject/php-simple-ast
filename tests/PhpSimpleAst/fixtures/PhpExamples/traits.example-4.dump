@@ -2,23 +2,96 @@ CzProject\PhpSimpleAst\Ast\PhpString
    children: array (1)
    |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
    |  |  openTag: '<?php\n'
-   |  |  children: array (3)
+   |  |  children: array (5)
    |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: string
    |  |  |  |  |  '// Example #4 Multiple Traits Usage\n
-   |  |  |  |  |   // http://www.php.net/manual/en/language.oop5.traits.php\n
-   |  |  |  |  |   trait Hello {\n
-   |  |  |  |  |       public function sayHello() {\n
-   |  |  |  |  |           echo 'Hello ';\n
-   |  |  |  |  |       }\n
-   |  |  |  |  |   }\n
-   |  |  |  |  |   \n
-   |  |  |  |  |   trait World {\n
-   |  |  |  |  |       public function sayWorld() {\n
-   |  |  |  |  |           echo 'World';\n
-   |  |  |  |  |       }\n
+   |  |  |  |  |   // http://www.php.net/manual/en/language.oop5.traits.php\n'
+   |  |  |  1 => CzProject\PhpSimpleAst\Ast\TraitNode
+   |  |  |  |  indentation: ''
+   |  |  |  |  keyword: 'trait'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'Hello'
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (1)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\MethodNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |       '
+   |  |  |  |  |  |  flags: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  visibility: 'public'
+   |  |  |  |  |  |  keywordPrefix: ' '
+   |  |  |  |  |  |  keyword: 'function'
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  name: 'sayHello'
+   |  |  |  |  |  |  arguments: CzProject\PhpSimpleAst\Ast\FunctionArguments
+   |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  opener: '('
+   |  |  |  |  |  |  |  arguments: array (0)
+   |  |  |  |  |  |  |  closer: ')'
+   |  |  |  |  |  |  returnType: null
+   |  |  |  |  |  |  body: CzProject\PhpSimpleAst\Ast\FunctionBody
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  blockOpener: '{'
+   |  |  |  |  |  |  |  children: array (1)
+   |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  |  |  |  |  |  content: string
+   |  |  |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |  |  |           echo 'Hello ';'
+   |  |  |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |       }'
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
    |  |  |  |  |   }'
-   |  |  |  1 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  2 => CzProject\PhpSimpleAst\Ast\TraitNode
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n'
+   |  |  |  |  keyword: 'trait'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'World'
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (1)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\MethodNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |       '
+   |  |  |  |  |  |  flags: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  visibility: 'public'
+   |  |  |  |  |  |  keywordPrefix: ' '
+   |  |  |  |  |  |  keyword: 'function'
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  name: 'sayWorld'
+   |  |  |  |  |  |  arguments: CzProject\PhpSimpleAst\Ast\FunctionArguments
+   |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  opener: '('
+   |  |  |  |  |  |  |  arguments: array (0)
+   |  |  |  |  |  |  |  closer: ')'
+   |  |  |  |  |  |  returnType: null
+   |  |  |  |  |  |  body: CzProject\PhpSimpleAst\Ast\FunctionBody
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  blockOpener: '{'
+   |  |  |  |  |  |  |  children: array (1)
+   |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  |  |  |  |  |  content: string
+   |  |  |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |  |  |           echo 'World';'
+   |  |  |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |       }'
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   }'
+   |  |  |  3 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  indentation: string
    |  |  |  |  |  '\n
    |  |  |  |  |   \n'
@@ -83,7 +156,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  blockCloser: string
    |  |  |  |  |  '\n
    |  |  |  |  |   }'
-   |  |  |  2 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  4 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: string
    |  |  |  |  |  '\n
    |  |  |  |  |   \n

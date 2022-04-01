@@ -2,19 +2,58 @@ CzProject\PhpSimpleAst\Ast\PhpString
    children: array (1)
    |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
    |  |  openTag: '<?php\n'
-   |  |  children: array (5)
+   |  |  children: array (7)
    |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: string
    |  |  |  |  |  '// Example #6 Changing Method Visibility\n
-   |  |  |  |  |   // http://www.php.net/manual/en/language.oop5.traits.php\n
-   |  |  |  |  |   trait HelloWorld {\n
-   |  |  |  |  |       public function sayHello() {\n
-   |  |  |  |  |           echo 'Hello World!';\n
-   |  |  |  |  |       }\n
-   |  |  |  |  |   }\n
+   |  |  |  |  |   // http://www.php.net/manual/en/language.oop5.traits.php\n'
+   |  |  |  1 => CzProject\PhpSimpleAst\Ast\TraitNode
+   |  |  |  |  indentation: ''
+   |  |  |  |  keyword: 'trait'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'HelloWorld'
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (1)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\MethodNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |       '
+   |  |  |  |  |  |  flags: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  visibility: 'public'
+   |  |  |  |  |  |  keywordPrefix: ' '
+   |  |  |  |  |  |  keyword: 'function'
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  name: 'sayHello'
+   |  |  |  |  |  |  arguments: CzProject\PhpSimpleAst\Ast\FunctionArguments
+   |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  opener: '('
+   |  |  |  |  |  |  |  arguments: array (0)
+   |  |  |  |  |  |  |  closer: ')'
+   |  |  |  |  |  |  returnType: null
+   |  |  |  |  |  |  body: CzProject\PhpSimpleAst\Ast\FunctionBody
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  blockOpener: '{'
+   |  |  |  |  |  |  |  children: array (1)
+   |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  |  |  |  |  |  content: string
+   |  |  |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |  |  |           echo 'Hello World!';'
+   |  |  |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |       }'
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   }'
+   |  |  |  2 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: string
+   |  |  |  |  |  '\n
    |  |  |  |  |   \n
    |  |  |  |  |   // Change visibility of sayHello\n'
-   |  |  |  1 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  3 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  indentation: ''
    |  |  |  |  keyword: 'class'
    |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
@@ -43,13 +82,13 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  blockCloser: string
    |  |  |  |  |  '\n
    |  |  |  |  |   }'
-   |  |  |  2 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  4 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: string
    |  |  |  |  |  '\n
    |  |  |  |  |   \n
    |  |  |  |  |   // Alias method with changed visibility\n
    |  |  |  |  |   // sayHello visibility not changed\n'
-   |  |  |  3 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  5 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  indentation: ''
    |  |  |  |  keyword: 'class'
    |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
@@ -78,6 +117,6 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  blockCloser: string
    |  |  |  |  |  '\n
    |  |  |  |  |   }'
-   |  |  |  4 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  6 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: '\n'
    |  |  closeTag: null
