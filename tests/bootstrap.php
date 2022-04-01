@@ -99,20 +99,20 @@ class Fixtures
 				continue;
 			}
 
-			if (!\Nette\Utils\Strings::endsWith($entry, '.php')) {
-				continue;
-			}
-
-			$phpVersion = self::extractPhpVersion($entry);
-
-			if ($phpVersion !== NULL && PHP_VERSION_ID < $phpVersion) {
-				continue;
-			}
-
 			$entryPath = $basePath . ($basePath !== '' ? '/' : '') . $entry;
 			$realPath = self::path($entryPath);
 
 			if (is_file($realPath)) {
+				if (!\Nette\Utils\Strings::endsWith($entry, '.php')) {
+					continue;
+				}
+
+				$phpVersion = self::extractPhpVersion($entry);
+
+				if ($phpVersion !== NULL && PHP_VERSION_ID < $phpVersion) {
+					continue;
+				}
+
 				$res[] = $entryPath;
 
 			} elseif (is_dir($realPath)) {
