@@ -81,6 +81,9 @@
 						continue;
 					}
 
+				} elseif ($parser->isCurrent(T_COMMENT)) {
+					$child = CommentNode::parse($parser->createSubParser());
+
 				// } else {
 					// $parser->consumeUnknow();
 					// continue;

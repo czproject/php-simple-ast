@@ -37,8 +37,9 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  blockOpener: '{'
    |  |  |  |  |  |  |  children: array (1)
-   |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  |  |  |  |  |  content: ' /*1*/'
+   |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  |  content: '/*1*/'
    |  |  |  |  |  |  |  blockCloser: ' }'
    |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\MethodNode
    |  |  |  |  |  |  indentation: string
@@ -60,8 +61,9 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  blockOpener: '{'
    |  |  |  |  |  |  |  children: array (1)
-   |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  |  |  |  |  |  content: ' /*2*/'
+   |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  |  content: '/*2*/'
    |  |  |  |  |  |  |  blockCloser: ' }'
    |  |  |  |  blockCloser: string
    |  |  |  |  |  '\n
