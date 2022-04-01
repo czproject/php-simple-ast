@@ -13,5 +13,6 @@ jobs:
                   php-version: 7.4
                   coverage: none
 
+            - run: composer install --no-interaction --prefer-dist
             - run: composer create-project janpecha/code-checker temp/code-checker ^1.0 --no-progress
             - run: temp/code-checker/code-checker --no-progress
