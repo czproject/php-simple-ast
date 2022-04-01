@@ -23,7 +23,7 @@
 		/**
 		 * @param string $indentation
 		 * @param string $opener
-		 * @param string $arguments
+		 * @param FunctionArgument[] $arguments
 		 * @param string $closer
 		 */
 		public function __construct(

@@ -28,7 +28,7 @@
 		 * @param string $indentation
 		 * @param string $keyword
 		 * @param string $blockOpener
-		 * @param string $children
+		 * @param INode[] $children
 		 * @param string $blockCloser
 		 */
 		public function __construct(
@@ -64,7 +64,7 @@
 		 */
 		public function setName($name)
 		{
-			$this->name = Name::fromName($this->name, $name);
+			$this->name = $name !== NULL ? Name::fromName($this->name, $name) : NULL;
 		}
 
 

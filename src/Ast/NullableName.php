@@ -33,7 +33,9 @@
 		}
 
 
-
+		/**
+		 * @return string
+		 */
 		public function toString()
 		{
 			if ($this->nullableSign !== '') {

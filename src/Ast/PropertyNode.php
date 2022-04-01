@@ -13,7 +13,7 @@
 		/** @var IPropertyFlag[] */
 		private $flags;
 
-		/** @var NullableName */
+		/** @var NullableName|NULL */
 		private $type;
 
 		/** @var string */

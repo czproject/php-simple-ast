@@ -20,7 +20,7 @@
 		/**
 		 * @param string $openTag
 		 * @param INode[] $children
-		 * @param string $closeTag
+		 * @param string|NULL $closeTag
 		 */
 		public function __construct(
 			$openTag,

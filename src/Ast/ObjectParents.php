@@ -34,14 +34,8 @@
 
 
 		/**
-		 * @return Name[]
+		 * @return string
 		 */
-		public function getImplements()
-		{
-			return $this->implements;
-		}
-
-
 		public function toString()
 		{
 			return $this->indentation . $this->keyword . $this->implements->toString();

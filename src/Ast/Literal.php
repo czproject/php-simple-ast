@@ -29,6 +29,9 @@
 		}
 
 
+		/**
+		 * @return string
+		 */
 		public function toString()
 		{
 			return $this->indentation . $this->literal;

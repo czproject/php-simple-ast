@@ -76,7 +76,7 @@
 
 
 		/**
-		 * @param  int|string ...$type
+		 * @param  int|string ...$types
 		 * @return IToken
 		 */
 		public function consumeToken(...$types)
@@ -98,7 +98,7 @@
 
 
 		/**
-		 * @param  int|string ...$type
+		 * @param  int|string ...$types
 		 * @return string
 		 */
 		public function consumeTokenAsText(...$types)
@@ -113,8 +113,8 @@
 		 */
 		public function tryConsumeToken(...$types)
 		{
-			if ($this->isCurrent($types)) {
-				return $this->consumeToken($types);
+			if ($this->isCurrent(...$types)) {
+				return $this->consumeToken(...$types);
 			}
 
 			return NULL;
@@ -122,7 +122,7 @@
 
 
 		/**
-		 * @param  int|string ...$type
+		 * @param  int|string ...$types
 		 * @return string
 		 */
 		public function tryConsumeTokenAsText(...$types)

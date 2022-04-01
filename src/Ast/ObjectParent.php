@@ -42,6 +42,9 @@
 		}
 
 
+		/**
+		 * @return string
+		 */
 		public function toString()
 		{
 			return $this->indentation . $this->keyword . $this->extends->toString();

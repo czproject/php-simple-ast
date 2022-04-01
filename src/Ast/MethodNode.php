@@ -37,8 +37,6 @@
 		 * @param IMethodFlag[] $flags
 		 * @param string $keywordPrefix
 		 * @param string $keyword
-		 * @param string $blockOpener
-		 * @param string $children
 		 */
 		public function __construct(
 			$indentation,
@@ -67,16 +65,16 @@
 
 
 		/**
-		 * @return string|NULL
+		 * @return string
 		 */
 		public function getName()
 		{
-			return $this->name !== NULL ? $this->name->getName() : NULL;
+			return $this->name->getName();
 		}
 
 
 		/**
-		 * @param  string|NULL $name
+		 * @param  string $name
 		 * @return void
 		 */
 		public function setName($name)

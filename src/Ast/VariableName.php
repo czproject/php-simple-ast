@@ -16,7 +16,7 @@
 		/** @var string */
 		private $referenceSuffix;
 
-		/** @var Name */
+		/** @var string */
 		private $name;
 
 
@@ -24,6 +24,7 @@
 		 * @param string $indentation
 		 * @param string $referenceSign
 		 * @param string $referenceSuffix
+		 * @param string $name
 		 */
 		public function __construct(
 			$indentation,
@@ -44,7 +45,9 @@
 		}
 
 
-
+		/**
+		 * @return string
+		 */
 		public function toString()
 		{
 			if ($this->referenceSign !== '') {

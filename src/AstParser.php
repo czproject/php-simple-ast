@@ -21,7 +21,7 @@
 		 */
 		public function parseFile($path)
 		{
-			return Ast\PhpFile::parse($path, $this->createParser(file_get_contents($path)));
+			return Ast\PhpFile::parse($path, $this->createParser((string) file_get_contents($path)));
 		}
 
 

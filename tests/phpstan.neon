@@ -3,3 +3,8 @@ parameters:
 
 	paths:
 		- ../src
+
+	ignoreErrors:
+		-
+			message: '#^Method CzProject\\PhpSimpleAst\\Ast\\Flags\:\:toPropertyFlags\(\).*$#'
+			path: */Ast/Flags.php

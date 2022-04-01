@@ -12,6 +12,9 @@
 		private $code;
 
 
+		/**
+		 * @param string $path
+		 */
 		public function __construct($path, PhpString $code)
 		{
 			$this->path = $path;
@@ -44,6 +47,7 @@
 
 
 		/**
+		 * @param  string $path
 		 * @return self
 		 */
 		public static function parse($path, NodeParser $parser)

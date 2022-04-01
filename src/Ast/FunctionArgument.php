@@ -16,7 +16,7 @@
 		/** @var VariableName */
 		private $name;
 
-		/** @var FunctionArgumentValue|NULL */
+		/** @var DefaultValue|NULL */
 		private $defaultValue;
 
 
@@ -27,7 +27,7 @@
 			$indentation,
 			NullableName $type = NULL,
 			VariableName $name,
-			FunctionArgumentValue $defaultValue = NULL
+			DefaultValue $defaultValue = NULL
 		)
 		{
 			Assert::string($indentation);

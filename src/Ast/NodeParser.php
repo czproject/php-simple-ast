@@ -30,6 +30,9 @@
 		private $closed = FALSE;
 
 
+		/**
+		 * @param string $nodeIndentation
+		 */
 		public function __construct($nodeIndentation, Lexer\Stream $stream, self $parentParser = NULL)
 		{
 			$this->nodeIndentation = $nodeIndentation;
@@ -66,6 +69,9 @@
 		}
 
 
+		/**
+		 * @return string
+		 */
 		public function flushIndentation()
 		{
 			Assert::false($this->closed, 'Node is already closed.');
@@ -87,6 +93,7 @@
 		/**
 		 * @param  int|string ...$types
 		 * @return bool
+		 * @phpstan-impure
 		 */
 		public function isCurrent(...$types)
 		{
@@ -172,6 +179,7 @@
 
 
 		/**
+		 * @param  int|string ...$types
 		 * @return void
 		 */
 		public function consumeAsUnknowContent(...$types)
@@ -181,6 +189,7 @@
 
 
 		/**
+		 * @param  int|string ...$types
 		 * @return void
 		 */
 		public function tryConsumeAsUnknowContent(...$types)
@@ -243,6 +252,7 @@
 
 			} else {
 				$this->tryFlushUnknowContent();
+				assert($this->parentParser !== NULL); // phpstan hotfix
 				$this->parentParser->addIndentation($this->flushIndentation());
 			}
 

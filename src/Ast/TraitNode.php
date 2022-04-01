@@ -30,7 +30,7 @@
 		 * @param string $indentation
 		 * @param string $keyword
 		 * @param string $blockOpener
-		 * @param string $children
+		 * @param INode[] $children
 		 * @param string $blockCloser
 		 */
 		public function __construct(
