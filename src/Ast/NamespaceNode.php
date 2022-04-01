@@ -140,11 +140,7 @@
 					$child = InterfaceNode::parse($parser->createSubParser());
 
 				} elseif ($parser->isCurrent(T_TRAIT)) {
-					$parser->consumeUnknow();
-
-					while ($parser->hasToken() && !$parser->isCurrent('{', ';')) {
-						$parser->consumeUnknow();
-					}
+					$child = TraitNode::parse($parser->createSubParser());
 
 				} elseif ($parser->isCurrent(T_NEW)) {
 					$parser->consumeUnknow();
