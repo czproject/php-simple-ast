@@ -142,6 +142,9 @@
 				} elseif ($parser->isCurrent(T_TRAIT)) {
 					$child = TraitNode::parse($parser->createSubParser());
 
+				} elseif ($parser->isCurrent(T_COMMENT)) {
+					$child = CommentNode::parse($parser->createSubParser());
+
 				} elseif ($parser->isCurrent(T_NEW)) {
 					$parser->consumeUnknow();
 

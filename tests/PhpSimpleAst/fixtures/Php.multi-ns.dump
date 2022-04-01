@@ -12,7 +12,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  blockOpener: string
    |  |  |  |  |  '\n
    |  |  |  |  |   {'
-   |  |  |  |  children: array (8)
+   |  |  |  |  children: array (10)
    |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n
@@ -115,9 +115,13 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |   }\n
    |  |  |  |  |  |  |   \n
-   |  |  |  |  |  |  |   namespace # global namespace\n
-   |  |  |  |  |  |  |   {'
-   |  |  |  |  |  6 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  |  |  |   namespace'
+   |  |  |  |  |  6 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  content: '# global namespace\n'
+   |  |  |  |  |  7 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  |  |  content: '{'
+   |  |  |  |  |  8 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |   \t    '
@@ -140,7 +144,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  blockCloser: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |   \t    }'
-   |  |  |  |  |  7 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  |  9 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  |  |  content: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |   }\n'
