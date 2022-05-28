@@ -1,0 +1,60 @@
+CzProject\PhpSimpleAst\Ast\PhpString
+   children: array (1)
+   |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
+   |  |  openTag: '<?php\n'
+   |  |  children: array (1)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\NamespaceNode
+   |  |  |  |  indentation: '\n'
+   |  |  |  |  keyword: 'namespace'
+   |  |  |  |  name: null
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (2)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    '
+   |  |  |  |  |  |  keyword: 'class'
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  name: 'MyClass'
+   |  |  |  |  |  |  constructorValues: null
+   |  |  |  |  |  |  extends: null
+   |  |  |  |  |  |  implements: null
+   |  |  |  |  |  |  blockOpener: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    {'
+   |  |  |  |  |  |  children: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\MethodNode
+   |  |  |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |  |   \t    \t    '
+   |  |  |  |  |  |  |  |  flags: array (0)
+   |  |  |  |  |  |  |  |  keywordPrefix: ''
+   |  |  |  |  |  |  |  |  keyword: 'function'
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  |  name: 'getName'
+   |  |  |  |  |  |  |  |  arguments: CzProject\PhpSimpleAst\Ast\FunctionArguments
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  opener: '('
+   |  |  |  |  |  |  |  |  |  arguments: array (0)
+   |  |  |  |  |  |  |  |  |  closer: ')'
+   |  |  |  |  |  |  |  |  returnType: null
+   |  |  |  |  |  |  |  |  body: CzProject\PhpSimpleAst\Ast\FunctionBody
+   |  |  |  |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t    '
+   |  |  |  |  |  |  |  |  |  blockOpener: '{'
+   |  |  |  |  |  |  |  |  |  children: array (0)
+   |  |  |  |  |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t    }'
+   |  |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    }'
+   |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  |  |  content: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   }\n'
+   |  |  |  |  blockCloser: ''
+   |  |  closeTag: null

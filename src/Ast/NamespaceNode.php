@@ -5,7 +5,7 @@
 	namespace CzProject\PhpSimpleAst\Ast;
 
 
-	class NamespaceNode implements INode
+	class NamespaceNode implements IParentNode
 	{
 		/** @var string */
 		private $indentation;
@@ -67,6 +67,12 @@
 		public function setName($name)
 		{
 			$this->name = $name !== NULL ? Name::fromName($this->name, $name) : NULL;
+		}
+
+
+		public function getNodes()
+		{
+			return $this->children;
 		}
 
 

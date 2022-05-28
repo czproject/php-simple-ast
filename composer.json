@@ -11,7 +11,8 @@
 	],
 	"require": {
 		"php": ">=7.2.0",
-		"czproject/assert": "^1.4"
+		"czproject/assert": "^1.4",
+		"nette/finder": "^2.5"
 	},
 	"autoload": {
 		"classmap": ["src/"]

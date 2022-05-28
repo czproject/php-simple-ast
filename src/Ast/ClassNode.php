@@ -7,7 +7,7 @@
 	use CzProject\Assert\Assert;
 
 
-	class ClassNode implements INode
+	class ClassNode implements IParentNode
 	{
 		/** @var string */
 		private $indentation;
@@ -69,6 +69,12 @@
 			$this->blockOpener = $blockOpener;
 			$this->children = $children;
 			$this->blockCloser = $blockCloser;
+		}
+
+
+		public function getNodes()
+		{
+			return $this->children;
 		}
 
 

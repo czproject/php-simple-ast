@@ -5,7 +5,7 @@
 	namespace CzProject\PhpSimpleAst\Ast;
 
 
-	class PhpFile implements INode
+	class PhpFile implements IParentNode
 	{
 		/** @var string */
 		private $path;
@@ -21,6 +21,12 @@
 		{
 			$this->path = $path;
 			$this->code = $code;
+		}
+
+
+		public function getNodes()
+		{
+			return $this->code->getNodes();
 		}
 
 

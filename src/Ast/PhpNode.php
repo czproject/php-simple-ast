@@ -7,7 +7,7 @@
 	use CzProject\Assert\Assert;
 
 
-	class PhpNode implements INode
+	class PhpNode implements IParentNode
 	{
 		/** @var string */
 		private $openTag;
@@ -36,6 +36,12 @@
 			$this->openTag = $openTag;
 			$this->children = $children;
 			$this->closeTag = $closeTag;
+		}
+
+
+		public function getNodes()
+		{
+			return $this->children;
 		}
 
 

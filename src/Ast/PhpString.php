@@ -5,18 +5,24 @@
 	namespace CzProject\PhpSimpleAst\Ast;
 
 
-	class PhpString implements INode
+	class PhpString implements IParentNode
 	{
-		/** @var INode[] */
+		/** @var array<INode|IParentNode> */
 		private $children;
 
 
 		/**
-		 * @param INode[] $children
+		 * @param array<INode|IParentNode> $children
 		 */
 		public function __construct(array $children)
 		{
 			$this->children = $children;
+		}
+
+
+		public function getNodes()
+		{
+			return $this->children;
 		}
 
 
