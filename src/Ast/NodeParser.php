@@ -184,6 +184,15 @@
 		/**
 		 * @return void
 		 */
+		public function tryConsumeWhitespaceAndComments()
+		{
+			$this->addIndentation($this->stream->tryConsumeAllTokensAsText(T_WHITESPACE, T_COMMENT));
+		}
+
+
+		/**
+		 * @return void
+		 */
 		public function consumeUnknow()
 		{
 			$this->addUnknowContent($this->stream->consumeAnythingAsText());

@@ -20,6 +20,11 @@
 		function withComment() // comment
 		{
 		}
+
+
+		function paramWithComment($login, $password/*, $testMode*/)
+		{
+		}
 	}
 
 

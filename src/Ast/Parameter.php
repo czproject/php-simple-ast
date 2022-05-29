@@ -80,11 +80,11 @@
 
 			if (!$parser->isCurrent(T_VARIABLE, T_ELLIPSIS, '&')) {
 				$type = NamedType::parse($parser->createSubParser());
-				$parser->tryConsumeWhitespace();
+				$parser->tryConsumeWhitespaceAndComments();
 			}
 
 			$name = VariableName::parse($parser->createSubParser());
-			$parser->tryConsumeWhitespace();
+			$parser->tryConsumeWhitespaceAndComments();
 			$defaultValue = NULL;
 
 			if ($parser->isCurrent('=')) { // default value

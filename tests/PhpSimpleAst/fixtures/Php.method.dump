@@ -15,7 +15,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  blockOpener: string
    |  |  |  |  |  '\n
    |  |  |  |  |   \t    {'
-   |  |  |  |  children: array (2)
+   |  |  |  |  children: array (3)
    |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\MethodNode
    |  |  |  |  |  |  phpDocNode: null
    |  |  |  |  |  |  indentation: string
@@ -257,6 +257,56 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  body: CzProject\PhpSimpleAst\Ast\FunctionBody
    |  |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  |  ' // comment\n
+   |  |  |  |  |  |  |  |   \t    \t    '
+   |  |  |  |  |  |  |  blockOpener: '{'
+   |  |  |  |  |  |  |  children: array (0)
+   |  |  |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |   \t    \t    }'
+   |  |  |  |  |  2 => CzProject\PhpSimpleAst\Ast\MethodNode
+   |  |  |  |  |  |  phpDocNode: null
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \n
+   |  |  |  |  |  |  |   \n
+   |  |  |  |  |  |  |   \t    \t    '
+   |  |  |  |  |  |  modifiers: array (0)
+   |  |  |  |  |  |  keywordPrefix: ''
+   |  |  |  |  |  |  keyword: 'function'
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  name: 'paramWithComment'
+   |  |  |  |  |  |  parameters: CzProject\PhpSimpleAst\Ast\Parameters
+   |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  opener: '('
+   |  |  |  |  |  |  |  parameters: array (2)
+   |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Parameter
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  type: null
+   |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
+   |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  referenceSign: ''
+   |  |  |  |  |  |  |  |  |  |  variadic: null
+   |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  literal: '$login'
+   |  |  |  |  |  |  |  |  |  defaultValue: null
+   |  |  |  |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\Parameter
+   |  |  |  |  |  |  |  |  |  indentation: ', '
+   |  |  |  |  |  |  |  |  |  type: null
+   |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
+   |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  referenceSign: ''
+   |  |  |  |  |  |  |  |  |  |  variadic: null
+   |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  literal: '$password'
+   |  |  |  |  |  |  |  |  |  defaultValue: null
+   |  |  |  |  |  |  |  closer: '/*, $testMode*/)'
+   |  |  |  |  |  |  returnType: null
+   |  |  |  |  |  |  body: CzProject\PhpSimpleAst\Ast\FunctionBody
+   |  |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |  |   \t    \t    '
    |  |  |  |  |  |  |  blockOpener: '{'
    |  |  |  |  |  |  |  children: array (0)
