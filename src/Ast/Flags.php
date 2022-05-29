@@ -12,13 +12,13 @@
 		/** @var string */
 		private $indentation;
 
-		/** @var array<Visibility|OverridingFlag|StaticFlag> */
+		/** @var array<Visibility|OverridingFlag|StaticModifier> */
 		private $flags;
 
 
 		/**
 		 * @param string $indentation
-		 * @param array<Visibility|OverridingFlag|StaticFlag> $flags
+		 * @param array<Visibility|OverridingFlag|StaticModifier> $flags
 		 */
 		private function __construct($indentation, array $flags)
 		{
@@ -86,7 +86,7 @@
 					$flags[] = Visibility::parse($parser->createSubParser());
 
 				} elseif ($parser->isCurrent(T_STATIC)) {
-					$flags[] = StaticFlag::parse($parser->createSubParser());
+					$flags[] = StaticModifier::parse($parser->createSubParser());
 
 				} elseif ($parser->isCurrent(T_ABSTRACT, T_FINAL)) {
 					$flags[] = OverridingFlag::parse($parser->createSubParser());

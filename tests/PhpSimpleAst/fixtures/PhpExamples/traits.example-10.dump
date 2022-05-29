@@ -25,7 +25,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
    |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  visibility: 'public'
-   |  |  |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\StaticFlag
+   |  |  |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\StaticModifier
    |  |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  |  flag: 'static'
    |  |  |  |  |  |  keywordPrefix: ' '
