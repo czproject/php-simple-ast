@@ -11,7 +11,8 @@
 			string $str,
 			float $float,
 			bool $bool,
-			self $self
+			self $self,
+			int & ... $numbers
 		)
 		{
 		}

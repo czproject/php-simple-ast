@@ -16,42 +16,33 @@
 		/** @var string */
 		private $referenceSign;
 
-		/** @var string */
-		private $referenceSuffix;
+		/** @var Literal|NULL */
+		private $variadic;
 
-		/** @var string */
+		/** @var Literal */
 		private $name;
 
 
-		/**
-		 * @param string $indentation
-		 * @param string $referenceSign
-		 * @param string $referenceSuffix
-		 * @param string $name
-		 */
 		public function __construct(
-			$indentation,
-			$referenceSign,
-			$referenceSuffix,
-			$name
+			string $indentation,
+			string $referenceSign,
+			?Literal $variadic,
+			Literal $name
 		)
 		{
-			Assert::string($indentation);
-			Assert::string($referenceSign);
 			Assert::true($referenceSign === '' || $referenceSign === '&');
-			Assert::string($referenceSuffix);
-			Assert::true(Strings::startsWith($name, '$'));
+			Assert::true(Strings::startsWith($name->getLiteral(), '$'));
 
 			$this->indentation = $indentation;
 			$this->referenceSign = $referenceSign;
-			$this->referenceSuffix = $referenceSuffix;
+			$this->variadic = $variadic;
 			$this->name = $name;
 		}
 
 
 		public function getName(): string
 		{
-			return Strings::substring($this->name, 1);
+			return Strings::substring($this->name->getLiteral(), 1);
 		}
 
 
@@ -61,16 +52,29 @@
 		}
 
 
+		public function isVariadic(): bool
+		{
+			return $this->variadic !== NULL;
+		}
+
+
 		/**
 		 * @return string
 		 */
 		public function toString()
 		{
+			$s = $this->indentation;
+
 			if ($this->hasReference()) {
-				return $this->indentation . $this->referenceSign . $this->referenceSuffix . $this->name;
+				$s .= $this->referenceSign;
 			}
 
-			return $this->indentation . $this->name;
+			if ($this->variadic !== NULL) {
+				$s .= $this->hasReference() ? $this->variadic->toString() : $this->variadic->getLiteral();
+			}
+
+			$s .= ($this->hasReference() || $this->variadic !== NULL) ? $this->name->toString() : $this->name->getLiteral();
+			return $s;
 		}
 
 
@@ -80,17 +84,22 @@
 		public static function parse(NodeParser $parser)
 		{
 			$referenceSign = '';
-			$referenceSuffix = '';
 
 			if ($parser->isCurrent('&')) {
 				$referenceSign = $parser->consumeTokenAsText('&');
 				$parser->tryConsumeWhitespace();
-				$referenceSuffix = $parser->flushIndentation();
 			}
 
-			$name = $parser->consumeTokenAsText(T_VARIABLE);
+			$variadic = NULL;
+
+			if ($parser->isCurrent(T_ELLIPSIS)) {
+				$variadic = Literal::parseToken($parser->createSubParser(), T_ELLIPSIS);
+				$parser->tryConsumeWhitespace();
+			}
+
+			$name = Literal::parseToken($parser->createSubParser(), T_VARIABLE);
 			$parser->close();
 
-			return new self($parser->getNodeIndentation(), $referenceSign, $referenceSuffix, $name);
+			return new self($parser->getNodeIndentation(), $referenceSign, $variadic, $name);
 		}
 	}

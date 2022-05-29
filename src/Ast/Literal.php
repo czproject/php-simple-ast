@@ -31,6 +31,12 @@
 		}
 
 
+		public function getLiteral(): string
+		{
+			return $this->literal;
+		}
+
+
 		/**
 		 * @return string
 		 */

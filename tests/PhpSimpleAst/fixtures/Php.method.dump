@@ -33,7 +33,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  parameters: CzProject\PhpSimpleAst\Ast\Parameters
    |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  opener: '('
-   |  |  |  |  |  |  |  parameters: array (10)
+   |  |  |  |  |  |  |  parameters: array (11)
    |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Parameter
    |  |  |  |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  |  |  |  '\n
@@ -46,8 +46,10 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  |  |  |  referenceSign: ''
-   |  |  |  |  |  |  |  |  |  |  referenceSuffix: ''
-   |  |  |  |  |  |  |  |  |  |  name: '$namespacedFoo'
+   |  |  |  |  |  |  |  |  |  |  variadic: null
+   |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  literal: '$namespacedFoo'
    |  |  |  |  |  |  |  |  |  defaultValue: null
    |  |  |  |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\Parameter
    |  |  |  |  |  |  |  |  |  indentation: string
@@ -61,8 +63,10 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  |  |  |  referenceSign: ''
-   |  |  |  |  |  |  |  |  |  |  referenceSuffix: ''
-   |  |  |  |  |  |  |  |  |  |  name: '$person'
+   |  |  |  |  |  |  |  |  |  |  variadic: null
+   |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  literal: '$person'
    |  |  |  |  |  |  |  |  |  defaultValue: null
    |  |  |  |  |  |  |  |  2 => CzProject\PhpSimpleAst\Ast\Parameter
    |  |  |  |  |  |  |  |  |  indentation: string
@@ -76,8 +80,10 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  |  |  |  referenceSign: ''
-   |  |  |  |  |  |  |  |  |  |  referenceSuffix: ''
-   |  |  |  |  |  |  |  |  |  |  name: '$arr'
+   |  |  |  |  |  |  |  |  |  |  variadic: null
+   |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  literal: '$arr'
    |  |  |  |  |  |  |  |  |  defaultValue: null
    |  |  |  |  |  |  |  |  3 => CzProject\PhpSimpleAst\Ast\Parameter
    |  |  |  |  |  |  |  |  |  indentation: string
@@ -91,8 +97,10 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  |  |  |  referenceSign: ''
-   |  |  |  |  |  |  |  |  |  |  referenceSuffix: ''
-   |  |  |  |  |  |  |  |  |  |  name: '$callable'
+   |  |  |  |  |  |  |  |  |  |  variadic: null
+   |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  literal: '$callable'
    |  |  |  |  |  |  |  |  |  defaultValue: null
    |  |  |  |  |  |  |  |  4 => CzProject\PhpSimpleAst\Ast\Parameter
    |  |  |  |  |  |  |  |  |  indentation: string
@@ -106,8 +114,10 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  |  |  |  referenceSign: ''
-   |  |  |  |  |  |  |  |  |  |  referenceSuffix: ''
-   |  |  |  |  |  |  |  |  |  |  name: '$obj'
+   |  |  |  |  |  |  |  |  |  |  variadic: null
+   |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  literal: '$obj'
    |  |  |  |  |  |  |  |  |  defaultValue: null
    |  |  |  |  |  |  |  |  5 => CzProject\PhpSimpleAst\Ast\Parameter
    |  |  |  |  |  |  |  |  |  indentation: string
@@ -121,8 +131,10 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  |  |  |  referenceSign: ''
-   |  |  |  |  |  |  |  |  |  |  referenceSuffix: ''
-   |  |  |  |  |  |  |  |  |  |  name: '$int'
+   |  |  |  |  |  |  |  |  |  |  variadic: null
+   |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  literal: '$int'
    |  |  |  |  |  |  |  |  |  defaultValue: null
    |  |  |  |  |  |  |  |  6 => CzProject\PhpSimpleAst\Ast\Parameter
    |  |  |  |  |  |  |  |  |  indentation: string
@@ -136,8 +148,10 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  |  |  |  referenceSign: ''
-   |  |  |  |  |  |  |  |  |  |  referenceSuffix: ''
-   |  |  |  |  |  |  |  |  |  |  name: '$str'
+   |  |  |  |  |  |  |  |  |  |  variadic: null
+   |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  literal: '$str'
    |  |  |  |  |  |  |  |  |  defaultValue: null
    |  |  |  |  |  |  |  |  7 => CzProject\PhpSimpleAst\Ast\Parameter
    |  |  |  |  |  |  |  |  |  indentation: string
@@ -151,8 +165,10 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  |  |  |  referenceSign: ''
-   |  |  |  |  |  |  |  |  |  |  referenceSuffix: ''
-   |  |  |  |  |  |  |  |  |  |  name: '$float'
+   |  |  |  |  |  |  |  |  |  |  variadic: null
+   |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  literal: '$float'
    |  |  |  |  |  |  |  |  |  defaultValue: null
    |  |  |  |  |  |  |  |  8 => CzProject\PhpSimpleAst\Ast\Parameter
    |  |  |  |  |  |  |  |  |  indentation: string
@@ -166,8 +182,10 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  |  |  |  referenceSign: ''
-   |  |  |  |  |  |  |  |  |  |  referenceSuffix: ''
-   |  |  |  |  |  |  |  |  |  |  name: '$bool'
+   |  |  |  |  |  |  |  |  |  |  variadic: null
+   |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  literal: '$bool'
    |  |  |  |  |  |  |  |  |  defaultValue: null
    |  |  |  |  |  |  |  |  9 => CzProject\PhpSimpleAst\Ast\Parameter
    |  |  |  |  |  |  |  |  |  indentation: string
@@ -181,8 +199,29 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  |  |  |  referenceSign: ''
-   |  |  |  |  |  |  |  |  |  |  referenceSuffix: ''
-   |  |  |  |  |  |  |  |  |  |  name: '$self'
+   |  |  |  |  |  |  |  |  |  |  variadic: null
+   |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  literal: '$self'
+   |  |  |  |  |  |  |  |  |  defaultValue: null
+   |  |  |  |  |  |  |  |  10 => CzProject\PhpSimpleAst\Ast\Parameter
+   |  |  |  |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  |  |  |  ',\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t    \t    '
+   |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  nullableSign: ''
+   |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
+   |  |  |  |  |  |  |  |  |  |  type: 'int'
+   |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
+   |  |  |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  |  |  referenceSign: '&'
+   |  |  |  |  |  |  |  |  |  |  variadic: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  |  |  |  literal: '...'
+   |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  |  |  |  literal: '$numbers'
    |  |  |  |  |  |  |  |  |  defaultValue: null
    |  |  |  |  |  |  |  closer: string
    |  |  |  |  |  |  |  |  '\n

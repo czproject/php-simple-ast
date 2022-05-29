@@ -46,8 +46,10 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  |  |  referenceSign: ''
-   |  |  |  |  |  |  |  |  |  |  referenceSuffix: ''
-   |  |  |  |  |  |  |  |  |  |  name: '$msg'
+   |  |  |  |  |  |  |  |  |  |  variadic: null
+   |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  literal: '$msg'
    |  |  |  |  |  |  |  |  |  defaultValue: null
    |  |  |  |  |  |  |  closer: ')'
    |  |  |  |  |  |  returnType: null
@@ -112,8 +114,10 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  |  |  referenceSign: ''
-   |  |  |  |  |  |  |  |  |  |  referenceSuffix: ''
-   |  |  |  |  |  |  |  |  |  |  name: '$msg'
+   |  |  |  |  |  |  |  |  |  |  variadic: null
+   |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  literal: '$msg'
    |  |  |  |  |  |  |  |  |  defaultValue: null
    |  |  |  |  |  |  |  closer: ')'
    |  |  |  |  |  |  returnType: null
@@ -239,8 +243,10 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  |  |  referenceSign: ''
-   |  |  |  |  |  |  |  |  |  |  referenceSuffix: ''
-   |  |  |  |  |  |  |  |  |  |  name: '$num'
+   |  |  |  |  |  |  |  |  |  |  variadic: null
+   |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  literal: '$num'
    |  |  |  |  |  |  |  |  |  defaultValue: null
    |  |  |  |  |  |  |  closer: ')'
    |  |  |  |  |  |  returnType: null

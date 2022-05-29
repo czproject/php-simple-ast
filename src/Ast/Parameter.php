@@ -78,7 +78,7 @@
 		{
 			$type = NULL;
 
-			if (!$parser->isCurrent(T_VARIABLE, '&')) {
+			if (!$parser->isCurrent(T_VARIABLE, T_ELLIPSIS, '&')) {
 				$type = NamedType::parse($parser->createSubParser());
 				$parser->tryConsumeWhitespace();
 			}

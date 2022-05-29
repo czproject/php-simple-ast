@@ -171,8 +171,10 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  |  |  referenceSign: ''
-   |  |  |  |  |  |  |  |  |  |  referenceSuffix: ''
-   |  |  |  |  |  |  |  |  |  |  name: '$val'
+   |  |  |  |  |  |  |  |  |  |  variadic: null
+   |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  literal: '$val'
    |  |  |  |  |  |  |  |  |  defaultValue: null
    |  |  |  |  |  |  |  closer: ')'
    |  |  |  |  |  |  returnType: null

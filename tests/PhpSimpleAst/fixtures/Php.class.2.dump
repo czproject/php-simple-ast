@@ -48,8 +48,10 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  |  |  referenceSign: ''
-   |  |  |  |  |  |  |  |  |  |  referenceSuffix: ''
-   |  |  |  |  |  |  |  |  |  |  name: '$name'
+   |  |  |  |  |  |  |  |  |  |  variadic: null
+   |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  literal: '$name'
    |  |  |  |  |  |  |  |  |  defaultValue: null
    |  |  |  |  |  |  |  closer: ')'
    |  |  |  |  |  |  returnType: null
