@@ -13,6 +13,10 @@ namespace {
 namespace Foo {
 	class Bar extends \MyClass
 	{
+		/**
+		 * @param string
+		 * @return void
+		 */
 		function setName($name, &$age)
 		{
 		}

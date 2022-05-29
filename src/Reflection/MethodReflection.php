@@ -51,6 +51,12 @@
 		}
 
 
+		public function getDocComment(): ?string
+		{
+			return $this->node->getDocComment();
+		}
+
+
 		/**
 		 * @return array<string, ParameterReflection>
 		 */

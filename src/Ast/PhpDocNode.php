@@ -34,6 +34,19 @@
 		}
 
 
+		public function getContent(): string
+		{
+			$indentation = $this->indentation;
+
+			if (($pos = strrpos($indentation, "\n"))) {
+				$indentation = substr($indentation, $pos);
+			}
+
+			$indentation = ltrim($indentation, "\n");
+			return str_replace("\n" . $indentation, "\n", $this->content);
+		}
+
+
 		public function toString()
 		{
 			return $this->indentation . $this->content;

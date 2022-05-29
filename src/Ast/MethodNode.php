@@ -9,6 +9,9 @@
 
 	class MethodNode implements INode
 	{
+		/** @var PhpDocNode|NULL */
+		private $phpDocNode;
+
 		/** @var string */
 		private $indentation;
 
@@ -41,6 +44,7 @@
 		 * @param string $keyword
 		 */
 		public function __construct(
+			?PhpDocNode $phpDocNode,
 			$indentation,
 			array $modifiers,
 			$keywordPrefix,
@@ -55,6 +59,7 @@
 			Assert::string($keywordPrefix);
 			Assert::string($keyword);
 
+			$this->phpDocNode = $phpDocNode;
 			$this->indentation = $indentation;
 			$this->modifiers = $modifiers;
 			$this->keywordPrefix = $keywordPrefix;
@@ -85,6 +90,12 @@
 		}
 
 
+		public function getDocComment(): ?string
+		{
+			return $this->phpDocNode !== NULL ? $this->phpDocNode->getContent() : NULL;
+		}
+
+
 		/**
 		 * @return Parameter[]
 		 */
@@ -96,7 +107,8 @@
 
 		public function toString()
 		{
-			$s = $this->indentation;
+			$s = $this->phpDocNode !== NULL ? $this->phpDocNode->toString() : '';
+			$s .= $this->indentation;
 
 			foreach ($this->modifiers as $modifier) {
 				$s .= $modifier->toString();
@@ -119,7 +131,11 @@
 		/**
 		 * @return self
 		 */
-		public static function parse(Modifiers $modifiers, NodeParser $parser)
+		public static function parse(
+			?PhpDocNode $phpDocNode,
+			Modifiers $modifiers,
+			NodeParser $parser
+		)
 		{
 			$keyword = $parser->consumeTokenAsText(T_FUNCTION);
 			$parser->consumeWhitespace();
@@ -149,6 +165,7 @@
 
 			return new self(
 				//$parser->getNodeIndentation(),
+				$phpDocNode,
 				$modifiers->getIndentation(),
 				$modifiers->toMethodModifiers(),
 				$parser->getNodeIndentation(),

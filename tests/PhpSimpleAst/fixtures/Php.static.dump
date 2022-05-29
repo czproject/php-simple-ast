@@ -17,6 +17,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |   {'
    |  |  |  |  children: array (1)
    |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\MethodNode
+   |  |  |  |  |  |  phpDocNode: null
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |   \t    '
@@ -74,6 +75,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |   {'
    |  |  |  |  children: array (1)
    |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\MethodNode
+   |  |  |  |  |  |  phpDocNode: null
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |   \t    '

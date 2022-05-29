@@ -25,6 +25,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |   \t    {'
    |  |  |  |  children: array (1)
    |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\MethodNode
+   |  |  |  |  |  |  phpDocNode: null
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |   \t    \t    '

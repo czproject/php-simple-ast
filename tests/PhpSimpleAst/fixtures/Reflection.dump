@@ -25,6 +25,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |   \t    {'
    |  |  |  |  |  |  children: array (1)
    |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\MethodNode
+   |  |  |  |  |  |  |  |  phpDocNode: null
    |  |  |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |  |  |   \t    \t    '
@@ -87,6 +88,15 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |   \t    {'
    |  |  |  |  |  |  children: array (1)
    |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\MethodNode
+   |  |  |  |  |  |  |  |  phpDocNode: CzProject\PhpSimpleAst\Ast\PhpDocNode
+   |  |  |  |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t    '
+   |  |  |  |  |  |  |  |  |  content: string
+   |  |  |  |  |  |  |  |  |  |  '/**\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t     * @param string\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t     * @return void\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t     */'
    |  |  |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |  |  |   \t    \t    '

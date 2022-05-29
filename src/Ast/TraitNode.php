@@ -108,9 +108,11 @@
 
 			// namespace body
 			$blockCloser = '';
+			$phpDocNode = NULL;
 
 			while ($parser->hasToken()) {
 				$child = NULL;
+				$isPhpDoc = FALSE;
 
 				if ($parser->isCurrent('}')) {
 					$blockCloser = $parser->flushIndentation() . $parser->consumeTokenAsText('}');
@@ -120,7 +122,8 @@
 					$modifiers = Modifiers::parse($parser->createSubParser());
 
 					if ($parser->isCurrent(T_FUNCTION)) {
-						$child = MethodNode::parse($modifiers, $parser->createSubParser());
+						$child = MethodNode::parse($phpDocNode, $modifiers, $parser->createSubParser());
+						$phpDocNode = NULL;
 
 					} elseif ($parser->isCurrent(T_VARIABLE)) {
 						$child = PropertyNode::parse($modifiers, $parser->createSubParser());
@@ -130,7 +133,8 @@
 					}
 
 				} elseif ($parser->isCurrent(T_FUNCTION)) {
-					$child = MethodNode::parse(Modifiers::empty($parser->flushIndentation()), $parser->createSubParser());
+					$child = MethodNode::parse($phpDocNode, Modifiers::empty($parser->flushIndentation()), $parser->createSubParser());
+					$phpDocNode = NULL;
 
 				} elseif ($parser->isCurrent(T_USE)) { // trait
 					$child = TraitUseNode::parse($parser->createSubParser());
@@ -139,13 +143,19 @@
 					$child = CommentNode::parse($parser->createSubParser());
 
 				} elseif ($parser->isCurrent(T_DOC_COMMENT)) {
-					$child = PhpDocNode::parse($parser->createSubParser());
+					$phpDocNode = PhpDocNode::parse($parser->createSubParser());
+					$isPhpDoc = TRUE;
 
 				} elseif($parser->isCurrent(T_WHITESPACE)) {
 					// nothing
 
 				} else {
 					$parser->errorUnknowToken();
+				}
+
+				if ($phpDocNode !== NULL && !$isPhpDoc) {
+					$parser->onChild($phpDocNode);
+					$phpDocNode = NULL;
 				}
 
 				$parser->onChild($child);

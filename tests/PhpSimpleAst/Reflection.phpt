@@ -86,3 +86,18 @@ test('Method parameters', function () use ($reflection) {
 	Assert::false($methodReflection->getParameterByIndex(0)->isPassedByReference());
 	Assert::true($methodReflection->getParameterByIndex(1)->isPassedByReference());
 });
+
+
+test('Method PHPDoc', function () use ($reflection) {
+	$methodReflection = $reflection->getMethod(\Foo\Bar::class, 'getName');
+	Assert::null($methodReflection->getDocComment());
+
+	$methodReflection = $reflection->getMethod(\Foo\Bar::class, 'setName');
+	$content = <<<DOCCOMMENT
+/**
+ * @param string
+ * @return void
+ */
+DOCCOMMENT;
+	Assert::same($content, $methodReflection->getDocComment());
+});

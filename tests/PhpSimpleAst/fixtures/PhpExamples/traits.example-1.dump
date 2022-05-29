@@ -18,6 +18,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  blockOpener: ' {'
    |  |  |  |  children: array (2)
    |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\MethodNode
+   |  |  |  |  |  |  phpDocNode: null
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |       '
@@ -42,6 +43,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  content: '/*1*/'
    |  |  |  |  |  |  |  blockCloser: ' }'
    |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\MethodNode
+   |  |  |  |  |  |  phpDocNode: null
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |       '
