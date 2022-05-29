@@ -85,6 +85,15 @@
 		}
 
 
+		/**
+		 * @return Parameter[]
+		 */
+		public function getParameters(): array
+		{
+			return $this->parameters->getParameters();
+		}
+
+
 		public function toString()
 		{
 			$s = $this->indentation;

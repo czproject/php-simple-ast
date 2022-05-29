@@ -4,6 +4,7 @@
 
 	namespace CzProject\PhpSimpleAst\Reflection;
 
+	use CzProject\Assert\Assert;
 	use CzProject\PhpSimpleAst\Ast;
 	use CzProject\PhpSimpleAst\InvalidStateException;
 
@@ -72,6 +73,19 @@
 		public function getMethods(): array
 		{
 			return $this->methods;
+		}
+
+
+		public function hasMethod(string $methodName): bool
+		{
+			return isset($this->methods[$methodName]);
+		}
+
+
+		public function getMethod(string $methodName): MethodReflection
+		{
+			Assert::true(isset($this->methods[$methodName]), 'Method ' . $methodName . ' not found.');
+			return $this->methods[$methodName];
 		}
 
 

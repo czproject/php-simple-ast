@@ -5,6 +5,7 @@
 	namespace CzProject\PhpSimpleAst\Ast;
 
 	use CzProject\Assert\Assert;
+	use Nette\Utils\Strings;
 
 
 	class VariableName
@@ -39,11 +40,18 @@
 			Assert::string($referenceSign);
 			Assert::true($referenceSign === '' || $referenceSign === '&');
 			Assert::string($referenceSuffix);
+			Assert::true(Strings::startsWith($name, '$'));
 
 			$this->indentation = $indentation;
 			$this->referenceSign = $referenceSign;
 			$this->referenceSuffix = $referenceSuffix;
 			$this->name = $name;
+		}
+
+
+		public function getName(): string
+		{
+			return Strings::substring($this->name, 1);
 		}
 
 

@@ -4,6 +4,7 @@
 
 	namespace CzProject\PhpSimpleAst\Reflection;
 
+	use CzProject\Assert\Assert;
 	use CzProject\PhpSimpleAst\Ast;
 	use Nette\Utils\Strings;
 
@@ -96,6 +97,23 @@
 			}
 
 			return $result;
+		}
+
+
+		/**
+		 * @return MethodReflection
+		 */
+		public function getMethod(string $className, string $methodName): MethodReflection
+		{
+			$parent = $this->getClass($className);
+
+			if ($parent->hasMethod($methodName)) {
+				return $parent->getMethod($methodName);
+			}
+
+			$methods = $this->getMethods($className);
+			Assert::true(isset($methods[$methodName]), 'Method ' . $methodName . ' not found.');
+			return $methods[$methodName];
 		}
 
 

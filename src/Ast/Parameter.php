@@ -41,6 +41,12 @@
 		}
 
 
+		public function getName(): string
+		{
+			return $this->name->getName();
+		}
+
+
 		public function toString()
 		{
 			$s = $this->indentation;

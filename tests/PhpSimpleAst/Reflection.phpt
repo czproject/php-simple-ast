@@ -67,3 +67,19 @@ test('Class inherited methods', function () use ($reflection) {
 		Foo\Bar::class . '::setName',
 	], $names);
 });
+
+
+test('Method parameters', function () use ($reflection) {
+	$methodReflection = $reflection->getMethod(\Foo\Bar::class, 'setName');
+	$names = [];
+
+	foreach ($methodReflection->getParameters() as $parameterReflection) {
+		Assert::type(PhpSimpleAst\Reflection\ParameterReflection::class, $parameterReflection);
+		$names[$parameterReflection->getIndex()] = $parameterReflection->getName();
+	}
+
+	Assert::same([
+		0 => 'name',
+		1 => 'age',
+	], $names);
+});

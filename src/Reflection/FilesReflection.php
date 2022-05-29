@@ -74,6 +74,12 @@
 		}
 
 
+		public function getMethod(string $className, string $methodName): MethodReflection
+		{
+			return $this->getReflection()->getMethod($className, $methodName);
+		}
+
+
 		private function getReflection(): Reflection
 		{
 			if ($this->reflection === NULL) {
