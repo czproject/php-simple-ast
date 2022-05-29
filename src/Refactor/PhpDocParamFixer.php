@@ -34,22 +34,29 @@
 				$newDocComment = Strings::replace($docComment, "#(\\s*\\*\\s*@param\\s+)([^@\\n\\r]*)#", function (array $m) use (&$index, $methodReflection) {
 					$tag = $m[1];
 					$value = $m[2];
+					$tokens = preg_split('/(\s+)/', $value, 2, \PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE);
 
-					if (strpos($value, '$') !== FALSE) {
+					if ($tokens === FALSE) {
+						return $m[1];
+					}
+
+					if (isset($tokens[2]) && Strings::startsWith($tokens[2], '$')) {
+						$index++;
 						return $m[0];
 					}
 
 					if ($methodReflection->hasParameterByIndex($index)) {
 						$parameterReflection = $methodReflection->getParameterByIndex($index);
-						$value .= ' $' . $parameterReflection->getName();
+						$tokens[1] = isset($tokens[1]) ? $tokens[1]  : ' ';
+						$tokens[2] = '$' . $parameterReflection->getName() . (isset($tokens[2]) ? (' ' . $tokens[2]) : '');
 
 					} else {
-						$tag = '';
-						$value = '';
+						$index++;
+						return '';
 					}
 
 					$index++;
-					return $tag . $value;
+					return $tag . implode('', $tokens);
 				});
 
 				if ($newDocComment !== $docComment) {

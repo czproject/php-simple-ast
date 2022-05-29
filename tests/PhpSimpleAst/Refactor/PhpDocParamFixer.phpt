@@ -7,7 +7,7 @@ use Tester\Assert;
 
 require __DIR__ . '/../../bootstrap.php';
 
-$reflection = PhpSimpleAst\Reflection\FilesReflection::scanFile(Fixtures::path('Reflection.php'));
+$reflection = PhpSimpleAst\Reflection\FilesReflection::scanFile(Fixtures::path('Refactoring/PhpDocParamFixer.php'));
 
 
 test('@param fixer', function () use ($reflection) {
@@ -16,8 +16,9 @@ test('@param fixer', function () use ($reflection) {
 
 	$newContent = <<<DOCCOMMENT
 /**
- * @param string \$name
+ * @param string \$name description \$var
  * @param int \$age
+ * @param string \$email
  *
  * @return void
  */
