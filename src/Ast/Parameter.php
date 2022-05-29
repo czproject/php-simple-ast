@@ -12,7 +12,7 @@
 		/** @var string */
 		private $indentation;
 
-		/** @var NullableName|NULL */
+		/** @var NamedType|NULL */
 		private $type;
 
 		/** @var VariableName */
@@ -27,7 +27,7 @@
 		 */
 		public function __construct(
 			$indentation,
-			NullableName $type = NULL,
+			NamedType $type = NULL,
 			VariableName $name,
 			DefaultValue $defaultValue = NULL
 		)
@@ -79,7 +79,7 @@
 			$type = NULL;
 
 			if (!$parser->isCurrent(T_VARIABLE, '&')) {
-				$type = NullableName::parse($parser->createSubParser());
+				$type = NamedType::parse($parser->createSubParser());
 				$parser->tryConsumeWhitespace();
 			}
 

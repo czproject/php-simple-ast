@@ -12,21 +12,21 @@
 		/** @var string */
 		private $indentation;
 
-		/** @var NullableName[] */
-		private $names;
+		/** @var NamedType[] */
+		private $types;
 
 
 		/**
 		 * @param string $indentation
-		 * @param NullableName[] $names
+		 * @param NamedType[] $types
 		 */
-		public function __construct($indentation, array $names)
+		public function __construct($indentation, array $types)
 		{
 			Assert::string($indentation);
-			Assert::true(count($names) > 0, 'Names cannot be empty.');
+			Assert::true(count($types) > 0, 'Types cannot be empty.');
 
 			$this->indentation = $indentation;
-			$this->names = $names;
+			$this->types = $types;
 		}
 
 
@@ -37,7 +37,7 @@
 		{
 			$s = $this->indentation;
 
-			foreach ($this->names as $name) {
+			foreach ($this->types as $name) {
 				$s .= $name->toString();
 			}
 
@@ -50,14 +50,14 @@
 		 */
 		public static function parse(NodeParser $parser)
 		{
-			$names = [];
-			$names[] = NullableName::parse($parser->createSubParser());
+			$types = [];
+			$types[] = NamedType::parse($parser->createSubParser());
 			$parser->tryConsumeWhitespace();
 
 			while ($parser->isCurrent('&', '|')) {
 				$parser->consumeAsIndentation('&', '|');
 				$parser->tryConsumeWhitespace();
-				$names[] = NullableName::parse($parser->createSubParser());
+				$names[] = NamedType::parse($parser->createSubParser());
 				$parser->tryConsumeWhitespace();
 			}
 

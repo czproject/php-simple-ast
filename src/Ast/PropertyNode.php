@@ -15,7 +15,7 @@
 		/** @var IPropertyModifier[] */
 		private $modifiers;
 
-		/** @var NullableName|NULL */
+		/** @var NamedType|NULL */
 		private $type;
 
 		/** @var string */
@@ -41,7 +41,7 @@
 		public function __construct(
 			$indentation,
 			array $modifiers,
-			NullableName $type = NULL,
+			NamedType $type = NULL,
 			$namePrefix,
 			$name,
 			DefaultValue $defaultValue = NULL,
@@ -95,7 +95,7 @@
 			$type = NULL;
 
 			if (!$parser->isCurrent(T_VARIABLE)) {
-				$type = NullableName::parse($parser->createSubParser());
+				$type = NamedType::parse($parser->createSubParser());
 				$parser->consumeWhitespace();
 			}
 
