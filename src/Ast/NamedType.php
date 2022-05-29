@@ -69,6 +69,9 @@
 			if ($parser->isCurrent(T_ARRAY)) {
 				$type = $parser->consumeTokenAsText(T_ARRAY);
 
+			} elseif ($parser->isCurrent(T_CALLABLE)) {
+				$type = $parser->consumeTokenAsText(T_CALLABLE);
+
 			} else {
 				$name = Name::parse($parser->createSubParser());
 				$type = $name->toString();
