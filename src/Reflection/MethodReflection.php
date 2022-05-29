@@ -71,6 +71,17 @@
 		}
 
 
+		/**
+		 * @return array<int, ParameterReflection>
+		 */
+		public function getIndexedParameters(): array
+		{
+			$this->getParameters();
+			Assert::true($this->parametersByIndex !== NULL);
+			return $this->parametersByIndex;
+		}
+
+
 		public function getParameter(string $name): ParameterReflection
 		{
 			$parameters = $this->getParameters();
