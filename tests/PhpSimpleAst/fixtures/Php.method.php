@@ -16,6 +16,16 @@
 		)
 		{
 		}
+
+		function withComment() // comment
+		{
+		}
+	}
+
+
+	abstract class AbstractClass
+	{
+		abstract function abstractWithComment() /* asdf */;
 	}
 
 

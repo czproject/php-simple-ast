@@ -164,6 +164,11 @@
 				$parser->tryConsumeWhitespace();
 			}
 
+			if ($parser->isCurrent(T_COMMENT)) {
+				$parser->consumeAsIndentation(T_COMMENT);
+				$parser->tryConsumeWhitespace();
+			}
+
 			if ($parser->isCurrent('{')) {
 				$body = FunctionBody::parse($parser->createSubParser());
 
