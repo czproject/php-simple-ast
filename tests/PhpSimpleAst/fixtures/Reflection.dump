@@ -114,7 +114,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  |  |  type: null
    |  |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
-   |  |  |  |  |  |  |  |  |  |  |  |  referenceSign: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  referenceSign: '&'
    |  |  |  |  |  |  |  |  |  |  |  |  referenceSuffix: ''
    |  |  |  |  |  |  |  |  |  |  |  |  name: '$age'
    |  |  |  |  |  |  |  |  |  |  |  defaultValue: null

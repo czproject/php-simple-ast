@@ -13,7 +13,7 @@ namespace {
 namespace Foo {
 	class Bar extends \MyClass
 	{
-		function setName($name, $age)
+		function setName($name, &$age)
 		{
 		}
 	}

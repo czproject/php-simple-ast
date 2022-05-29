@@ -38,4 +38,10 @@
 		{
 			return $this->parameter->getName();
 		}
+
+
+		public function isPassedByReference(): bool
+		{
+			return $this->parameter->isPassedByReference();
+		}
 	}

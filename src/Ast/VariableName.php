@@ -55,12 +55,18 @@
 		}
 
 
+		public function hasReference(): bool
+		{
+			return $this->referenceSign !== '';
+		}
+
+
 		/**
 		 * @return string
 		 */
 		public function toString()
 		{
-			if ($this->referenceSign !== '') {
+			if ($this->hasReference()) {
 				return $this->indentation . $this->referenceSign . $this->referenceSuffix . $this->name;
 			}
 
@@ -77,7 +83,7 @@
 			$referenceSuffix = '';
 
 			if ($parser->isCurrent('&')) {
-				$referenceSign = $parser->consumeTokenAsText('?');
+				$referenceSign = $parser->consumeTokenAsText('&');
 				$parser->tryConsumeWhitespace();
 				$referenceSuffix = $parser->flushIndentation();
 			}

@@ -47,6 +47,12 @@
 		}
 
 
+		public function isPassedByReference(): bool
+		{
+			return $this->name->hasReference();
+		}
+
+
 		public function toString()
 		{
 			$s = $this->indentation;

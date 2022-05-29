@@ -82,4 +82,7 @@ test('Method parameters', function () use ($reflection) {
 		0 => 'name',
 		1 => 'age',
 	], $names);
+
+	Assert::false($methodReflection->getParameterByIndex(0)->isPassedByReference());
+	Assert::true($methodReflection->getParameterByIndex(1)->isPassedByReference());
 });
