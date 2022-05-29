@@ -9,15 +9,26 @@
 
 	class MethodReflection
 	{
+		/** @var string */
+		private $declaringClassName;
+
 		/** @var Ast\MethodNode */
 		private $node;
 
 
-		public function __construct(
+		private function __construct(
+			string $declaringClassName,
 			Ast\MethodNode $node
 		)
 		{
+			$this->declaringClassName = $declaringClassName;
 			$this->node = $node;
+		}
+
+
+		public function getDeclaringClassName(): string
+		{
+			return $this->declaringClassName;
 		}
 
 
@@ -30,12 +41,12 @@
 		/**
 		 * @return self[]
 		 */
-		public static function createFromClass(Ast\ClassNode $classNode): array
+		public static function createFromClass(string $declaringClassName, Ast\ClassNode $classNode): array
 		{
 			$result = [];
 
 			foreach (Ast\Tree::find($classNode, Ast\MethodNode::class) as $tree) {
-				$result[] = new self($tree->getNode());
+				$result[] = new self($declaringClassName, $tree->getNode());
 			}
 
 			return $result;

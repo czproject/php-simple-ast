@@ -67,7 +67,7 @@
 				$namespaceNode = $classTree->closest(Ast\NamespaceNode::class);
 				$namespaceName = $namespaceNode !== NULL ? $namespaceNode->getName() : NULL;
 				$className = ($namespaceName !== NULL ? "$namespaceName\\" : '') . $classNode->getName();
-				$result[] = new self($className, MethodReflection::createFromClass($classNode));
+				$result[] = new self($className, MethodReflection::createFromClass($className, $classNode));
 			}
 
 			return $result;
