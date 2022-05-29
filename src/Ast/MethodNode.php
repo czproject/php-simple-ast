@@ -24,7 +24,7 @@
 		/** @var Name */
 		private $name;
 
-		/** @var FunctionArguments */
+		/** @var Parameters */
 		private $arguments;
 
 		/** @var FunctionReturnType|NULL */
@@ -46,7 +46,7 @@
 			$keywordPrefix,
 			$keyword,
 			Name $name,
-			FunctionArguments $arguments,
+			Parameters $arguments,
 			FunctionReturnType $returnType = NULL,
 			IFunctionBody $body
 		)
@@ -116,7 +116,7 @@
 			$parser->consumeWhitespace();
 			$name = Name::parse($parser->createSubParser());
 			$parser->tryConsumeWhitespace();
-			$arguments = FunctionArguments::parse($parser->createSubParser());
+			$arguments = Parameters::parse($parser->createSubParser());
 			$parser->tryConsumeWhitespace();
 			$returnType = NULL;
 			$body = NULL;

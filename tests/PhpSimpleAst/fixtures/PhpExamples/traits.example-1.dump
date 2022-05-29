@@ -27,7 +27,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
    |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  name: 'getReturnType'
-   |  |  |  |  |  |  arguments: CzProject\PhpSimpleAst\Ast\FunctionArguments
+   |  |  |  |  |  |  arguments: CzProject\PhpSimpleAst\Ast\Parameters
    |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  opener: '('
    |  |  |  |  |  |  |  arguments: array (0)
@@ -51,7 +51,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
    |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  name: 'getReturnDescription'
-   |  |  |  |  |  |  arguments: CzProject\PhpSimpleAst\Ast\FunctionArguments
+   |  |  |  |  |  |  arguments: CzProject\PhpSimpleAst\Ast\Parameters
    |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  opener: '('
    |  |  |  |  |  |  |  arguments: array (0)

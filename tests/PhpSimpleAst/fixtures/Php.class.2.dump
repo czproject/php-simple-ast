@@ -37,7 +37,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
    |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  name: 'say'
-   |  |  |  |  |  |  arguments: CzProject\PhpSimpleAst\Ast\FunctionArguments
+   |  |  |  |  |  |  arguments: CzProject\PhpSimpleAst\Ast\Parameters
    |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  opener: '('
    |  |  |  |  |  |  |  arguments: array (1)
