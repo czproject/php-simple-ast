@@ -137,6 +137,9 @@
 						$child = MethodNode::parse($phpDocNode, $modifiers, $parser->createSubParser());
 						$phpDocNode = NULL;
 
+					} elseif ($parser->isCurrent(T_CONST)) {
+						$child = ConstantNode::parse($modifiers, $parser->createSubParser());
+
 					} else {
 						$parser->errorUnknowToken();
 					}
@@ -144,6 +147,9 @@
 				} elseif ($parser->isCurrent(T_FUNCTION)) {
 					$child = MethodNode::parse($phpDocNode, Modifiers::empty($parser->flushIndentation()), $parser->createSubParser());
 					$phpDocNode = NULL;
+
+				} elseif ($parser->isCurrent(T_CONST)) {
+					$child = ConstantNode::parse(Modifiers::empty($parser->flushIndentation()), $parser->createSubParser());
 
 				} elseif ($parser->isCurrent(T_COMMENT)) {
 					$child = CommentNode::parse($parser->createSubParser());

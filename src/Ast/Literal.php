@@ -153,4 +153,20 @@
 				$literal
 			);
 		}
+
+
+		/**
+		 * @param  int|string $tokenType
+		 * @return self
+		 */
+		public static function parseToken(NodeParser $parser, $tokenType)
+		{
+			$literal = $parser->consumeTokenAsText($tokenType);
+			$parser->close();
+
+			return new self(
+				$parser->getNodeIndentation(),
+				$literal
+			);
+		}
 	}

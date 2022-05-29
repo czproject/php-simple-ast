@@ -206,6 +206,9 @@
 					} elseif ($parser->isCurrent(T_VARIABLE)) {
 						$child = PropertyNode::parse($modifiers, $parser->createSubParser());
 
+					} elseif ($parser->isCurrent(T_CONST)) {
+						$child = ConstantNode::parse($modifiers, $parser->createSubParser());
+
 					} else {
 						$parser->errorUnknowToken();
 					}
@@ -213,6 +216,9 @@
 				} elseif ($parser->isCurrent(T_FUNCTION)) {
 					$child = MethodNode::parse($phpDocNode, Modifiers::empty($parser->flushIndentation()), $parser->createSubParser());
 					$phpDocNode = NULL;
+
+				} elseif ($parser->isCurrent(T_CONST)) {
+					$child = ConstantNode::parse(Modifiers::empty($parser->flushIndentation()), $parser->createSubParser());
 
 				} elseif ($parser->isCurrent(T_USE)) { // trait
 					$child = TraitUseNode::parse($parser->createSubParser());

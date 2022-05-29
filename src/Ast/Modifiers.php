@@ -39,6 +39,19 @@
 
 
 		/**
+		 * @return IConstantModifier[]
+		 */
+		public function toConstantModifiers()
+		{
+			foreach ($this->modifiers as $modifier) {
+				Assert::type($modifier, IConstantModifier::class, 'Modifier ' . get_class($modifier) . ' is not ' . IConstantModifier::class);
+			}
+
+			return $this->modifiers;
+		}
+
+
+		/**
 		 * @return IMethodModifier[]
 		 */
 		public function toMethodModifiers()

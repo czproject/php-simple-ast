@@ -7,7 +7,7 @@
 	use CzProject\Assert\Assert;
 
 
-	class Visibility implements IMethodModifier, IPropertyModifier
+	class Visibility implements IConstantModifier, IMethodModifier, IPropertyModifier
 	{
 		/** @var string */
 		private $indentation;
