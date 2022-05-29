@@ -80,6 +80,7 @@
 
 			if (!$parser->isCurrent(T_VARIABLE, '&')) {
 				$type = NullableName::parse($parser->createSubParser());
+				$parser->tryConsumeWhitespace();
 			}
 
 			$name = VariableName::parse($parser->createSubParser());
