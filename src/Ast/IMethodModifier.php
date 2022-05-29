@@ -5,7 +5,7 @@
 	namespace CzProject\PhpSimpleAst\Ast;
 
 
-	interface IMethodFlag
+	interface IMethodModifier
 	{
 		/**
 		 * @return string

@@ -39,12 +39,12 @@
 
 
 		/**
-		 * @return IMethodFlag[]
+		 * @return IMethodModifier[]
 		 */
 		public function toMethodFlags()
 		{
 			foreach ($this->flags as $flag) {
-				Assert::type($flag, IMethodFlag::class, 'Flag ' . get_class($flag) . ' is not IMethodFlag');
+				Assert::type($flag, IMethodModifier::class, 'Flag ' . get_class($flag) . ' is not ' . IMethodModifier::class);
 			}
 
 			return $this->flags;

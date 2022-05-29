@@ -12,7 +12,7 @@
 		/** @var string */
 		private $indentation;
 
-		/** @var IMethodFlag[] */
+		/** @var IMethodModifier[] */
 		private $flags;
 
 		/** @var string */
@@ -36,7 +36,7 @@
 
 		/**
 		 * @param string $indentation
-		 * @param IMethodFlag[] $flags
+		 * @param IMethodModifier[] $flags
 		 * @param string $keywordPrefix
 		 * @param string $keyword
 		 */
