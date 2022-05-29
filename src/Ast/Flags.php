@@ -52,12 +52,12 @@
 
 
 		/**
-		 * @return IPropertyFlag[]
+		 * @return IPropertyModifier[]
 		 */
 		public function toPropertyFlags()
 		{
 			foreach ($this->flags as $flag) {
-				Assert::type($flag, IPropertyFlag::class, 'Flag ' . get_class($flag) . ' is not IPropertyFlag');
+				Assert::type($flag, IPropertyModifier::class, 'Flag ' . get_class($flag) . ' is not ' . IPropertyModifier::class);
 			}
 
 			return $this->flags;

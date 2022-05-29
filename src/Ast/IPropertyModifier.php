@@ -5,7 +5,7 @@
 	namespace CzProject\PhpSimpleAst\Ast;
 
 
-	interface IPropertyFlag
+	interface IPropertyModifier
 	{
 		/**
 		 * @return string

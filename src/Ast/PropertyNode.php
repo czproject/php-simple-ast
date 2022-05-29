@@ -12,7 +12,7 @@
 		/** @var string */
 		private $indentation;
 
-		/** @var IPropertyFlag[] */
+		/** @var IPropertyModifier[] */
 		private $flags;
 
 		/** @var NullableName|NULL */
@@ -33,7 +33,7 @@
 
 		/**
 		 * @param string $indentation
-		 * @param IPropertyFlag[] $flags
+		 * @param IPropertyModifier[] $flags
 		 * @param string $namePrefix
 		 * @param string $name
 		 * @param string $closer
