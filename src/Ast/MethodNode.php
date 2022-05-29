@@ -25,7 +25,7 @@
 		private $name;
 
 		/** @var Parameters */
-		private $arguments;
+		private $parameters;
 
 		/** @var FunctionReturnType|NULL */
 		private $returnType;
@@ -46,7 +46,7 @@
 			$keywordPrefix,
 			$keyword,
 			Name $name,
-			Parameters $arguments,
+			Parameters $parameters,
 			FunctionReturnType $returnType = NULL,
 			IFunctionBody $body
 		)
@@ -60,7 +60,7 @@
 			$this->keywordPrefix = $keywordPrefix;
 			$this->keyword = $keyword;
 			$this->name = $name;
-			$this->arguments = $arguments;
+			$this->parameters = $parameters;
 			$this->returnType = $returnType;
 			$this->body = $body;
 		}
@@ -96,7 +96,7 @@
 			$s .= $this->keywordPrefix;
 			$s .= $this->keyword;
 			$s .= $this->name->toString();
-			$s .= $this->arguments->toString();
+			$s .= $this->parameters->toString();
 
 			if ($this->returnType !== NULL) {
 				$s .= $this->returnType->toString();
@@ -116,7 +116,7 @@
 			$parser->consumeWhitespace();
 			$name = Name::parse($parser->createSubParser());
 			$parser->tryConsumeWhitespace();
-			$arguments = Parameters::parse($parser->createSubParser());
+			$parameters = Parameters::parse($parser->createSubParser());
 			$parser->tryConsumeWhitespace();
 			$returnType = NULL;
 			$body = NULL;
@@ -145,7 +145,7 @@
 				$parser->getNodeIndentation(),
 				$keyword,
 				$name,
-				$arguments,
+				$parameters,
 				$returnType,
 				$body
 			);

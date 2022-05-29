@@ -35,10 +35,10 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
    |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  name: 'log'
-   |  |  |  |  |  |  arguments: CzProject\PhpSimpleAst\Ast\Parameters
+   |  |  |  |  |  |  parameters: CzProject\PhpSimpleAst\Ast\Parameters
    |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  opener: '('
-   |  |  |  |  |  |  |  arguments: array (1)
+   |  |  |  |  |  |  |  parameters: array (1)
    |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Parameter
    |  |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  |  type: null
@@ -100,10 +100,10 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
    |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  name: 'log'
-   |  |  |  |  |  |  arguments: CzProject\PhpSimpleAst\Ast\Parameters
+   |  |  |  |  |  |  parameters: CzProject\PhpSimpleAst\Ast\Parameters
    |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  opener: '('
-   |  |  |  |  |  |  |  arguments: array (1)
+   |  |  |  |  |  |  |  parameters: array (1)
    |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Parameter
    |  |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  |  type: null
@@ -226,10 +226,10 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
    |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  name: '__construct'
-   |  |  |  |  |  |  arguments: CzProject\PhpSimpleAst\Ast\Parameters
+   |  |  |  |  |  |  parameters: CzProject\PhpSimpleAst\Ast\Parameters
    |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  opener: '('
-   |  |  |  |  |  |  |  arguments: array (1)
+   |  |  |  |  |  |  |  parameters: array (1)
    |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Parameter
    |  |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  |  type: null
@@ -342,10 +342,10 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
    |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  name: 'func1'
-   |  |  |  |  |  |  arguments: CzProject\PhpSimpleAst\Ast\Parameters
+   |  |  |  |  |  |  parameters: CzProject\PhpSimpleAst\Ast\Parameters
    |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  opener: '('
-   |  |  |  |  |  |  |  arguments: array (0)
+   |  |  |  |  |  |  |  parameters: array (0)
    |  |  |  |  |  |  |  closer: ')'
    |  |  |  |  |  |  returnType: null
    |  |  |  |  |  |  body: CzProject\PhpSimpleAst\Ast\FunctionBody
@@ -375,10 +375,10 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
    |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  name: 'func2'
-   |  |  |  |  |  |  arguments: CzProject\PhpSimpleAst\Ast\Parameters
+   |  |  |  |  |  |  parameters: CzProject\PhpSimpleAst\Ast\Parameters
    |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  opener: '('
-   |  |  |  |  |  |  |  arguments: array (0)
+   |  |  |  |  |  |  |  parameters: array (0)
    |  |  |  |  |  |  |  closer: ')'
    |  |  |  |  |  |  returnType: null
    |  |  |  |  |  |  body: CzProject\PhpSimpleAst\Ast\FunctionBody

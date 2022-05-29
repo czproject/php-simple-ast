@@ -44,7 +44,7 @@
 		/**
 		 * @return self
 		 */
-		public static function parseForFunctionArgument(NodeParser $parser)
+		public static function parseForFunctionParameter(NodeParser $parser)
 		{
 			$operator = $parser->consumeTokenAsText('=');
 			$parser->tryConsumeWhitespace();

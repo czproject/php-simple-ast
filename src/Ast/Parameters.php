@@ -16,7 +16,7 @@
 		private $opener;
 
 		/** @var Parameter[] */
-		private $arguments;
+		private $parameters;
 
 		/** @var string */
 		private $closer;
@@ -25,13 +25,13 @@
 		/**
 		 * @param string $indentation
 		 * @param string $opener
-		 * @param Parameter[] $arguments
+		 * @param Parameter[] $parameters
 		 * @param string $closer
 		 */
 		public function __construct(
 			$indentation,
 			$opener,
-			array $arguments,
+			array $parameters,
 			$closer
 		)
 		{
@@ -41,7 +41,7 @@
 
 			$this->indentation = $indentation;
 			$this->opener = $opener;
-			$this->arguments = $arguments;
+			$this->parameters = $parameters;
 			$this->closer = $closer;
 		}
 
@@ -50,8 +50,8 @@
 		{
 			$s = $this->indentation . $this->opener;
 
-			foreach ($this->arguments as $argument) {
-				$s .= $argument->toString();
+			foreach ($this->parameters as $parameter) {
+				$s .= $parameter->toString();
 			}
 
 			return $s . $this->closer;
@@ -65,10 +65,10 @@
 		{
 			$opener = $parser->consumeTokenAsText('(');
 			$parser->tryConsumeWhitespace();
-			$arguments = [];
+			$parameters = [];
 
 			while (!$parser->isCurrent(')')) {
-				$arguments[] = Parameter::parse($parser->createSubParser());
+				$parameters[] = Parameter::parse($parser->createSubParser());
 				$parser->tryConsumeWhitespace();
 
 				if ($parser->isCurrent(',')) {
@@ -83,7 +83,7 @@
 			return new self(
 				$parser->getNodeIndentation(),
 				$opener,
-				$arguments,
+				$parameters,
 				$closer
 			);
 		}

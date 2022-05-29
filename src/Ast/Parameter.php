@@ -75,7 +75,7 @@
 			$defaultValue = NULL;
 
 			if ($parser->isCurrent('=')) { // default value
-				$defaultValue = DefaultValue::parseForFunctionArgument($parser->createSubParser());
+				$defaultValue = DefaultValue::parseForFunctionParameter($parser->createSubParser());
 			}
 
 			$parser->close();

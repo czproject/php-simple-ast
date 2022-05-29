@@ -30,10 +30,10 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
    |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  name: 'sayHello'
-   |  |  |  |  |  |  arguments: CzProject\PhpSimpleAst\Ast\Parameters
+   |  |  |  |  |  |  parameters: CzProject\PhpSimpleAst\Ast\Parameters
    |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  opener: '('
-   |  |  |  |  |  |  |  arguments: array (0)
+   |  |  |  |  |  |  |  parameters: array (0)
    |  |  |  |  |  |  |  closer: ')'
    |  |  |  |  |  |  returnType: null
    |  |  |  |  |  |  body: CzProject\PhpSimpleAst\Ast\FunctionBody
