@@ -101,6 +101,7 @@
 		{
 			$keyword = $parser->consumeTokenAsText(T_NAMESPACE);
 			$parser->consumeWhitespace();
+			$parser->tryConsumeAllAsIndentation(T_COMMENT);
 			$name = NULL;
 			$blockOpener = '';
 			$inBrackets = FALSE;
@@ -135,6 +136,10 @@
 					break;
 
 				} elseif (!$inBrackets && $parser->isCurrent(T_NAMESPACE)) {
+					break;
+
+				} elseif ($inBrackets && $parser->isCurrent('}')) {
+					$blockCloser = $parser->flushIndentation() . $parser->consumeTokenAsText('}');
 					break;
 
 				} elseif ($parser->isCurrent(T_DOUBLE_COLON)) { // static call or property/constant

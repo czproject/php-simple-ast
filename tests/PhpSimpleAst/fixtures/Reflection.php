@@ -8,3 +8,13 @@ namespace {
 		}
 	}
 }
+
+
+namespace Foo {
+	class Bar extends \MyClass
+	{
+		function setName($name, $age)
+		{
+		}
+	}
+}

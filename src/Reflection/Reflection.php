@@ -5,6 +5,7 @@
 	namespace CzProject\PhpSimpleAst\Reflection;
 
 	use CzProject\PhpSimpleAst\Ast;
+	use Nette\Utils\Strings;
 
 
 	class Reflection
@@ -60,5 +61,50 @@
 			}
 
 			return $this->classes[$key];
+		}
+
+
+		/**
+		 * @return ClassReflection[]
+		 */
+		public function getFamilyLine(string $className): array
+		{
+			$result = [];
+			$parent = $this->getClass($className);
+			$result[] = $parent;
+
+			while ($parent->hasParent()) {
+				$parent = $this->getClass($parent->getParentName());
+				$result[] = $parent;
+			}
+
+			return $result;
+		}
+
+
+		/**
+		 * @return array<string, MethodReflection>
+		 */
+		public function getMethods(string $className): array
+		{
+			$result = [];
+
+			foreach (array_reverse($this->getFamilyLine($className)) as $parent) {
+				foreach ($parent->getMethods() as $method) {
+					$result[$method->getName()] = $method;
+				}
+			}
+
+			return $result;
+		}
+
+
+		public static function translateName(string $name, ?string $namespace): string
+		{
+			if (Strings::startsWith($name, '\\')) {
+				return Strings::substring($name, 1);
+			}
+
+			return ($namespace !== NULL ? "$namespace\\" : '') . $name;
 		}
 	}

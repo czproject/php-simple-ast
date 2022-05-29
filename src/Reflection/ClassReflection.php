@@ -5,12 +5,16 @@
 	namespace CzProject\PhpSimpleAst\Reflection;
 
 	use CzProject\PhpSimpleAst\Ast;
+	use CzProject\PhpSimpleAst\InvalidStateException;
 
 
 	class ClassReflection
 	{
 		/** @var string */
 		private $name;
+
+		/** @var string|NULL */
+		private $parentName;
 
 		/** @var array<string, MethodReflection> */
 		private $methods = [];
@@ -21,10 +25,12 @@
 		 */
 		private function __construct(
 			string $name,
+			?string $parentName,
 			array $methods
 		)
 		{
 			$this->name = $name;
+			$this->parentName = $parentName;
 
 			foreach ($methods as $method) {
 				$name = $method->getName();
@@ -41,6 +47,22 @@
 		public function getName(): string
 		{
 			return $this->name;
+		}
+
+
+		public function hasParent(): bool
+		{
+			return $this->parentName !== NULL;
+		}
+
+
+		public function getParentName(): string
+		{
+			if ($this->parentName === NULL) {
+				throw new InvalidStateException('Class has no parent.');
+			}
+
+			return $this->parentName;
 		}
 
 
@@ -66,8 +88,18 @@
 				$classNode = $classTree->getNode();
 				$namespaceNode = $classTree->closest(Ast\NamespaceNode::class);
 				$namespaceName = $namespaceNode !== NULL ? $namespaceNode->getName() : NULL;
-				$className = ($namespaceName !== NULL ? "$namespaceName\\" : '') . $classNode->getName();
-				$result[] = new self($className, MethodReflection::createFromClass($className, $classNode));
+				$className = Reflection::translateName($classNode->getName(), $namespaceName);
+				$parentName = NULL;
+
+				if ($classNode->hasExtends()) {
+					$parentName = Reflection::translateName($classNode->getExtends()->getName(), $namespaceName);
+				}
+
+				$result[] = new self(
+					$className,
+					$parentName,
+					MethodReflection::createFromClass($className, $classNode)
+				);
 			}
 
 			return $result;

@@ -5,6 +5,7 @@
 	namespace CzProject\PhpSimpleAst\Ast;
 
 	use CzProject\Assert\Assert;
+	use CzProject\PhpSimpleAst\InvalidStateException;
 
 
 	class ClassNode implements IParentNode
@@ -78,12 +79,16 @@
 		}
 
 
-		/**
-		 * @return string|NULL
-		 */
-		public function getName()
+		public function hasName(): bool
 		{
-			return $this->name !== NULL ? $this->name->getName() : NULL;
+			return $this->name !== NULL;
+		}
+
+
+		public function getName(): string
+		{
+			Assert::true($this->name !== NULL, 'Anonymous class has no name.');
+			return $this->name->getName();
 		}
 
 
@@ -95,6 +100,22 @@
 		{
 			Assert::true($this->name !== NULL, 'Anonymous class cannot be renamed.');
 			$this->name = Name::fromName($this->name, $name);
+		}
+
+
+		public function getExtends(): ObjectParent
+		{
+			if ($this->extends === NULL) {
+				throw new InvalidStateException('Missing extends.');
+			}
+
+			return $this->extends;
+		}
+
+
+		public function hasExtends(): bool
+		{
+			return $this->extends !== NULL;
 		}
 
 

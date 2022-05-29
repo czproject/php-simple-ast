@@ -44,6 +44,12 @@
 		}
 
 
+		public function getName(): string
+		{
+			return $this->extends->getName();
+		}
+
+
 		/**
 		 * @return string
 		 */

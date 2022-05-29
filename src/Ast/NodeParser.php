@@ -154,6 +154,16 @@
 
 
 		/**
+		 * @param  int|string ...$types
+		 * @return void
+		 */
+		public function tryConsumeAllAsIndentation(...$types)
+		{
+			$this->addIndentation($this->stream->tryConsumeAllTokensAsText(...$types));
+		}
+
+
+		/**
 		 * @return void
 		 */
 		public function consumeWhitespace()

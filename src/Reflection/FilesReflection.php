@@ -56,6 +56,24 @@
 		}
 
 
+		/**
+		 * @return ClassReflection[]
+		 */
+		public function getFamilyLine(string $className): array
+		{
+			return $this->getReflection()->getFamilyLine($className);
+		}
+
+
+		/**
+		 * @return array<string, MethodReflection>
+		 */
+		public function getMethods(string $className): array
+		{
+			return $this->getReflection()->getMethods($className);
+		}
+
+
 		private function getReflection(): Reflection
 		{
 			if ($this->reflection === NULL) {

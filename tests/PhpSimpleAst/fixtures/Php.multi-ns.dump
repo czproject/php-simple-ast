@@ -2,7 +2,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    children: array (1)
    |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
    |  |  openTag: '<?php\n'
-   |  |  children: array (1)
+   |  |  children: array (5)
    |  |  |  0 => CzProject\PhpSimpleAst\Ast\NamespaceNode
    |  |  |  |  indentation: ''
    |  |  |  |  keyword: 'namespace'
@@ -12,7 +12,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  blockOpener: string
    |  |  |  |  |  '\n
    |  |  |  |  |   {'
-   |  |  |  |  children: array (10)
+   |  |  |  |  children: array (1)
    |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n
@@ -39,14 +39,22 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  blockCloser: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |   \t    }'
-   |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  |  |  content: string
-   |  |  |  |  |  |  |  '\n
-   |  |  |  |  |  |  |   }\n
-   |  |  |  |  |  |  |   \n
-   |  |  |  |  |  |  |   namespace NS2\n
-   |  |  |  |  |  |  |   {'
-   |  |  |  |  |  2 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   }'
+   |  |  |  1 => CzProject\PhpSimpleAst\Ast\NamespaceNode
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n'
+   |  |  |  |  keyword: 'namespace'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'NS2'
+   |  |  |  |  blockOpener: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   {'
+   |  |  |  |  children: array (1)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |   \t    '
@@ -69,16 +77,27 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  blockCloser: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |   \t    }'
-   |  |  |  |  |  3 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   }'
+   |  |  |  2 => CzProject\PhpSimpleAst\Ast\NamespaceNode
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n'
+   |  |  |  |  keyword: 'namespace'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'NS3'
+   |  |  |  |  blockOpener: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   {'
+   |  |  |  |  children: array (2)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  |  |  content: string
    |  |  |  |  |  |  |  '\n
-   |  |  |  |  |  |  |   }\n
-   |  |  |  |  |  |  |   \n
-   |  |  |  |  |  |  |   namespace NS3\n
-   |  |  |  |  |  |  |   {\n
    |  |  |  |  |  |  |   \t    use NS4\NS5\NS6;\n
    |  |  |  |  |  |  |   \t    use NS4\NS5\NS7 as NS9;'
-   |  |  |  |  |  4 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |   \n
@@ -110,18 +129,20 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  blockCloser: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |   \t    }'
-   |  |  |  |  |  5 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  |  |  content: string
-   |  |  |  |  |  |  |  '\n
-   |  |  |  |  |  |  |   }\n
-   |  |  |  |  |  |  |   \n
-   |  |  |  |  |  |  |   namespace'
-   |  |  |  |  |  6 => CzProject\PhpSimpleAst\Ast\CommentNode
-   |  |  |  |  |  |  indentation: ' '
-   |  |  |  |  |  |  content: '# global namespace\n'
-   |  |  |  |  |  7 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  |  |  content: '{'
-   |  |  |  |  |  8 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   }'
+   |  |  |  3 => CzProject\PhpSimpleAst\Ast\NamespaceNode
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n'
+   |  |  |  |  keyword: 'namespace'
+   |  |  |  |  name: null
+   |  |  |  |  blockOpener: string
+   |  |  |  |  |  ' # global namespace\n
+   |  |  |  |  |   {'
+   |  |  |  |  children: array (1)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |   \t    '
@@ -144,9 +165,9 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  blockCloser: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |   \t    }'
-   |  |  |  |  |  9 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  |  |  content: string
-   |  |  |  |  |  |  |  '\n
-   |  |  |  |  |  |  |   }\n'
-   |  |  |  |  blockCloser: ''
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   }'
+   |  |  |  4 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: '\n'
    |  |  closeTag: null
