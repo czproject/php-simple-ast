@@ -21,7 +21,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |       '
-   |  |  |  |  |  |  flags: array (0)
+   |  |  |  |  |  |  modifiers: array (0)
    |  |  |  |  |  |  keywordPrefix: ''
    |  |  |  |  |  |  keyword: 'function'
    |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
@@ -45,7 +45,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |       '
-   |  |  |  |  |  |  flags: array (0)
+   |  |  |  |  |  |  modifiers: array (0)
    |  |  |  |  |  |  keywordPrefix: ''
    |  |  |  |  |  |  keyword: 'function'
    |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name

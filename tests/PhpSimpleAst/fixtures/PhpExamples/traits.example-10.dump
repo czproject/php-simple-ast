@@ -21,13 +21,13 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |       '
-   |  |  |  |  |  |  flags: array (2)
+   |  |  |  |  |  |  modifiers: array (2)
    |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
    |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  visibility: 'public'
    |  |  |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\StaticModifier
    |  |  |  |  |  |  |  |  indentation: ' '
-   |  |  |  |  |  |  |  |  flag: 'static'
+   |  |  |  |  |  |  |  |  modifier: 'static'
    |  |  |  |  |  |  keywordPrefix: ' '
    |  |  |  |  |  |  keyword: 'function'
    |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name

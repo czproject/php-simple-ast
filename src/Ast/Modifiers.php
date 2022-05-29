@@ -13,19 +13,19 @@
 		private $indentation;
 
 		/** @var array<Visibility|OverridingModifier|StaticModifier> */
-		private $flags;
+		private $modifiers;
 
 
 		/**
 		 * @param string $indentation
-		 * @param array<Visibility|OverridingModifier|StaticModifier> $flags
+		 * @param array<Visibility|OverridingModifier|StaticModifier> $modifiers
 		 */
-		private function __construct($indentation, array $flags)
+		private function __construct($indentation, array $modifiers)
 		{
 			Assert::string($indentation);
 
 			$this->indentation = $indentation;
-			$this->flags = $flags;
+			$this->modifiers = $modifiers;
 		}
 
 
@@ -41,26 +41,26 @@
 		/**
 		 * @return IMethodModifier[]
 		 */
-		public function toMethodFlags()
+		public function toMethodModifiers()
 		{
-			foreach ($this->flags as $flag) {
-				Assert::type($flag, IMethodModifier::class, 'Flag ' . get_class($flag) . ' is not ' . IMethodModifier::class);
+			foreach ($this->modifiers as $modifier) {
+				Assert::type($modifier, IMethodModifier::class, 'Modifier ' . get_class($modifier) . ' is not ' . IMethodModifier::class);
 			}
 
-			return $this->flags;
+			return $this->modifiers;
 		}
 
 
 		/**
 		 * @return IPropertyModifier[]
 		 */
-		public function toPropertyFlags()
+		public function toPropertyModifiers()
 		{
-			foreach ($this->flags as $flag) {
-				Assert::type($flag, IPropertyModifier::class, 'Flag ' . get_class($flag) . ' is not ' . IPropertyModifier::class);
+			foreach ($this->modifiers as $modifier) {
+				Assert::type($modifier, IPropertyModifier::class, 'Modifier ' . get_class($modifier) . ' is not ' . IPropertyModifier::class);
 			}
 
-			return $this->flags;
+			return $this->modifiers;
 		}
 
 
@@ -79,17 +79,17 @@
 		 */
 		public static function parse(NodeParser $parser)
 		{
-			$flags = [];
+			$modifiers = [];
 
 			do {
 				if ($parser->isCurrent(T_PUBLIC, T_PROTECTED, T_PRIVATE)) {
-					$flags[] = Visibility::parse($parser->createSubParser());
+					$modifiers[] = Visibility::parse($parser->createSubParser());
 
 				} elseif ($parser->isCurrent(T_STATIC)) {
-					$flags[] = StaticModifier::parse($parser->createSubParser());
+					$modifiers[] = StaticModifier::parse($parser->createSubParser());
 
 				} elseif ($parser->isCurrent(T_ABSTRACT, T_FINAL)) {
-					$flags[] = OverridingModifier::parse($parser->createSubParser());
+					$modifiers[] = OverridingModifier::parse($parser->createSubParser());
 
 				} else {
 					$parser->errorUnknowToken();
@@ -100,6 +100,6 @@
 			} while ($parser->isCurrent(T_PUBLIC, T_PROTECTED, T_PRIVATE, T_STATIC, T_ABSTRACT, T_FINAL));
 
 			$parser->close();
-			return new self($parser->getNodeIndentation(), $flags);
+			return new self($parser->getNodeIndentation(), $modifiers);
 		}
 	}

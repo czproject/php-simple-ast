@@ -21,7 +21,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |       '
-   |  |  |  |  |  |  flags: array (1)
+   |  |  |  |  |  |  modifiers: array (1)
    |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
    |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  visibility: 'public'
@@ -80,7 +80,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |       '
-   |  |  |  |  |  |  flags: array (1)
+   |  |  |  |  |  |  modifiers: array (1)
    |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
    |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  visibility: 'public'

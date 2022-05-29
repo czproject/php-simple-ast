@@ -174,13 +174,13 @@
 					break;
 
 				} elseif ($parser->isCurrent(T_PUBLIC, T_PROTECTED, T_PRIVATE, T_STATIC, T_ABSTRACT, T_FINAL)) {
-					$flags = Modifiers::parse($parser->createSubParser());
+					$modifiers = Modifiers::parse($parser->createSubParser());
 
 					if ($parser->isCurrent(T_FUNCTION)) {
-						$child = MethodNode::parse($flags, $parser->createSubParser());
+						$child = MethodNode::parse($modifiers, $parser->createSubParser());
 
 					} elseif ($parser->isCurrent(T_VARIABLE)) {
-						$child = PropertyNode::parse($flags, $parser->createSubParser());
+						$child = PropertyNode::parse($modifiers, $parser->createSubParser());
 
 					} else {
 						$parser->errorUnknowToken();

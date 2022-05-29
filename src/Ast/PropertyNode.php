@@ -13,7 +13,7 @@
 		private $indentation;
 
 		/** @var IPropertyModifier[] */
-		private $flags;
+		private $modifiers;
 
 		/** @var NullableName|NULL */
 		private $type;
@@ -33,14 +33,14 @@
 
 		/**
 		 * @param string $indentation
-		 * @param IPropertyModifier[] $flags
+		 * @param IPropertyModifier[] $modifiers
 		 * @param string $namePrefix
 		 * @param string $name
 		 * @param string $closer
 		 */
 		public function __construct(
 			$indentation,
-			array $flags,
+			array $modifiers,
 			NullableName $type = NULL,
 			$namePrefix,
 			$name,
@@ -54,7 +54,7 @@
 			Assert::string($closer);
 
 			$this->indentation = $indentation;
-			$this->flags = $flags;
+			$this->modifiers = $modifiers;
 			$this->type = $type;
 			$this->namePrefix = $namePrefix;
 			$this->name = $name;
@@ -67,8 +67,8 @@
 		{
 			$s = $this->indentation;
 
-			foreach ($this->flags as $flag) {
-				$s .= $flag->toString();
+			foreach ($this->modifiers as $modifier) {
+				$s .= $modifier->toString();
 			}
 
 			if ($this->type !== NULL) {
@@ -90,7 +90,7 @@
 		/**
 		 * @return self
 		 */
-		public static function parse(Modifiers $flags, NodeParser $parser)
+		public static function parse(Modifiers $modifiers, NodeParser $parser)
 		{
 			$type = NULL;
 
@@ -112,8 +112,8 @@
 			$parser->close();
 
 			return new self(
-				$flags->getIndentation(),
-				$flags->toPropertyFlags(),
+				$modifiers->getIndentation(),
+				$modifiers->toPropertyModifiers(),
 				$type,
 				$parser->getNodeIndentation(),
 				$name,

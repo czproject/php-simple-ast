@@ -26,7 +26,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |   \t    '
-   |  |  |  |  |  |  flags: array (1)
+   |  |  |  |  |  |  modifiers: array (1)
    |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
    |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  visibility: 'public'
@@ -91,7 +91,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |   \t    '
-   |  |  |  |  |  |  flags: array (1)
+   |  |  |  |  |  |  modifiers: array (1)
    |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
    |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  visibility: 'public'
@@ -203,7 +203,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |   \t    '
-   |  |  |  |  |  |  flags: array (1)
+   |  |  |  |  |  |  modifiers: array (1)
    |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
    |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  visibility: 'private'
@@ -217,7 +217,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |   \n
    |  |  |  |  |  |  |   \t    '
-   |  |  |  |  |  |  flags: array (1)
+   |  |  |  |  |  |  modifiers: array (1)
    |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
    |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  visibility: 'public'
@@ -296,7 +296,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |   \t    '
-   |  |  |  |  |  |  flags: array (1)
+   |  |  |  |  |  |  modifiers: array (1)
    |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
    |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  visibility: 'private'
@@ -314,7 +314,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |   \t    '
-   |  |  |  |  |  |  flags: array (1)
+   |  |  |  |  |  |  modifiers: array (1)
    |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
    |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  visibility: 'protected'
@@ -333,7 +333,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |   \n
    |  |  |  |  |  |  |   \t    '
-   |  |  |  |  |  |  flags: array (1)
+   |  |  |  |  |  |  modifiers: array (1)
    |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
    |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  visibility: 'protected'
@@ -366,7 +366,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |   \n
    |  |  |  |  |  |  |   \t    '
-   |  |  |  |  |  |  flags: array (1)
+   |  |  |  |  |  |  modifiers: array (1)
    |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
    |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  visibility: 'public'

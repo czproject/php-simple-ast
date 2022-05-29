@@ -13,29 +13,29 @@
 		private $indentation;
 
 		/** @var string */
-		private $flag;
+		private $modifier;
 
 
 		/**
 		 * @param string $indentation
-		 * @param string $flag
+		 * @param string $modifier
 		 */
-		public function __construct($indentation, $flag)
+		public function __construct($indentation, $modifier)
 		{
 			Assert::string($indentation);
-			Assert::string($flag);
+			Assert::string($modifier);
 
-			$lowerValue = strtolower($flag);
+			$lowerValue = strtolower($modifier);
 			Assert::true($lowerValue === 'static');
 
 			$this->indentation = $indentation;
-			$this->flag = $flag;
+			$this->modifier = $modifier;
 		}
 
 
 		public function toString()
 		{
-			return $this->indentation . $this->flag;
+			return $this->indentation . $this->modifier;
 		}
 
 
@@ -44,8 +44,8 @@
 		 */
 		public static function parse(NodeParser $parser)
 		{
-			$flag = $parser->consumeTokenAsText(T_STATIC);
+			$modifier = $parser->consumeTokenAsText(T_STATIC);
 			$parser->close();
-			return new self($parser->getNodeIndentation(), $flag);
+			return new self($parser->getNodeIndentation(), $modifier);
 		}
 	}

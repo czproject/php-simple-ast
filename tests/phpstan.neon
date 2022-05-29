@@ -6,5 +6,5 @@ parameters:
 
 	ignoreErrors:
 		-
-			message: '#^Method CzProject\\PhpSimpleAst\\Ast\\Modifiers\:\:toPropertyFlags\(\).*$#'
+			message: '#^Method CzProject\\PhpSimpleAst\\Ast\\Modifiers\:\:toPropertyModifiers\(\).*$#'
 			path: */Ast/Modifiers.php

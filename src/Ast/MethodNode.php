@@ -13,7 +13,7 @@
 		private $indentation;
 
 		/** @var IMethodModifier[] */
-		private $flags;
+		private $modifiers;
 
 		/** @var string */
 		private $keywordPrefix;
@@ -36,13 +36,13 @@
 
 		/**
 		 * @param string $indentation
-		 * @param IMethodModifier[] $flags
+		 * @param IMethodModifier[] $modifiers
 		 * @param string $keywordPrefix
 		 * @param string $keyword
 		 */
 		public function __construct(
 			$indentation,
-			array $flags,
+			array $modifiers,
 			$keywordPrefix,
 			$keyword,
 			Name $name,
@@ -56,7 +56,7 @@
 			Assert::string($keyword);
 
 			$this->indentation = $indentation;
-			$this->flags = $flags;
+			$this->modifiers = $modifiers;
 			$this->keywordPrefix = $keywordPrefix;
 			$this->keyword = $keyword;
 			$this->name = $name;
@@ -89,8 +89,8 @@
 		{
 			$s = $this->indentation;
 
-			foreach ($this->flags as $flag) {
-				$s .= $flag->toString();
+			foreach ($this->modifiers as $modifier) {
+				$s .= $modifier->toString();
 			}
 
 			$s .= $this->keywordPrefix;
@@ -110,7 +110,7 @@
 		/**
 		 * @return self
 		 */
-		public static function parse(Modifiers $flags, NodeParser $parser)
+		public static function parse(Modifiers $modifiers, NodeParser $parser)
 		{
 			$keyword = $parser->consumeTokenAsText(T_FUNCTION);
 			$parser->consumeWhitespace();
@@ -140,8 +140,8 @@
 
 			return new self(
 				//$parser->getNodeIndentation(),
-				$flags->getIndentation(),
-				$flags->toMethodFlags(),
+				$modifiers->getIndentation(),
+				$modifiers->toMethodModifiers(),
 				$parser->getNodeIndentation(),
 				$keyword,
 				$name,

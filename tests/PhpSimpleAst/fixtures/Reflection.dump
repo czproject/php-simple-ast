@@ -28,7 +28,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |  |  |   \t    \t    '
-   |  |  |  |  |  |  |  |  flags: array (0)
+   |  |  |  |  |  |  |  |  modifiers: array (0)
    |  |  |  |  |  |  |  |  keywordPrefix: ''
    |  |  |  |  |  |  |  |  keyword: 'function'
    |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name

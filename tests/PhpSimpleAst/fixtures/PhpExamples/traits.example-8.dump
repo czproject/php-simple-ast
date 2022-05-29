@@ -21,7 +21,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |       '
-   |  |  |  |  |  |  flags: array (1)
+   |  |  |  |  |  |  modifiers: array (1)
    |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
    |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  visibility: 'public'
@@ -51,10 +51,10 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |       '
-   |  |  |  |  |  |  flags: array (2)
+   |  |  |  |  |  |  modifiers: array (2)
    |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\OverridingModifier
    |  |  |  |  |  |  |  |  indentation: ''
-   |  |  |  |  |  |  |  |  flag: 'abstract'
+   |  |  |  |  |  |  |  |  modifier: 'abstract'
    |  |  |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\Visibility
    |  |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  |  visibility: 'public'
@@ -92,7 +92,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |       '
-   |  |  |  |  |  |  flags: array (1)
+   |  |  |  |  |  |  modifiers: array (1)
    |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
    |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  visibility: 'private'
@@ -118,7 +118,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |       '
-   |  |  |  |  |  |  flags: array (1)
+   |  |  |  |  |  |  modifiers: array (1)
    |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
    |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  visibility: 'public'
@@ -148,7 +148,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |       '
-   |  |  |  |  |  |  flags: array (1)
+   |  |  |  |  |  |  modifiers: array (1)
    |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
    |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  visibility: 'public'

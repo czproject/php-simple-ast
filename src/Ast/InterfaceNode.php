@@ -129,10 +129,10 @@
 					break;
 
 				} elseif ($parser->isCurrent(T_PUBLIC, T_STATIC)) {
-					$flags = Modifiers::parse($parser->createSubParser());
+					$modifiers = Modifiers::parse($parser->createSubParser());
 
 					if ($parser->isCurrent(T_FUNCTION)) {
-						$child = MethodNode::parse($flags, $parser->createSubParser());
+						$child = MethodNode::parse($modifiers, $parser->createSubParser());
 
 					} else {
 						$parser->errorUnknowToken();
