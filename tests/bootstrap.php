@@ -36,7 +36,7 @@ class Tests
 	public static function dumpToText($value)
 	{
 		return \Tracy\Dumper::toText($value, [
-			\Tracy\Dumper::DEPTH => 20,
+			\Tracy\Dumper::DEPTH => 100,
 			\Tracy\Dumper::TRUNCATE => 1000,
 			\Tracy\Dumper::HASH => FALSE,
 		]);
