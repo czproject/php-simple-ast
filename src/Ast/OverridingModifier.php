@@ -7,7 +7,7 @@
 	use CzProject\Assert\Assert;
 
 
-	class OverridingFlag implements IMethodModifier
+	class OverridingModifier implements IMethodModifier
 	{
 		/** @var string */
 		private $indentation;

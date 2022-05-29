@@ -52,7 +52,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |       '
    |  |  |  |  |  |  flags: array (2)
-   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\OverridingFlag
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\OverridingModifier
    |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  flag: 'abstract'
    |  |  |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\Visibility

@@ -12,13 +12,13 @@
 		/** @var string */
 		private $indentation;
 
-		/** @var array<Visibility|OverridingFlag|StaticModifier> */
+		/** @var array<Visibility|OverridingModifier|StaticModifier> */
 		private $flags;
 
 
 		/**
 		 * @param string $indentation
-		 * @param array<Visibility|OverridingFlag|StaticModifier> $flags
+		 * @param array<Visibility|OverridingModifier|StaticModifier> $flags
 		 */
 		private function __construct($indentation, array $flags)
 		{
@@ -89,7 +89,7 @@
 					$flags[] = StaticModifier::parse($parser->createSubParser());
 
 				} elseif ($parser->isCurrent(T_ABSTRACT, T_FINAL)) {
-					$flags[] = OverridingFlag::parse($parser->createSubParser());
+					$flags[] = OverridingModifier::parse($parser->createSubParser());
 
 				} else {
 					$parser->errorUnknowToken();
