@@ -104,7 +104,7 @@
 		 * @param  string|string[] $directories
 		 * @return self
 		 */
-		public static function scanDirectories($directories)
+		public static function scanDirectories($directories, callable $progress = NULL)
 		{
 			$astParser = new AstParser;
 			$files = [];
@@ -116,6 +116,10 @@
 
 				if (isset($files[$path])) {
 					continue;
+				}
+
+				if ($progress !== NULL) {
+					$progress($path);
 				}
 
 				$files[$path] = $astParser->parseFile($path);
