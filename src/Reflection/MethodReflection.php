@@ -38,6 +38,12 @@
 		}
 
 
+		public function getFullName(): string
+		{
+			return $this->declaringClassName . '::' . $this->node->getName();
+		}
+
+
 		/**
 		 * @return self[]
 		 */

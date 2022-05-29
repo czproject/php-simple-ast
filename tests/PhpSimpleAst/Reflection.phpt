@@ -29,10 +29,10 @@ test('Class methods', function () use ($reflection) {
 
 	foreach ($reflection->getClass(MyClass::class)->getMethods() as $methodReflection) {
 		Assert::type(PhpSimpleAst\Reflection\MethodReflection::class, $methodReflection);
-		$names[] = $methodReflection->getName();
+		$names[] = $methodReflection->getFullName();
 	}
 
 	Assert::same([
-		'getName',
+		MyClass::class . '::getName',
 	], $names);
 });
