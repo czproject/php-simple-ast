@@ -96,6 +96,9 @@ test('Method PHPDoc', function () use ($reflection) {
 	$content = <<<DOCCOMMENT
 /**
  * @param string
+ * @param int
+ * @param invalid
+ *
  * @return void
  */
 DOCCOMMENT;

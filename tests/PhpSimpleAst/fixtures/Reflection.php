@@ -15,6 +15,9 @@ namespace Foo {
 	{
 		/**
 		 * @param string
+		 * @param int
+		 * @param invalid
+		 *
 		 * @return void
 		 */
 		function setName($name, &$age)

@@ -57,6 +57,12 @@
 		}
 
 
+		public function setDocComment(string $docComment): void
+		{
+			$this->node->setDocComment($docComment);
+		}
+
+
 		/**
 		 * @return array<string, ParameterReflection>
 		 */
@@ -93,6 +99,13 @@
 			$parameters = $this->getParameters();
 			Assert::true(isset($parameters[$name]), 'Parameter ' . $name . ' not found.');
 			return $parameters[$name];
+		}
+
+
+		public function hasParameterByIndex(int $index): bool
+		{
+			$this->getParameters();
+			return isset($this->parametersByIndex[$index]);
 		}
 
 

@@ -95,6 +95,9 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  content: string
    |  |  |  |  |  |  |  |  |  |  '/**\n
    |  |  |  |  |  |  |  |  |  |   \t    \t     * @param string\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t     * @param int\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t     * @param invalid\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t     *\n
    |  |  |  |  |  |  |  |  |  |   \t    \t     * @return void\n
    |  |  |  |  |  |  |  |  |  |   \t    \t     */'
    |  |  |  |  |  |  |  |  indentation: string

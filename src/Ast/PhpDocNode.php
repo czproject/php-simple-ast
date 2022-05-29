@@ -5,6 +5,7 @@
 	namespace CzProject\PhpSimpleAst\Ast;
 
 	use CzProject\Assert\Assert;
+	use CzProject\PhpSimpleAst\Helpers;
 
 
 	class PhpDocNode implements INode
@@ -36,14 +37,14 @@
 
 		public function getContent(): string
 		{
-			$indentation = $this->indentation;
+			return Helpers::unindent($this->content, Helpers::extractIndentation($this->indentation));
+		}
 
-			if (($pos = strrpos($indentation, "\n"))) {
-				$indentation = substr($indentation, $pos);
-			}
 
-			$indentation = ltrim($indentation, "\n");
-			return str_replace("\n" . $indentation, "\n", $this->content);
+		public function setContent(string $content): void
+		{
+			Assert::true($content !== '', 'Missing content.');
+			$this->content = Helpers::indent($content, Helpers::extractIndentation($this->indentation));
 		}
 
 

@@ -5,6 +5,7 @@
 	namespace CzProject\PhpSimpleAst\Ast;
 
 	use CzProject\Assert\Assert;
+	use CzProject\PhpSimpleAst\Helpers;
 
 
 	class MethodNode implements INode
@@ -93,6 +94,18 @@
 		public function getDocComment(): ?string
 		{
 			return $this->phpDocNode !== NULL ? $this->phpDocNode->getContent() : NULL;
+		}
+
+
+		public function setDocComment(string $docComment): void
+		{
+			if ($this->phpDocNode !== NULL) {
+				$this->phpDocNode->setContent($docComment);
+
+			} else {
+				$this->phpDocNode = new PhpDocNode($this->indentation, $docComment);
+				$this->indentation = "\n" . Helpers::extractIndentation($this->indentation);
+			}
 		}
 
 
