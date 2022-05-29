@@ -7,7 +7,7 @@
 	use CzProject\Assert\Assert;
 
 
-	class Flags
+	class Modifiers
 	{
 		/** @var string */
 		private $indentation;

@@ -110,7 +110,7 @@
 		/**
 		 * @return self
 		 */
-		public static function parse(Flags $flags, NodeParser $parser)
+		public static function parse(Modifiers $flags, NodeParser $parser)
 		{
 			$keyword = $parser->consumeTokenAsText(T_FUNCTION);
 			$parser->consumeWhitespace();
