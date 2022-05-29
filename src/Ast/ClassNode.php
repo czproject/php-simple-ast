@@ -181,6 +181,8 @@
 			}
 
 			$parser->tryConsumeWhitespace();
+			$parser->tryConsumeAllAsIndentation(T_COMMENT);
+			$parser->tryConsumeWhitespace();
 			$blockOpener = $parser->flushIndentation() . $parser->consumeTokenAsText('{');
 			$parser->tryConsumeWhitespace();
 

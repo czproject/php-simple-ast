@@ -2,7 +2,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    children: array (1)
    |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
    |  |  openTag: '<?php\n'
-   |  |  children: array (2)
+   |  |  children: array (5)
    |  |  |  0 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  indentation: string
    |  |  |  |  |  '\n
@@ -21,6 +21,66 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  blockCloser: string
    |  |  |  |  |  '\n
    |  |  |  |  |   \t    }'
-   |  |  |  1 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  1 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   \n
+   |  |  |  |  |   \t    '
+   |  |  |  |  keyword: 'class'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'Foo'
+   |  |  |  |  constructorValues: null
+   |  |  |  |  extends: CzProject\PhpSimpleAst\Ast\ObjectParent
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  keyword: 'extends'
+   |  |  |  |  |  extends: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  name: '\Bar'
+   |  |  |  |  implements: null
+   |  |  |  |  blockOpener: string
+   |  |  |  |  |  ' // comment\n
+   |  |  |  |  |   \t    {'
+   |  |  |  |  children: array (0)
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \t    }'
+   |  |  |  2 => CzProject\PhpSimpleAst\Ast\InterfaceNode
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   \n
+   |  |  |  |  |   \t    '
+   |  |  |  |  keyword: 'interface'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'IBar'
+   |  |  |  |  extends: null
+   |  |  |  |  blockOpener: string
+   |  |  |  |  |  ' // comment\n
+   |  |  |  |  |   \t    {'
+   |  |  |  |  children: array (0)
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \t    }'
+   |  |  |  3 => CzProject\PhpSimpleAst\Ast\TraitNode
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   \n
+   |  |  |  |  |   \t    '
+   |  |  |  |  keyword: 'trait'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'TFooBar'
+   |  |  |  |  blockOpener: string
+   |  |  |  |  |  ' // comment\n
+   |  |  |  |  |   \t    {'
+   |  |  |  |  children: array (0)
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \t    }'
+   |  |  |  4 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: '\n'
    |  |  closeTag: null
