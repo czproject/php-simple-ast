@@ -5,7 +5,7 @@
 	namespace CzProject\PhpSimpleAst\Ast;
 
 
-	class PhpFile implements IParentNode
+	class PhpFile implements IPhpSource
 	{
 		/** @var string */
 		private $path;

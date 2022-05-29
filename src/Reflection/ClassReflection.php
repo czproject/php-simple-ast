@@ -76,10 +76,9 @@
 
 
 		/**
-		 * @param  Ast\PhpFile|Ast\PhpString $source
 		 * @return self[]
 		 */
-		public static function createFromSource($source): array
+		public static function createFromSource(Ast\IPhpSource $source): array
 		{
 			$result = [];
 			$classTrees = Ast\Tree::find($source, Ast\ClassNode::class);

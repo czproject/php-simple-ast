@@ -5,7 +5,7 @@
 	namespace CzProject\PhpSimpleAst\Ast;
 
 
-	class PhpString implements IParentNode
+	class PhpString implements IPhpSource
 	{
 		/** @var array<INode|IParentNode> */
 		private $children;

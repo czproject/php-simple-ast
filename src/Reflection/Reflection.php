@@ -10,7 +10,7 @@
 
 	class Reflection
 	{
-		/** @var array<Ast\PhpFile|Ast\PhpString> */
+		/** @var Ast\IPhpSource[] */
 		private $sources = [];
 
 		/** @var array<string, ClassReflection>|NULL */
@@ -18,7 +18,7 @@
 
 
 		/**
-		 * @param array<Ast\PhpFile|Ast\PhpString> $sources
+		 * @param Ast\IPhpSource[] $sources
 		 */
 		public function __construct(array $sources)
 		{
