@@ -57,11 +57,11 @@
 			while ($parser->isCurrent('&', '|')) {
 				$parser->consumeAsIndentation('&', '|');
 				$parser->tryConsumeWhitespace();
-				$names[] = NamedType::parse($parser->createSubParser());
+				$types[] = NamedType::parse($parser->createSubParser());
 				$parser->tryConsumeWhitespace();
 			}
 
 			$parser->close();
-			return new self($parser->getNodeIndentation(), $names);
+			return new self($parser->getNodeIndentation(), $types);
 		}
 	}
