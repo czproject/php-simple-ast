@@ -15,7 +15,7 @@
 		/** @var string */
 		private $opener;
 
-		/** @var FunctionArgument[] */
+		/** @var Parameter[] */
 		private $arguments;
 
 		/** @var string */
@@ -25,7 +25,7 @@
 		/**
 		 * @param string $indentation
 		 * @param string $opener
-		 * @param FunctionArgument[] $arguments
+		 * @param Parameter[] $arguments
 		 * @param string $closer
 		 */
 		public function __construct(
@@ -68,7 +68,7 @@
 			$arguments = [];
 
 			while (!$parser->isCurrent(')')) {
-				$arguments[] = FunctionArgument::parse($parser->createSubParser());
+				$arguments[] = Parameter::parse($parser->createSubParser());
 				$parser->tryConsumeWhitespace();
 
 				if ($parser->isCurrent(',')) {

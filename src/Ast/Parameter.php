@@ -7,7 +7,7 @@
 	use CzProject\Assert\Assert;
 
 
-	class FunctionArgument implements IFunctionBody
+	class Parameter implements IFunctionBody
 	{
 		/** @var string */
 		private $indentation;

@@ -39,7 +39,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  opener: '('
    |  |  |  |  |  |  |  arguments: array (1)
-   |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\FunctionArgument
+   |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Parameter
    |  |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  |  type: null
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
@@ -104,7 +104,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  opener: '('
    |  |  |  |  |  |  |  arguments: array (1)
-   |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\FunctionArgument
+   |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Parameter
    |  |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  |  type: null
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
@@ -230,7 +230,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  opener: '('
    |  |  |  |  |  |  |  arguments: array (1)
-   |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\FunctionArgument
+   |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Parameter
    |  |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  |  type: null
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
