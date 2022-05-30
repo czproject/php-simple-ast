@@ -6,6 +6,7 @@
 
 	use CzProject\PhpSimpleAst\Reflection;
 	use Nette\Utils\Strings;
+	use PHPStan\PhpDocParser\Ast\PhpDoc;
 
 
 	class PhpDocParamFixer
@@ -23,6 +24,8 @@
 
 		public static function processClass(Reflection\ClassReflection $classReflection): void
 		{
+			$phpDocParser = \CzProject\PhpSimpleAst\Utils\PhpDocParser::getInstance();
+
 			foreach ($classReflection->getMethods() as $methodReflection) {
 				$docComment = $methodReflection->getDocComment();
 
@@ -30,33 +33,43 @@
 					continue;
 				}
 
+				$phpDoc = $phpDocParser->parse($docComment);
 				$index = 0;
-				$newDocComment = Strings::replace($docComment, "#(\\s*\\*\\s*@param\\s+)([^@\\n\\r]*)#", function (array $m) use (&$index, $methodReflection) {
-					$tag = $m[1];
-					$value = $m[2];
-					$tokens = preg_split('/(\s+)/', $value, 2, \PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE);
+				$paramsTag = $phpDoc->getTagsByName('@param');
 
-					if ($tokens === FALSE || count($tokens) === 0) {
-						return $m[0];
+				foreach ($phpDoc->children as $k => $phpDocTag) {
+					if (!($phpDocTag instanceof PhpDoc\PhpDocTagNode)) {
+						continue;
 					}
 
-					if (isset($tokens[2]) && Strings::startsWith($tokens[2], '$')) {
+					if ($phpDocTag->name !== '@param') {
+						continue;
+					}
+
+					if (!($phpDocTag->value instanceof PhpDoc\InvalidTagValueNode)) {
 						$index++;
-						return $m[0];
+						continue;
 					}
+
+					$value = $phpDocTag->value->value;
+					$typeString = (string) $phpDocParser->parseType($value);
+					$description = Strings::substring($value, Strings::length($typeString));
 
 					if ($methodReflection->hasParameterByIndex($index)) {
 						$parameterReflection = $methodReflection->getParameterByIndex($index);
-						$tokens[0] .= ' $' . $parameterReflection->getName();
+						$typeString .= ' $' . $parameterReflection->getName();
 
 					} else {
 						$index++;
-						return '';
+						unset($phpDoc->children[$k]);
+						continue;
 					}
 
 					$index++;
-					return $tag . implode('', $tokens);
-				});
+					$phpDocTag->value->value = $typeString . $description;
+				}
+
+				$newDocComment = (string) $phpDoc;
 
 				if ($newDocComment !== $docComment) {
 					$methodReflection->setDocComment($newDocComment);

@@ -43,6 +43,8 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  |   \t    \t     * @param string  description $var\n
    |  |  |  |  |  |  |  |  |  |   \t    \t     * @param int\n
    |  |  |  |  |  |  |  |  |  |   \t    \t     * @param string $email\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t     * @param array<string, mixed> $parameters\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t     * @param array<string, mixed>\n
    |  |  |  |  |  |  |  |  |  |   \t    \t     * @param invalid\n
    |  |  |  |  |  |  |  |  |  |   \t    \t     *\n
    |  |  |  |  |  |  |  |  |  |   \t    \t     * @return void\n
@@ -59,7 +61,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  parameters: CzProject\PhpSimpleAst\Ast\Parameters
    |  |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  |  opener: '('
-   |  |  |  |  |  |  |  |  |  parameters: array (3)
+   |  |  |  |  |  |  |  |  |  parameters: array (5)
    |  |  |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Parameter
    |  |  |  |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  |  |  |  type: null
@@ -92,6 +94,36 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Literal
    |  |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  |  |  |  |  |  literal: '$email'
+   |  |  |  |  |  |  |  |  |  |  |  defaultValue: null
+   |  |  |  |  |  |  |  |  |  |  3 => CzProject\PhpSimpleAst\Ast\Parameter
+   |  |  |  |  |  |  |  |  |  |  |  indentation: ', '
+   |  |  |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  nullableSign: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  type: 'array'
+   |  |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
+   |  |  |  |  |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  |  |  |  |  referenceSign: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  variadic: null
+   |  |  |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  |  literal: '$parameters'
+   |  |  |  |  |  |  |  |  |  |  |  defaultValue: null
+   |  |  |  |  |  |  |  |  |  |  4 => CzProject\PhpSimpleAst\Ast\Parameter
+   |  |  |  |  |  |  |  |  |  |  |  indentation: ', '
+   |  |  |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  nullableSign: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  type: 'array'
+   |  |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
+   |  |  |  |  |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  |  |  |  |  referenceSign: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  variadic: null
+   |  |  |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  |  literal: '$parameters2'
    |  |  |  |  |  |  |  |  |  |  |  defaultValue: null
    |  |  |  |  |  |  |  |  |  closer: ')'
    |  |  |  |  |  |  |  |  returnType: null

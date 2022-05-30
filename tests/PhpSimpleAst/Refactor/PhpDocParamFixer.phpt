@@ -19,6 +19,8 @@ test('@param fixer', function () use ($reflection) {
  * @param string \$name  description \$var
  * @param int \$age
  * @param string \$email
+ * @param array<string, mixed> \$parameters
+ * @param array<string, mixed> \$parameters2
  *
  * @return void
  */
