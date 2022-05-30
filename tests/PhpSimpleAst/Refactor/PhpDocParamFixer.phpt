@@ -16,7 +16,7 @@ test('@param fixer', function () use ($reflection) {
 
 	$newContent = <<<DOCCOMMENT
 /**
- * @param string \$name description \$var
+ * @param string \$name  description \$var
  * @param int \$age
  * @param string \$email
  *

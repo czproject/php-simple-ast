@@ -36,8 +36,8 @@
 					$value = $m[2];
 					$tokens = preg_split('/(\s+)/', $value, 2, \PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE);
 
-					if ($tokens === FALSE) {
-						return $m[1];
+					if ($tokens === FALSE || count($tokens) === 0) {
+						return $m[0];
 					}
 
 					if (isset($tokens[2]) && Strings::startsWith($tokens[2], '$')) {
@@ -47,8 +47,7 @@
 
 					if ($methodReflection->hasParameterByIndex($index)) {
 						$parameterReflection = $methodReflection->getParameterByIndex($index);
-						$tokens[1] = isset($tokens[1]) ? $tokens[1]  : ' ';
-						$tokens[2] = '$' . $parameterReflection->getName() . (isset($tokens[2]) ? (' ' . $tokens[2]) : '');
+						$tokens[0] .= ' $' . $parameterReflection->getName();
 
 					} else {
 						$index++;

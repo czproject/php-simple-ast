@@ -40,7 +40,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  |   \t    \t    '
    |  |  |  |  |  |  |  |  |  content: string
    |  |  |  |  |  |  |  |  |  |  '/**\n
-   |  |  |  |  |  |  |  |  |  |   \t    \t     * @param string description $var\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t     * @param string  description $var\n
    |  |  |  |  |  |  |  |  |  |   \t    \t     * @param int\n
    |  |  |  |  |  |  |  |  |  |   \t    \t     * @param string $email\n
    |  |  |  |  |  |  |  |  |  |   \t    \t     * @param invalid\n
