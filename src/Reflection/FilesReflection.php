@@ -106,10 +106,14 @@
 		 */
 		public static function scanDirectories($directories, callable $progress = NULL)
 		{
+			if (is_string($directories)) {
+				$directories = [$directories];
+			}
+
 			$astParser = new AstParser;
 			$files = [];
 			$finder = \Nette\Utils\Finder::findFiles('*.php')
-				->from($directories);
+				->from(...$directories);
 
 			foreach ($finder as $path => $file) {
 				assert(is_string($path));
