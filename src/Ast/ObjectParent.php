@@ -64,11 +64,12 @@
 		 */
 		public static function parse(NodeParser $parser)
 		{
+			$nodeIndentation = $parser->consumeNodeIndentation();
 			$keyword = $parser->consumeTokenAsText(T_EXTENDS);
 			$parser->consumeWhitespace();
 			$extends = Name::parse($parser->createSubParser());
 
 			$parser->close();
-			return new self($parser->getNodeIndentation(), $keyword, $extends);
+			return new self($nodeIndentation, $keyword, $extends);
 		}
 	}

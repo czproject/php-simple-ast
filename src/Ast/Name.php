@@ -78,6 +78,7 @@
 		 */
 		public static function parse(NodeParser $parser)
 		{
+			$nodeIndentation = $parser->consumeNodeIndentation();
 			$name = '';
 
 			if (PHP_VERSION_ID >= 80000) {
@@ -109,6 +110,6 @@
 			}
 
 			$parser->close();
-			return new self($parser->getNodeIndentation(), $name);
+			return new self($nodeIndentation, $name);
 		}
 	}

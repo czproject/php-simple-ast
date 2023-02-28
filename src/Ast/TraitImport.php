@@ -54,6 +54,7 @@
 		 */
 		public static function parse(NodeParser $parser)
 		{
+			$nodeIndentation = $parser->consumeNodeIndentation();
 			$name = Name::parse($parser->createSubParser());
 			$parser->tryConsumeWhitespace();
 			$aliases = NULL;
@@ -65,7 +66,7 @@
 			$parser->close();
 
 			return new self(
-				$parser->getNodeIndentation(),
+				$nodeIndentation,
 				$name,
 				$aliases
 			);

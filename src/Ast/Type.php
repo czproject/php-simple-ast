@@ -50,6 +50,7 @@
 		 */
 		public static function parse(NodeParser $parser)
 		{
+			$nodeIndentation = $parser->consumeNodeIndentation();
 			$types = [];
 			$types[] = NamedType::parse($parser->createSubParser());
 			$parser->tryConsumeWhitespace();
@@ -62,6 +63,6 @@
 			}
 
 			$parser->close();
-			return new self($parser->getNodeIndentation(), $types);
+			return new self($nodeIndentation, $types);
 		}
 	}

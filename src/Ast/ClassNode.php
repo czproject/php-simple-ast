@@ -155,6 +155,7 @@
 		 */
 		public static function parse(NodeParser $parser)
 		{
+			$nodeIndentation = $parser->consumeNodeIndentation();
 			$keyword = $parser->consumeTokenAsText(T_CLASS);
 			$parser->tryConsumeWhitespace();
 			$name = NULL;
@@ -251,7 +252,7 @@
 			$parser->close();
 
 			return new self(
-				$parser->getNodeIndentation(),
+				$nodeIndentation,
 				$keyword,
 				$name,
 				$constructorValues,

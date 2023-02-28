@@ -10,7 +10,7 @@
 
 	class NodeParser
 	{
-		/** @var string */
+		/** @var string|NULL */
 		private $nodeIndentation;
 
 		/** @var Lexer\Stream */
@@ -46,9 +46,15 @@
 		/**
 		 * @return string
 		 */
-		public function getNodeIndentation()
+		public function consumeNodeIndentation()
 		{
-			return $this->nodeIndentation;
+			if ($this->nodeIndentation !== NULL) {
+				$res = $this->nodeIndentation;
+				$this->nodeIndentation = NULL;
+				return $res;
+			}
+
+			return '';
 		}
 
 
@@ -57,7 +63,7 @@
 		 */
 		public function createSubParser()
 		{
-			return new self($this->flushIndentation(), $this->stream, $this);
+			return new self($this->consumeNodeIndentation() . $this->flushIndentation(), $this->stream, $this);
 		}
 
 
@@ -109,6 +115,7 @@
 		 */
 		public function consumeToken(...$types)
 		{
+			Assert::null($this->nodeIndentation, 'NodeIndentation must be consumed first.');
 			return $this->stream->consumeToken(...$types);
 		}
 
@@ -119,6 +126,7 @@
 		 */
 		public function consumeTokenAsText(...$types)
 		{
+			Assert::null($this->nodeIndentation, 'NodeIndentation must be consumed first.');
 			return $this->stream->consumeTokenAsText(...$types);
 		}
 
@@ -129,6 +137,7 @@
 		 */
 		public function consumeAllTokensAsText(...$types)
 		{
+			Assert::null($this->nodeIndentation, 'NodeIndentation must be consumed first.');
 			return $this->stream->consumeAllTokensAsText(...$types);
 		}
 
@@ -139,6 +148,7 @@
 		 */
 		public function tryConsumeAllTokensAsText(...$types)
 		{
+			Assert::null($this->nodeIndentation, 'NodeIndentation must be consumed first.');
 			return $this->stream->tryConsumeAllTokensAsText(...$types);
 		}
 
@@ -149,6 +159,7 @@
 		 */
 		public function consumeAsIndentation(...$types)
 		{
+			Assert::null($this->nodeIndentation, 'NodeIndentation must be consumed first.');
 			$this->addIndentation($this->stream->consumeTokenAsText(...$types));
 		}
 
@@ -159,6 +170,7 @@
 		 */
 		public function tryConsumeAllAsIndentation(...$types)
 		{
+			Assert::null($this->nodeIndentation, 'NodeIndentation must be consumed first.');
 			$this->addIndentation($this->stream->tryConsumeAllTokensAsText(...$types));
 		}
 
@@ -168,6 +180,7 @@
 		 */
 		public function consumeWhitespace()
 		{
+			Assert::null($this->nodeIndentation, 'NodeIndentation must be consumed first.');
 			$this->addIndentation($this->stream->consumeAllTokensAsText(T_WHITESPACE));
 		}
 
@@ -177,6 +190,7 @@
 		 */
 		public function tryConsumeWhitespace()
 		{
+			Assert::null($this->nodeIndentation, 'NodeIndentation must be consumed first.');
 			$this->addIndentation($this->stream->tryConsumeAllTokensAsText(T_WHITESPACE));
 		}
 
@@ -186,6 +200,7 @@
 		 */
 		public function tryConsumeWhitespaceAndComments()
 		{
+			Assert::null($this->nodeIndentation, 'NodeIndentation must be consumed first.');
 			$this->addIndentation($this->stream->tryConsumeAllTokensAsText(T_WHITESPACE, T_COMMENT));
 		}
 
@@ -195,6 +210,7 @@
 		 */
 		public function consumeUnknow()
 		{
+			Assert::null($this->nodeIndentation, 'NodeIndentation must be consumed first.');
 			$this->addUnknowContent($this->stream->consumeAnythingAsText());
 		}
 
@@ -205,6 +221,7 @@
 		 */
 		public function consumeAsUnknowContent(...$types)
 		{
+			Assert::null($this->nodeIndentation, 'NodeIndentation must be consumed first.');
 			$this->addUnknowContent($this->stream->consumeTokenAsText(...$types));
 		}
 
@@ -215,6 +232,7 @@
 		 */
 		public function tryConsumeAsUnknowContent(...$types)
 		{
+			Assert::null($this->nodeIndentation, 'NodeIndentation must be consumed first.');
 			$this->addUnknowContent($this->stream->tryConsumeTokenAsText(...$types));
 		}
 
@@ -224,6 +242,7 @@
 		 */
 		public function consumeAnythingAsText()
 		{
+			Assert::null($this->nodeIndentation, 'NodeIndentation must be consumed first.');
 			return $this->stream->consumeAnythingAsText();
 		}
 

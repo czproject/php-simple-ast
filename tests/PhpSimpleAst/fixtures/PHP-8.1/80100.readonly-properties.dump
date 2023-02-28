@@ -28,11 +28,11 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  |  modifier: 'readonly'
    |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
-   |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  nullableSign: ''
    |  |  |  |  |  |  |  typeIndentation: ''
    |  |  |  |  |  |  |  type: 'Status'
-   |  |  |  |  |  |  namePrefix: ' '
+   |  |  |  |  |  |  namePrefix: ''
    |  |  |  |  |  |  name: '$status'
    |  |  |  |  |  |  defaultValue: null
    |  |  |  |  |  |  closer: ' ;'

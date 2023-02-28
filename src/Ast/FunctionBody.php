@@ -61,6 +61,7 @@
 		 */
 		public static function parse(NodeParser $parser)
 		{
+			$nodeIndentation = $parser->consumeNodeIndentation();
 			$blockOpener = $parser->consumeTokenAsText('{');
 			$level = 1;
 
@@ -101,7 +102,7 @@
 			$parser->close();
 
 			return new self(
-				$parser->getNodeIndentation(),
+				$nodeIndentation,
 				$blockOpener,
 				$parser->getChildren(),
 				$blockCloser

@@ -46,6 +46,7 @@
 		 */
 		public static function parseForFunctionParameter(NodeParser $parser)
 		{
+			$nodeIndentation = $parser->consumeNodeIndentation();
 			$operator = $parser->consumeTokenAsText('=');
 			$parser->tryConsumeWhitespace();
 			$literal = Literal::parseExpression($parser->createSubParser(), [',', ')']);
@@ -53,7 +54,7 @@
 			$parser->close();
 
 			return new self(
-				$parser->getNodeIndentation(),
+				$nodeIndentation,
 				$operator,
 				$literal
 			);
@@ -65,6 +66,7 @@
 		 */
 		public static function parseForProperty(NodeParser $parser)
 		{
+			$nodeIndentation = $parser->consumeNodeIndentation();
 			$operator = $parser->consumeTokenAsText('=');
 			$parser->tryConsumeWhitespace();
 			$literal = Literal::parseExpression($parser->createSubParser(), [';']);
@@ -72,7 +74,7 @@
 			$parser->close();
 
 			return new self(
-				$parser->getNodeIndentation(),
+				$nodeIndentation,
 				$operator,
 				$literal
 			);

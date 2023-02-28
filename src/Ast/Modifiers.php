@@ -93,6 +93,7 @@
 		 */
 		public static function parse(NodeParser $parser)
 		{
+			$nodeIndentation = $parser->consumeNodeIndentation();
 			$modifiers = [];
 
 			do {
@@ -117,6 +118,6 @@
 			} while ($parser->isCurrent(T_PUBLIC, T_PROTECTED, T_PRIVATE, T_STATIC, T_ABSTRACT, T_FINAL, PhpToken::T_READONLY()));
 
 			$parser->close();
-			return new self($parser->getNodeIndentation(), $modifiers);
+			return new self($nodeIndentation, $modifiers);
 		}
 	}

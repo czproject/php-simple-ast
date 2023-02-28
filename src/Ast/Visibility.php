@@ -98,8 +98,9 @@
 		 */
 		public static function parse(NodeParser $parser)
 		{
+			$nodeIndentation = $parser->consumeNodeIndentation();
 			$visibility = $parser->consumeTokenAsText(T_PUBLIC, T_PROTECTED, T_PRIVATE);
 			$parser->close();
-			return new self($parser->getNodeIndentation(), $visibility);
+			return new self($nodeIndentation, $visibility);
 		}
 	}

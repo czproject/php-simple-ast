@@ -99,6 +99,7 @@
 				$parser->consumeWhitespace();
 			}
 
+			$nodeIndentation = $parser->consumeNodeIndentation();
 			$name = $parser->consumeTokenAsText(T_VARIABLE);
 			$parser->tryConsumeWhitespace();
 
@@ -115,7 +116,7 @@
 				$modifiers->getIndentation(),
 				$modifiers->toPropertyModifiers(),
 				$type,
-				$parser->getNodeIndentation(),
+				$nodeIndentation,
 				$name,
 				$defaultValue,
 				$closer

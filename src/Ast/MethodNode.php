@@ -150,6 +150,7 @@
 			NodeParser $parser
 		)
 		{
+			$nodeIndentation = $parser->consumeNodeIndentation();
 			$keyword = $parser->consumeTokenAsText(T_FUNCTION);
 			$parser->consumeWhitespace();
 			$name = Name::parse($parser->createSubParser());
@@ -182,11 +183,10 @@
 			$parser->close();
 
 			return new self(
-				//$parser->getNodeIndentation(),
 				$phpDocNode,
 				$modifiers->getIndentation(),
 				$modifiers->toMethodModifiers(),
-				$parser->getNodeIndentation(),
+				$nodeIndentation,
 				$keyword,
 				$name,
 				$parameters,

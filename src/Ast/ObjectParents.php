@@ -50,10 +50,11 @@
 		 */
 		public static function parse(NodeParser $parser, $keywordToken)
 		{
+			$nodeIndentation = $parser->consumeNodeIndentation();
 			$keyword = $parser->consumeTokenAsText($keywordToken);
 			$parser->consumeWhitespace();
 			$implements = Names::parse($parser->createSubParser());
 			$parser->close();
-			return new self($parser->getNodeIndentation(), $keyword, $implements);
+			return new self($nodeIndentation, $keyword, $implements);
 		}
 	}

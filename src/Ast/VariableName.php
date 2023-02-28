@@ -84,6 +84,7 @@
 		 */
 		public static function parse(NodeParser $parser)
 		{
+			$nodeIndentation = $parser->consumeNodeIndentation();
 			$referenceSign = '';
 
 			if ($parser->isCurrent('&')) {
@@ -105,6 +106,6 @@
 			$name = Literal::parseToken($parser->createSubParser(), T_VARIABLE);
 			$parser->close();
 
-			return new self($parser->getNodeIndentation(), $referenceSign, $variadic, $name);
+			return new self($nodeIndentation, $referenceSign, $variadic, $name);
 		}
 	}

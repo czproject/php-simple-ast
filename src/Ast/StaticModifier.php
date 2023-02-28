@@ -44,8 +44,9 @@
 		 */
 		public static function parse(NodeParser $parser)
 		{
+			$nodeIndentation = $parser->consumeNodeIndentation();
 			$modifier = $parser->consumeTokenAsText(T_STATIC);
 			$parser->close();
-			return new self($parser->getNodeIndentation(), $modifier);
+			return new self($nodeIndentation, $modifier);
 		}
 	}

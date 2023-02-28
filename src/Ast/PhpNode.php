@@ -62,7 +62,7 @@
 		 */
 		public static function parse(NodeParser $parser)
 		{
-			$openTag = $parser->consumeTokenAsText(T_OPEN_TAG, T_OPEN_TAG_WITH_ECHO);
+			$openTag = $parser->consumeNodeIndentation() . $parser->consumeTokenAsText(T_OPEN_TAG, T_OPEN_TAG_WITH_ECHO);
 			$closeTag = NULL;
 
 			while ($parser->hasToken()) {

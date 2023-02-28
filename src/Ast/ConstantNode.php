@@ -70,6 +70,7 @@
 		 */
 		public static function parse(Modifiers $modifiers, NodeParser $parser)
 		{
+			$nodeIndentation = $parser->consumeNodeIndentation();
 			$keyword = $parser->consumeTokenAsText(T_CONST);
 			$parser->tryConsumeWhitespace();
 			$name = Literal::parseToken($parser->createSubParser(), T_STRING);
@@ -81,7 +82,7 @@
 			return new self(
 				$modifiers->getIndentation(),
 				$modifiers->toConstantModifiers(),
-				new Literal($parser->getNodeIndentation(), $keyword),
+				new Literal($nodeIndentation, $keyword),
 				$name,
 				$defaultValue,
 				$closer

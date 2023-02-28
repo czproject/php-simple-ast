@@ -51,6 +51,7 @@
 		 */
 		public static function parseParenthesisExpression(NodeParser $parser)
 		{
+			$nodeIndentation = $parser->consumeNodeIndentation();
 			$literal = $parser->consumeTokenAsText('(');
 			$level = 0;
 
@@ -76,7 +77,7 @@
 			$parser->close();
 
 			return new self(
-				$parser->getNodeIndentation(),
+				$nodeIndentation,
 				$literal
 			);
 		}
@@ -87,6 +88,7 @@
 		 */
 		public static function parseBlockExpression(NodeParser $parser)
 		{
+			$nodeIndentation = $parser->consumeNodeIndentation();
 			$literal = $parser->consumeTokenAsText('{');
 			$level = 0;
 
@@ -112,7 +114,7 @@
 			$parser->close();
 
 			return new self(
-				$parser->getNodeIndentation(),
+				$nodeIndentation,
 				$literal
 			);
 		}
@@ -124,6 +126,7 @@
 		 */
 		public static function parseExpression(NodeParser $parser, array $endingTokens)
 		{
+			$nodeIndentation = $parser->consumeNodeIndentation();
 			$level = 0;
 			$literal = '';
 
@@ -155,7 +158,7 @@
 			$parser->close();
 
 			return new self(
-				$parser->getNodeIndentation(),
+				$nodeIndentation,
 				$literal
 			);
 		}
@@ -167,11 +170,12 @@
 		 */
 		public static function parseToken(NodeParser $parser, $tokenType)
 		{
+			$nodeIndentation = $parser->consumeNodeIndentation();
 			$literal = $parser->consumeTokenAsText($tokenType);
 			$parser->close();
 
 			return new self(
-				$parser->getNodeIndentation(),
+				$nodeIndentation,
 				$literal
 			);
 		}

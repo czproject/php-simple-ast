@@ -58,6 +58,7 @@
 		 */
 		public static function parse(NodeParser $parser)
 		{
+			$nodeIndentation = $parser->consumeNodeIndentation();
 			$nullableSign = '';
 			$typeIndentation = '';
 
@@ -78,6 +79,6 @@
 			}
 
 			$parser->close();
-			return new self($parser->getNodeIndentation(), $nullableSign, $typeIndentation, $type);
+			return new self($nodeIndentation, $nullableSign, $typeIndentation, $type);
 		}
 	}

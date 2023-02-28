@@ -72,6 +72,7 @@
 		 */
 		public static function parse(NodeParser $parser)
 		{
+			$nodeIndentation = $parser->consumeNodeIndentation();
 			$opener = $parser->consumeTokenAsText('(');
 			$parser->tryConsumeWhitespace();
 			$parameters = [];
@@ -90,7 +91,7 @@
 			$parser->close();
 
 			return new self(
-				$parser->getNodeIndentation(),
+				$nodeIndentation,
 				$opener,
 				$parameters,
 				$closer

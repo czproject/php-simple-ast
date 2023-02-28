@@ -47,7 +47,7 @@
 
 			while ($parser->hasToken()) {
 				if ($parser->isCurrent(T_INLINE_HTML)) {
-					$children[] = new HtmlNode($parser->consumeAllTokensAsText(T_INLINE_HTML));
+					$children[] = new HtmlNode($parser->consumeNodeIndentation() . $parser->consumeAllTokensAsText(T_INLINE_HTML));
 
 				} elseif ($parser->isCurrent(T_OPEN_TAG, T_OPEN_TAG_WITH_ECHO)) {
 					$children[] = PhpNode::parse($parser->createSubParser());
