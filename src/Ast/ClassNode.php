@@ -214,7 +214,7 @@
 						$child = ConstantNode::parse($modifiers, $parser->createSubParser());
 
 					} else {
-						$parser->errorUnknowToken();
+						$child = PropertyNode::parse($modifiers, $parser->createSubParser());
 					}
 
 				} elseif ($parser->isCurrent(T_FUNCTION)) {

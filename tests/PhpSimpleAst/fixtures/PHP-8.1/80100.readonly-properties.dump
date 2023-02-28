@@ -32,10 +32,10 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  nullableSign: ''
    |  |  |  |  |  |  |  typeIndentation: ''
    |  |  |  |  |  |  |  type: 'Status'
-   |  |  |  |  |  |  namePrefix: ''
+   |  |  |  |  |  |  namePrefix: ' '
    |  |  |  |  |  |  name: '$status'
    |  |  |  |  |  |  defaultValue: null
-   |  |  |  |  |  |  closer: ' ;'
+   |  |  |  |  |  |  closer: ';'
    |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\MethodNode
    |  |  |  |  |  |  phpDocNode: null
    |  |  |  |  |  |  indentation: string
