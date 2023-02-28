@@ -6,6 +6,7 @@
 
 	use CzProject\Assert\Assert;
 	use Nette\Utils\Strings;
+	use CzProject\PhpSimpleAst\Lexer\PhpToken;
 
 
 	class VariableName
@@ -87,6 +88,10 @@
 
 			if ($parser->isCurrent('&')) {
 				$referenceSign = $parser->consumeTokenAsText('&');
+				$parser->tryConsumeWhitespace();
+
+			} elseif ($parser->isCurrent(PhpToken::T_AMPERSAND_FOLLOWED_BY_VAR_OR_VARARG())) {
+				$referenceSign = $parser->consumeTokenAsText(PhpToken::T_AMPERSAND_FOLLOWED_BY_VAR_OR_VARARG());
 				$parser->tryConsumeWhitespace();
 			}
 

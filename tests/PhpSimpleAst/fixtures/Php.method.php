@@ -25,6 +25,11 @@
 		function paramWithComment($login, $password/*, $testMode*/)
 		{
 		}
+
+
+		function paramWithReference($directory, array &$result)
+		{
+		}
 	}
 
 

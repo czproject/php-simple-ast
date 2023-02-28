@@ -5,6 +5,7 @@
 	namespace CzProject\PhpSimpleAst\Ast;
 
 	use CzProject\Assert\Assert;
+	use CzProject\PhpSimpleAst\Lexer\PhpToken;
 
 
 	class Parameter implements IFunctionBody
@@ -78,7 +79,7 @@
 		{
 			$type = NULL;
 
-			if (!$parser->isCurrent(T_VARIABLE, T_ELLIPSIS, '&')) {
+			if (!$parser->isCurrent(T_VARIABLE, T_ELLIPSIS, '&', PhpToken::T_AMPERSAND_FOLLOWED_BY_VAR_OR_VARARG())) {
 				$type = NamedType::parse($parser->createSubParser());
 				$parser->tryConsumeWhitespaceAndComments();
 			}
