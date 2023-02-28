@@ -1,0 +1,93 @@
+CzProject\PhpSimpleAst\Ast\PhpString
+   children: array (1)
+   |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
+   |  |  openTag: '<?php\n'
+   |  |  children: array (2)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  indentation: '\n'
+   |  |  |  |  keyword: 'class'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'BlogData'
+   |  |  |  |  constructorValues: null
+   |  |  |  |  extends: null
+   |  |  |  |  implements: null
+   |  |  |  |  blockOpener: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   {'
+   |  |  |  |  children: array (2)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\PropertyNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    '
+   |  |  |  |  |  |  modifiers: array (2)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  visibility: 'public'
+   |  |  |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\ReadOnlyModifier
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  modifier: 'readonly'
+   |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  nullableSign: ''
+   |  |  |  |  |  |  |  typeIndentation: ''
+   |  |  |  |  |  |  |  type: 'Status'
+   |  |  |  |  |  |  namePrefix: ' '
+   |  |  |  |  |  |  name: '$status'
+   |  |  |  |  |  |  defaultValue: null
+   |  |  |  |  |  |  closer: ' ;'
+   |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\MethodNode
+   |  |  |  |  |  |  phpDocNode: null
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \n
+   |  |  |  |  |  |  |   \t    '
+   |  |  |  |  |  |  modifiers: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  visibility: 'public'
+   |  |  |  |  |  |  keywordPrefix: ' '
+   |  |  |  |  |  |  keyword: 'function'
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  name: '__construct'
+   |  |  |  |  |  |  parameters: CzProject\PhpSimpleAst\Ast\Parameters
+   |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  opener: '('
+   |  |  |  |  |  |  |  parameters: array (1)
+   |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Parameter
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  nullableSign: ''
+   |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
+   |  |  |  |  |  |  |  |  |  |  type: 'Status'
+   |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
+   |  |  |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  |  |  referenceSign: ''
+   |  |  |  |  |  |  |  |  |  |  variadic: null
+   |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  literal: '$status'
+   |  |  |  |  |  |  |  |  |  defaultValue: null
+   |  |  |  |  |  |  |  closer: ')'
+   |  |  |  |  |  |  returnType: null
+   |  |  |  |  |  |  body: CzProject\PhpSimpleAst\Ast\FunctionBody
+   |  |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |   \t    '
+   |  |  |  |  |  |  |  blockOpener: '{'
+   |  |  |  |  |  |  |  children: array (1)
+   |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  |  |  |  |  |  content: string
+   |  |  |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t    $this->status = $status;'
+   |  |  |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |   \t    }'
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   }'
+   |  |  |  1 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: '\n'
+   |  |  closeTag: null

@@ -5,6 +5,7 @@
 	namespace CzProject\PhpSimpleAst\Ast;
 
 	use CzProject\Assert\Assert;
+	use CzProject\PhpSimpleAst\Lexer\PhpToken;
 
 
 	class Modifiers
@@ -104,13 +105,16 @@
 				} elseif ($parser->isCurrent(T_ABSTRACT, T_FINAL)) {
 					$modifiers[] = OverridingModifier::parse($parser->createSubParser());
 
+				} elseif ($parser->isCurrent(PhpToken::T_READONLY())) {
+					$modifiers[] = ReadOnlyModifier::parse($parser->createSubParser());
+
 				} else {
 					$parser->errorUnknowToken();
 				}
 
 				$parser->tryConsumeWhitespace();
 
-			} while ($parser->isCurrent(T_PUBLIC, T_PROTECTED, T_PRIVATE, T_STATIC, T_ABSTRACT, T_FINAL));
+			} while ($parser->isCurrent(T_PUBLIC, T_PROTECTED, T_PRIVATE, T_STATIC, T_ABSTRACT, T_FINAL, PhpToken::T_READONLY()));
 
 			$parser->close();
 			return new self($parser->getNodeIndentation(), $modifiers);

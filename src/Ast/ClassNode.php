@@ -6,6 +6,7 @@
 
 	use CzProject\Assert\Assert;
 	use CzProject\PhpSimpleAst\InvalidStateException;
+	use CzProject\PhpSimpleAst\Lexer\PhpToken;
 
 
 	class ClassNode implements IParentNode
@@ -198,7 +199,7 @@
 					$blockCloser = $parser->flushIndentation() . $parser->consumeTokenAsText('}');
 					break;
 
-				} elseif ($parser->isCurrent(T_PUBLIC, T_PROTECTED, T_PRIVATE, T_STATIC, T_ABSTRACT, T_FINAL)) {
+				} elseif ($parser->isCurrent(T_PUBLIC, T_PROTECTED, T_PRIVATE, T_STATIC, T_ABSTRACT, T_FINAL, PhpToken::T_READONLY())) {
 					$modifiers = Modifiers::parse($parser->createSubParser());
 
 					if ($parser->isCurrent(T_FUNCTION)) {

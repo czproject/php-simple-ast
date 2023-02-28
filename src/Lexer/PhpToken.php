@@ -63,4 +63,10 @@
 		{
 			return $this->line;
 		}
+
+
+		public static function T_READONLY()
+		{
+			return PHP_VERSION_ID >= 80100 ? T_READONLY : -1;
+		}
 	}
