@@ -80,6 +80,15 @@
 		}
 
 
+		/**
+		 * @param  string|ClassReflection $class
+		 */
+		public function isSubclassOf($class, string $requiredClass): bool
+		{
+			return $this->getReflection()->isSubclassOf($class, $requiredClass);
+		}
+
+
 		private function getReflection(): Reflection
 		{
 			if ($this->reflection === NULL) {

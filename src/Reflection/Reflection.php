@@ -117,6 +117,32 @@
 		}
 
 
+		/**
+		 * @param  string|ClassReflection $class
+		 */
+		public function isSubclassOf($class, string $requiredClass): bool
+		{
+			if (is_string($class)) {
+				$class = $this->getClass($class);
+			}
+
+			$requiredClass = strtolower($requiredClass);
+
+			do {
+				if (strtolower($class->getName()) === $requiredClass) {
+					return TRUE;
+				}
+
+				if (!$class->hasParent()) {
+					return FALSE;
+				}
+
+				$class = $this->getClass($class->getParentName());
+
+			} while (TRUE);
+		}
+
+
 		public static function translateName(string $name, ?string $namespace): string
 		{
 			if (Strings::startsWith($name, '\\')) {

@@ -40,6 +40,26 @@ test('Family line', function () use ($reflection) {
 });
 
 
+test('Subclass-of', function () use ($reflection) {
+	Assert::true($reflection->isSubclassOf(\MyClass::class, \MyClass::class), 'Self');
+	Assert::false($reflection->isSubclassOf(\MyClass::class, \Foo\Bar::class), 'Not subclass');
+
+	Assert::true($reflection->isSubclassOf(\Foo\Bar::class, \Foo\Bar::class), 'Self');
+	Assert::true($reflection->isSubclassOf(\Foo\Bar::class, \MyClass::class), 'Extends');
+	Assert::false($reflection->isSubclassOf(\Foo\Bar::class, \MyClass2::class), 'Not subclass');
+});
+
+
+test('Subclass-of - ClassReflection', function () use ($reflection) {
+	Assert::true($reflection->isSubclassOf($reflection->getClass(\MyClass::class), \MyClass::class), 'Self');
+	Assert::false($reflection->isSubclassOf($reflection->getClass(\MyClass::class), \Foo\Bar::class), 'Not subclass');
+
+	Assert::true($reflection->isSubclassOf($reflection->getClass(\Foo\Bar::class), \Foo\Bar::class), 'Self');
+	Assert::true($reflection->isSubclassOf($reflection->getClass(\Foo\Bar::class), \MyClass::class), 'Extends');
+	Assert::false($reflection->isSubclassOf($reflection->getClass(\Foo\Bar::class), \MyClass2::class), 'Not subclass');
+});
+
+
 test('Class methods', function () use ($reflection) {
 	$names = [];
 
