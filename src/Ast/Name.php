@@ -105,7 +105,7 @@
 			}
 
 			if ($name === '') {
-				throw new \CzProject\PhpSimpleAst\InvalidStateException('Missing name.');
+				$parser->errorUnknowToken('Missing name');
 			}
 
 			$parser->close();
