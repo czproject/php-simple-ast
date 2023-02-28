@@ -5,9 +5,9 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  children: array (7)
    |  |  |  0 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  indentation: '\n'
-   |  |  |  |  content: '// Basic class & interface definition\n'
+   |  |  |  |  content: '// Basic class & interface definition'
    |  |  |  1 => CzProject\PhpSimpleAst\Ast\InterfaceNode
-   |  |  |  |  indentation: ''
+   |  |  |  |  indentation: '\n'
    |  |  |  |  keyword: 'interface'
    |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
    |  |  |  |  |  indentation: ' '

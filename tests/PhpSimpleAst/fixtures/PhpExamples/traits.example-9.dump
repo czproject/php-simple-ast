@@ -2,15 +2,15 @@ CzProject\PhpSimpleAst\Ast\PhpString
    children: array (1)
    |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
    |  |  openTag: '<?php\n'
-   |  |  children: array (9)
+   |  |  children: array (10)
    |  |  |  0 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  indentation: ''
-   |  |  |  |  content: '// Example #9 Static Variables\n'
+   |  |  |  |  content: '// Example #9 Static Variables'
    |  |  |  1 => CzProject\PhpSimpleAst\Ast\CommentNode
-   |  |  |  |  indentation: ''
-   |  |  |  |  content: '// http://www.php.net/manual/en/language.oop5.traits.php\n'
+   |  |  |  |  indentation: '\n'
+   |  |  |  |  content: '// http://www.php.net/manual/en/language.oop5.traits.php'
    |  |  |  2 => CzProject\PhpSimpleAst\Ast\TraitNode
-   |  |  |  |  indentation: ''
+   |  |  |  |  indentation: '\n'
    |  |  |  |  keyword: 'trait'
    |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
    |  |  |  |  |  indentation: ' '
@@ -118,10 +118,14 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |   $o = new C1(); $o->inc();'
    |  |  |  6 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  indentation: ' '
-   |  |  |  |  content: '// echo 1\n'
+   |  |  |  |  content: '// echo 1'
    |  |  |  7 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  content: '$p = new C2(); $p->inc();'
+   |  |  |  |  content: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   $p = new C2(); $p->inc();'
    |  |  |  8 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  indentation: ' '
-   |  |  |  |  content: '// echo 1\n'
+   |  |  |  |  content: '// echo 1'
+   |  |  |  9 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: '\n'
    |  |  closeTag: null

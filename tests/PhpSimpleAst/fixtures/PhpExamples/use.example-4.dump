@@ -2,34 +2,43 @@ CzProject\PhpSimpleAst\Ast\PhpString
    children: array (1)
    |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
    |  |  openTag: '<?php\n'
-   |  |  children: array (10)
+   |  |  children: array (11)
    |  |  |  0 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  indentation: ''
-   |  |  |  |  content: '// Example #4\n'
+   |  |  |  |  content: '// Example #4'
    |  |  |  1 => CzProject\PhpSimpleAst\Ast\CommentNode
-   |  |  |  |  indentation: ''
-   |  |  |  |  content: '// http://php.net/manual/en/language.namespaces.importing.php\n'
+   |  |  |  |  indentation: '\n'
+   |  |  |  |  content: '// http://php.net/manual/en/language.namespaces.importing.php'
    |  |  |  2 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: string
-   |  |  |  |  |  'use My\Full\Classname as Another, My\Full\NSname;\n
+   |  |  |  |  |  '\n
+   |  |  |  |  |   use My\Full\Classname as Another, My\Full\NSname;\n
    |  |  |  |  |   \n
    |  |  |  |  |   $obj = new Another;'
    |  |  |  3 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  indentation: ' '
-   |  |  |  |  content: '// instantiates object of class My\Full\Classname\n'
+   |  |  |  |  content: '// instantiates object of class My\Full\Classname'
    |  |  |  4 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  content: '$obj = new \Another;'
+   |  |  |  |  content: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   $obj = new \Another;'
    |  |  |  5 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  indentation: ' '
-   |  |  |  |  content: '// instantiates object of class Another\n'
+   |  |  |  |  content: '// instantiates object of class Another'
    |  |  |  6 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  content: '$obj = new Another\thing;'
+   |  |  |  |  content: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   $obj = new Another\thing;'
    |  |  |  7 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  indentation: ' '
-   |  |  |  |  content: '// instantiates object of class My\Full\Classname\thing\n'
+   |  |  |  |  content: '// instantiates object of class My\Full\Classname\thing'
    |  |  |  8 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  content: '$obj = new \Another\thing;'
+   |  |  |  |  content: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   $obj = new \Another\thing;'
    |  |  |  9 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  indentation: ' '
-   |  |  |  |  content: '// instantiates object of class Another\thing\n'
+   |  |  |  |  content: '// instantiates object of class Another\thing'
+   |  |  |  10 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: '\n'
    |  |  closeTag: null

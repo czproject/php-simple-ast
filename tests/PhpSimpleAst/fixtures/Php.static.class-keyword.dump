@@ -5,9 +5,9 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  children: array (2)
    |  |  |  0 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  indentation: ''
-   |  |  |  |  content: '// Basic class dependencies\n'
+   |  |  |  |  content: '// Basic class dependencies'
    |  |  |  1 => CzProject\PhpSimpleAst\Ast\NamespaceNode
-   |  |  |  |  indentation: ''
+   |  |  |  |  indentation: '\n'
    |  |  |  |  keyword: 'namespace'
    |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
    |  |  |  |  |  indentation: ' '

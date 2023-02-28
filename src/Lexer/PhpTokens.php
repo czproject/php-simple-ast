@@ -4,6 +4,8 @@
 
 	namespace CzProject\PhpSimpleAst\Lexer;
 
+	use Nette\Utils\Strings;
+
 
 	class PhpTokens implements ITokens
 	{
@@ -91,15 +93,38 @@
 		{
 			$tokens = [];
 			$line = 0;
+			$whitespaceToMerge = NULL;
 
 			foreach (token_get_all($str) as $position => $token) {
+				if ($whitespaceToMerge !== NULL) {
+					if (is_array($token) && $token[0] === $whitespaceToMerge->getType()) {
+						$token[1] = $whitespaceToMerge->toString() . $token[1];
+						$token[2] = $whitespaceToMerge->getLine();
+
+					} else {
+						$tokens[] = $whitespaceToMerge;
+					}
+
+					$whitespaceToMerge = NULL;
+				}
+
 				if (is_string($token)) {
 					$tokens[] = new PhpToken($token, $token, $position, $line);
 
 				} else {
 					$line = $token[2];
+
+					if ($token[0] === T_COMMENT && ($match = Strings::match($token[1], '~[\\n\\r]+$~'))) {
+						$whitespaceToMerge = new PhpToken(T_WHITESPACE, $match[0], $position + 1, $line);
+						$token[1] = rtrim($token[1], "\n\r");
+					}
+
 					$tokens[] = new PhpToken($token[0], $token[1], $position, $line);
 				}
+			}
+
+			if ($whitespaceToMerge !== NULL) {
+				$tokens[] = $whitespaceToMerge;
 			}
 
 			return new self($tokens);

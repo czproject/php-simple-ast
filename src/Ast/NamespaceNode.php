@@ -102,6 +102,7 @@
 			$keyword = $parser->consumeTokenAsText(T_NAMESPACE);
 			$parser->consumeWhitespace();
 			$parser->tryConsumeAllAsIndentation(T_COMMENT);
+			$parser->tryConsumeWhitespace();
 			$name = NULL;
 			$blockOpener = '';
 			$inBrackets = FALSE;

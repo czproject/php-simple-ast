@@ -5,12 +5,12 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  children: array (26)
    |  |  |  0 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  indentation: '\n'
-   |  |  |  |  content: '// http://php.net/manual/en/language.oop5.anonymous.php\n'
+   |  |  |  |  content: '// http://php.net/manual/en/language.oop5.anonymous.php'
    |  |  |  1 => CzProject\PhpSimpleAst\Ast\CommentNode
-   |  |  |  |  indentation: ''
-   |  |  |  |  content: '// Pre PHP 7 code\n'
+   |  |  |  |  indentation: '\n'
+   |  |  |  |  content: '// Pre PHP 7 code'
    |  |  |  2 => CzProject\PhpSimpleAst\Ast\ClassNode
-   |  |  |  |  indentation: ''
+   |  |  |  |  indentation: '\n'
    |  |  |  |  keyword: 'class'
    |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
    |  |  |  |  |  indentation: ' '
@@ -78,9 +78,11 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  indentation: string
    |  |  |  |  |  '\n
    |  |  |  |  |   \n'
-   |  |  |  |  content: '// PHP 7+ code\n'
+   |  |  |  |  content: '// PHP 7+ code'
    |  |  |  5 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  content: '$util->setLogger(new'
+   |  |  |  |  content: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   $util->setLogger(new'
    |  |  |  6 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  indentation: ' '
    |  |  |  |  keyword: 'class'
@@ -144,9 +146,9 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  '\n
    |  |  |  |  |   \n
    |  |  |  |  |   \n'
-   |  |  |  |  content: '// example 2\n'
+   |  |  |  |  content: '// example 2'
    |  |  |  9 => CzProject\PhpSimpleAst\Ast\ClassNode
-   |  |  |  |  indentation: ''
+   |  |  |  |  indentation: '\n'
    |  |  |  |  keyword: 'class'
    |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
    |  |  |  |  |  indentation: ' '
@@ -287,9 +289,9 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  '\n
    |  |  |  |  |   \n
    |  |  |  |  |   \n'
-   |  |  |  |  content: '// example 3\n'
+   |  |  |  |  content: '// example 3'
    |  |  |  16 => CzProject\PhpSimpleAst\Ast\ClassNode
-   |  |  |  |  indentation: ''
+   |  |  |  |  indentation: '\n'
    |  |  |  |  keyword: 'class'
    |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
    |  |  |  |  |  indentation: ' '
@@ -430,10 +432,11 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  '\n
    |  |  |  |  |   \n
    |  |  |  |  |   \n'
-   |  |  |  |  content: '// example 4\n'
+   |  |  |  |  content: '// example 4'
    |  |  |  19 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: string
-   |  |  |  |  |  'function anonymous_class()\n
+   |  |  |  |  |  '\n
+   |  |  |  |  |   function anonymous_class()\n
    |  |  |  |  |   {\n
    |  |  |  |  |   \t    return new'
    |  |  |  20 => CzProject\PhpSimpleAst\Ast\ClassNode
@@ -460,9 +463,11 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  indentation: string
    |  |  |  |  |  '\n
    |  |  |  |  |   \n'
-   |  |  |  |  content: '// example 5\n'
+   |  |  |  |  content: '// example 5'
    |  |  |  23 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  content: 'echo get_class(new'
+   |  |  |  |  content: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   echo get_class(new'
    |  |  |  24 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  indentation: ' '
    |  |  |  |  keyword: 'class'

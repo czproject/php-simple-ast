@@ -5,10 +5,11 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  children: array (2)
    |  |  |  0 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  indentation: ''
-   |  |  |  |  content: '// http://php.net/manual/en/language.namespaces.importing.php\n'
+   |  |  |  |  content: '// http://php.net/manual/en/language.namespaces.importing.php'
    |  |  |  1 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: string
-   |  |  |  |  |  'use const My\Full\CONSTANT;\n
+   |  |  |  |  |  '\n
+   |  |  |  |  |   use const My\Full\CONSTANT;\n
    |  |  |  |  |   \n
    |  |  |  |  |   $a = new CONSTANT;\n'
    |  |  closeTag: null

@@ -5,9 +5,9 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  children: array (3)
    |  |  |  0 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  indentation: ''
-   |  |  |  |  content: '// conflicts\n'
+   |  |  |  |  content: '// conflicts'
    |  |  |  1 => CzProject\PhpSimpleAst\Ast\NamespaceNode
-   |  |  |  |  indentation: ''
+   |  |  |  |  indentation: '\n'
    |  |  |  |  keyword: 'namespace'
    |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
    |  |  |  |  |  indentation: ' '

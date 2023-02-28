@@ -5,10 +5,11 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  children: array (4)
    |  |  |  0 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  indentation: ''
-   |  |  |  |  content: '// multiuse\n'
+   |  |  |  |  content: '// multiuse'
    |  |  |  1 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: string
-   |  |  |  |  |  'use NS4\NS5\NS6;\n
+   |  |  |  |  |  '\n
+   |  |  |  |  |   use NS4\NS5\NS6;\n
    |  |  |  |  |   use NS4\NS5\NS7 as NS9;'
    |  |  |  2 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  indentation: string

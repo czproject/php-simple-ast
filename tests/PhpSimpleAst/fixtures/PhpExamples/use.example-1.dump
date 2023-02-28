@@ -5,18 +5,18 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  children: array (3)
    |  |  |  0 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  indentation: ''
-   |  |  |  |  content: '// Example #1\n'
+   |  |  |  |  content: '// Example #1'
    |  |  |  1 => CzProject\PhpSimpleAst\Ast\CommentNode
-   |  |  |  |  indentation: ''
-   |  |  |  |  content: '// http://php.net/manual/en/language.namespaces.importing.php\n'
+   |  |  |  |  indentation: '\n'
+   |  |  |  |  content: '// http://php.net/manual/en/language.namespaces.importing.php'
    |  |  |  2 => CzProject\PhpSimpleAst\Ast\NamespaceNode
-   |  |  |  |  indentation: ''
+   |  |  |  |  indentation: '\n'
    |  |  |  |  keyword: 'namespace'
    |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
    |  |  |  |  |  indentation: ' '
    |  |  |  |  |  name: 'foo'
    |  |  |  |  blockOpener: ';'
-   |  |  |  |  children: array (23)
+   |  |  |  |  children: array (24)
    |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  |  |  content: string
    |  |  |  |  |  |  |  '\n
@@ -25,70 +25,91 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |   \n'
-   |  |  |  |  |  |  content: '// this is the same as use My\Full\NSname as NSname\n'
+   |  |  |  |  |  |  content: '// this is the same as use My\Full\NSname as NSname'
    |  |  |  |  |  2 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  |  |  content: 'use My\Full\NSname;'
+   |  |  |  |  |  |  content: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   use My\Full\NSname;'
    |  |  |  |  |  3 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |   \n'
-   |  |  |  |  |  |  content: '// importing a global class\n'
+   |  |  |  |  |  |  content: '// importing a global class'
    |  |  |  |  |  4 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  |  |  content: 'use ArrayObject;'
+   |  |  |  |  |  |  content: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   use ArrayObject;'
    |  |  |  |  |  5 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |   \n'
-   |  |  |  |  |  |  content: '// importing a function (PHP 5.6+)\n'
+   |  |  |  |  |  |  content: '// importing a function (PHP 5.6+)'
    |  |  |  |  |  6 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  |  |  content: 'use function My\Full\functionName;'
+   |  |  |  |  |  |  content: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   use function My\Full\functionName;'
    |  |  |  |  |  7 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |   \n'
-   |  |  |  |  |  |  content: '// aliasing a function (PHP 5.6+)\n'
+   |  |  |  |  |  |  content: '// aliasing a function (PHP 5.6+)'
    |  |  |  |  |  8 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  |  |  content: 'use function My\Full\functionName as func;'
+   |  |  |  |  |  |  content: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   use function My\Full\functionName as func;'
    |  |  |  |  |  9 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |   \n'
-   |  |  |  |  |  |  content: '// importing a constant (PHP 5.6+)\n'
+   |  |  |  |  |  |  content: '// importing a constant (PHP 5.6+)'
    |  |  |  |  |  10 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  |  |  content: string
-   |  |  |  |  |  |  |  'use const My\Full\CONSTANT;\n
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   use const My\Full\CONSTANT;\n
    |  |  |  |  |  |  |   \n
    |  |  |  |  |  |  |   $obj = new namespace\Another;'
    |  |  |  |  |  11 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  |  |  indentation: ' '
-   |  |  |  |  |  |  content: '// instantiates object of class foo\Another\n'
+   |  |  |  |  |  |  content: '// instantiates object of class foo\Another'
    |  |  |  |  |  12 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  |  |  content: '$obj = new Another;'
+   |  |  |  |  |  |  content: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   $obj = new Another;'
    |  |  |  |  |  13 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  |  |  indentation: ' '
-   |  |  |  |  |  |  content: '// instantiates object of class My\Full\Classname\n'
+   |  |  |  |  |  |  content: '// instantiates object of class My\Full\Classname'
    |  |  |  |  |  14 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  |  |  content: 'NSname\subns\func();'
+   |  |  |  |  |  |  content: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   NSname\subns\func();'
    |  |  |  |  |  15 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  |  |  indentation: ' '
-   |  |  |  |  |  |  content: '// calls function My\Full\NSname\subns\func\n'
+   |  |  |  |  |  |  content: '// calls function My\Full\NSname\subns\func'
    |  |  |  |  |  16 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  |  |  content: '$a = new ArrayObject(array(1));'
+   |  |  |  |  |  |  content: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   $a = new ArrayObject(array(1));'
    |  |  |  |  |  17 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  |  |  indentation: ' '
-   |  |  |  |  |  |  content: '// instantiates object of class ArrayObject\n'
+   |  |  |  |  |  |  content: '// instantiates object of class ArrayObject'
    |  |  |  |  |  18 => CzProject\PhpSimpleAst\Ast\CommentNode
-   |  |  |  |  |  |  indentation: ''
-   |  |  |  |  |  |  content: '// without the "use ArrayObject" we would instantiate an object of class foo\ArrayObject\n'
+   |  |  |  |  |  |  indentation: '\n'
+   |  |  |  |  |  |  content: '// without the "use ArrayObject" we would instantiate an object of class foo\ArrayObject'
    |  |  |  |  |  19 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  |  |  content: 'func();'
+   |  |  |  |  |  |  content: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   func();'
    |  |  |  |  |  20 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  |  |  indentation: ' '
-   |  |  |  |  |  |  content: '// calls function My\Full\functionName\n'
+   |  |  |  |  |  |  content: '// calls function My\Full\functionName'
    |  |  |  |  |  21 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  |  |  content: 'echo CONSTANT;'
+   |  |  |  |  |  |  content: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   echo CONSTANT;'
    |  |  |  |  |  22 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  |  |  indentation: ' '
-   |  |  |  |  |  |  content: '// echoes the value of My\Full\CONSTANT\n'
+   |  |  |  |  |  |  content: '// echoes the value of My\Full\CONSTANT'
+   |  |  |  |  |  23 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  |  |  content: '\n'
    |  |  |  |  blockCloser: ''
    |  |  closeTag: null

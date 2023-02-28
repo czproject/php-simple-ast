@@ -5,12 +5,12 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  children: array (5)
    |  |  |  0 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  indentation: ''
-   |  |  |  |  content: '// Example #3 Alternate Precedence Order Example\n'
+   |  |  |  |  content: '// Example #3 Alternate Precedence Order Example'
    |  |  |  1 => CzProject\PhpSimpleAst\Ast\CommentNode
-   |  |  |  |  indentation: ''
-   |  |  |  |  content: '// http://www.php.net/manual/en/language.oop5.traits.php\n'
+   |  |  |  |  indentation: '\n'
+   |  |  |  |  content: '// http://www.php.net/manual/en/language.oop5.traits.php'
    |  |  |  2 => CzProject\PhpSimpleAst\Ast\TraitNode
-   |  |  |  |  indentation: ''
+   |  |  |  |  indentation: '\n'
    |  |  |  |  keyword: 'trait'
    |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
    |  |  |  |  |  indentation: ' '

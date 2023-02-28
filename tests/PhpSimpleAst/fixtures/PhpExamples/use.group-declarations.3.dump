@@ -5,16 +5,17 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  children: array (4)
    |  |  |  0 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  indentation: ''
-   |  |  |  |  content: '// Group `use` declarations\n'
+   |  |  |  |  content: '// Group `use` declarations'
    |  |  |  1 => CzProject\PhpSimpleAst\Ast\CommentNode
-   |  |  |  |  indentation: ''
-   |  |  |  |  content: '// http://php.net/manual/en/language.namespaces.importing.php\n'
+   |  |  |  |  indentation: '\n'
+   |  |  |  |  content: '// http://php.net/manual/en/language.namespaces.importing.php'
    |  |  |  2 => CzProject\PhpSimpleAst\Ast\CommentNode
-   |  |  |  |  indentation: ''
-   |  |  |  |  content: '// subpath\n'
+   |  |  |  |  indentation: '\n'
+   |  |  |  |  content: '// subpath'
    |  |  |  3 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: string
-   |  |  |  |  |  'use A\B\{A, B\C, C as D};\n
+   |  |  |  |  |  '\n
+   |  |  |  |  |   use A\B\{A, B\C, C as D};\n
    |  |  |  |  |   \n
    |  |  |  |  |   $a = new A;\n
    |  |  |  |  |   $a = new C;\n

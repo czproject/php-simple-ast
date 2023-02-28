@@ -2,24 +2,29 @@ CzProject\PhpSimpleAst\Ast\PhpString
    children: array (1)
    |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
    |  |  openTag: '<?php\n'
-   |  |  children: array (6)
+   |  |  children: array (7)
    |  |  |  0 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  indentation: ''
-   |  |  |  |  content: '// Example #2\n'
+   |  |  |  |  content: '// Example #2'
    |  |  |  1 => CzProject\PhpSimpleAst\Ast\CommentNode
-   |  |  |  |  indentation: ''
-   |  |  |  |  content: '// http://php.net/manual/en/language.namespaces.importing.php\n'
+   |  |  |  |  indentation: '\n'
+   |  |  |  |  content: '// http://php.net/manual/en/language.namespaces.importing.php'
    |  |  |  2 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: string
-   |  |  |  |  |  'use My\Full\Classname as Another, My\Full\NSname;\n
+   |  |  |  |  |  '\n
+   |  |  |  |  |   use My\Full\Classname as Another, My\Full\NSname;\n
    |  |  |  |  |   \n
    |  |  |  |  |   $obj = new Another;'
    |  |  |  3 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  indentation: ' '
-   |  |  |  |  content: '// instantiates object of class My\Full\Classname\n'
+   |  |  |  |  content: '// instantiates object of class My\Full\Classname'
    |  |  |  4 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  content: 'NSname\subns\func();'
+   |  |  |  |  content: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   NSname\subns\func();'
    |  |  |  5 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  indentation: ' '
-   |  |  |  |  content: '// calls function My\Full\NSname\subns\func\n'
+   |  |  |  |  content: '// calls function My\Full\NSname\subns\func'
+   |  |  |  6 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: '\n'
    |  |  closeTag: null

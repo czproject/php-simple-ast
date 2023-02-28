@@ -100,9 +100,11 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |   \n
    |  |  |  |  |   \n
    |  |  |  |  |   \t    '
-   |  |  |  |  content: '// Multiple\n'
+   |  |  |  |  content: '// Multiple'
    |  |  |  4 => CzProject\PhpSimpleAst\Ast\TraitNode
-   |  |  |  |  indentation: '\t    '
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \t    '
    |  |  |  |  keyword: 'trait'
    |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
    |  |  |  |  |  indentation: ' '
@@ -168,9 +170,11 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |   \n
    |  |  |  |  |   \n
    |  |  |  |  |   \t    '
-   |  |  |  |  content: '// Block { }\n'
+   |  |  |  |  content: '// Block { }'
    |  |  |  8 => CzProject\PhpSimpleAst\Ast\TraitNode
-   |  |  |  |  indentation: '\t    '
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \t    '
    |  |  |  |  keyword: 'trait'
    |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
    |  |  |  |  |  indentation: ' '
