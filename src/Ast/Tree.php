@@ -68,8 +68,8 @@
 
 		/**
 		 * @phpstan-template TSearch of INode
-		 * @param  string $nodeType
-		 * @phpstan-param class-string<TSearch> $nodeType
+		 * @param  string|string[] $nodeType
+		 * @phpstan-param class-string<TSearch>|array<class-string<TSearch>> $nodeType
 		 * @return self[]
 		 * @phpstan-return self<TSearch>[]
 		 */
@@ -84,7 +84,14 @@
 				$parents[] = $parent[0];
 
 				foreach ($parent[0]->getNodes() as $node) {
-					if ($node instanceof $nodeType) {
+					if (is_array($nodeType)) {
+						foreach ($nodeType as $nType) {
+							if ($node instanceof $nType) {
+								$result[] = new self($node, $parents);
+							}
+						}
+
+					} elseif ($node instanceof $nodeType) {
 						$result[] = new self($node, $parents);
 					}
 
