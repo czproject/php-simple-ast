@@ -159,7 +159,10 @@
 		 */
 		public function consumeAsIndentation(...$types)
 		{
-			Assert::null($this->nodeIndentation, 'NodeIndentation must be consumed first.');
+			if ($this->nodeIndentation !== NULL) {
+				$this->addIndentation($this->consumeNodeIndentation());
+			}
+
 			$this->addIndentation($this->stream->consumeTokenAsText(...$types));
 		}
 
@@ -170,7 +173,10 @@
 		 */
 		public function tryConsumeAllAsIndentation(...$types)
 		{
-			Assert::null($this->nodeIndentation, 'NodeIndentation must be consumed first.');
+			if ($this->nodeIndentation !== NULL) {
+				$this->addIndentation($this->consumeNodeIndentation());
+			}
+
 			$this->addIndentation($this->stream->tryConsumeAllTokensAsText(...$types));
 		}
 
@@ -180,7 +186,10 @@
 		 */
 		public function consumeWhitespace()
 		{
-			Assert::null($this->nodeIndentation, 'NodeIndentation must be consumed first.');
+			if ($this->nodeIndentation !== NULL) {
+				$this->addIndentation($this->consumeNodeIndentation());
+			}
+
 			$this->addIndentation($this->stream->consumeAllTokensAsText(T_WHITESPACE));
 		}
 
@@ -190,7 +199,10 @@
 		 */
 		public function tryConsumeWhitespace()
 		{
-			Assert::null($this->nodeIndentation, 'NodeIndentation must be consumed first.');
+			if ($this->nodeIndentation !== NULL) {
+				$this->addIndentation($this->consumeNodeIndentation());
+			}
+
 			$this->addIndentation($this->stream->tryConsumeAllTokensAsText(T_WHITESPACE));
 		}
 
@@ -200,7 +212,10 @@
 		 */
 		public function tryConsumeWhitespaceAndComments()
 		{
-			Assert::null($this->nodeIndentation, 'NodeIndentation must be consumed first.');
+			if ($this->nodeIndentation !== NULL) {
+				$this->addIndentation($this->consumeNodeIndentation());
+			}
+
 			$this->addIndentation($this->stream->tryConsumeAllTokensAsText(T_WHITESPACE, T_COMMENT));
 		}
 
