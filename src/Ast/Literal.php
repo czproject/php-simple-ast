@@ -165,13 +165,20 @@
 
 
 		/**
-		 * @param  int|string $tokenType
+		 * @param  int|string|array<int|string> $tokenType
 		 * @return self
 		 */
 		public static function parseToken(NodeParser $parser, $tokenType)
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();
-			$literal = $parser->consumeTokenAsText($tokenType);
+
+			if (is_array($tokenType)) {
+				$literal = $parser->consumeTokenAsText(...$tokenType);
+
+			} else {
+				$literal = $parser->consumeTokenAsText($tokenType);
+			}
+
 			$parser->close();
 
 			return new self(
