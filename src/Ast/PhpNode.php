@@ -75,6 +75,9 @@
 				} elseif ($parser->isCurrent(T_NAMESPACE)) {
 					$child = NamespaceNode::parse($parser->createSubParser());
 
+				} elseif ($parser->isCurrent(T_USE)) {
+					$child = UseNode::parse($parser->createSubParser());
+
 				} elseif ($parser->isCurrent(T_CLASS)) {
 					$child = ClassNode::parse($parser->createSubParser());
 

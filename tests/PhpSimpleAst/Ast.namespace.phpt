@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use CzProject\PhpSimpleAst\Ast;
+use CzProject\PhpSimpleAst\Ast\UseAliasNode;
 use CzProject\PhpSimpleAst\AstParser;
 use Tester\Assert;
 
@@ -107,9 +108,31 @@ test('Php.multi-ns.2', function () use ($astParser) {
 				new Ast\Name(' ', 'NThird'),
 				';',
 				[
-					new Ast\UnknowNode(
-						"\n\tuse NS4\\NS5\\NS6;"
-						. "\n\tuse NS4\\NS5\\NS7 as NS9;"
+					new Ast\UseNode(
+						"\n\t",
+						'use',
+						NULL,
+						[
+							new Ast\UseAliasNode(
+								' ',
+								new Ast\Name('', "NS4\\NS5\\NS6"),
+								NULL
+							),
+						],
+						';'
+					),
+					new Ast\UseNode(
+						"\n\t",
+						'use',
+						NULL,
+						[
+							new Ast\UseAliasNode(
+								' ',
+								new Ast\Name('', "NS4\\NS5\\NS7"),
+								new Ast\Literal(' as ', 'NS9')
+							),
+						],
+						';'
 					),
 					new Ast\ClassNode(
 						"\n\n\t",

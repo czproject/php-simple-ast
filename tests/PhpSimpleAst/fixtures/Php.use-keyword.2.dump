@@ -2,16 +2,37 @@ CzProject\PhpSimpleAst\Ast\PhpString
    children: array (1)
    |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
    |  |  openTag: '<?php\n'
-   |  |  children: array (4)
+   |  |  children: array (5)
    |  |  |  0 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  indentation: ''
    |  |  |  |  content: '// multiuse'
-   |  |  |  1 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  content: string
-   |  |  |  |  |  '\n
-   |  |  |  |  |   use NS4\NS5\NS6;\n
-   |  |  |  |  |   use NS4\NS5\NS7 as NS9;'
-   |  |  |  2 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  1 => CzProject\PhpSimpleAst\Ast\UseNode
+   |  |  |  |  indentation: '\n'
+   |  |  |  |  type: null
+   |  |  |  |  keyword: 'use'
+   |  |  |  |  children: array (1)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UseAliasNode
+   |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  name: 'NS4\NS5\NS6'
+   |  |  |  |  |  |  alias: null
+   |  |  |  |  closer: ';'
+   |  |  |  2 => CzProject\PhpSimpleAst\Ast\UseNode
+   |  |  |  |  indentation: '\n'
+   |  |  |  |  type: null
+   |  |  |  |  keyword: 'use'
+   |  |  |  |  children: array (1)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UseAliasNode
+   |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  name: 'NS4\NS5\NS7'
+   |  |  |  |  |  |  alias: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  indentation: ' as '
+   |  |  |  |  |  |  |  literal: 'NS9'
+   |  |  |  |  closer: ';'
+   |  |  |  3 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  indentation: string
    |  |  |  |  |  '\n
    |  |  |  |  |   \n'
@@ -42,6 +63,6 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  blockCloser: string
    |  |  |  |  |  '\n
    |  |  |  |  |   }'
-   |  |  |  3 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  4 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: '\n'
    |  |  closeTag: null

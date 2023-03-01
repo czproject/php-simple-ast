@@ -13,13 +13,34 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  indentation: ' '
    |  |  |  |  |  name: 'First'
    |  |  |  |  blockOpener: ';'
-   |  |  |  |  children: array (2)
-   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  |  |  content: string
-   |  |  |  |  |  |  |  '\n
-   |  |  |  |  |  |  |   use NS4\NS5\NS6;\n
-   |  |  |  |  |  |  |   use NS4\NS5\NS7 as NS9;'
-   |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  children: array (3)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UseNode
+   |  |  |  |  |  |  indentation: '\n'
+   |  |  |  |  |  |  type: null
+   |  |  |  |  |  |  keyword: 'use'
+   |  |  |  |  |  |  children: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UseAliasNode
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  name: 'NS4\NS5\NS6'
+   |  |  |  |  |  |  |  |  alias: null
+   |  |  |  |  |  |  closer: ';'
+   |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\UseNode
+   |  |  |  |  |  |  indentation: '\n'
+   |  |  |  |  |  |  type: null
+   |  |  |  |  |  |  keyword: 'use'
+   |  |  |  |  |  |  children: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UseAliasNode
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  name: 'NS4\NS5\NS7'
+   |  |  |  |  |  |  |  |  alias: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  indentation: ' as '
+   |  |  |  |  |  |  |  |  |  literal: 'NS9'
+   |  |  |  |  |  |  closer: ';'
+   |  |  |  |  |  2 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |   \n'
@@ -62,10 +83,18 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  name: 'Second'
    |  |  |  |  blockOpener: ';'
    |  |  |  |  children: array (3)
-   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  |  |  content: string
-   |  |  |  |  |  |  |  '\n
-   |  |  |  |  |  |  |   use MYNS\NS6;'
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UseNode
+   |  |  |  |  |  |  indentation: '\n'
+   |  |  |  |  |  |  type: null
+   |  |  |  |  |  |  keyword: 'use'
+   |  |  |  |  |  |  children: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UseAliasNode
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  name: 'MYNS\NS6'
+   |  |  |  |  |  |  |  |  alias: null
+   |  |  |  |  |  |  closer: ';'
    |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  '\n

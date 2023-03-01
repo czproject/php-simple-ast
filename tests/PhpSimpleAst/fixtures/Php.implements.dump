@@ -46,11 +46,20 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  blockCloser: string
    |  |  |  |  |  '\n
    |  |  |  |  |   }'
-   |  |  |  3 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  content: string
+   |  |  |  3 => CzProject\PhpSimpleAst\Ast\UseNode
+   |  |  |  |  indentation: string
    |  |  |  |  |  '\n
-   |  |  |  |  |   \n
-   |  |  |  |  |   use Foo\Bar;'
+   |  |  |  |  |   \n'
+   |  |  |  |  type: null
+   |  |  |  |  keyword: 'use'
+   |  |  |  |  children: array (1)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UseAliasNode
+   |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  name: 'Foo\Bar'
+   |  |  |  |  |  |  alias: null
+   |  |  |  |  closer: ';'
    |  |  |  4 => CzProject\PhpSimpleAst\Ast\InterfaceNode
    |  |  |  |  indentation: string
    |  |  |  |  |  '\n

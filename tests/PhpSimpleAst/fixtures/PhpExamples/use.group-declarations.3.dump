@@ -2,7 +2,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    children: array (1)
    |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
    |  |  openTag: '<?php\n'
-   |  |  children: array (4)
+   |  |  children: array (5)
    |  |  |  0 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  indentation: ''
    |  |  |  |  content: '// Group `use` declarations'
@@ -12,10 +12,42 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  2 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  indentation: '\n'
    |  |  |  |  content: '// subpath'
-   |  |  |  3 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  3 => CzProject\PhpSimpleAst\Ast\UseNode
+   |  |  |  |  indentation: '\n'
+   |  |  |  |  type: null
+   |  |  |  |  keyword: 'use'
+   |  |  |  |  children: array (1)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UseGroupNode
+   |  |  |  |  |  |  prefix: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  name: 'A\B'
+   |  |  |  |  |  |  opener: '\{'
+   |  |  |  |  |  |  children: array (3)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UseAliasNode
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  name: 'A'
+   |  |  |  |  |  |  |  |  alias: null
+   |  |  |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\UseAliasNode
+   |  |  |  |  |  |  |  |  indentation: ', '
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  name: 'B\C'
+   |  |  |  |  |  |  |  |  alias: null
+   |  |  |  |  |  |  |  2 => CzProject\PhpSimpleAst\Ast\UseAliasNode
+   |  |  |  |  |  |  |  |  indentation: ', '
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  name: 'C'
+   |  |  |  |  |  |  |  |  alias: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  indentation: ' as '
+   |  |  |  |  |  |  |  |  |  literal: 'D'
+   |  |  |  |  |  |  closer: '}'
+   |  |  |  |  closer: ';'
+   |  |  |  4 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: string
    |  |  |  |  |  '\n
-   |  |  |  |  |   use A\B\{A, B\C, C as D};\n
    |  |  |  |  |   \n
    |  |  |  |  |   $a = new A;\n
    |  |  |  |  |   $a = new C;\n

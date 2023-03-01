@@ -31,6 +31,12 @@
 		}
 
 
+		public function getIndentation(): string
+		{
+			return $this->indentation;
+		}
+
+
 		/**
 		 * @return string
 		 */

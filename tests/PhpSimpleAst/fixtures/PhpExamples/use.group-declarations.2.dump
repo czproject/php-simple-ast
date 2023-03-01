@@ -2,7 +2,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    children: array (1)
    |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
    |  |  openTag: '<?php\n'
-   |  |  children: array (12)
+   |  |  children: array (13)
    |  |  |  0 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  indentation: ''
    |  |  |  |  content: '// Group `use` declarations'
@@ -12,36 +12,68 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  2 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  indentation: '\n'
    |  |  |  |  content: '// spaces'
-   |  |  |  3 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  3 => CzProject\PhpSimpleAst\Ast\UseNode
+   |  |  |  |  indentation: '\n'
+   |  |  |  |  type: null
+   |  |  |  |  keyword: 'use'
+   |  |  |  |  children: array (1)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UseGroupNode
+   |  |  |  |  |  |  prefix: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  name: 'some\ns'
+   |  |  |  |  |  |  opener: '\{'
+   |  |  |  |  |  |  children: array (3)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UseAliasNode
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  name: 'ClassA'
+   |  |  |  |  |  |  |  |  alias: null
+   |  |  |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\UseAliasNode
+   |  |  |  |  |  |  |  |  indentation: ', '
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  name: 'ClassB'
+   |  |  |  |  |  |  |  |  alias: null
+   |  |  |  |  |  |  |  2 => CzProject\PhpSimpleAst\Ast\UseAliasNode
+   |  |  |  |  |  |  |  |  indentation: ', '
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  name: 'ClassC'
+   |  |  |  |  |  |  |  |  alias: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  indentation: ' as '
+   |  |  |  |  |  |  |  |  |  literal: 'C'
+   |  |  |  |  |  |  closer: ' }'
+   |  |  |  |  closer: ';'
+   |  |  |  4 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: string
    |  |  |  |  |  '\n
-   |  |  |  |  |   use some\ns\{ ClassA, ClassB, ClassC as C };\n
    |  |  |  |  |   \n
    |  |  |  |  |   $a = new ClassA;'
-   |  |  |  4 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  5 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  indentation: ' '
    |  |  |  |  content: '// some\ns\ClassA'
-   |  |  |  5 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  6 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: string
    |  |  |  |  |  '\n
    |  |  |  |  |   $a = new ClassB;'
-   |  |  |  6 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  7 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  indentation: ' '
    |  |  |  |  content: '// some\ns\ClassB'
-   |  |  |  7 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  8 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: string
    |  |  |  |  |  '\n
    |  |  |  |  |   $a = new ClassC;'
-   |  |  |  8 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  9 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  indentation: ' '
    |  |  |  |  content: '// ClassC'
-   |  |  |  9 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  10 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: string
    |  |  |  |  |  '\n
    |  |  |  |  |   $a = new C;'
-   |  |  |  10 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  11 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  indentation: ' '
    |  |  |  |  content: '// some\ns\ClassC'
-   |  |  |  11 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  12 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: '\n'
    |  |  closeTag: null

@@ -148,6 +148,9 @@
 					$parser->consumeAsUnknowContent(T_DOUBLE_COLON);
 					$parser->tryConsumeAsUnknowContent(T_CLASS);
 
+				} elseif ($parser->isCurrent(T_USE)) {
+					$child = UseNode::parse($parser->createSubParser());
+
 				} elseif ($parser->isCurrent(T_CLASS)) {
 					$child = ClassNode::parse($parser->createSubParser());
 

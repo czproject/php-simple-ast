@@ -3,8 +3,18 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
    |  |  openTag: '<?php\n'
    |  |  children: array (3)
-   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  content: 'use MyNamespace\Sub\SubClass;'
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UseNode
+   |  |  |  |  indentation: ''
+   |  |  |  |  type: null
+   |  |  |  |  keyword: 'use'
+   |  |  |  |  children: array (1)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UseAliasNode
+   |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  name: 'MyNamespace\Sub\SubClass'
+   |  |  |  |  |  |  alias: null
+   |  |  |  |  closer: ';'
    |  |  |  1 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  indentation: string
    |  |  |  |  |  '\n

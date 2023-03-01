@@ -2,10 +2,24 @@ CzProject\PhpSimpleAst\Ast\PhpString
    children: array (1)
    |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
    |  |  openTag: '<?php\n'
-   |  |  children: array (1)
-   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  children: array (2)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UseNode
+   |  |  |  |  indentation: ''
+   |  |  |  |  type: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  literal: 'function'
+   |  |  |  |  keyword: 'use'
+   |  |  |  |  children: array (1)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UseAliasNode
+   |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  name: 'some\ns\fn_a'
+   |  |  |  |  |  |  alias: null
+   |  |  |  |  closer: ';'
+   |  |  |  1 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: string
-   |  |  |  |  |  'use function some\ns\fn_a;\n
+   |  |  |  |  |  '\n
    |  |  |  |  |   \n
    |  |  |  |  |   $a = new fn_a;\n'
    |  |  closeTag: null

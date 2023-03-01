@@ -2,14 +2,27 @@ CzProject\PhpSimpleAst\Ast\PhpString
    children: array (1)
    |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
    |  |  openTag: '<?php\n'
-   |  |  children: array (2)
+   |  |  children: array (3)
    |  |  |  0 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  indentation: ''
    |  |  |  |  content: '// http://php.net/manual/en/language.namespaces.importing.php'
-   |  |  |  1 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  1 => CzProject\PhpSimpleAst\Ast\UseNode
+   |  |  |  |  indentation: '\n'
+   |  |  |  |  type: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  literal: 'const'
+   |  |  |  |  keyword: 'use'
+   |  |  |  |  children: array (1)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UseAliasNode
+   |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  name: 'My\Full\CONSTANT'
+   |  |  |  |  |  |  alias: null
+   |  |  |  |  closer: ';'
+   |  |  |  2 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: string
    |  |  |  |  |  '\n
-   |  |  |  |  |   use const My\Full\CONSTANT;\n
    |  |  |  |  |   \n
    |  |  |  |  |   $a = new CONSTANT;\n'
    |  |  closeTag: null

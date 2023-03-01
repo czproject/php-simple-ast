@@ -2,10 +2,37 @@ CzProject\PhpSimpleAst\Ast\PhpString
    children: array (1)
    |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
    |  |  openTag: '<?php\n'
-   |  |  children: array (1)
-   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  children: array (2)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UseNode
+   |  |  |  |  indentation: ''
+   |  |  |  |  type: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  literal: 'function'
+   |  |  |  |  keyword: 'use'
+   |  |  |  |  children: array (1)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UseGroupNode
+   |  |  |  |  |  |  prefix: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  name: 'NS'
+   |  |  |  |  |  |  opener: '\{'
+   |  |  |  |  |  |  children: array (2)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UseAliasNode
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  name: 'funcA'
+   |  |  |  |  |  |  |  |  alias: null
+   |  |  |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\UseAliasNode
+   |  |  |  |  |  |  |  |  indentation: ', '
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  name: 'funcB'
+   |  |  |  |  |  |  |  |  alias: null
+   |  |  |  |  |  |  closer: '}'
+   |  |  |  |  closer: ';'
+   |  |  |  1 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: string
-   |  |  |  |  |  'use function NS\{funcA, funcB};\n
+   |  |  |  |  |  '\n
    |  |  |  |  |   \n
    |  |  |  |  |   $a = new funcA;\n
    |  |  |  |  |   $a = new funcB;\n'
