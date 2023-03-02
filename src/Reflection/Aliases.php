@@ -52,6 +52,7 @@
 
 				if (isset($this->classAliases[$key])) {
 					$namespace = $this->classAliases[$key];
+					$name = Strings::after($name, '\\');
 				}
 
 			} elseif (isset($this->classAliases[$key = Strings::lower($name)])) {
