@@ -117,6 +117,24 @@
 		}
 
 
+		public function isPublic(): bool
+		{
+			return $this->node->isPublic();
+		}
+
+
+		public function isProtected(): bool
+		{
+			return $this->node->isProtected();
+		}
+
+
+		public function isPrivate(): bool
+		{
+			return $this->node->isPrivate();
+		}
+
+
 		public function setVisibilityToPublic(): void
 		{
 			$this->node->setVisibilityToPublic();

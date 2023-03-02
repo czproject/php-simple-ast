@@ -118,6 +118,42 @@
 		}
 
 
+		public function isPublic(): bool
+		{
+			foreach ($this->modifiers as $modifier) {
+				if (($modifier instanceof Visibility) && $modifier->isPublic()) {
+					return TRUE;
+				}
+			}
+
+			return FALSE;
+		}
+
+
+		public function isProtected(): bool
+		{
+			foreach ($this->modifiers as $modifier) {
+				if (($modifier instanceof Visibility) && $modifier->isProtected()) {
+					return TRUE;
+				}
+			}
+
+			return FALSE;
+		}
+
+
+		public function isPrivate(): bool
+		{
+			foreach ($this->modifiers as $modifier) {
+				if (($modifier instanceof Visibility) && $modifier->isPrivate()) {
+					return TRUE;
+				}
+			}
+
+			return FALSE;
+		}
+
+
 		public function setVisibilityToPublic(): void
 		{
 			foreach ($this->modifiers as $modifier) {
