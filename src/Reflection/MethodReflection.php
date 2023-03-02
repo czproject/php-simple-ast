@@ -117,6 +117,12 @@
 		}
 
 
+		public function hasReturnType(): bool
+		{
+			return $this->node->hasReturnType();
+		}
+
+
 		public function isPublic(): bool
 		{
 			return $this->node->isPublic();

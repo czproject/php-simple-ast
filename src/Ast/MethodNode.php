@@ -184,6 +184,12 @@
 		}
 
 
+		public function hasReturnType(): bool
+		{
+			return $this->returnType !== NULL;
+		}
+
+
 		public function toString()
 		{
 			$s = $this->phpDocNode !== NULL ? $this->phpDocNode->toString() : '';
