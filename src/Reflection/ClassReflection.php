@@ -20,6 +20,9 @@
 		/** @var array<string, MethodReflection> */
 		private $methods = [];
 
+		/** @var string|NULL */
+		private $fileName;
+
 
 		/**
 		 * @param MethodReflection[] $methods
@@ -27,7 +30,8 @@
 		private function __construct(
 			string $name,
 			?string $parentName,
-			array $methods
+			array $methods,
+			?string $fileName
 		)
 		{
 			$this->name = $name;
@@ -42,6 +46,8 @@
 
 				$this->methods[$name] = $method;
 			}
+
+			$this->fileName = $fileName;
 		}
 
 
@@ -89,6 +95,12 @@
 		}
 
 
+		public function getFileName(): ?string
+		{
+			return $this->fileName;
+		}
+
+
 		/**
 		 * @return self[]
 		 */
@@ -100,6 +112,11 @@
 				Ast\UseNode::class,
 			]);
 			$sourceAliases = new SourceAliases;
+			$fileName = NULL;
+
+			if ($source instanceof Ast\PhpFile) {
+				$fileName = $source->getPath();
+			}
 
 			foreach ($nodeTrees as $nodeTree) {
 				$node = $nodeTree->getNode();
@@ -130,7 +147,8 @@
 				$result[] = new self(
 					$className,
 					$parentName,
-					MethodReflection::createFromClass($className, $classNode)
+					MethodReflection::createFromClass($className, $classNode),
+					$fileName
 				);
 			}
 
