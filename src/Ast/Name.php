@@ -103,10 +103,8 @@
 					$name .= $parser->consumeTokenAsText(T_STRING);
 				}
 
-				while ($parser->isCurrent(T_NS_SEPARATOR)) {
+				while ($parser->isCurrent(T_NS_SEPARATOR) && $parser->isNext(T_STRING)) {
 					$name .= $parser->consumeTokenAsText(T_NS_SEPARATOR);
-					$parser->tryConsumeWhitespace(); // TODO: invalid from PHP 8.0+
-
 					$name .= $parser->consumeTokenAsText(T_STRING);
 				}
 			}
