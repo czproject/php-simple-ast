@@ -65,13 +65,13 @@
 		}
 
 
-		public static function T_READONLY()
+		public static function T_READONLY(): int
 		{
 			return PHP_VERSION_ID >= 80100 ? T_READONLY : -1;
 		}
 
 
-		public static function T_AMPERSAND_FOLLOWED_BY_VAR_OR_VARARG()
+		public static function T_AMPERSAND_FOLLOWED_BY_VAR_OR_VARARG(): int
 		{
 			return PHP_VERSION_ID >= 80100 ? T_AMPERSAND_FOLLOWED_BY_VAR_OR_VARARG : -1;
 		}
