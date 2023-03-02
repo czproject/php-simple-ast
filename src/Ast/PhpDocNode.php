@@ -54,6 +54,12 @@
 		}
 
 
+		public static function create(string $indentation, string $content): self
+		{
+			return new self($indentation, Helpers::indent($content, Helpers::extractIndentation($indentation)));
+		}
+
+
 		/**
 		 * @return self
 		 */

@@ -103,7 +103,7 @@
 				$this->phpDocNode->setContent($docComment);
 
 			} else {
-				$this->phpDocNode = new PhpDocNode($this->indentation, $docComment);
+				$this->phpDocNode = PhpDocNode::create($this->indentation, $docComment);
 				$this->indentation = "\n" . Helpers::extractIndentation($this->indentation);
 			}
 		}
