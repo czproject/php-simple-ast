@@ -52,7 +52,7 @@
 
 
 		/**
-		 * @return PhpToken
+		 * @return PhpToken|NULL
 		 */
 		public function getNext()
 		{
