@@ -13,13 +13,13 @@
 		/** @var string */
 		private $indentation;
 
-		/** @var array<Visibility|OverridingModifier|StaticModifier> */
+		/** @var list<IConstantModifier>|list<IPropertyModifier>|list<IMethodModifier> */
 		private $modifiers;
 
 
 		/**
 		 * @param string $indentation
-		 * @param array<Visibility|OverridingModifier|StaticModifier> $modifiers
+		 * @param list<IConstantModifier>|list<IPropertyModifier>|list<IMethodModifier> $modifiers
 		 */
 		private function __construct($indentation, array $modifiers)
 		{

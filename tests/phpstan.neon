@@ -9,6 +9,9 @@ parameters:
 			message: '#^Method CzProject\\PhpSimpleAst\\Ast\\Modifiers\:\:toConstantModifiers\(\).*$#'
 			path: */Ast/Modifiers.php
 		-
+			message: '#^Method CzProject\\PhpSimpleAst\\Ast\\Modifiers\:\:toMethodModifiers\(\).*$#'
+			path: */Ast/Modifiers.php
+		-
 			message: '#^Method CzProject\\PhpSimpleAst\\Ast\\Modifiers\:\:toPropertyModifiers\(\).*$#'
 			path: */Ast/Modifiers.php
 
