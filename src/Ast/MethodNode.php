@@ -118,6 +118,36 @@
 		}
 
 
+		public function setVisibilityToPublic(): void
+		{
+			foreach ($this->modifiers as $modifier) {
+				if ($modifier instanceof Visibility) {
+					$modifier->setAsPublic();
+				}
+			}
+		}
+
+
+		public function setVisibilityToProtected(): void
+		{
+			foreach ($this->modifiers as $modifier) {
+				if ($modifier instanceof Visibility) {
+					$modifier->setAsProtected();
+				}
+			}
+		}
+
+
+		public function setVisibilityToPrivate(): void
+		{
+			foreach ($this->modifiers as $modifier) {
+				if ($modifier instanceof Visibility) {
+					$modifier->setAsPrivate();
+				}
+			}
+		}
+
+
 		public function toString()
 		{
 			$s = $this->phpDocNode !== NULL ? $this->phpDocNode->toString() : '';

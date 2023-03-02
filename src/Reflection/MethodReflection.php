@@ -117,6 +117,24 @@
 		}
 
 
+		public function setVisibilityToPublic(): void
+		{
+			$this->node->setVisibilityToPublic();
+		}
+
+
+		public function setVisibilityToProtected(): void
+		{
+			$this->node->setVisibilityToProtected();
+		}
+
+
+		public function setVisibilityToPrivate(): void
+		{
+			$this->node->setVisibilityToPrivate();
+		}
+
+
 		/**
 		 * @return self[]
 		 */
