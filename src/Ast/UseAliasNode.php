@@ -32,6 +32,29 @@
 		}
 
 
+		public function getAlias(): string
+		{
+			if ($this->alias !== NULL) {
+				return $this->alias->getLiteral();
+			}
+
+			$short = trim($this->name->getName(), '\\');
+			$pos = strrpos($short, '\\');
+
+			if ($pos !== FALSE) {
+				$short = substr($short, $pos + 1);
+			}
+
+			return $short;
+		}
+
+
+		public function getName(): string
+		{
+			return ltrim($this->name->getName(), '\\');
+		}
+
+
 		/**
 		 * @return string
 		 */

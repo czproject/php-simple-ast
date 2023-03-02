@@ -1,0 +1,327 @@
+CzProject\PhpSimpleAst\Ast\PhpString
+   children: array (1)
+   |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
+   |  |  openTag: '<?php\n'
+   |  |  children: array (5)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\NamespaceNode
+   |  |  |  |  indentation: '\n'
+   |  |  |  |  keyword: 'namespace'
+   |  |  |  |  name: null
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (3)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    '
+   |  |  |  |  |  |  keyword: 'class'
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  name: 'MyClass'
+   |  |  |  |  |  |  constructorValues: null
+   |  |  |  |  |  |  extends: CzProject\PhpSimpleAst\Ast\ObjectParent
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  keyword: 'extends'
+   |  |  |  |  |  |  |  extends: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  name: 'People'
+   |  |  |  |  |  |  implements: null
+   |  |  |  |  |  |  blockOpener: string
+   |  |  |  |  |  |  |  ' // => \People\n
+   |  |  |  |  |  |  |   \t    {'
+   |  |  |  |  |  |  children: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\MethodNode
+   |  |  |  |  |  |  |  |  phpDocNode: null
+   |  |  |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |  |   \t    \t    '
+   |  |  |  |  |  |  |  |  modifiers: array (0)
+   |  |  |  |  |  |  |  |  keywordPrefix: ''
+   |  |  |  |  |  |  |  |  keyword: 'function'
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  |  name: 'getName'
+   |  |  |  |  |  |  |  |  parameters: CzProject\PhpSimpleAst\Ast\Parameters
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  opener: '('
+   |  |  |  |  |  |  |  |  |  parameters: array (0)
+   |  |  |  |  |  |  |  |  |  closer: ')'
+   |  |  |  |  |  |  |  |  returnType: null
+   |  |  |  |  |  |  |  |  body: CzProject\PhpSimpleAst\Ast\FunctionBody
+   |  |  |  |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t    '
+   |  |  |  |  |  |  |  |  |  blockOpener: '{'
+   |  |  |  |  |  |  |  |  |  children: array (0)
+   |  |  |  |  |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t    }'
+   |  |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    }'
+   |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\UseNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \n
+   |  |  |  |  |  |  |   \t    '
+   |  |  |  |  |  |  type: null
+   |  |  |  |  |  |  keyword: 'use'
+   |  |  |  |  |  |  children: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UseAliasNode
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  name: 'FooBar\People'
+   |  |  |  |  |  |  |  |  alias: null
+   |  |  |  |  |  |  closer: ';'
+   |  |  |  |  |  2 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \n
+   |  |  |  |  |  |  |   \t    '
+   |  |  |  |  |  |  keyword: 'class'
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  name: 'MyPeople2'
+   |  |  |  |  |  |  constructorValues: null
+   |  |  |  |  |  |  extends: CzProject\PhpSimpleAst\Ast\ObjectParent
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  keyword: 'extends'
+   |  |  |  |  |  |  |  extends: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  name: 'People'
+   |  |  |  |  |  |  implements: null
+   |  |  |  |  |  |  blockOpener: string
+   |  |  |  |  |  |  |  ' // => \FooBar\People\n
+   |  |  |  |  |  |  |   \t    {'
+   |  |  |  |  |  |  children: array (0)
+   |  |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    }'
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   }'
+   |  |  |  1 => CzProject\PhpSimpleAst\Ast\NamespaceNode
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   \n'
+   |  |  |  |  keyword: 'namespace'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'Foo'
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (1)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    '
+   |  |  |  |  |  |  keyword: 'class'
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  name: 'Bar'
+   |  |  |  |  |  |  constructorValues: null
+   |  |  |  |  |  |  extends: CzProject\PhpSimpleAst\Ast\ObjectParent
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  keyword: 'extends'
+   |  |  |  |  |  |  |  extends: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  name: '\MyClass'
+   |  |  |  |  |  |  implements: null
+   |  |  |  |  |  |  blockOpener: string
+   |  |  |  |  |  |  |  ' // => \MyClass\n
+   |  |  |  |  |  |  |   \t    {'
+   |  |  |  |  |  |  children: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\MethodNode
+   |  |  |  |  |  |  |  |  phpDocNode: CzProject\PhpSimpleAst\Ast\PhpDocNode
+   |  |  |  |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t    '
+   |  |  |  |  |  |  |  |  |  content: string
+   |  |  |  |  |  |  |  |  |  |  '/**\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t     * @param string\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t     * @param int\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t     * @param invalid\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t     *\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t     * @return void\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t     */'
+   |  |  |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |  |   \t    \t    '
+   |  |  |  |  |  |  |  |  modifiers: array (0)
+   |  |  |  |  |  |  |  |  keywordPrefix: ''
+   |  |  |  |  |  |  |  |  keyword: 'function'
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  |  name: 'setName'
+   |  |  |  |  |  |  |  |  parameters: CzProject\PhpSimpleAst\Ast\Parameters
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  opener: '('
+   |  |  |  |  |  |  |  |  |  parameters: array (2)
+   |  |  |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Parameter
+   |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  type: null
+   |  |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
+   |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  referenceSign: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  variadic: null
+   |  |  |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  |  literal: '$name'
+   |  |  |  |  |  |  |  |  |  |  |  defaultValue: null
+   |  |  |  |  |  |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\Parameter
+   |  |  |  |  |  |  |  |  |  |  |  indentation: ', '
+   |  |  |  |  |  |  |  |  |  |  |  type: null
+   |  |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
+   |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  referenceSign: '&'
+   |  |  |  |  |  |  |  |  |  |  |  |  variadic: null
+   |  |  |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  |  literal: '$age'
+   |  |  |  |  |  |  |  |  |  |  |  defaultValue: null
+   |  |  |  |  |  |  |  |  |  closer: ')'
+   |  |  |  |  |  |  |  |  returnType: null
+   |  |  |  |  |  |  |  |  body: CzProject\PhpSimpleAst\Ast\FunctionBody
+   |  |  |  |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t    '
+   |  |  |  |  |  |  |  |  |  blockOpener: '{'
+   |  |  |  |  |  |  |  |  |  children: array (0)
+   |  |  |  |  |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t    }'
+   |  |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    }'
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   }'
+   |  |  |  2 => CzProject\PhpSimpleAst\Ast\NamespaceNode
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   \n'
+   |  |  |  |  keyword: 'namespace'
+   |  |  |  |  name: null
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (3)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    '
+   |  |  |  |  |  |  keyword: 'class'
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  name: 'MyClass2'
+   |  |  |  |  |  |  constructorValues: null
+   |  |  |  |  |  |  extends: CzProject\PhpSimpleAst\Ast\ObjectParent
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  keyword: 'extends'
+   |  |  |  |  |  |  |  extends: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  name: 'People'
+   |  |  |  |  |  |  implements: null
+   |  |  |  |  |  |  blockOpener: string
+   |  |  |  |  |  |  |  ' // => \People\n
+   |  |  |  |  |  |  |   \t    {'
+   |  |  |  |  |  |  children: array (0)
+   |  |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    }'
+   |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \n
+   |  |  |  |  |  |  |   \t    '
+   |  |  |  |  |  |  keyword: 'class'
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  name: 'MyClass3'
+   |  |  |  |  |  |  constructorValues: null
+   |  |  |  |  |  |  extends: CzProject\PhpSimpleAst\Ast\ObjectParent
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  keyword: 'extends'
+   |  |  |  |  |  |  |  extends: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  name: 'namespace\People'
+   |  |  |  |  |  |  implements: null
+   |  |  |  |  |  |  blockOpener: string
+   |  |  |  |  |  |  |  ' // => \People\n
+   |  |  |  |  |  |  |   \t    {'
+   |  |  |  |  |  |  children: array (0)
+   |  |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    }'
+   |  |  |  |  |  2 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \n
+   |  |  |  |  |  |  |   \t    '
+   |  |  |  |  |  |  keyword: 'class'
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  name: 'People'
+   |  |  |  |  |  |  constructorValues: null
+   |  |  |  |  |  |  extends: null
+   |  |  |  |  |  |  implements: null
+   |  |  |  |  |  |  blockOpener: ' {'
+   |  |  |  |  |  |  children: array (0)
+   |  |  |  |  |  |  blockCloser: '}'
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   }'
+   |  |  |  3 => CzProject\PhpSimpleAst\Ast\NamespaceNode
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n
+   |  |  |  |  |   \n'
+   |  |  |  |  keyword: 'namespace'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'FooBar'
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (2)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    '
+   |  |  |  |  |  |  keyword: 'class'
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  name: 'People'
+   |  |  |  |  |  |  constructorValues: null
+   |  |  |  |  |  |  extends: null
+   |  |  |  |  |  |  implements: null
+   |  |  |  |  |  |  blockOpener: ' {'
+   |  |  |  |  |  |  children: array (0)
+   |  |  |  |  |  |  blockCloser: '}'
+   |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \n
+   |  |  |  |  |  |  |   \t    '
+   |  |  |  |  |  |  keyword: 'class'
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  name: 'MyClass3'
+   |  |  |  |  |  |  constructorValues: null
+   |  |  |  |  |  |  extends: CzProject\PhpSimpleAst\Ast\ObjectParent
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  keyword: 'extends'
+   |  |  |  |  |  |  |  extends: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  name: 'namespace\People'
+   |  |  |  |  |  |  implements: null
+   |  |  |  |  |  |  blockOpener: string
+   |  |  |  |  |  |  |  ' // => FooBar\People\n
+   |  |  |  |  |  |  |   \t    {'
+   |  |  |  |  |  |  children: array (0)
+   |  |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    }'
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   }'
+   |  |  |  4 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: '\n'
+   |  |  closeTag: null

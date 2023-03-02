@@ -41,6 +41,21 @@
 
 
 		/**
+		 * @return array<string, string>
+		 */
+		public function getAliases(): array
+		{
+			$aliases = [];
+
+			foreach ($this->children as $child) {
+				$aliases[$child->getAlias()] = ltrim($this->prefix->getName() . '\\' . $child->getName(), '\\');
+			}
+
+			return $aliases;
+		}
+
+
+		/**
 		 * @return UseAliasNode[]
 		 */
 		public function getNodes()

@@ -95,17 +95,36 @@
 		public static function createFromSource(Ast\IPhpSource $source): array
 		{
 			$result = [];
-			$classTrees = Ast\Tree::find($source, Ast\ClassNode::class);
+			$nodeTrees = Ast\Tree::find($source, [
+				Ast\ClassNode::class,
+				Ast\UseNode::class,
+			]);
+			$sourceAliases = new SourceAliases;
 
-			foreach ($classTrees as $classTree) {
-				$classNode = $classTree->getNode();
-				$namespaceNode = $classTree->closest(Ast\NamespaceNode::class);
-				$namespaceName = $namespaceNode !== NULL ? $namespaceNode->getName() : NULL;
-				$className = Reflection::translateName($classNode->getName(), $namespaceName);
+			foreach ($nodeTrees as $nodeTree) {
+				$node = $nodeTree->getNode();
+				$namespaceNode = $nodeTree->closest(Ast\NamespaceNode::class);
+				$aliases = $sourceAliases->getAliases($namespaceNode);
+
+				if ($node instanceof Ast\ClassNode) {
+					$namespaceName = $namespaceNode !== NULL ? $namespaceNode->getName() : NULL;
+					$className = Reflection::translateName($node->getName(), $namespaceName);
+
+				} elseif ($node instanceof Ast\UseNode) {
+					if ($node->isForClasses()) {
+						foreach ($node->getAliases() as $alias => $name) {
+							$aliases->addClassAlias($alias, $name);
+						}
+					}
+
+					continue;
+				}
+
+				$classNode = $node;
 				$parentName = NULL;
 
 				if ($classNode->hasExtends()) {
-					$parentName = Reflection::translateName($classNode->getExtends()->getName(), $namespaceName);
+					$parentName = $aliases->translateClassName($classNode->getExtends()->getName());
 				}
 
 				$result[] = new self(

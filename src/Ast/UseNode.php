@@ -45,6 +45,34 @@
 		}
 
 
+		public function isForClasses(): bool
+		{
+			return $this->type === NULL;
+		}
+
+
+		/**
+		 * @return array<string, string>
+		 */
+		public function getAliases(): array
+		{
+			$aliases = [];
+
+			foreach ($this->children as $child) {
+				if ($child instanceof UseGroupNode) {
+					foreach ($child->getAliases() as $alias => $name) {
+						$aliases[$alias] = $name;
+					}
+
+				} else {
+					$aliases[$child->getAlias()] = $child->getName();
+				}
+			}
+
+			return $aliases;
+		}
+
+
 		/**
 		 * @return array{UseGroupNode}|array<UseAliasNode>
 		 */
