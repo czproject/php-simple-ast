@@ -128,18 +128,19 @@
 
 			$requiredClass = strtolower($requiredClass);
 
-			do {
-				if (strtolower($class->getName()) === $requiredClass) {
+			if (strtolower($class->getName()) === $requiredClass) {
+				return TRUE;
+			}
+
+			while ($class->hasParent()) {
+				if (strtolower($class->getParentName()) === $requiredClass) {
 					return TRUE;
 				}
 
-				if (!$class->hasParent()) {
-					return FALSE;
-				}
-
 				$class = $this->getClass($class->getParentName());
+			}
 
-			} while (TRUE);
+			return FALSE;
 		}
 
 
