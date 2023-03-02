@@ -23,6 +23,12 @@
 		/**
 		 * @return IToken|NULL
 		 */
+		function getNext();
+
+
+		/**
+		 * @return IToken|NULL
+		 */
 		function next();
 
 

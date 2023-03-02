@@ -52,6 +52,21 @@
 
 
 		/**
+		 * @return PhpToken
+		 */
+		public function getNext()
+		{
+			$position = $this->position + 1;
+
+			if (!isset($this->tokens[$position])) {
+				return NULL;
+			}
+
+			return $this->tokens[$position];
+		}
+
+
+		/**
 		 * @return PhpToken|NULL
 		 */
 		public function next()

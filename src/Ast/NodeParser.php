@@ -111,6 +111,17 @@
 
 		/**
 		 * @param  int|string ...$types
+		 * @return bool
+		 * @phpstan-impure
+		 */
+		public function isNext(...$types)
+		{
+			return $this->stream->isNext(...$types);
+		}
+
+
+		/**
+		 * @param  int|string ...$types
 		 * @return Lexer\IToken
 		 */
 		public function consumeToken(...$types)

@@ -54,6 +54,27 @@
 
 
 		/**
+		 * @param  int|string ...$types
+		 */
+		public function isNext(...$types): bool
+		{
+			$token = $this->tokens->getNext();
+
+			if ($token === NULL) {
+				return FALSE;
+			}
+
+			foreach ($types as $type) {
+				if ($token->isOfType($type)) {
+					return TRUE;
+				}
+			}
+
+			return FALSE;
+		}
+
+
+		/**
 		 * @return IToken
 		 */
 		public function consumeAnything()
