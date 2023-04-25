@@ -2,7 +2,7 @@ parameters:
 	level: max
 
 	paths:
-		- ../src
+		- src
 
 	ignoreErrors:
 		-
