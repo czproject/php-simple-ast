@@ -1,7 +1,9 @@
-
 # CzProject\Php-simple-ast
 
-[![Tests Status](https://github.com/czproject/php-simple-ast/workflows/Tests/badge.svg)](https://github.com/czproject/php-simple-ast/actions)
+[![Build Status](https://github.com/czproject/php-simple-ast/workflows/Build/badge.svg)](https://github.com/czproject/php-simple-ast/actions)
+[![Downloads this Month](https://img.shields.io/packagist/dm/czproject/php-simple-ast.svg)](https://packagist.org/packages/czproject/php-simple-ast)
+[![Latest Stable Version](https://poser.pugx.org/czproject/php-simple-ast/v/stable)](https://github.com/czproject/php-simple-ast/releases)
+[![License](https://img.shields.io/badge/license-New%20BSD-blue.svg)](https://github.com/czproject/php-simple-ast/blob/master/license.md)
 
 Simple PHP-AST.
 
