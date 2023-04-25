@@ -1,4 +1,4 @@
-# CzProject\Php-simple-ast
+# CzProject\PhpSimpleAst
 
 [![Build Status](https://github.com/czproject/php-simple-ast/workflows/Build/badge.svg)](https://github.com/czproject/php-simple-ast/actions)
 [![Downloads this Month](https://img.shields.io/packagist/dm/czproject/php-simple-ast.svg)](https://packagist.org/packages/czproject/php-simple-ast)
@@ -18,7 +18,7 @@ Simple PHP-AST.
 composer require czproject/php-simple-ast
 ```
 
-CzProject\Php-simple-ast requires PHP 7.2.0 or later.
+CzProject\PhpSimpleAst requires PHP 7.2.0 or later.
 
 
 ------------------------------
