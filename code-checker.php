@@ -5,5 +5,5 @@ return function (JP\CodeChecker\CheckerConfig $config) {
 	$config->addPath('./src');
 	$config->addPath('./tests');
 	$config->addIgnore('fixtures/*');
-	JP\CodeChecker\Tasks\AutoConfig::configure($config);
+	JP\CodeChecker\Sets\CzProjectMinimum::configure($config);
 };
