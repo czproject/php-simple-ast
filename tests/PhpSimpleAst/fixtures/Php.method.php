@@ -27,6 +27,19 @@
 		}
 
 
+		function paramWithCommentOnly(/*, $testMode*/)
+		{
+		}
+
+
+		function paramWithCommentEverywhere(
+			/*A1*/$login/*A2*/,
+			/*B1*/array/*B2*/$args/*B3*/
+		)
+		{
+		}
+
+
 		function paramWithReference($directory, array &$result)
 		{
 		}

@@ -74,16 +74,16 @@
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();
 			$opener = $parser->consumeTokenAsText('(');
-			$parser->tryConsumeWhitespace();
+			$parser->tryConsumeWhitespaceAndComments();
 			$parameters = [];
 
 			while (!$parser->isCurrent(')')) {
 				$parameters[] = Parameter::parse($parser->createSubParser());
-				$parser->tryConsumeWhitespace();
+				$parser->tryConsumeWhitespaceAndComments();
 
 				if ($parser->isCurrent(',')) {
 					$parser->consumeAsIndentation(',');
-					$parser->tryConsumeWhitespace();
+					$parser->tryConsumeWhitespaceAndComments();
 				}
 			}
 
