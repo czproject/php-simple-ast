@@ -18,7 +18,7 @@ Simple PHP-AST.
 composer require czproject/php-simple-ast
 ```
 
-CzProject\PhpSimpleAst requires PHP 7.2.0 or later.
+CzProject\PhpSimpleAst requires PHP 8.0 or later.
 
 
 ------------------------------
