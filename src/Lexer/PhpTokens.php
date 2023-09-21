@@ -130,6 +130,7 @@
 					$line = $token[2];
 
 					if ($token[0] === T_COMMENT && ($match = Strings::match($token[1], '~[\\n\\r]+$~'))) {
+						assert(is_array($match) && isset($match[0]) && is_string($match[0]));
 						$whitespaceToMerge = new PhpToken(T_WHITESPACE, $match[0], $position + 1, $line);
 						$token[1] = rtrim($token[1], "\n\r");
 					}
