@@ -38,6 +38,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |  |  |  |   \t    \t    \t    '
+   |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
    |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
    |  |  |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  |  |  nullableSign: ''
@@ -55,6 +56,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  |  |  |  ',\n
    |  |  |  |  |  |  |  |  |  |   \t    \t    \t    '
+   |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
    |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
    |  |  |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  |  |  nullableSign: ''
@@ -72,6 +74,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  |  |  |  ',\n
    |  |  |  |  |  |  |  |  |  |   \t    \t    \t    '
+   |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
    |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
    |  |  |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  |  |  nullableSign: ''
@@ -89,6 +92,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  |  |  |  ',\n
    |  |  |  |  |  |  |  |  |  |   \t    \t    \t    '
+   |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
    |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
    |  |  |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  |  |  nullableSign: ''
@@ -106,6 +110,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  |  |  |  ',\n
    |  |  |  |  |  |  |  |  |  |   \t    \t    \t    '
+   |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
    |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
    |  |  |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  |  |  nullableSign: ''
@@ -123,6 +128,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  |  |  |  ',\n
    |  |  |  |  |  |  |  |  |  |   \t    \t    \t    '
+   |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
    |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
    |  |  |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  |  |  nullableSign: ''
@@ -140,6 +146,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  |  |  |  ',\n
    |  |  |  |  |  |  |  |  |  |   \t    \t    \t    '
+   |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
    |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
    |  |  |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  |  |  nullableSign: ''
@@ -157,6 +164,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  |  |  |  ',\n
    |  |  |  |  |  |  |  |  |  |   \t    \t    \t    '
+   |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
    |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
    |  |  |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  |  |  nullableSign: ''
@@ -174,6 +182,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  |  |  |  ',\n
    |  |  |  |  |  |  |  |  |  |   \t    \t    \t    '
+   |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
    |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
    |  |  |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  |  |  nullableSign: ''
@@ -191,6 +200,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  |  |  |  ',\n
    |  |  |  |  |  |  |  |  |  |   \t    \t    \t    '
+   |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
    |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
    |  |  |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  |  |  nullableSign: ''
@@ -208,6 +218,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  |  |  |  ',\n
    |  |  |  |  |  |  |  |  |  |   \t    \t    \t    '
+   |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
    |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
    |  |  |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  |  |  nullableSign: ''
@@ -282,6 +293,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  parameters: array (2)
    |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Parameter
    |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
    |  |  |  |  |  |  |  |  |  type: null
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ''
@@ -293,6 +305,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  defaultValue: null
    |  |  |  |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\Parameter
    |  |  |  |  |  |  |  |  |  indentation: ', '
+   |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
    |  |  |  |  |  |  |  |  |  type: null
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ''
@@ -362,6 +375,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |  |  |  |   \t    \t    \t    /*A1*/'
+   |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
    |  |  |  |  |  |  |  |  |  type: null
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ''
@@ -375,6 +389,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  indentation: string
    |  |  |  |  |  |  |  |  |  |  '/*A2*/,\n
    |  |  |  |  |  |  |  |  |  |   \t    \t    \t    /*B1*/'
+   |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
    |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
    |  |  |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  |  |  nullableSign: ''
@@ -420,6 +435,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  parameters: array (2)
    |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Parameter
    |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
    |  |  |  |  |  |  |  |  |  type: null
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ''
@@ -431,6 +447,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  defaultValue: null
    |  |  |  |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\Parameter
    |  |  |  |  |  |  |  |  |  indentation: ', '
+   |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
    |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
    |  |  |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  |  |  nullableSign: ''

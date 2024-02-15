@@ -44,6 +44,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  parameters: array (1)
    |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Parameter
    |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
    |  |  |  |  |  |  |  |  |  type: null
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ''

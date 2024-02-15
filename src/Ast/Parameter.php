@@ -13,6 +13,9 @@
 		/** @var string */
 		private $indentation;
 
+		/** @var IPropertyModifier[] */
+		private $promotedPropertyModifiers;
+
 		/** @var NamedType|NULL */
 		private $type;
 
@@ -25,9 +28,11 @@
 
 		/**
 		 * @param string $indentation
+		 * @param IPropertyModifier[] $promotedPropertyModifiers
 		 */
 		public function __construct(
 			$indentation,
+			array $promotedPropertyModifiers,
 			NamedType $type = NULL,
 			VariableName $name,
 			DefaultValue $defaultValue = NULL
@@ -36,6 +41,7 @@
 			Assert::string($indentation);
 
 			$this->indentation = $indentation;
+			$this->promotedPropertyModifiers = $promotedPropertyModifiers;
 			$this->type = $type;
 			$this->name = $name;
 			$this->defaultValue = $defaultValue;
@@ -54,9 +60,19 @@
 		}
 
 
+		public function hasPromotedProperty(): bool
+		{
+			return count($this->promotedPropertyModifiers) > 0;
+		}
+
+
 		public function toString()
 		{
 			$s = $this->indentation;
+
+			foreach ($this->promotedPropertyModifiers as $promotedPropertyModifier) {
+				$s .= $promotedPropertyModifier->toString();
+			}
 
 			if ($this->type !== NULL) {
 				$s .= $this->type->toString();
@@ -78,7 +94,12 @@
 		public static function parse(NodeParser $parser)
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();
+			$promotedPropertyModifiers = NULL;
 			$type = NULL;
+
+			if ($parser->isCurrent(T_PUBLIC, T_PROTECTED, T_PRIVATE, PhpToken::T_READONLY())) {
+				$promotedPropertyModifiers = Modifiers::parse($parser->createSubParser());
+			}
 
 			if (!$parser->isCurrent(T_VARIABLE, T_ELLIPSIS, '&', PhpToken::T_AMPERSAND_FOLLOWED_BY_VAR_OR_VARARG())) {
 				$type = NamedType::parse($parser->createSubParser());
@@ -97,6 +118,7 @@
 
 			return new self(
 				$nodeIndentation,
+				$promotedPropertyModifiers !== NULL ? $promotedPropertyModifiers->toPropertyModifiers() : [],
 				$type,
 				$name,
 				$defaultValue

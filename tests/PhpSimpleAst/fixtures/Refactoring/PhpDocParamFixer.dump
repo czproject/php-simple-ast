@@ -64,6 +64,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  parameters: array (5)
    |  |  |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Parameter
    |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
    |  |  |  |  |  |  |  |  |  |  |  type: null
    |  |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
@@ -75,6 +76,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  |  |  defaultValue: null
    |  |  |  |  |  |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\Parameter
    |  |  |  |  |  |  |  |  |  |  |  indentation: ', '
+   |  |  |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
    |  |  |  |  |  |  |  |  |  |  |  type: null
    |  |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
@@ -86,6 +88,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  |  |  defaultValue: null
    |  |  |  |  |  |  |  |  |  |  2 => CzProject\PhpSimpleAst\Ast\Parameter
    |  |  |  |  |  |  |  |  |  |  |  indentation: ', '
+   |  |  |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
    |  |  |  |  |  |  |  |  |  |  |  type: null
    |  |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
@@ -97,6 +100,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  |  |  defaultValue: null
    |  |  |  |  |  |  |  |  |  |  3 => CzProject\PhpSimpleAst\Ast\Parameter
    |  |  |  |  |  |  |  |  |  |  |  indentation: ', '
+   |  |  |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
    |  |  |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
    |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  |  |  |  |  nullableSign: ''
@@ -112,6 +116,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  |  |  defaultValue: null
    |  |  |  |  |  |  |  |  |  |  4 => CzProject\PhpSimpleAst\Ast\Parameter
    |  |  |  |  |  |  |  |  |  |  |  indentation: ', '
+   |  |  |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
    |  |  |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
    |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  |  |  |  |  nullableSign: ''
