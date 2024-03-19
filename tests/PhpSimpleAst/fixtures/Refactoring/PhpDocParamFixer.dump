@@ -101,11 +101,14 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  |  3 => CzProject\PhpSimpleAst\Ast\Parameter
    |  |  |  |  |  |  |  |  |  |  |  indentation: ', '
    |  |  |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
-   |  |  |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\Type
    |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
-   |  |  |  |  |  |  |  |  |  |  |  |  nullableSign: ''
-   |  |  |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
-   |  |  |  |  |  |  |  |  |  |  |  |  type: 'array'
+   |  |  |  |  |  |  |  |  |  |  |  |  types: array (1)
+   |  |  |  |  |  |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  |  |  nullableSign: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  |  |  type: 'array'
    |  |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  |  |  |  |  |  referenceSign: ''
@@ -117,11 +120,14 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  |  4 => CzProject\PhpSimpleAst\Ast\Parameter
    |  |  |  |  |  |  |  |  |  |  |  indentation: ', '
    |  |  |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
-   |  |  |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\Type
    |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
-   |  |  |  |  |  |  |  |  |  |  |  |  nullableSign: ''
-   |  |  |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
-   |  |  |  |  |  |  |  |  |  |  |  |  type: 'array'
+   |  |  |  |  |  |  |  |  |  |  |  |  types: array (1)
+   |  |  |  |  |  |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  |  |  nullableSign: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  |  |  type: 'array'
    |  |  |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  |  |  |  |  |  referenceSign: ''

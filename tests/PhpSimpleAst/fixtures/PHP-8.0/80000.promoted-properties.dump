@@ -38,11 +38,14 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
    |  |  |  |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  |  |  |  visibility: 'protected'
-   |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\Type
    |  |  |  |  |  |  |  |  |  |  indentation: ' '
-   |  |  |  |  |  |  |  |  |  |  nullableSign: ''
-   |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
-   |  |  |  |  |  |  |  |  |  |  type: 'int'
+   |  |  |  |  |  |  |  |  |  |  types: array (1)
+   |  |  |  |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  nullableSign: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  type: 'int'
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  |  |  |  referenceSign: ''
@@ -57,11 +60,14 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
    |  |  |  |  |  |  |  |  |  |  |  indentation: ''
    |  |  |  |  |  |  |  |  |  |  |  visibility: 'protected'
-   |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\Type
    |  |  |  |  |  |  |  |  |  |  indentation: ' '
-   |  |  |  |  |  |  |  |  |  |  nullableSign: ''
-   |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
-   |  |  |  |  |  |  |  |  |  |  type: 'int'
+   |  |  |  |  |  |  |  |  |  |  types: array (1)
+   |  |  |  |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  nullableSign: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  type: 'int'
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  |  |  |  referenceSign: ''

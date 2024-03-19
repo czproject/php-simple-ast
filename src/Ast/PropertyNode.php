@@ -15,7 +15,7 @@
 		/** @var IPropertyModifier[] */
 		private $modifiers;
 
-		/** @var NamedType|NULL */
+		/** @var Type|NULL */
 		private $type;
 
 		/** @var string */
@@ -41,7 +41,7 @@
 		public function __construct(
 			$indentation,
 			array $modifiers,
-			NamedType $type = NULL,
+			Type $type = NULL,
 			$namePrefix,
 			$name,
 			DefaultValue $defaultValue = NULL,
@@ -95,8 +95,8 @@
 			$type = NULL;
 
 			if (!$parser->isCurrent(T_VARIABLE)) {
-				$type = NamedType::parse($parser->createSubParser());
-				$parser->consumeWhitespace();
+				$type = Type::parse($parser->createSubParser());
+				$parser->tryConsumeWhitespace();
 			}
 
 			$nodeIndentation = $parser->consumeNodeIndentation() . $parser->flushIndentation();

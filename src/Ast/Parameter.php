@@ -16,7 +16,7 @@
 		/** @var IPropertyModifier[] */
 		private $promotedPropertyModifiers;
 
-		/** @var NamedType|NULL */
+		/** @var Type|NULL */
 		private $type;
 
 		/** @var VariableName */
@@ -33,7 +33,7 @@
 		public function __construct(
 			$indentation,
 			array $promotedPropertyModifiers,
-			NamedType $type = NULL,
+			Type $type = NULL,
 			VariableName $name,
 			DefaultValue $defaultValue = NULL
 		)
@@ -102,7 +102,7 @@
 			}
 
 			if (!$parser->isCurrent(T_VARIABLE, T_ELLIPSIS, '&', PhpToken::T_AMPERSAND_FOLLOWED_BY_VAR_OR_VARARG())) {
-				$type = NamedType::parse($parser->createSubParser());
+				$type = Type::parse($parser->createSubParser());
 				$parser->tryConsumeWhitespaceAndComments();
 			}
 

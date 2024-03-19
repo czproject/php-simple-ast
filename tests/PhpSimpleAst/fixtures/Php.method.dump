@@ -39,11 +39,14 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  |  '\n
    |  |  |  |  |  |  |  |  |  |   \t    \t    \t    '
    |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
-   |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\Type
    |  |  |  |  |  |  |  |  |  |  indentation: ''
-   |  |  |  |  |  |  |  |  |  |  nullableSign: ''
-   |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
-   |  |  |  |  |  |  |  |  |  |  type: 'namespace\Foo'
+   |  |  |  |  |  |  |  |  |  |  types: array (1)
+   |  |  |  |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  nullableSign: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  type: 'namespace\Foo'
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  |  |  |  referenceSign: ''
@@ -57,11 +60,14 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  |  ',\n
    |  |  |  |  |  |  |  |  |  |   \t    \t    \t    '
    |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
-   |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\Type
    |  |  |  |  |  |  |  |  |  |  indentation: ''
-   |  |  |  |  |  |  |  |  |  |  nullableSign: ''
-   |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
-   |  |  |  |  |  |  |  |  |  |  type: 'Person'
+   |  |  |  |  |  |  |  |  |  |  types: array (1)
+   |  |  |  |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  nullableSign: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  type: 'Person'
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  |  |  |  referenceSign: ''
@@ -75,11 +81,14 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  |  ',\n
    |  |  |  |  |  |  |  |  |  |   \t    \t    \t    '
    |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
-   |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\Type
    |  |  |  |  |  |  |  |  |  |  indentation: ''
-   |  |  |  |  |  |  |  |  |  |  nullableSign: ''
-   |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
-   |  |  |  |  |  |  |  |  |  |  type: 'array'
+   |  |  |  |  |  |  |  |  |  |  types: array (1)
+   |  |  |  |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  nullableSign: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  type: 'array'
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  |  |  |  referenceSign: ''
@@ -93,11 +102,14 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  |  ',\n
    |  |  |  |  |  |  |  |  |  |   \t    \t    \t    '
    |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
-   |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\Type
    |  |  |  |  |  |  |  |  |  |  indentation: ''
-   |  |  |  |  |  |  |  |  |  |  nullableSign: ''
-   |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
-   |  |  |  |  |  |  |  |  |  |  type: 'callable'
+   |  |  |  |  |  |  |  |  |  |  types: array (1)
+   |  |  |  |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  nullableSign: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  type: 'callable'
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  |  |  |  referenceSign: ''
@@ -111,11 +123,14 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  |  ',\n
    |  |  |  |  |  |  |  |  |  |   \t    \t    \t    '
    |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
-   |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\Type
    |  |  |  |  |  |  |  |  |  |  indentation: ''
-   |  |  |  |  |  |  |  |  |  |  nullableSign: ''
-   |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
-   |  |  |  |  |  |  |  |  |  |  type: 'object'
+   |  |  |  |  |  |  |  |  |  |  types: array (1)
+   |  |  |  |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  nullableSign: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  type: 'object'
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  |  |  |  referenceSign: ''
@@ -129,11 +144,14 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  |  ',\n
    |  |  |  |  |  |  |  |  |  |   \t    \t    \t    '
    |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
-   |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\Type
    |  |  |  |  |  |  |  |  |  |  indentation: ''
-   |  |  |  |  |  |  |  |  |  |  nullableSign: ''
-   |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
-   |  |  |  |  |  |  |  |  |  |  type: 'int'
+   |  |  |  |  |  |  |  |  |  |  types: array (1)
+   |  |  |  |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  nullableSign: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  type: 'int'
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  |  |  |  referenceSign: ''
@@ -147,11 +165,14 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  |  ',\n
    |  |  |  |  |  |  |  |  |  |   \t    \t    \t    '
    |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
-   |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\Type
    |  |  |  |  |  |  |  |  |  |  indentation: ''
-   |  |  |  |  |  |  |  |  |  |  nullableSign: ''
-   |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
-   |  |  |  |  |  |  |  |  |  |  type: 'string'
+   |  |  |  |  |  |  |  |  |  |  types: array (1)
+   |  |  |  |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  nullableSign: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  type: 'string'
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  |  |  |  referenceSign: ''
@@ -165,11 +186,14 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  |  ',\n
    |  |  |  |  |  |  |  |  |  |   \t    \t    \t    '
    |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
-   |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\Type
    |  |  |  |  |  |  |  |  |  |  indentation: ''
-   |  |  |  |  |  |  |  |  |  |  nullableSign: ''
-   |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
-   |  |  |  |  |  |  |  |  |  |  type: 'float'
+   |  |  |  |  |  |  |  |  |  |  types: array (1)
+   |  |  |  |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  nullableSign: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  type: 'float'
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  |  |  |  referenceSign: ''
@@ -183,11 +207,14 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  |  ',\n
    |  |  |  |  |  |  |  |  |  |   \t    \t    \t    '
    |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
-   |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\Type
    |  |  |  |  |  |  |  |  |  |  indentation: ''
-   |  |  |  |  |  |  |  |  |  |  nullableSign: ''
-   |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
-   |  |  |  |  |  |  |  |  |  |  type: 'bool'
+   |  |  |  |  |  |  |  |  |  |  types: array (1)
+   |  |  |  |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  nullableSign: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  type: 'bool'
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  |  |  |  referenceSign: ''
@@ -201,11 +228,14 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  |  ',\n
    |  |  |  |  |  |  |  |  |  |   \t    \t    \t    '
    |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
-   |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\Type
    |  |  |  |  |  |  |  |  |  |  indentation: ''
-   |  |  |  |  |  |  |  |  |  |  nullableSign: ''
-   |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
-   |  |  |  |  |  |  |  |  |  |  type: 'self'
+   |  |  |  |  |  |  |  |  |  |  types: array (1)
+   |  |  |  |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  nullableSign: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  type: 'self'
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  |  |  |  referenceSign: ''
@@ -219,11 +249,14 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  |  ',\n
    |  |  |  |  |  |  |  |  |  |   \t    \t    \t    '
    |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
-   |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\Type
    |  |  |  |  |  |  |  |  |  |  indentation: ''
-   |  |  |  |  |  |  |  |  |  |  nullableSign: ''
-   |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
-   |  |  |  |  |  |  |  |  |  |  type: 'int'
+   |  |  |  |  |  |  |  |  |  |  types: array (1)
+   |  |  |  |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  nullableSign: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  type: 'int'
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  |  |  |  referenceSign: '&'
@@ -390,11 +423,14 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  |  '/*A2*/,\n
    |  |  |  |  |  |  |  |  |  |   \t    \t    \t    /*B1*/'
    |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
-   |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\Type
    |  |  |  |  |  |  |  |  |  |  indentation: ''
-   |  |  |  |  |  |  |  |  |  |  nullableSign: ''
-   |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
-   |  |  |  |  |  |  |  |  |  |  type: 'array'
+   |  |  |  |  |  |  |  |  |  |  types: array (1)
+   |  |  |  |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  nullableSign: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  type: 'array'
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: '/*B2*/'
    |  |  |  |  |  |  |  |  |  |  referenceSign: ''
@@ -448,11 +484,14 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\Parameter
    |  |  |  |  |  |  |  |  |  indentation: ', '
    |  |  |  |  |  |  |  |  |  promotedPropertyModifiers: array (0)
-   |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\Type
    |  |  |  |  |  |  |  |  |  |  indentation: ''
-   |  |  |  |  |  |  |  |  |  |  nullableSign: ''
-   |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
-   |  |  |  |  |  |  |  |  |  |  type: 'array'
+   |  |  |  |  |  |  |  |  |  |  types: array (1)
+   |  |  |  |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  nullableSign: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
+   |  |  |  |  |  |  |  |  |  |  |  |  type: 'array'
    |  |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\VariableName
    |  |  |  |  |  |  |  |  |  |  indentation: ' '
    |  |  |  |  |  |  |  |  |  |  referenceSign: '&'
