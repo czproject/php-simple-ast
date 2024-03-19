@@ -1,0 +1,66 @@
+CzProject\PhpSimpleAst\Ast\PhpString
+   children: array (1)
+   |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
+   |  |  openTag: '<?php\n'
+   |  |  children: array (2)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  |  indentation: '\n'
+   |  |  |  |  keyword: 'class'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'Foo'
+   |  |  |  |  constructorValues: null
+   |  |  |  |  extends: null
+   |  |  |  |  implements: null
+   |  |  |  |  blockOpener: ' {'
+   |  |  |  |  children: array (1)
+   |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\MethodNode
+   |  |  |  |  |  |  phpDocNode: null
+   |  |  |  |  |  |  indentation: string
+   |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |   \t    '
+   |  |  |  |  |  |  modifiers: array (2)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\Visibility
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  visibility: 'public'
+   |  |  |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\StaticModifier
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  modifier: 'static'
+   |  |  |  |  |  |  keywordPrefix: ' '
+   |  |  |  |  |  |  keyword: 'function'
+   |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  name: 'getInstance'
+   |  |  |  |  |  |  parameters: CzProject\PhpSimpleAst\Ast\Parameters
+   |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  opener: '('
+   |  |  |  |  |  |  |  parameters: array (0)
+   |  |  |  |  |  |  |  closer: ')'
+   |  |  |  |  |  |  returnType: CzProject\PhpSimpleAst\Ast\FunctionReturnType
+   |  |  |  |  |  |  |  indentation: ': '
+   |  |  |  |  |  |  |  nullable: false
+   |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\Type
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  types: array (1)
+   |  |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  |  nullableSign: ''
+   |  |  |  |  |  |  |  |  |  |  typeIndentation: ''
+   |  |  |  |  |  |  |  |  |  |  type: 'static'
+   |  |  |  |  |  |  body: CzProject\PhpSimpleAst\Ast\FunctionBody
+   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  blockOpener: '{'
+   |  |  |  |  |  |  |  children: array (1)
+   |  |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  |  |  |  |  |  content: string
+   |  |  |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |  |  |   \t    \t    return new static();'
+   |  |  |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |   \t    }'
+   |  |  |  |  blockCloser: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   }'
+   |  |  |  1 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: '\n'
+   |  |  closeTag: null

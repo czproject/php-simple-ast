@@ -73,6 +73,9 @@
 			} elseif ($parser->isCurrent(T_CALLABLE)) {
 				$type = $parser->consumeTokenAsText(T_CALLABLE);
 
+			} elseif ($parser->isCurrent(T_STATIC)) {
+				$type = $parser->consumeTokenAsText(T_STATIC);
+
 			} else {
 				$name = Name::parse($parser->createSubParser());
 				$type = $name->toString();
