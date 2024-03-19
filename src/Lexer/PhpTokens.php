@@ -54,9 +54,9 @@
 		/**
 		 * @return PhpToken|NULL
 		 */
-		public function getNext()
+		public function getNext(int $position = 0)
 		{
-			$position = $this->position + 1;
+			$position = $this->position + max(0, $position) + 1;
 
 			if (!isset($this->tokens[$position])) {
 				return NULL;

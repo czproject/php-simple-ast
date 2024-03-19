@@ -23,7 +23,7 @@
 		/**
 		 * @return IToken|NULL
 		 */
-		function getNext();
+		function getNext(int $position = 0);
 
 
 		/**

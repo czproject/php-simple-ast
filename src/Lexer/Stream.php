@@ -75,6 +75,38 @@
 
 
 		/**
+		 * @param  array<int|string> $types
+		 * @param  array<int|string> $ignoredTypes
+		 */
+		public function isAhead(array $types, array $ignoredTypes = []): bool
+		{
+			$pos = 0;
+			$found = FALSE;
+
+			while (($token = $this->tokens->getNext($pos)) !== NULL) {
+				foreach ($ignoredTypes as $ignoredType) {
+					if ($token->isOfType($ignoredType)) {
+						$pos++;
+						continue 2;
+					}
+				}
+
+				foreach ($types as $type) {
+					if ($token->isOfType($type)) {
+						$pos++;
+						$found = TRUE;
+						continue 2;
+					}
+				}
+
+				break;
+			}
+
+			return $found;
+		}
+
+
+		/**
 		 * @return IToken
 		 */
 		public function consumeAnything()

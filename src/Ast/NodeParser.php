@@ -121,6 +121,18 @@
 
 
 		/**
+		 * Look ahead, ignore whitespace.
+		 * @param  int|string ...$types
+		 * @return bool
+		 * @phpstan-impure
+		 */
+		public function isAhead(...$types)
+		{
+			return $this->stream->isAhead($types, [T_WHITESPACE]);
+		}
+
+
+		/**
 		 * @param  int|string ...$types
 		 * @return Lexer\IToken
 		 */

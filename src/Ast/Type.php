@@ -55,7 +55,7 @@
 			$types[] = NamedType::parse($parser->createSubParser());
 			$parser->tryConsumeWhitespace();
 
-			while ($parser->isCurrent('&', '|')) {
+			while ($parser->isCurrent('&', '|') && !$parser->isAhead(T_ELLIPSIS, T_VARIABLE)) {
 				$parser->consumeAsIndentation('&', '|');
 				$parser->tryConsumeWhitespace();
 				$types[] = NamedType::parse($parser->createSubParser());
