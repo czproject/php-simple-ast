@@ -52,7 +52,7 @@
 		public static function parse(NodeParser $parser)
 		{
 			$indentation = $parser->consumeNodeIndentation();
-			$parser->consumeAsUnknowContent(':');
+			$parser->consumeAsIndentation(':');
 			$parser->consumeWhitespace();
 			$indentation .= $parser->flushIndentation();
 			$nullable = FALSE;

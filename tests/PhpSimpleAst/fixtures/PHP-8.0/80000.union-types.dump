@@ -82,7 +82,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |  |  |  |  |  defaultValue: null
    |  |  |  |  |  |  |  closer: ')'
    |  |  |  |  |  |  returnType: CzProject\PhpSimpleAst\Ast\FunctionReturnType
-   |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  indentation: ': '
    |  |  |  |  |  |  |  nullable: false
    |  |  |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\Type
    |  |  |  |  |  |  |  |  indentation: ''
