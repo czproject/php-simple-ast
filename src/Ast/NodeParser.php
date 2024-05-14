@@ -331,7 +331,7 @@
 			} else {
 				$this->tryFlushUnknowContent();
 				assert($this->parentParser !== NULL); // phpstan hotfix
-				$this->parentParser->addIndentation($this->flushIndentation());
+				$this->parentParser->addIndentation($this->consumeNodeIndentation() . $this->flushIndentation());
 			}
 
 			$this->closed = TRUE;
