@@ -82,6 +82,18 @@
 		/**
 		 * @return self
 		 */
+		public static function parseAnything(NodeParser $parser)
+		{
+			return new self(
+				$parser->consumeNodeIndentation(),
+				$parser->consumeAnythingAsText()
+			);
+		}
+
+
+		/**
+		 * @return self
+		 */
 		public static function parse(NodeParser $parser)
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();

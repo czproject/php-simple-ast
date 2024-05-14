@@ -225,7 +225,7 @@
 			$nodeIndentation = $parser->consumeNodeIndentation();
 			$keyword = $parser->consumeTokenAsText(T_FUNCTION);
 			$parser->consumeWhitespace();
-			$name = Name::parse($parser->createSubParser());
+			$name = Name::parseAnything($parser->createSubParser());
 			$parser->tryConsumeWhitespace();
 			$parameters = Parameters::parse($parser->createSubParser());
 			$parser->tryConsumeWhitespace();
