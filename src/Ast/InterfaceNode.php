@@ -108,7 +108,7 @@
 			$extends = NULL;
 			$blockOpener = '';
 
-			$name = Name::parse($parser->createSubParser());
+			$name = Name::parseClassName($parser->createSubParser());
 			$parser->tryConsumeWhitespace();
 
 			if ($parser->isCurrent(T_EXTENDS)) {

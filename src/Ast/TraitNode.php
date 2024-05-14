@@ -100,7 +100,7 @@
 			$parser->tryConsumeWhitespace();
 			$blockOpener = '';
 
-			$name = Name::parse($parser->createSubParser());
+			$name = Name::parseClassName($parser->createSubParser());
 			$parser->tryConsumeWhitespace();
 
 			$parser->tryConsumeWhitespace();

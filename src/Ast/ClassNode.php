@@ -164,8 +164,9 @@
 			$implements = NULL;
 			$blockOpener = '';
 
-			if ($parser->isCurrent(T_STRING)) { // class name
-				$name = Name::parse($parser->createSubParser());
+			$name = Name::tryParseClassName($parser->createSubParser());
+
+			if ($name !== NULL) { // class name
 				$parser->tryConsumeWhitespace();
 
 			} elseif ($parser->isCurrent('(')) {

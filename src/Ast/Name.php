@@ -128,4 +128,37 @@
 			$parser->close();
 			return new self($nodeIndentation, $name);
 		}
+
+
+		/**
+		 * @return self
+		 */
+		public static function parseClassName(NodeParser $parser)
+		{
+			$name = self::tryParseClassName($parser);
+
+			if ($name === NULL) {
+				$parser->errorUnknowToken('Missing name');
+			}
+
+			return $name;
+		}
+
+
+		/**
+		 * @return self|NULL
+		 */
+		public static function tryParseClassName(NodeParser $parser)
+		{
+			$nodeIndentation = '';
+			$name = '';
+
+			if ($parser->isCurrent(T_STRING)) {
+				$nodeIndentation = $parser->consumeNodeIndentation();
+				$name = $parser->consumeTokenAsText(T_STRING);
+			}
+
+			$parser->close();
+			return $name !== '' ? new self($nodeIndentation, $name) : NULL;
+		}
 	}
