@@ -1,0 +1,11 @@
+CzProject\PhpSimpleAst\Ast\PhpString
+   children: array (1)
+   |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
+   |  |  openTag: '<?php\n'
+   |  |  children: array (1)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   echo \Foo\Bar::class;\n
+   |  |  |  |  |   test(\Foo\Bar::class, 'Lorem ipsum');\n'
+   |  |  closeTag: null

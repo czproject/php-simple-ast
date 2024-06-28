@@ -75,6 +75,10 @@
 				} elseif ($parser->isCurrent(T_NAMESPACE)) {
 					$child = NamespaceNode::parse($parser->createSubParser());
 
+				} elseif ($parser->isCurrent(T_DOUBLE_COLON)) { // static call or property/constant
+					$parser->consumeAsUnknowContent(T_DOUBLE_COLON);
+					$parser->tryConsumeAsUnknowContent(T_CLASS);
+
 				} elseif ($parser->isCurrent(T_USE)) {
 					$child = UseNode::parse($parser->createSubParser());
 
