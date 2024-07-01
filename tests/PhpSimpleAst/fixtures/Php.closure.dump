@@ -1,0 +1,223 @@
+CzProject\PhpSimpleAst\Ast\PhpString
+   children: array (1)
+   |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
+   |  |  openTag: '<?php\n'
+   |  |  children: array (10)
+   |  |  |  0 => CzProject\PhpSimpleAst\Ast\FunctionNode
+   |  |  |  |  phpDocNode: null
+   |  |  |  |  indentation: '\n'
+   |  |  |  |  keyword: 'function'
+   |  |  |  |  name: null
+   |  |  |  |  parameters: CzProject\PhpSimpleAst\Ast\Parameters
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  opener: '('
+   |  |  |  |  |  parameters: array (0)
+   |  |  |  |  |  closer: ')'
+   |  |  |  |  inheritedVariables: null
+   |  |  |  |  returnType: null
+   |  |  |  |  body: CzProject\PhpSimpleAst\Ast\FunctionBody
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  blockOpener: '{'
+   |  |  |  |  |  children: array (0)
+   |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  '\n
+   |  |  |  |  |  |   }'
+   |  |  |  1 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: ';'
+   |  |  |  2 => CzProject\PhpSimpleAst\Ast\FunctionNode
+   |  |  |  |  phpDocNode: null
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n'
+   |  |  |  |  keyword: 'function'
+   |  |  |  |  name: null
+   |  |  |  |  parameters: CzProject\PhpSimpleAst\Ast\Parameters
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  opener: '('
+   |  |  |  |  |  parameters: array (0)
+   |  |  |  |  |  closer: ')'
+   |  |  |  |  inheritedVariables: null
+   |  |  |  |  returnType: CzProject\PhpSimpleAst\Ast\FunctionReturnType
+   |  |  |  |  |  indentation: ': '
+   |  |  |  |  |  nullable: false
+   |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\Type
+   |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  types: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  nullableSign: ''
+   |  |  |  |  |  |  |  |  typeIndentation: ''
+   |  |  |  |  |  |  |  |  type: 'void'
+   |  |  |  |  body: CzProject\PhpSimpleAst\Ast\FunctionBody
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  blockOpener: '{'
+   |  |  |  |  |  children: array (0)
+   |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  '\n
+   |  |  |  |  |  |   }'
+   |  |  |  3 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: ';'
+   |  |  |  4 => CzProject\PhpSimpleAst\Ast\FunctionNode
+   |  |  |  |  phpDocNode: null
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n'
+   |  |  |  |  keyword: 'function'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'name'
+   |  |  |  |  parameters: CzProject\PhpSimpleAst\Ast\Parameters
+   |  |  |  |  |  indentation: ''
+   |  |  |  |  |  opener: '('
+   |  |  |  |  |  parameters: array (0)
+   |  |  |  |  |  closer: ')'
+   |  |  |  |  inheritedVariables: null
+   |  |  |  |  returnType: null
+   |  |  |  |  body: CzProject\PhpSimpleAst\Ast\FunctionBody
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  blockOpener: '{'
+   |  |  |  |  |  children: array (0)
+   |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  '\n
+   |  |  |  |  |  |   }'
+   |  |  |  5 => CzProject\PhpSimpleAst\Ast\FunctionNode
+   |  |  |  |  phpDocNode: null
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n'
+   |  |  |  |  keyword: 'function'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'name2'
+   |  |  |  |  parameters: CzProject\PhpSimpleAst\Ast\Parameters
+   |  |  |  |  |  indentation: ''
+   |  |  |  |  |  opener: '('
+   |  |  |  |  |  parameters: array (0)
+   |  |  |  |  |  closer: ')'
+   |  |  |  |  inheritedVariables: null
+   |  |  |  |  returnType: CzProject\PhpSimpleAst\Ast\FunctionReturnType
+   |  |  |  |  |  indentation: ': '
+   |  |  |  |  |  nullable: false
+   |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\Type
+   |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  types: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  nullableSign: ''
+   |  |  |  |  |  |  |  |  typeIndentation: ''
+   |  |  |  |  |  |  |  |  type: 'void'
+   |  |  |  |  body: CzProject\PhpSimpleAst\Ast\FunctionBody
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  blockOpener: '{'
+   |  |  |  |  |  children: array (0)
+   |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  '\n
+   |  |  |  |  |  |   }'
+   |  |  |  6 => CzProject\PhpSimpleAst\Ast\FunctionNode
+   |  |  |  |  phpDocNode: null
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n'
+   |  |  |  |  keyword: 'function'
+   |  |  |  |  name: null
+   |  |  |  |  parameters: CzProject\PhpSimpleAst\Ast\Parameters
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  opener: '('
+   |  |  |  |  |  parameters: array (0)
+   |  |  |  |  |  closer: ')'
+   |  |  |  |  inheritedVariables: CzProject\PhpSimpleAst\Ast\InheritedVariables
+   |  |  |  |  |  keyword: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  literal: 'use'
+   |  |  |  |  |  opener: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  literal: '('
+   |  |  |  |  |  variables: array (1)
+   |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\InheritedVariable
+   |  |  |  |  |  |  |  variable: CzProject\PhpSimpleAst\Ast\VariableName
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  referenceSign: '&'
+   |  |  |  |  |  |  |  |  variadic: null
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  literal: '$foo'
+   |  |  |  |  |  |  |  suffix: null
+   |  |  |  |  |  closer: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  literal: ')'
+   |  |  |  |  returnType: null
+   |  |  |  |  body: CzProject\PhpSimpleAst\Ast\FunctionBody
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  blockOpener: '{'
+   |  |  |  |  |  children: array (0)
+   |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  '\n
+   |  |  |  |  |  |   }'
+   |  |  |  7 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: ';'
+   |  |  |  8 => CzProject\PhpSimpleAst\Ast\FunctionNode
+   |  |  |  |  phpDocNode: null
+   |  |  |  |  indentation: string
+   |  |  |  |  |  '\n
+   |  |  |  |  |   \n'
+   |  |  |  |  keyword: 'function'
+   |  |  |  |  name: null
+   |  |  |  |  parameters: CzProject\PhpSimpleAst\Ast\Parameters
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  opener: '('
+   |  |  |  |  |  parameters: array (0)
+   |  |  |  |  |  closer: ')'
+   |  |  |  |  inheritedVariables: CzProject\PhpSimpleAst\Ast\InheritedVariables
+   |  |  |  |  |  keyword: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  literal: 'use'
+   |  |  |  |  |  opener: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  literal: '('
+   |  |  |  |  |  variables: array (2)
+   |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\InheritedVariable
+   |  |  |  |  |  |  |  variable: CzProject\PhpSimpleAst\Ast\VariableName
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  referenceSign: ''
+   |  |  |  |  |  |  |  |  variadic: null
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  literal: '$foo'
+   |  |  |  |  |  |  |  suffix: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  literal: ','
+   |  |  |  |  |  |  1 => CzProject\PhpSimpleAst\Ast\InheritedVariable
+   |  |  |  |  |  |  |  variable: CzProject\PhpSimpleAst\Ast\VariableName
+   |  |  |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  |  |  referenceSign: ''
+   |  |  |  |  |  |  |  |  variadic: null
+   |  |  |  |  |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  |  literal: '$bar'
+   |  |  |  |  |  |  |  suffix: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  literal: ','
+   |  |  |  |  |  closer: CzProject\PhpSimpleAst\Ast\Literal
+   |  |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  |  literal: ')'
+   |  |  |  |  returnType: CzProject\PhpSimpleAst\Ast\FunctionReturnType
+   |  |  |  |  |  indentation: ': '
+   |  |  |  |  |  nullable: false
+   |  |  |  |  |  type: CzProject\PhpSimpleAst\Ast\Type
+   |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  types: array (1)
+   |  |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\NamedType
+   |  |  |  |  |  |  |  |  indentation: ''
+   |  |  |  |  |  |  |  |  nullableSign: ''
+   |  |  |  |  |  |  |  |  typeIndentation: ''
+   |  |  |  |  |  |  |  |  type: 'void'
+   |  |  |  |  body: CzProject\PhpSimpleAst\Ast\FunctionBody
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  blockOpener: '{'
+   |  |  |  |  |  children: array (0)
+   |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  '\n
+   |  |  |  |  |  |   }'
+   |  |  |  9 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  content: ';\n'
+   |  |  closeTag: null

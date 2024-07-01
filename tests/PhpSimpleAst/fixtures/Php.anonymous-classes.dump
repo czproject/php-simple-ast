@@ -2,7 +2,7 @@ CzProject\PhpSimpleAst\Ast\PhpString
    children: array (1)
    |  0 => CzProject\PhpSimpleAst\Ast\PhpNode
    |  |  openTag: '<?php\n'
-   |  |  children: array (26)
+   |  |  children: array (25)
    |  |  |  0 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  indentation: '\n'
    |  |  |  |  content: '// http://php.net/manual/en/language.oop5.anonymous.php'
@@ -436,42 +436,50 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  |   \n
    |  |  |  |  |   \n'
    |  |  |  |  content: '// example 4'
-   |  |  |  19 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  19 => CzProject\PhpSimpleAst\Ast\FunctionNode
+   |  |  |  |  phpDocNode: null
+   |  |  |  |  indentation: '\n'
+   |  |  |  |  keyword: 'function'
+   |  |  |  |  name: CzProject\PhpSimpleAst\Ast\Name
+   |  |  |  |  |  indentation: ' '
+   |  |  |  |  |  name: 'anonymous_class'
+   |  |  |  |  parameters: CzProject\PhpSimpleAst\Ast\Parameters
+   |  |  |  |  |  indentation: ''
+   |  |  |  |  |  opener: '('
+   |  |  |  |  |  parameters: array (0)
+   |  |  |  |  |  closer: ')'
+   |  |  |  |  inheritedVariables: null
+   |  |  |  |  returnType: null
+   |  |  |  |  body: CzProject\PhpSimpleAst\Ast\FunctionBody
+   |  |  |  |  |  indentation: '\n'
+   |  |  |  |  |  blockOpener: '{'
+   |  |  |  |  |  children: array (1)
+   |  |  |  |  |  |  0 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  |  |  |  |  content: string
+   |  |  |  |  |  |  |  |  '\n
+   |  |  |  |  |  |  |  |   \t    return new class {};'
+   |  |  |  |  |  blockCloser: string
+   |  |  |  |  |  |  '\n
+   |  |  |  |  |  |   }'
+   |  |  |  20 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: string
    |  |  |  |  |  '\n
-   |  |  |  |  |   function anonymous_class()\n
-   |  |  |  |  |   {\n
-   |  |  |  |  |   \t    return new'
-   |  |  |  20 => CzProject\PhpSimpleAst\Ast\ClassNode
-   |  |  |  |  indentation: ' '
-   |  |  |  |  keyword: 'class'
-   |  |  |  |  name: null
-   |  |  |  |  constructorValues: null
-   |  |  |  |  extends: null
-   |  |  |  |  implements: null
-   |  |  |  |  blockOpener: ' {'
-   |  |  |  |  children: array (0)
-   |  |  |  |  blockCloser: '}'
-   |  |  |  21 => CzProject\PhpSimpleAst\Ast\UnknowNode
-   |  |  |  |  content: string
-   |  |  |  |  |  ';\n
-   |  |  |  |  |   }\n
    |  |  |  |  |   \n
    |  |  |  |  |   if (get_class(anonymous_class()) === get_class(anonymous_class())) {\n
    |  |  |  |  |   \t    echo 'same class';\n
    |  |  |  |  |   } else {\n
    |  |  |  |  |   \t    echo 'different class';\n
    |  |  |  |  |   }'
-   |  |  |  22 => CzProject\PhpSimpleAst\Ast\CommentNode
+   |  |  |  21 => CzProject\PhpSimpleAst\Ast\CommentNode
    |  |  |  |  indentation: string
    |  |  |  |  |  '\n
    |  |  |  |  |   \n'
    |  |  |  |  content: '// example 5'
-   |  |  |  23 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  22 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: string
    |  |  |  |  |  '\n
    |  |  |  |  |   echo get_class(new'
-   |  |  |  24 => CzProject\PhpSimpleAst\Ast\ClassNode
+   |  |  |  23 => CzProject\PhpSimpleAst\Ast\ClassNode
    |  |  |  |  indentation: ' '
    |  |  |  |  keyword: 'class'
    |  |  |  |  name: null
@@ -481,6 +489,6 @@ CzProject\PhpSimpleAst\Ast\PhpString
    |  |  |  |  blockOpener: ' {'
    |  |  |  |  children: array (0)
    |  |  |  |  blockCloser: '}'
-   |  |  |  25 => CzProject\PhpSimpleAst\Ast\UnknowNode
+   |  |  |  24 => CzProject\PhpSimpleAst\Ast\UnknowNode
    |  |  |  |  content: ');\n'
    |  |  closeTag: null
