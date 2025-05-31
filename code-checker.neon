@@ -1,0 +1,5 @@
+sets:
+	- JP\CodeChecker\Sets\CzProjectMinimum
+
+ignore:
+	- fixtures/*
