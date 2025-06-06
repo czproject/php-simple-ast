@@ -70,7 +70,7 @@
 		 * @param  string $newName
 		 * @return self
 		 */
-		public static function fromName(self $name = NULL, $newName)
+		public static function fromName(?self $name, $newName)
 		{
 			return new self(
 				$name !== NULL ? $name->indentation : ' ',

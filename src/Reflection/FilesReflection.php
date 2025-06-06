@@ -113,7 +113,7 @@
 		 * @param  string|string[] $directories
 		 * @return self
 		 */
-		public static function scanDirectories($directories, callable $progress = NULL)
+		public static function scanDirectories($directories, ?callable $progress = NULL)
 		{
 			if (is_string($directories)) {
 				$directories = [$directories];

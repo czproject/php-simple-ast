@@ -41,10 +41,10 @@
 		public function __construct(
 			$indentation,
 			array $modifiers,
-			Type $type = NULL,
+			?Type $type,
 			$namePrefix,
 			$name,
-			DefaultValue $defaultValue = NULL,
+			?DefaultValue $defaultValue,
 			$closer
 		)
 		{

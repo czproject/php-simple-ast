@@ -36,7 +36,7 @@
 		public function __construct(
 			$indentation,
 			$keyword,
-			Name $name = NULL,
+			?Name $name,
 			$blockOpener,
 			array $children,
 			$blockCloser

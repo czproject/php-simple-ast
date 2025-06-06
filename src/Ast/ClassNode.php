@@ -49,10 +49,10 @@
 		public function __construct(
 			$indentation,
 			$keyword,
-			Name $name = NULL,
-			Literal $constructorValues = NULL,
-			ObjectParent $extends = NULL,
-			ObjectParents $implements = NULL,
+			?Name $name,
+			?Literal $constructorValues,
+			?ObjectParent $extends,
+			?ObjectParents $implements,
 			$blockOpener,
 			array $children,
 			$blockCloser

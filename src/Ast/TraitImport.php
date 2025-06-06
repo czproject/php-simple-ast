@@ -25,7 +25,7 @@
 		public function __construct(
 			$indentation,
 			Name $name,
-			Literal $aliases = NULL
+			?Literal $aliases = NULL
 		)
 		{
 			Assert::string($indentation);

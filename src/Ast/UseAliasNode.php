@@ -23,7 +23,7 @@
 		public function __construct(
 			string $indentation,
 			Name $name,
-			Literal $alias = NULL
+			?Literal $alias = NULL
 		)
 		{
 			$this->indentation = $indentation;

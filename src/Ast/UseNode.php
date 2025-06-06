@@ -31,7 +31,7 @@
 		public function __construct(
 			string $indentation,
 			string $keyword,
-			Literal $type = NULL,
+			?Literal $type,
 			array $children,
 			string $closer
 		)

@@ -35,7 +35,7 @@
 		/**
 		 * @param string $nodeIndentation
 		 */
-		public function __construct($nodeIndentation, Lexer\Stream $stream, self $parentParser = NULL)
+		public function __construct($nodeIndentation, Lexer\Stream $stream, ?self $parentParser = NULL)
 		{
 			$this->nodeIndentation = $nodeIndentation;
 			$this->stream = $stream;
@@ -299,7 +299,7 @@
 		/**
 		 * @return void
 		 */
-		public function onChild(INode $child = NULL)
+		public function onChild(?INode $child = NULL)
 		{
 			Assert::false($this->closed, 'Node is already closed.');
 

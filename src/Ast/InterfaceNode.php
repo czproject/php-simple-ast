@@ -40,7 +40,7 @@
 			$indentation,
 			$keyword,
 			Name $name,
-			ObjectParents $extends = NULL,
+			?ObjectParents $extends,
 			$blockOpener,
 			array $children,
 			$blockCloser

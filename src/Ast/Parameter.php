@@ -33,9 +33,9 @@
 		public function __construct(
 			$indentation,
 			array $promotedPropertyModifiers,
-			Type $type = NULL,
+			?Type $type,
 			VariableName $name,
-			DefaultValue $defaultValue = NULL
+			?DefaultValue $defaultValue
 		)
 		{
 			Assert::string($indentation);

@@ -52,7 +52,7 @@
 			$keyword,
 			Name $name,
 			Parameters $parameters,
-			FunctionReturnType $returnType = NULL,
+			?FunctionReturnType $returnType,
 			IFunctionBody $body
 		)
 		{
