@@ -6,6 +6,7 @@
 
 	use PHPStan\PhpDocParser\Lexer;
 	use PHPStan\PhpDocParser\Parser;
+	use PHPStan\PhpDocParser\ParserConfig;
 
 
 	class PhpDocParser
@@ -52,11 +53,16 @@
 		public static function getInstance(): self
 		{
 			if (self::$instance === NULL) {
-				$constExprParser = new Parser\ConstExprParser();
-				$typeParser = new Parser\TypeParser($constExprParser);
+				$parserConfig = new ParserConfig([
+					'lines' => FALSE,
+					'indexes' => FALSE,
+					'comments' => FALSE,
+				]);
+				$constExprParser = new Parser\ConstExprParser($parserConfig);
+				$typeParser = new Parser\TypeParser($parserConfig, $constExprParser);
 				self::$instance = new self(
-					new Lexer\Lexer,
-					new Parser\PhpDocParser($typeParser, $constExprParser),
+					new Lexer\Lexer($parserConfig),
+					new Parser\PhpDocParser($parserConfig, $typeParser, $constExprParser),
 					$typeParser
 				);
 			}
