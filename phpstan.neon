@@ -14,10 +14,3 @@ parameters:
 		-
 			message: '#^Method CzProject\\PhpSimpleAst\\Ast\\Modifiers\:\:toPropertyModifiers\(\).*$#'
 			path: */Ast/Modifiers.php
-
-
-services:
-	-
-		class: CzProject\Assert\Bridges\PhpStan\StaticMethodTypeSpecifyingExtension
-		tags:
-			- phpstan.typeSpecifier.staticMethodTypeSpecifyingExtension
