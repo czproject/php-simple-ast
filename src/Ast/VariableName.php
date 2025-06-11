@@ -59,10 +59,7 @@
 		}
 
 
-		/**
-		 * @return string
-		 */
-		public function toString()
+		public function toString(): string
 		{
 			$s = $this->indentation;
 
@@ -79,10 +76,7 @@
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parse(NodeParser $parser)
+		public static function parse(NodeParser $parser): self
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();
 			$referenceSign = '';

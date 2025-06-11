@@ -4,8 +4,6 @@
 
 	namespace CzProject\PhpSimpleAst\Ast;
 
-	use CzProject\Assert\Assert;
-
 
 	class PropertyNode implements INode
 	{
@@ -32,27 +30,18 @@
 
 
 		/**
-		 * @param string $indentation
 		 * @param IPropertyModifier[] $modifiers
-		 * @param string $namePrefix
-		 * @param string $name
-		 * @param string $closer
 		 */
 		public function __construct(
-			$indentation,
+			string $indentation,
 			array $modifiers,
 			?Type $type,
-			$namePrefix,
-			$name,
+			string $namePrefix,
+			string $name,
 			?DefaultValue $defaultValue,
-			$closer
+			string $closer
 		)
 		{
-			Assert::string($indentation);
-			Assert::string($namePrefix);
-			Assert::string($name);
-			Assert::string($closer);
-
 			$this->indentation = $indentation;
 			$this->modifiers = $modifiers;
 			$this->type = $type;
@@ -63,7 +52,7 @@
 		}
 
 
-		public function toString()
+		public function toString(): string
 		{
 			$s = $this->indentation;
 
@@ -87,10 +76,7 @@
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parse(Modifiers $modifiers, NodeParser $parser)
+		public static function parse(Modifiers $modifiers, NodeParser $parser): self
 		{
 			$type = NULL;
 

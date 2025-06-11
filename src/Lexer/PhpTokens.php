@@ -29,19 +29,13 @@
 		}
 
 
-		/**
-		 * @return bool
-		 */
-		public function hasToken()
+		public function hasToken(): bool
 		{
 			return isset($this->tokens[$this->position]);
 		}
 
 
-		/**
-		 * @return PhpToken
-		 */
-		public function getCurrent()
+		public function getCurrent(): PhpToken
 		{
 			if (!isset($this->tokens[$this->position])) {
 				throw new \CzProject\PhpSimpleAst\OutOfRangeException('No token here.');
@@ -51,10 +45,7 @@
 		}
 
 
-		/**
-		 * @return PhpToken|NULL
-		 */
-		public function getNext(int $position = 0)
+		public function getNext(int $position = 0): ?PhpToken
 		{
 			$position = $this->position + max(0, $position) + 1;
 
@@ -66,10 +57,7 @@
 		}
 
 
-		/**
-		 * @return PhpToken|NULL
-		 */
-		public function next()
+		public function next(): ?PhpToken
 		{
 			if (!isset($this->tokens[$this->position])) {
 				return NULL;
@@ -81,16 +69,13 @@
 		}
 
 
-		public function getTypeName($type)
+		public function getTypeName(int|string $type): string
 		{
 			return is_int($type) ? token_name($type) : $type;
 		}
 
 
-		/**
-		 * @return void
-		 */
-		private function nextPosition()
+		private function nextPosition(): void
 		{
 			if (($this->position + 1) > count($this->tokens)) {
 				throw new \CzProject\PhpSimpleAst\InvalidStateException('There no next position.');
@@ -100,11 +85,7 @@
 		}
 
 
-		/**
-		 * @param  string $str
-		 * @return self
-		 */
-		public static function fromSource($str)
+		public static function fromSource(string $str): self
 		{
 			$tokens = [];
 			$line = 0;

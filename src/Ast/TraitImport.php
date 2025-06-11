@@ -4,8 +4,6 @@
 
 	namespace CzProject\PhpSimpleAst\Ast;
 
-	use CzProject\Assert\Assert;
-
 
 	class TraitImport implements INode
 	{
@@ -19,24 +17,19 @@
 		private $aliases;
 
 
-		/**
-		 * @param string $indentation
-		 */
 		public function __construct(
-			$indentation,
+			string $indentation,
 			Name $name,
 			?Literal $aliases = NULL
 		)
 		{
-			Assert::string($indentation);
-
 			$this->indentation = $indentation;
 			$this->name = $name;
 			$this->aliases = $aliases;
 		}
 
 
-		public function toString()
+		public function toString(): string
 		{
 			$s = $this->indentation;
 			$s .= $this->name->toString();
@@ -49,10 +42,7 @@
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parse(NodeParser $parser)
+		public static function parse(NodeParser $parser): self
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();
 			$name = Name::parse($parser->createSubParser());

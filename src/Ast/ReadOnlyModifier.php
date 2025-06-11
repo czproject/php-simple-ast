@@ -17,15 +17,8 @@
 		private $modifier;
 
 
-		/**
-		 * @param string $indentation
-		 * @param string $modifier
-		 */
-		public function __construct($indentation, $modifier)
+		public function __construct(string $indentation, string $modifier)
 		{
-			Assert::string($indentation);
-			Assert::string($modifier);
-
 			$lowerValue = strtolower($modifier);
 			Assert::true($lowerValue === 'readonly');
 
@@ -34,16 +27,13 @@
 		}
 
 
-		public function toString()
+		public function toString(): string
 		{
 			return $this->indentation . $this->modifier;
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parse(NodeParser $parser)
+		public static function parse(NodeParser $parser): self
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();
 			$modifier = $parser->consumeTokenAsText(PhpToken::T_READONLY());

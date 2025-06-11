@@ -257,11 +257,10 @@
 
 
 		/**
-		 * @param  string|NULL $msg
 		 * @return never
 		 * @throws \CzProject\PhpSimpleAst\InvalidStateException
 		 */
-		public function errorUnknowToken($msg = NULL)
+		public function errorUnknowToken(?string $msg = NULL)
 		{
 			$currentToken = $this->getCurrent();
 			$line = ' on line ' . $currentToken->getLine();
@@ -270,10 +269,9 @@
 
 
 		/**
-		 * @param  int|string ...$types
 		 * @return string
 		 */
-		private function formatTokenType(...$types)
+		private function formatTokenType(int|string ...$types)
 		{
 			$tmp = [];
 

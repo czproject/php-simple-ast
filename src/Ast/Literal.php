@@ -16,14 +16,8 @@
 		private $literal;
 
 
-		/**
-		 * @param string $indentation
-		 * @param string $literal
-		 */
-		public function __construct($indentation, $literal)
+		public function __construct(string $indentation, string $literal)
 		{
-			Assert::string($indentation);
-			Assert::string($literal);
 			Assert::true($literal !== '', 'Missing literal.');
 
 			$this->indentation = $indentation;
@@ -37,19 +31,13 @@
 		}
 
 
-		/**
-		 * @return string
-		 */
-		public function toString()
+		public function toString(): string
 		{
 			return $this->indentation . $this->literal;
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parseParenthesisExpression(NodeParser $parser)
+		public static function parseParenthesisExpression(NodeParser $parser): self
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();
 			$literal = $parser->consumeTokenAsText('(');
@@ -83,10 +71,7 @@
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parseBlockExpression(NodeParser $parser)
+		public static function parseBlockExpression(NodeParser $parser): self
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();
 			$literal = $parser->consumeTokenAsText('{');
@@ -121,10 +106,9 @@
 
 
 		/**
-		 * @param  array<int|string> $endingTokens
-		 * @return self
+		 * @param array<int|string> $endingTokens
 		 */
-		public static function parseExpression(NodeParser $parser, array $endingTokens)
+		public static function parseExpression(NodeParser $parser, array $endingTokens): self
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();
 			$level = 0;
@@ -165,10 +149,9 @@
 
 
 		/**
-		 * @param  int|string|array<int|string> $tokenType
-		 * @return self
+		 * @param int|string|array<int|string> $tokenType
 		 */
-		public static function parseToken(NodeParser $parser, $tokenType)
+		public static function parseToken(NodeParser $parser, int|string|array $tokenType): self
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();
 

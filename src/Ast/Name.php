@@ -16,15 +16,9 @@
 		private $name;
 
 
-		/**
-		 * @param string $indentation
-		 * @param string $name
-		 */
-		public function __construct($indentation, $name)
+		public function __construct(string $indentation, string $name)
 		{
-			Assert::string($name);
 			Assert::true($name !== '');
-			Assert::string($indentation);
 
 			$this->name = $name;
 			$this->indentation = $indentation;
@@ -37,40 +31,26 @@
 		}
 
 
-		/**
-		 * @return string
-		 */
-		public function getName()
+		public function getName(): string
 		{
 			return $this->name;
 		}
 
 
-		/**
-		 * @param  string $name
-		 * @return void
-		 */
-		public function setName($name)
+		public function setName(string $name): void
 		{
 			// TODO: check name syntax
 			$this->name = $name;
 		}
 
 
-		/**
-		 * @return string
-		 */
-		public function toString()
+		public function toString(): string
 		{
 			return $this->indentation . $this->name;
 		}
 
 
-		/**
-		 * @param  string $newName
-		 * @return self
-		 */
-		public static function fromName(?self $name, $newName)
+		public static function fromName(?self $name, string $newName): self
 		{
 			return new self(
 				$name !== NULL ? $name->indentation : ' ',
@@ -79,10 +59,7 @@
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parseAnything(NodeParser $parser)
+		public static function parseAnything(NodeParser $parser): self
 		{
 			return new self(
 				$parser->consumeNodeIndentation(),
@@ -91,10 +68,7 @@
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parse(NodeParser $parser)
+		public static function parse(NodeParser $parser): self
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();
 			$name = '';
@@ -112,10 +86,7 @@
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parseClassName(NodeParser $parser)
+		public static function parseClassName(NodeParser $parser): self
 		{
 			$name = self::tryParseClassName($parser);
 

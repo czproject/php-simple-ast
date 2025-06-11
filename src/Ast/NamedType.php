@@ -29,8 +29,6 @@
 			string $type
 		)
 		{
-			Assert::string($indentation);
-			Assert::string($nullableSign);
 			Assert::true($nullableSign === '' || $nullableSign === '?');
 
 			$this->indentation = $indentation;
@@ -40,10 +38,7 @@
 		}
 
 
-		/**
-		 * @return string
-		 */
-		public function toString()
+		public function toString(): string
 		{
 			if ($this->nullableSign !== '') {
 				return $this->indentation . $this->nullableSign . $this->typeIndentation . $this->type;
@@ -53,10 +48,7 @@
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parse(NodeParser $parser)
+		public static function parse(NodeParser $parser): self
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();
 			$nullableSign = '';

@@ -20,13 +20,7 @@
 		private $line;
 
 
-		/**
-		 * @param int|string $type
-		 * @param string $text
-		 * @param int $position
-		 * @param int $line
-		 */
-		public function __construct($type, $text, $position, $line)
+		public function __construct(int|string $type, string $text, int $position, int $line)
 		{
 			$this->type = $type;
 			$this->text = $text;
@@ -35,31 +29,31 @@
 		}
 
 
-		public function isOfType($type)
+		public function isOfType(int|string $type): bool
 		{
 			return $this->type === $type;
 		}
 
 
-		public function getType()
+		public function getType(): int|string
 		{
 			return $this->type;
 		}
 
 
-		public function toString()
+		public function toString(): string
 		{
 			return $this->text;
 		}
 
 
-		public function getPosition()
+		public function getPosition(): int
 		{
 			return $this->position;
 		}
 
 
-		public function getLine()
+		public function getLine(): int
 		{
 			return $this->line;
 		}

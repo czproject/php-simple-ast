@@ -16,15 +16,8 @@
 		private $modifier;
 
 
-		/**
-		 * @param string $indentation
-		 * @param string $modifier
-		 */
-		public function __construct($indentation, $modifier)
+		public function __construct(string $indentation, string $modifier)
 		{
-			Assert::string($indentation);
-			Assert::string($modifier);
-
 			$lowerValue = strtolower($modifier);
 			Assert::true($lowerValue === 'abstract' || $lowerValue === 'final');
 
@@ -33,52 +26,37 @@
 		}
 
 
-		/**
-		 * @return bool
-		 */
-		public function isAbstract()
+		public function isAbstract(): bool
 		{
 			return strtolower($this->modifier) === 'abstract';
 		}
 
 
-		/**
-		 * @return bool
-		 */
-		public function isFinal()
+		public function isFinal(): bool
 		{
 			return strtolower($this->modifier) === 'final';
 		}
 
 
-		/**
-		 * @return void
-		 */
-		public function setAsAbstract()
+		public function setAsAbstract(): void
 		{
 			$this->modifier = 'abstract';
 		}
 
 
-		/**
-		 * @return void
-		 */
-		public function setAsFinal()
+		public function setAsFinal(): void
 		{
 			$this->modifier = 'final';
 		}
 
 
-		public function toString()
+		public function toString(): string
 		{
 			return $this->indentation . $this->modifier;
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parse(NodeParser $parser)
+		public static function parse(NodeParser $parser): self
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();
 			$modifier = $parser->consumeTokenAsText(T_ABSTRACT, T_FINAL);

@@ -4,8 +4,6 @@
 
 	namespace CzProject\PhpSimpleAst\Ast;
 
-	use CzProject\Assert\Assert;
-
 
 	class NoFunctionBody implements IFunctionBody
 	{
@@ -16,30 +14,20 @@
 		private $content;
 
 
-		/**
-		 * @param string $indentation
-		 * @param string $content
-		 */
-		public function __construct($indentation, $content)
+		public function __construct(string $indentation, string $content)
 		{
-			Assert::string($indentation);
-			Assert::string($content);
-
 			$this->indentation = $indentation;
 			$this->content = $content;
 		}
 
 
-		public function toString()
+		public function toString(): string
 		{
 			return $this->indentation . $this->content;
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parse(NodeParser $parser)
+		public static function parse(NodeParser $parser): self
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();
 			$content = $parser->consumeTokenAsText(';');

@@ -14,10 +14,7 @@
 		private $code;
 
 
-		/**
-		 * @param string $path
-		 */
-		public function __construct($path, PhpString $code)
+		public function __construct(string $path, PhpString $code)
 		{
 			$this->path = $path;
 			$this->code = $code;
@@ -54,11 +51,7 @@
 		}
 
 
-		/**
-		 * @param  string $path
-		 * @return self
-		 */
-		public static function parse($path, NodeParser $parser)
+		public static function parse(string $path, NodeParser $parser): self
 		{
 			return new self($path, PhpString::parse($parser));
 		}

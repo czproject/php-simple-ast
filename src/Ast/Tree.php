@@ -45,12 +45,11 @@
 
 		/**
 		 * @phpstan-template TSearch of INode|IParentNode
-		 * @param  string $nodeType
 		 * @phpstan-param class-string<TSearch> $nodeType
 		 * @return INode|IParentNode|NULL
 		 * @phpstan-return TSearch|NULL
 		 */
-		public function closest($nodeType)
+		public function closest(string $nodeType)
 		{
 			if ($this->node instanceof $nodeType) {
 				return $this->node;
@@ -73,7 +72,7 @@
 		 * @return self[]
 		 * @phpstan-return self<TSearch>[]
 		 */
-		public static function find(IParentNode $root, $nodeType): array
+		public static function find(IParentNode $root, string|array $nodeType): array
 		{
 			$result = [];
 			$stack = [];

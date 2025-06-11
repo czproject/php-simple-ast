@@ -18,22 +18,16 @@
 
 
 		/**
-		 * @param string $indentation
 		 * @param list<IConstantModifier>|list<IPropertyModifier>|list<IMethodModifier> $modifiers
 		 */
-		private function __construct($indentation, array $modifiers)
+		private function __construct(string $indentation, array $modifiers)
 		{
-			Assert::string($indentation);
-
 			$this->indentation = $indentation;
 			$this->modifiers = $modifiers;
 		}
 
 
-		/**
-		 * @return string
-		 */
-		public function getIndentation()
+		public function getIndentation(): string
 		{
 			return $this->indentation;
 		}
@@ -78,20 +72,13 @@
 		}
 
 
-		/**
-		 * @param  string $indentation
-		 * @return self
-		 */
-		public static function empty($indentation)
+		public static function empty(string $indentation): self
 		{
 			return new self($indentation, []);
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parse(NodeParser $parser)
+		public static function parse(NodeParser $parser): self
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();
 			$modifiers = [];

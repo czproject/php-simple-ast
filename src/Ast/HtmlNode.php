@@ -11,16 +11,13 @@
 		private $text;
 
 
-		/**
-		 * @param string $text
-		 */
-		public function __construct($text)
+		public function __construct(string $text)
 		{
 			$this->text = $text;
 		}
 
 
-		public function toString()
+		public function toString(): string
 		{
 			return $this->text;
 		}

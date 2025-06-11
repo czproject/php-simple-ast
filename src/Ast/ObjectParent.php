@@ -19,14 +19,8 @@
 		private $extends;
 
 
-		/**
-		 * @param string $indentation
-		 * @param string $keyword
-		 */
-		public function __construct($indentation, $keyword, Name $extends)
+		public function __construct(string $indentation, string $keyword, Name $extends)
 		{
-			Assert::string($indentation);
-			Assert::string($keyword);
 			Assert::true($keyword !== '');
 
 			$this->indentation = $indentation;
@@ -35,10 +29,7 @@
 		}
 
 
-		/**
-		 * @return Name
-		 */
-		public function getExtends()
+		public function getExtends(): Name
 		{
 			return $this->extends;
 		}
@@ -50,19 +41,13 @@
 		}
 
 
-		/**
-		 * @return string
-		 */
-		public function toString()
+		public function toString(): string
 		{
 			return $this->indentation . $this->keyword . $this->extends->toString();
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parse(NodeParser $parser)
+		public static function parse(NodeParser $parser): self
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();
 			$keyword = $parser->consumeTokenAsText(T_EXTENDS);

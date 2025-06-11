@@ -7,34 +7,20 @@
 
 	interface ITokens
 	{
-		/**
-		 * @return bool
-		 */
-		function hasToken();
+		function hasToken(): bool;
 
 
 		/**
-		 * @return IToken
 		 * @throws \CzProject\PhpSimpleAst\OutOfRangeException
 		 */
-		function getCurrent();
+		function getCurrent(): IToken;
 
 
-		/**
-		 * @return IToken|NULL
-		 */
-		function getNext(int $position = 0);
+		function getNext(int $position = 0): ?IToken;
 
 
-		/**
-		 * @return IToken|NULL
-		 */
-		function next();
+		function next(): ?IToken;
 
 
-		/**
-		 * @param  int|string $type
-		 * @return string
-		 */
-		function getTypeName($type);
+		function getTypeName(int|string $type): string;
 	}

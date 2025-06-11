@@ -33,6 +33,7 @@
 		)
 		{
 			Assert::true(count($children) > 0, 'Children cannot be empty.');
+
 			$this->prefix = $prefix;
 			$this->opener = $opener;
 			$this->children = $children;
@@ -64,10 +65,7 @@
 		}
 
 
-		/**
-		 * @return string
-		 */
-		public function toString()
+		public function toString(): string
 		{
 			$s = $this->prefix->toString();
 			$s .= $this->opener;
@@ -82,10 +80,7 @@
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parse(NodeParser $parser, Name $prefix)
+		public static function parse(NodeParser $parser, Name $prefix): self
 		{
 			$opener = $parser->consumeNodeIndentation();
 

@@ -30,20 +30,16 @@
 
 
 		/**
-		 * @param string $indentation
-		 * @param string $keyword
-		 * @param string $blockOpener
 		 * @param INode[] $children
-		 * @param string $blockCloser
 		 */
 		public function __construct(
-			$indentation,
-			$keyword,
+			string $indentation,
+			string $keyword,
 			Name $name,
 			?ObjectParents $extends,
-			$blockOpener,
+			string $blockOpener,
 			array $children,
-			$blockCloser
+			string $blockCloser
 		)
 		{
 			$this->indentation = $indentation;
@@ -56,26 +52,19 @@
 		}
 
 
-		/**
-		 * @return string
-		 */
-		public function getName()
+		public function getName(): string
 		{
 			return $this->name->getName();
 		}
 
 
-		/**
-		 * @param  string $name
-		 * @return void
-		 */
-		public function setName($name)
+		public function setName(string $name): void
 		{
 			$this->name = Name::fromName($this->name, $name);
 		}
 
 
-		public function toString()
+		public function toString(): string
 		{
 			$s = $this->indentation . $this->keyword;
 
@@ -97,10 +86,7 @@
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parse(NodeParser $parser)
+		public static function parse(NodeParser $parser): self
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();
 			$keyword = $parser->consumeTokenAsText(T_INTERFACE);

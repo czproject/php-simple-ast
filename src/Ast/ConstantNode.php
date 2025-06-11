@@ -4,8 +4,6 @@
 
 	namespace CzProject\PhpSimpleAst\Ast;
 
-	use CzProject\Assert\Assert;
-
 
 	class ConstantNode implements INode
 	{
@@ -65,10 +63,7 @@
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parse(Modifiers $modifiers, NodeParser $parser)
+		public static function parse(Modifiers $modifiers, NodeParser $parser): self
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();
 			$keyword = $parser->consumeTokenAsText(T_CONST);

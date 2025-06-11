@@ -4,8 +4,6 @@
 
 	namespace CzProject\PhpSimpleAst\Ast;
 
-	use CzProject\Assert\Assert;
-
 
 	class Parameters implements IFunctionBody
 	{
@@ -23,22 +21,15 @@
 
 
 		/**
-		 * @param string $indentation
-		 * @param string $opener
 		 * @param Parameter[] $parameters
-		 * @param string $closer
 		 */
 		public function __construct(
-			$indentation,
-			$opener,
+			string $indentation,
+			string $opener,
 			array $parameters,
-			$closer
+			string $closer
 		)
 		{
-			Assert::string($indentation);
-			Assert::string($opener);
-			Assert::string($closer);
-
 			$this->indentation = $indentation;
 			$this->opener = $opener;
 			$this->parameters = $parameters;
@@ -67,10 +58,7 @@
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parse(NodeParser $parser)
+		public static function parse(NodeParser $parser): self
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();
 			$opener = $parser->consumeTokenAsText('(');

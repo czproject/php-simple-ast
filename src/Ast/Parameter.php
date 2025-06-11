@@ -4,7 +4,6 @@
 
 	namespace CzProject\PhpSimpleAst\Ast;
 
-	use CzProject\Assert\Assert;
 	use CzProject\PhpSimpleAst\Lexer\PhpToken;
 
 
@@ -27,19 +26,16 @@
 
 
 		/**
-		 * @param string $indentation
 		 * @param IPropertyModifier[] $promotedPropertyModifiers
 		 */
 		public function __construct(
-			$indentation,
+			string $indentation,
 			array $promotedPropertyModifiers,
 			?Type $type,
 			VariableName $name,
 			?DefaultValue $defaultValue
 		)
 		{
-			Assert::string($indentation);
-
 			$this->indentation = $indentation;
 			$this->promotedPropertyModifiers = $promotedPropertyModifiers;
 			$this->type = $type;
@@ -88,10 +84,7 @@
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parse(NodeParser $parser)
+		public static function parse(NodeParser $parser): self
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();
 			$promotedPropertyModifiers = NULL;

@@ -23,21 +23,15 @@
 
 
 		/**
-		 * @param string $indentation
-		 * @param string $keyword
 		 * @param TraitImport[] $imports
-		 * @param string $closer
 		 */
 		public function __construct(
-			$indentation,
-			$keyword,
+			string $indentation,
+			string $keyword,
 			array $imports,
-			$closer
+			string $closer
 		)
 		{
-			Assert::string($indentation);
-			Assert::string($keyword);
-			Assert::string($closer);
 			Assert::true($closer === '' || $closer === ';', 'Invalid closer.');
 
 			$this->indentation = $indentation;
@@ -47,7 +41,7 @@
 		}
 
 
-		public function toString()
+		public function toString(): string
 		{
 			$s = $this->indentation . $this->keyword;
 
@@ -60,10 +54,7 @@
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parse(NodeParser $parser)
+		public static function parse(NodeParser $parser): self
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();
 			$keyword = $parser->consumeTokenAsText(T_USE);

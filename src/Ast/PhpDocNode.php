@@ -17,17 +17,11 @@
 		private $content;
 
 
-		/**
-		 * @param string $indentation
-		 * @param string $content
-		 */
 		public function __construct(
-			$indentation,
-			$content
+			string $indentation,
+			string $content
 		)
 		{
-			Assert::string($indentation);
-			Assert::string($content);
 			Assert::true($content !== '', 'Missing content.');
 
 			$this->indentation = $indentation;
@@ -48,7 +42,7 @@
 		}
 
 
-		public function toString()
+		public function toString(): string
 		{
 			return $this->indentation . $this->content;
 		}
@@ -60,10 +54,7 @@
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parse(NodeParser $parser)
+		public static function parse(NodeParser $parser): self
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();
 			$content = $parser->consumeTokenAsText(T_DOC_COMMENT);

@@ -4,8 +4,6 @@
 
 	namespace CzProject\PhpSimpleAst\Ast;
 
-	use CzProject\Assert\Assert;
-
 
 	class FunctionBody implements IFunctionBody
 	{
@@ -23,20 +21,15 @@
 
 
 		/**
-		 * @param string $indentation
-		 * @param string $blockOpener
 		 * @param INode[] $children
-		 * @param string $blockCloser
 		 */
 		public function __construct(
-			$indentation,
-			$blockOpener,
+			string $indentation,
+			string $blockOpener,
 			array $children,
-			$blockCloser
+			string $blockCloser
 		)
 		{
-			Assert::string($indentation);
-
 			$this->indentation = $indentation;
 			$this->blockOpener = $blockOpener;
 			$this->children = $children;
@@ -44,7 +37,7 @@
 		}
 
 
-		public function toString()
+		public function toString(): string
 		{
 			$s = $this->indentation . $this->blockOpener;
 
@@ -56,10 +49,7 @@
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parse(NodeParser $parser)
+		public static function parse(NodeParser $parser): self
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();
 			$blockOpener = $parser->consumeTokenAsText('{');

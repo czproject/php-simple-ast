@@ -108,13 +108,10 @@
 		}
 
 
-		/**
-		 * @return self
-		 */
 		public static function parse(
 			?PhpDocNode $phpDocNode,
 			NodeParser $parser
-		)
+		): self
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();
 			$keyword = $parser->consumeTokenAsText(T_FUNCTION);

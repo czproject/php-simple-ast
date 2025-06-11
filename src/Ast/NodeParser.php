@@ -32,10 +32,7 @@
 		private $closed = FALSE;
 
 
-		/**
-		 * @param string $nodeIndentation
-		 */
-		public function __construct($nodeIndentation, Lexer\Stream $stream, ?self $parentParser = NULL)
+		public function __construct(string $nodeIndentation, Lexer\Stream $stream, ?self $parentParser = NULL)
 		{
 			$this->nodeIndentation = $nodeIndentation;
 			$this->stream = $stream;
@@ -58,10 +55,7 @@
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public function createSubParser()
+		public function createSubParser(): self
 		{
 			return new self($this->consumeNodeIndentation() . $this->flushIndentation(), $this->stream, $this);
 		}
@@ -286,11 +280,10 @@
 
 
 		/**
-		 * @param  string|NULL $msg
 		 * @return never
 		 * @throws \CzProject\PhpSimpleAst\InvalidStateException
 		 */
-		public function errorUnknowToken($msg = NULL)
+		public function errorUnknowToken(?string $msg = NULL)
 		{
 			$this->stream->errorUnknowToken($msg);
 		}
@@ -350,20 +343,18 @@
 
 
 		/**
-		 * @param  string $indentation
 		 * @return void
 		 */
-		private function addIndentation($indentation)
+		private function addIndentation(string $indentation)
 		{
 			$this->indentation .= $indentation;
 		}
 
 
 		/**
-		 * @param  string $unknowContent
 		 * @return void
 		 */
-		private function addUnknowContent($unknowContent)
+		private function addUnknowContent(string $unknowContent)
 		{
 			$this->unknowContent .= $this->indentation . $unknowContent;
 			$this->indentation = '';

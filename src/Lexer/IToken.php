@@ -7,33 +7,17 @@
 
 	interface IToken
 	{
-		/**
-		 * @param  int|string $type
-		 * @return bool
-		 */
-		function isOfType($type);
+		function isOfType(int|string $type): bool;
 
 
-		/**
-		 * @return int|string
-		 */
-		function getType();
+		function getType(): int|string;
 
 
-		/**
-		 * @return string
-		 */
-		function toString();
+		function toString(): string;
 
 
-		/**
-		 * @return int
-		 */
-		function getPosition();
+		function getPosition(): int;
 
 
-		/**
-		 * @return int
-		 */
-		function getLine();
+		function getLine(): int;
 	}

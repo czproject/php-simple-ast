@@ -55,10 +55,7 @@
 		}
 
 
-		/**
-		 * @return string
-		 */
-		public function toString()
+		public function toString(): string
 		{
 			$s = $this->indentation . $this->name->toString();
 
@@ -70,10 +67,7 @@
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parse(NodeParser $parser)
+		public static function parse(NodeParser $parser): self
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();
 			$name = Name::parse($parser->createSubParser());
@@ -96,10 +90,7 @@
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parseAlias(NodeParser $parser, Name $name)
+		public static function parseAlias(NodeParser $parser, Name $name): self
 		{
 			$alias = NULL;
 

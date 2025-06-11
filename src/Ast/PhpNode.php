@@ -4,8 +4,6 @@
 
 	namespace CzProject\PhpSimpleAst\Ast;
 
-	use CzProject\Assert\Assert;
-
 
 	class PhpNode implements IParentNode
 	{
@@ -20,32 +18,27 @@
 
 
 		/**
-		 * @param string $openTag
 		 * @param INode[] $children
-		 * @param string|NULL $closeTag
 		 */
 		public function __construct(
-			$openTag,
+			string $openTag,
 			array $children,
-			$closeTag
+			?string $closeTag
 		)
 		{
-			Assert::string($openTag);
-			Assert::stringOrNull($closeTag);
-
 			$this->openTag = $openTag;
 			$this->children = $children;
 			$this->closeTag = $closeTag;
 		}
 
 
-		public function getNodes()
+		public function getNodes(): array
 		{
 			return $this->children;
 		}
 
 
-		public function toString()
+		public function toString(): string
 		{
 			$s = $this->openTag;
 
@@ -57,10 +50,7 @@
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parse(NodeParser $parser)
+		public static function parse(NodeParser $parser): self
 		{
 			$openTag = $parser->consumeNodeIndentation() . $parser->consumeTokenAsText(T_OPEN_TAG, T_OPEN_TAG_WITH_ECHO);
 			$closeTag = NULL;

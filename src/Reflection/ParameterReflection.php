@@ -23,6 +23,7 @@
 		)
 		{
 			Assert::true($index >= 0, 'Index must be zero or positive-int.');
+
 			$this->index = $index;
 			$this->parameter = $parameter;
 		}

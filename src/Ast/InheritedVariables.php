@@ -51,10 +51,7 @@
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parse(NodeParser $parser)
+		public static function parse(NodeParser $parser): self
 		{
 			$keyword = Literal::parseToken($parser->createSubParser(), T_USE);
 			$parser->tryConsumeWhitespace();

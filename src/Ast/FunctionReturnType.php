@@ -4,8 +4,6 @@
 
 	namespace CzProject\PhpSimpleAst\Ast;
 
-	use CzProject\Assert\Assert;
-
 
 	class FunctionReturnType implements IFunctionBody
 	{
@@ -19,26 +17,19 @@
 		private $type;
 
 
-		/**
-		 * @param string $indentation
-		 * @param bool $nullable
-		 */
 		public function __construct(
-			$indentation,
-			$nullable,
+			string $indentation,
+			bool $nullable,
 			Type $type
 		)
 		{
-			Assert::string($indentation);
-			Assert::bool($nullable);
-
 			$this->indentation = $indentation;
 			$this->nullable = $nullable;
 			$this->type = $type;
 		}
 
 
-		public function toString()
+		public function toString(): string
 		{
 			$s = $this->indentation . ($this->nullable ? '?' : '');
 			$s .= $this->type->toString();
@@ -46,10 +37,7 @@
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parse(NodeParser $parser)
+		public static function parse(NodeParser $parser): self
 		{
 			$indentation = $parser->consumeNodeIndentation();
 			$parser->consumeAsIndentation(':');

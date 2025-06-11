@@ -4,7 +4,6 @@
 
 	namespace CzProject\PhpSimpleAst\Ast;
 
-	use CzProject\Assert\Assert;
 	use CzProject\PhpSimpleAst\Helpers;
 
 
@@ -39,27 +38,20 @@
 
 
 		/**
-		 * @param string $indentation
 		 * @param IMethodModifier[] $modifiers
-		 * @param string $keywordPrefix
-		 * @param string $keyword
 		 */
 		public function __construct(
 			?PhpDocNode $phpDocNode,
-			$indentation,
+			string $indentation,
 			array $modifiers,
-			$keywordPrefix,
-			$keyword,
+			string $keywordPrefix,
+			string $keyword,
 			Name $name,
 			Parameters $parameters,
 			?FunctionReturnType $returnType,
 			IFunctionBody $body
 		)
 		{
-			Assert::string($indentation);
-			Assert::string($keywordPrefix);
-			Assert::string($keyword);
-
 			$this->phpDocNode = $phpDocNode;
 			$this->indentation = $indentation;
 			$this->modifiers = $modifiers;
@@ -82,10 +74,9 @@
 
 
 		/**
-		 * @param  string $name
 		 * @return void
 		 */
-		public function setName($name)
+		public function setName(string $name)
 		{
 			$this->name = Name::fromName($this->name, $name);
 		}
@@ -213,14 +204,11 @@
 		}
 
 
-		/**
-		 * @return self
-		 */
 		public static function parse(
 			?PhpDocNode $phpDocNode,
 			Modifiers $modifiers,
 			NodeParser $parser
-		)
+		): self
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();
 			$keyword = $parser->consumeTokenAsText(T_FUNCTION);

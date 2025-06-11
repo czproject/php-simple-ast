@@ -37,6 +37,7 @@
 		)
 		{
 			Assert::true(count($children) > 0, 'Children cannot be empty.');
+
 			$this->indentation = $indentation;
 			$this->type = $type;
 			$this->keyword = $keyword;
@@ -82,7 +83,7 @@
 		}
 
 
-		public function toString()
+		public function toString(): string
 		{
 			$s = $this->indentation . $this->keyword;
 
@@ -98,10 +99,7 @@
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parse(NodeParser $parser)
+		public static function parse(NodeParser $parser): self
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();
 			$keyword = $parser->consumeTokenAsText(T_USE);

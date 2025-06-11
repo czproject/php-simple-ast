@@ -19,14 +19,8 @@
 		private $literal;
 
 
-		/**
-		 * @param string $indentation
-		 * @param string $operator
-		 */
-		public function __construct($indentation, $operator, Literal $literal)
+		public function __construct(string $indentation, string $operator, Literal $literal)
 		{
-			Assert::string($indentation);
-			Assert::string($operator);
 			Assert::true($operator === '=', 'Invalid operator');
 
 			$this->indentation = $indentation;
@@ -35,16 +29,13 @@
 		}
 
 
-		public function toString()
+		public function toString(): string
 		{
 			return $this->indentation . $this->operator . $this->literal->toString();
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parseForFunctionParameter(NodeParser $parser)
+		public static function parseForFunctionParameter(NodeParser $parser): self
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();
 			$operator = $parser->consumeTokenAsText('=');
@@ -61,10 +52,7 @@
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parseForProperty(NodeParser $parser)
+		public static function parseForProperty(NodeParser $parser): self
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();
 			$operator = $parser->consumeTokenAsText('=');

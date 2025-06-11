@@ -20,13 +20,13 @@
 		}
 
 
-		public function getNodes()
+		public function getNodes(): array
 		{
 			return $this->children;
 		}
 
 
-		public function toString()
+		public function toString(): string
 		{
 			$s = '';
 
@@ -38,10 +38,7 @@
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parse(NodeParser $parser)
+		public static function parse(NodeParser $parser): self
 		{
 			$children = [];
 

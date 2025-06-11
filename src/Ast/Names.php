@@ -17,12 +17,10 @@
 
 
 		/**
-		 * @param string $indentation
 		 * @param Name[] $names
 		 */
-		public function __construct($indentation, array $names)
+		public function __construct(string $indentation, array $names)
 		{
-			Assert::string($indentation);
 			Assert::true(count($names) > 0, 'Names cannot be empty.');
 
 			$this->indentation = $indentation;
@@ -30,10 +28,7 @@
 		}
 
 
-		/**
-		 * @return string
-		 */
-		public function toString()
+		public function toString(): string
 		{
 			$s = $this->indentation;
 
@@ -45,10 +40,7 @@
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parse(NodeParser $parser)
+		public static function parse(NodeParser $parser): self
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();
 			$names = [];

@@ -13,18 +13,15 @@
 		private $content;
 
 
-		/**
-		 * @param string $content
-		 */
-		public function __construct($content)
+		public function __construct(string $content)
 		{
-			Assert::string($content);
 			Assert::true($content !== '', 'Missing content.');
+
 			$this->content = $content;
 		}
 
 
-		public function toString()
+		public function toString(): string
 		{
 			return $this->content;
 		}

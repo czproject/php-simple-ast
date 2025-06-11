@@ -117,10 +117,7 @@
 		}
 
 
-		/**
-		 * @param  string|ClassReflection $class
-		 */
-		public function isSubclassOf($class, string $requiredClass): bool
+		public function isSubclassOf(string|ClassReflection $class, string $requiredClass): bool
 		{
 			if (is_string($class)) {
 				$class = $this->getClass($class);

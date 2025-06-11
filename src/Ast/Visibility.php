@@ -16,15 +16,8 @@
 		private $visibility;
 
 
-		/**
-		 * @param string $indentation
-		 * @param string $visibility
-		 */
-		public function __construct($indentation, $visibility)
+		public function __construct(string $indentation, string $visibility)
 		{
-			Assert::string($indentation);
-			Assert::string($visibility);
-
 			$lowerValue = strtolower($visibility);
 			Assert::true($lowerValue === 'public' || $lowerValue === 'protected' || $lowerValue === 'private', 'Invalid visibility');
 
@@ -33,70 +26,49 @@
 		}
 
 
-		/**
-		 * @return bool
-		 */
-		public function isPublic()
+		public function isPublic(): bool
 		{
 			return strtolower($this->visibility) === 'public';
 		}
 
 
-		/**
-		 * @return bool
-		 */
-		public function isProtected()
+		public function isProtected(): bool
 		{
 			return strtolower($this->visibility) === 'protected';
 		}
 
 
-		/**
-		 * @return bool
-		 */
-		public function isPrivate()
+		public function isPrivate(): bool
 		{
 			return strtolower($this->visibility) === 'private';
 		}
 
 
-		/**
-		 * @return void
-		 */
-		public function setAsPublic()
+		public function setAsPublic(): void
 		{
 			$this->visibility = 'public';
 		}
 
 
-		/**
-		 * @return void
-		 */
-		public function setAsProtected()
+		public function setAsProtected(): void
 		{
 			$this->visibility = 'protected';
 		}
 
 
-		/**
-		 * @return void
-		 */
-		public function setAsPrivate()
+		public function setAsPrivate(): void
 		{
 			$this->visibility = 'private';
 		}
 
 
-		public function toString()
+		public function toString(): string
 		{
 			return $this->indentation . $this->visibility;
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parse(NodeParser $parser)
+		public static function parse(NodeParser $parser): self
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();
 			$visibility = $parser->consumeTokenAsText(T_PUBLIC, T_PROTECTED, T_PRIVATE);

@@ -80,10 +80,7 @@
 		}
 
 
-		/**
-		 * @param  string|ClassReflection $class
-		 */
-		public function isSubclassOf($class, string $requiredClass): bool
+		public function isSubclassOf(string|ClassReflection $class, string $requiredClass): bool
 		{
 			return $this->getReflection()->isSubclassOf($class, $requiredClass);
 		}
@@ -99,10 +96,7 @@
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function scanFile(string $path)
+		public static function scanFile(string $path): self
 		{
 			$astParser = new AstParser;
 			return new self([$astParser->parseFile($path)]);
@@ -111,9 +105,8 @@
 
 		/**
 		 * @param  string|string[] $directories
-		 * @return self
 		 */
-		public static function scanDirectories($directories, ?callable $progress = NULL)
+		public static function scanDirectories(string|array $directories, ?callable $progress = NULL): self
 		{
 			if (is_string($directories)) {
 				$directories = [$directories];

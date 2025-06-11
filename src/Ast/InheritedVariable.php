@@ -36,10 +36,7 @@
 		}
 
 
-		/**
-		 * @return self
-		 */
-		public static function parse(NodeParser $parser)
+		public static function parse(NodeParser $parser): self
 		{
 			$variable = VariableName::parse($parser->createSubParser());
 			$parser->tryConsumeWhitespace();
