@@ -13,7 +13,7 @@
 		/** @var string */
 		private $opener;
 
-		/** @var Parameter[] */
+		/** @var list<Parameter> */
 		private $parameters;
 
 		/** @var string */
@@ -21,7 +21,7 @@
 
 
 		/**
-		 * @param Parameter[] $parameters
+		 * @param list<Parameter> $parameters
 		 */
 		public function __construct(
 			string $indentation,
@@ -38,7 +38,7 @@
 
 
 		/**
-		 * @return Parameter[]
+		 * @return list<Parameter>
 		 */
 		public function getParameters(): array
 		{

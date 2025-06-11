@@ -101,7 +101,7 @@
 
 
 		/**
-		 * @return Parameter[]
+		 * @return list<Parameter>
 		 */
 		public function getParameters(): array
 		{

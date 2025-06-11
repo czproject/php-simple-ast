@@ -118,8 +118,6 @@
 				->from(...$directories);
 
 			foreach ($finder as $path => $file) {
-				assert(is_string($path));
-
 				if (isset($files[$path])) {
 					continue;
 				}

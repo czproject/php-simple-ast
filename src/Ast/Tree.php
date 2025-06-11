@@ -75,6 +75,7 @@
 		public static function find(IParentNode $root, string|array $nodeType): array
 		{
 			$result = [];
+			/** @var array<array{IParentNode, array<IParentNode>}> $stack */
 			$stack = [];
 			$stack[] = [$root, []];
 
