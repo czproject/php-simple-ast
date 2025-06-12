@@ -45,4 +45,40 @@
 		{
 			return $this->parameter->isPassedByReference();
 		}
+
+
+		public function getType(): ?Ast\Type
+		{
+			return $this->parameter->getType();
+		}
+
+
+		public function getDefaultValue(): ?Ast\DefaultValue
+		{
+			return $this->parameter->getDefaultValue();
+		}
+
+
+		public function isNullable(): bool
+		{
+			$type = $this->parameter->getType();
+
+			if ($type === NULL) {
+				return FALSE;
+			}
+
+			return $type->isNullable();
+		}
+
+
+		public function setNullable(bool $nullable): void
+		{
+			$type = $this->parameter->getType();
+
+			if ($type === NULL) {
+				throw new \CzProject\PhpSimpleAst\InvalidStateException('Parameter has no type.');
+			}
+
+			$type->setNullable($nullable);
+		}
 	}

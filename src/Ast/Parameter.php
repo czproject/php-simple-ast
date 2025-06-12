@@ -62,6 +62,18 @@
 		}
 
 
+		public function getType(): ?Type
+		{
+			return $this->type;
+		}
+
+
+		public function getDefaultValue(): ?DefaultValue
+		{
+			return $this->defaultValue;
+		}
+
+
 		public function toString()
 		{
 			$s = $this->indentation;

@@ -35,6 +35,13 @@
 		}
 
 
+		public function isNull(): bool
+		{
+			$literalValue = trim($this->literal->getLiteral());
+			return strtolower($literalValue) === 'null';
+		}
+
+
 		public static function parseForFunctionParameter(NodeParser $parser): self
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();

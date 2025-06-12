@@ -28,6 +28,47 @@
 		}
 
 
+		/**
+		 * @return NamedType[]
+		 */
+		public function getNamedTypes(): array
+		{
+			return $this->types;
+		}
+
+
+		public function isNullable(): bool
+		{
+			foreach ($this->types as $namedType) {
+				if ($namedType->isNullable()) {
+					return TRUE;
+				}
+			}
+
+			return FALSE;
+		}
+
+
+		public function setNullable(bool $nullable): void
+		{
+			$namedTypes = $this->types;
+
+			if (count($namedTypes) > 1) {
+				throw new \CzProject\PhpSimpleAst\InvalidStateException('Union types are not supported.');
+			}
+
+			foreach ($namedTypes as $namedType) {
+				$namedType->setNullable($nullable);
+			}
+		}
+
+
+		public function isSingle(): bool
+		{
+			return count($this->types) === 1;
+		}
+
+
 		public function toString(): string
 		{
 			$s = $this->indentation;

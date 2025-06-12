@@ -48,6 +48,18 @@
 		}
 
 
+		public function isNullable(): bool
+		{
+			return $this->nullableSign === '?';
+		}
+
+
+		public function setNullable(bool $nullable): void
+		{
+			$this->nullableSign = $nullable ? '?' : '';
+		}
+
+
 		public static function parse(NodeParser $parser): self
 		{
 			$nodeIndentation = $parser->consumeNodeIndentation();

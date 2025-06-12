@@ -1,0 +1,22 @@
+<?php
+
+namespace Foo {
+	class TestClass
+	{
+		function methodWithNullableParams(?string $param1 = null, int $param2 = 42, ?array $param3 = null, $param4 = null)
+		{
+		}
+
+		function methodWithoutDefaults(string $param1, int $param2)
+		{
+		}
+
+		function methodWithNullableTypes(?string $param1 = null, ?int $param2 = null)
+		{
+		}
+
+		function methodWithNonSingleTypes(string|int|null $param1 = null)
+		{
+		}
+	}
+}
